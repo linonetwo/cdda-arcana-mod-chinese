@@ -7,6 +7,27 @@ const _ = require('lodash');
 
 const translate = new BaiduTranslate(process.env.TRANSLATION_APP_ID, process.env.TRANSLATION_SECRET, 'zh', 'en');
 
+function replaceNto1111(text: string) {
+  // 防止 %2$s 影响了翻译
+  return text
+    .replace('%1$s', ' 1111 ')
+    .replace('%2$s', ' 2222 ')
+    .replace('%3$s', ' 3333 ')
+    .replace('%s', ' 4444 ')
+    .replace('<good>', ' 5555 ')
+    .replace('<npcname>', ' 6666 ');
+}
+function replace1111toN(text: string) {
+  // 防止 %2$s 影响了翻译
+  return text
+    .replace('1111', '%1$s')
+    .replace('2222', '%2$s')
+    .replace('3333', '%3$s')
+    .replace('4444', '%s')
+    .replace('5555', '<good>')
+    .replace('6666', '<npcname>');
+}
+
 function tryTranslation(value) {
   if (typeof value !== 'string') return Promise.resolve(value);
   if (!value) return Promise.resolve('');
@@ -15,11 +36,11 @@ function tryTranslation(value) {
 
   return promiseRetry(
     (retry, number) =>
-      translate(value)
+      translate(replaceNto1111(value))
         .then(({ trans_result: result }) => {
           if (result && result.length > 0) {
             const [{ dst }] = result;
-            return dst;
+            return replace1111toN(dst);
           }
           lastResult = result;
           retryCount = number;
@@ -52,8 +73,14 @@ function readSourceFiles() {
  */
 function getFileJSON(inspectData, parentPath = '') {
   const filePath = path.join(parentPath, inspectData.name);
-  if (inspectData.type === 'file' && inspectData.name.endsWith('json')) {
-    return { ...inspectData, content: JSON.parse(fs.read(filePath)), filePath };
+  if (inspectData.type === 'file') {
+    if (inspectData.name.endsWith('json')) {
+      // JSON 文件
+      return { ...inspectData, content: JSON.parse(fs.read(filePath)), filePath };
+    } else {
+      // png 贴图等
+      return { ...inspectData, rawContent: fs.read(filePath), filePath };
+    }
   }
   if (inspectData.type === 'dir') {
     return _.compact(inspectData.children.flatMap((item) => getFileJSON(item, filePath)));
@@ -67,7 +94,13 @@ function getFileJSON(inspectData, parentPath = '') {
 function writeToCNMod(foldersWithContent) {
   for (const inspectDataWithContent of foldersWithContent) {
     const newFilePath = inspectDataWithContent.filePath.replace('Arcana/', 'Arcana_CN/');
-    fs.write(newFilePath, JSON.stringify(inspectDataWithContent.content, undefined, '  '));
+    if (inspectDataWithContent.content) {
+      // JSON 文件
+      fs.write(newFilePath, JSON.stringify(inspectDataWithContent.content, undefined, '  '));
+    } else if (inspectDataWithContent.rawContent) {
+      // png 贴图等
+      fs.write(newFilePath, inspectDataWithContent.rawContent);
+    }
   }
 }
 
@@ -76,7 +109,7 @@ const translators = {};
  *
  * @param {Object} fileItem 基本类似于 inspectData https://www.npmjs.com/package/fs-jetpack#inspecttreepath-options ，但是多了 content 包含 JSON parse 过的文件内容
  */
-function translateStringsInContent(fileItem) {
+async function translateStringsInContent(fileItem) {
   if (Array.isArray(fileItem.content)) {
     // 文件的内容一般是一维数组
     for (const item of fileItem.content) {
@@ -84,7 +117,7 @@ function translateStringsInContent(fileItem) {
       if (!translator) {
         console.warn(`没有 ${item.type} 的翻译器`);
       } else {
-        translator(item);
+        await translator(item);
       }
     }
     return fileItem;
@@ -93,9 +126,312 @@ function translateStringsInContent(fileItem) {
   }
 }
 
-translators.profession = (item) => {
-  item.name = '000';
-  item.description = '111';
+const translateFunction = (i) => 'aaa';
+const noop = () => {};
+
+// 常用的翻译器
+const nameDesc = async (item) => {
+  item.name = await translateFunction(item.name);
+  item.description = await translateFunction(item.description);
 };
 
-writeToCNMod(readSourceFiles().map(translateStringsInContent));
+const useActionMsg = async (useAction) => {
+  if (useAction.activation_message) {
+    useAction.activation_message = await translateFunction(useAction.activation_message);
+  }
+  if (useAction.message) {
+    useAction.message = await translateFunction(useAction.message);
+  }
+  if (useAction.msg) {
+    useAction.msg = await translateFunction(useAction.msg);
+  }
+  if (useAction.friendly_msg) {
+    useAction.friendly_msg = await translateFunction(useAction.friendly_msg);
+  }
+  if (useAction.hostile_msg) {
+    useAction.hostile_msg = await translateFunction(useAction.hostile_msg);
+  }
+  if (useAction.need_charges_msg) {
+    useAction.need_charges_msg = await translateFunction(useAction.need_charges_msg);
+  }
+};
+const attacks = async (item) => {
+  if (item.attacks) {
+    item.attacks.attack_text_u = await translateFunction(item.attacks.attack_text_u);
+    item.attacks.attack_text_npc = await translateFunction(item.attacks.attack_text_npc);
+  }
+};
+const namePlDesc = async (item) => {
+  if (item.name) {
+    item.name.str = await translateFunction(item.name.str);
+    if (item.name.str_pl) {
+      item.name.str_pl = await translateFunction(item.name.str_pl);
+    }
+  }
+  if (item.description) {
+    item.description = await translateFunction(item.description);
+  }
+  if (item.message) {
+    item.message = await translateFunction(item.message);
+  }
+
+  if (item.use_action?.activation_message) {
+    if (Array.isArray(item.use_action.activation_message)) {
+      // 有可能是一个数组
+      for (const useAction of item.use_action.activation_message) {
+        await useActionMsg(useAction);
+      }
+    } else {
+      // 有可能只有一个，就是个 Object
+      await useActionMsg(item.use_action.activation_message);
+    }
+  }
+
+  if (item.special_attacks) {
+    for (const specialAttacks of item.special_attacks) {
+      if (specialAttacks.description) {
+        specialAttacks.description = await translateFunction(specialAttacks.description);
+      }
+      if (specialAttacks.monster_message) {
+        specialAttacks.monster_message = await translateFunction(specialAttacks.monster_message);
+      }
+      if (specialAttacks.no_ammo_sound) {
+        specialAttacks.no_ammo_sound = await translateFunction(specialAttacks.no_ammo_sound);
+      }
+    }
+  }
+
+  await relic(item);
+  await attacks(item);
+};
+
+const relic = async (item) => {
+  if (item.relic_data?.passive_effects) {
+    for (const passiveEffect of item.relic_data.passive_effects) {
+      if (passiveEffect.hit_you_effect) {
+        for (const hitYouEffect of passiveEffect.hit_you_effect) {
+          if (hitYouEffect.message) {
+            hitYouEffect.message = await translateFunction(hitYouEffect.message);
+          }
+          if (hitYouEffect.npc_message) {
+            hitYouEffect.npc_message = await translateFunction(hitYouEffect.npc_message);
+          }
+        }
+      }
+      if (passiveEffect.hit_me_effect) {
+        for (const hitYouEffect of passiveEffect.hit_me_effect) {
+          if (hitYouEffect.message) {
+            hitYouEffect.message = await translateFunction(hitYouEffect.message);
+          }
+          if (hitYouEffect.npc_message) {
+            hitYouEffect.npc_message = await translateFunction(hitYouEffect.npc_message);
+          }
+        }
+      }
+    }
+  }
+};
+
+const dynamicLine = async (line) => {
+  if (typeof line.yes === 'string') {
+    line.yes = await translateFunction(line.yes);
+  } else {
+    await dynamicLine(line.yes);
+  }
+  if (typeof line.no === 'string') {
+    line.no = await translateFunction(line.no);
+  } else {
+    await dynamicLine(line.no);
+  }
+};
+const talkTopic = async (item) => {
+  if (Array.isArray(item.responses)) {
+    for (const response of item.responses) {
+      response.text = await translateFunction(response.text);
+    }
+  }
+  if (item.dynamic_line) {
+    if (typeof item.dynamic_line === 'string') {
+      item.dynamic_line = await translateFunction(item.dynamic_line);
+    } else {
+      await dynamicLine(item.dynamic_line);
+    }
+  }
+};
+
+translators.profession = nameDesc;
+translators.scenario = async (item) => {
+  item.name = await translateFunction(item.name);
+  item.description = await translateFunction(item.description);
+  item.start_name = await translateFunction(item.start_name);
+};
+translators.start_location = noop;
+translators.furniture = nameDesc;
+translators.gate = async (item) => {
+  for (const key in Object.keys(item.messages)) {
+    item.messages[key] = await translateFunction(item.messages[key]);
+  }
+};
+translators.terrain = nameDesc;
+translators.trap = async (item) => {
+  item.name = await translateFunction(item.name);
+};
+translators.item_group = noop;
+translators.ammunition_type = noop;
+translators.AMMO = namePlDesc;
+translators.ARMOR = namePlDesc;
+translators.BIONIC_ITEM = namePlDesc;
+translators.GENERIC = namePlDesc;
+translators.TOOL = namePlDesc;
+translators.COMESTIBLE = namePlDesc;
+translators.GUNMOD = namePlDesc;
+translators.GUN = namePlDesc;
+translators.TOOL_ARMOR = namePlDesc;
+translators.harvest = noop;
+translators.SPELL = namePlDesc;
+translators.MONSTER_FACTION = noop;
+translators.monstergroup = noop;
+translators.MONSTER = namePlDesc;
+translators.SPECIES = async (item) => {
+  if (item.description) {
+    item.description = await translateFunction(item.description);
+  }
+  if (item.footsteps) {
+    item.footsteps = await translateFunction(item.footsteps);
+  }
+};
+translators.speech = async (item) => {
+  item.sound = await translateFunction(item.sound);
+};
+translators.dream = async (item) => {
+  item.messages = await Promise.all(item.messages.map((msg) => translateFunction(msg)));
+};
+translators.mutation_category = async (item) => {
+  item.name = await translateFunction(item.name);
+  item.iv_message = await translateFunction(item.iv_message);
+  item.mutagen_message = await translateFunction(item.mutagen_message);
+  item.memorial_message = await translateFunction(item.memorial_message);
+};
+translators.mutation = namePlDesc;
+translators.talk_topic = talkTopic;
+translators.faction = nameDesc;
+translators.mission_definition = async (item) => {
+  await namePlDesc(item);
+  if (item.dialogue) {
+    item.dialogue.describe = await translateFunction(item.dialogue.describe);
+    item.dialogue.offer = await translateFunction(item.dialogue.offer);
+    item.dialogue.accepted = await translateFunction(item.dialogue.accepted);
+    item.dialogue.rejected = await translateFunction(item.dialogue.rejected);
+    item.dialogue.advice = await translateFunction(item.dialogue.advice);
+    item.dialogue.inquire = await translateFunction(item.dialogue.inquire);
+    item.dialogue.success = await translateFunction(item.dialogue.success);
+    item.dialogue.success_lie = await translateFunction(item.dialogue.success_lie);
+    item.dialogue.failure = await translateFunction(item.dialogue.failure);
+  }
+};
+translators.npc_class = noop;
+translators.npc = noop;
+translators.trait_group = noop;
+translators.mapgen = noop;
+translators.ter_furn_transform = async (item) => {
+  if (item.fail_message) {
+    item.fail_message = await translateFunction(item.fail_message);
+  }
+  if (Array.isArray(item.terrain)) {
+    for (const terrain of item.terrain) {
+      if (terrain.message) {
+        terrain.message = await translateFunction(terrain.message);
+      }
+    }
+  }
+};
+translators.overmap_special = noop;
+translators.overmap_terrain = noop;
+translators.region_overlay = noop;
+translators.city_building = noop;
+translators.requirement = noop;
+translators.recipe = noop;
+translators.recipe_category = noop;
+translators.uncraft = noop;
+translators.enchantment = noop;
+translators.SPELL = namePlDesc;
+translators.achievement = namePlDesc;
+translators.ammo_effect = noop;
+translators.bionic = namePlDesc;
+translators.clothing_mod = noop;
+translators.effect_type = async (item) => {
+  if (Array.isArray(item.name)) {
+    item.name = await Promise.all(item.name.map((msg) => translateFunction(msg)));
+  }
+  if (Array.isArray(item.desc)) {
+    item.desc = await Promise.all(item.desc.map((msg) => translateFunction(msg)));
+  }
+  if (item.remove_message) {
+    item.remove_message = await translateFunction(item.remove_message);
+  }
+
+  if (Array.isArray(item.decay_messages) && Array.isArray(item.decay_messages[0])) {
+    item.decay_messages = await Promise.all(
+      item.decay_messages.map((msgGroup) => Promise.all(msgGroup.map((msg) => translateFunction(msg))))
+    );
+  }
+};
+translators.emit = noop;
+translators.field_type = noop;
+translators.json_flag = async (item) => {
+  // 注意有 <good>protection</good> 这样的标记
+  item.info = await translateFunction(item.info);
+};
+translators.martial_art = async (item) => {
+  item.description = await translateFunction(item.description);
+  if (Array.isArray(item.initiate)) {
+    item.initiate = await Promise.all(item.initiate.map((msg) => translateFunction(msg)));
+  }
+  if (Array.isArray(item.onmove_buffs)) {
+    for (const buff of item.onmove_buffs) {
+      await nameDesc(buff);
+    }
+  }
+  if (Array.isArray(item.onattack_buffs)) {
+    for (const buff of item.onattack_buffs) {
+      await nameDesc(buff);
+    }
+  }
+  if (Array.isArray(item.onhit_buffs)) {
+    for (const buff of item.onhit_buffs) {
+      await nameDesc(buff);
+    }
+  }
+  if (Array.isArray(item.onkill_buffs)) {
+    for (const buff of item.onkill_buffs) {
+      await nameDesc(buff);
+    }
+  }
+};
+translators.material = nameDesc;
+translators.MOD_INFO = nameDesc;
+translators.scent_type = noop;
+translators.skill = namePlDesc;
+translators.snippet = async (item) => {
+  if (Array.isArray(item.text)) {
+    for (const text of item.text) {
+      text.text = await translateFunction(text.text);
+    }
+  }
+};
+translators.technique = async (item) => {
+  item.name = await translateFunction(item.name);
+  if (Array.isArray(item.message)) {
+    item.message = await Promise.all(item.message.map((msg) => translateFunction(msg)));
+  }
+};
+translators.vehicle_part = namePlDesc;
+
+/**
+ * 开始翻译
+ */
+async function main() {
+  const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
+  writeToCNMod(contents);
+}
+main();
