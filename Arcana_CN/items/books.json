@@ -1,0 +1,569 @@
+[
+  {
+    "id": "book_magicfordummies",
+    "type": "BOOK",
+    "name": {
+      "str": "学徒笔记",
+      "str_pl": "学徒笔记副本"
+    },
+    "description": "一个学生以某种神秘的顺序写的一系列笔记。起初，这个主题似乎是简单的宗教仪式，但很快就深入到了更多的……反常的行为。\n”到时候，我的眼睛会睁开的。他们称之为礼物，但所有深吸一口气的人都可以分享。没有天生的天赋，没有血统的怪癖，只有纪律和耐心……”",
+    "weight": "454 g",
+    "volume": "500 ml",
+    "//": "Pre-apocalypse price is estimated by maximum arcana skill the book can reach, post-apoc price is a depreciation derived from minimum arcana needed to learn from it. then further reduced to a tenth.",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "recipe_creepy",
+    "color": "light_gray",
+    "skill": "magic",
+    "required_level": 0,
+    "max_level": 1,
+    "intelligence": 8,
+    "time": "10 m",
+    "fun": -1
+  },
+  {
+    "id": "book_potioncraft",
+    "type": "BOOK",
+    "name": {
+      "str": "炼金术史",
+      "str_pl": "炼金术史副本"
+    },
+    "description": "一系列从几本关于炼金术概念的古籍中翻译、注释的节选。这本书提出了一个非传统的解释所讨论的作品，偶然地分成作者自己的失败尝试，创造“青金石”和“阿尔卡赫斯特”。所讨论的一些非传统化学可能仍然有用。\n“在所有的腐败和净化循环中，我们没有达到精炼的程度，进入了鲁贝多阶段。我们缺少一种催化剂，一种比黄金更纯净的东西，物质所蕴含的能量……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "textbook_gaswarfare",
+    "color": "green",
+    "skill": "magic",
+    "required_level": 0,
+    "max_level": 3,
+    "intelligence": 9,
+    "time": "10 m",
+    "fun": 0
+  },
+  {
+    "id": "book_scrollcraft",
+    "type": "BOOK",
+    "name": {
+      "str": "六大支柱",
+      "str_pl": "六大支柱的副本"
+    },
+    "//": "Implies that interpreting the coded verses are the most difficult part, the magic itself is low-mid level in complexity.",
+    "description": "封面上有六个奇怪符号的书。文本使用神话概念和隐喻来掩饰魔法公式，将其知识隐藏在一个超凡脱俗的万神殿的故事中。\n“太阳之母。月光下风暴的少女。秩序编织成地球本身。混沌陶醉在大自然中。四个骑士化身为一个。反抗和反抗。你是我所知道的一切的守护者……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 25000,
+    "price_postapoc": 2000,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "book_philosophy",
+    "color": "brown",
+    "skill": "magic",
+    "required_level": 2,
+    "max_level": 5,
+    "intelligence": 11,
+    "time": "40 m",
+    "fun": -2,
+    "flags": [
+      "INSPIRATIONAL"
+    ]
+  },
+  {
+    "id": "book_bloodmagic",
+    "type": "BOOK",
+    "name": {
+      "str": "血法典",
+      "str_pl": "血抄本"
+    },
+    "description": "一本用深褐色墨水写的书，几乎像干血。它展示了几种看起来痛苦的仪式，从生物的血液中汲取强大的能量，这是一个血法师的修行。\n“生命本身就有力量。其中也有斗争、动乱和混乱。要走这条路，就需要恰当地利用所说的不和谐，即使当一个人从生活中汲取力量时……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 30000,
+    "price_postapoc": 2100,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "textbook_chemistry",
+    "color": "red",
+    "skill": "magic",
+    "required_level": 3,
+    "max_level": 6,
+    "intelligence": 10,
+    "time": "20 m",
+    "fun": -4
+  },
+  {
+    "id": "book_hexenhammer",
+    "type": "BOOK",
+    "name": {
+      "str": "净化之火",
+      "str_pl": "清洁火焰的副本"
+    },
+    "description": "一本由一些神秘的宗教团体写的书，致力于摧毁侵入这个领域的超自然的事物。他们使用他们认为是神圣的“魔法”的本质。\n“为那些危害人类的人伸张正义，如果我们必须的话。如果可以的话，去修补世界之间日益增长的伤口。守卫和引导，以避免危险的道路，所以我们将。只要太阳照耀大地。”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 35000,
+    "price_postapoc": 2100,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "holybook_bible2",
+    "color": "light_blue",
+    "skill": "magic",
+    "required_level": 4,
+    "max_level": 7,
+    "intelligence": 9,
+    "time": "20 m",
+    "fun": -1,
+    "flags": [
+      "INSPIRATIONAL"
+    ]
+  },
+  {
+    "id": "book_sacrifice",
+    "type": "BOOK",
+    "name": {
+      "str": "圣杯宣誓",
+      "str_pl": "圣杯宣誓书副本"
+    },
+    "description": "一本奇怪的书，封面上有三叉戟图案，描述了一些超凡脱俗的邪教仪式，从面纱之外宣扬他。然而，这些仪式的细节是令人不安的。\n“透过我的幻觉，我看到滚滚的雾气扫过了一千个世界的山谷。我目睹了无数城市的衰败，由无尽的无名之物建成。在那里，影子凝聚成一种形式，一种指引我的存在……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 40000,
+    "price_postapoc": 2000,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "holybook_bible1",
+    "color": "blue",
+    "skill": "magic",
+    "required_level": 5,
+    "max_level": 8,
+    "intelligence": 10,
+    "time": "30 m",
+    "fun": -3,
+    "flags": [
+      "INSPIRATIONAL"
+    ]
+  },
+  {
+    "id": "book_syncretism",
+    "type": "BOOK",
+    "name": {
+      "str": "阴影中的故事",
+      "str_pl": "影子中的故事副本"
+    },
+    "description": "一本书讨论了一些特殊的邪教和宗教秩序的历史，以及它们在大灾难前几年的冲突。它描述了一些特殊的仪式和概念的基础上所提到的主要群体的哲学，以及思考他们各自的优点和缺点。\n“阿谁，锤子和圣杯。为了琐碎的力量而跟踪和战斗，如同盲目的世界追求一切的终结。一切事物都是，将来也将是，正如所写的那样……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 45000,
+    "price_postapoc": 2700,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "holybook_kojiki",
+    "color": "light_gray",
+    "skill": "magic",
+    "required_level": 4,
+    "max_level": 9,
+    "intelligence": 10,
+    "time": "45 m",
+    "fun": -2
+  },
+  {
+    "id": "book_summoning",
+    "type": "BOOK",
+    "name": {
+      "str": "去掌握未知",
+      "str_pl": "复制来掌握未知"
+    },
+    "description": "一本描述了几种超自然生物及其起源的书，或者至少是对这些起源的推测。更奇怪的是，它描述了召唤和……控制它们的实验？\n“在没有足够的催化剂的情况下，那些住在外面的人不容易被召入服务岗位。最容易从裂缝中溜走的只是一个影子，甚至是阴影的反射，给定的形式是可以驯服的……”",
+    "weight": "454 g",
+    "volume": "1 L",
+    "price": 50000,
+    "price_postapoc": 2000,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "welding_book",
+    "color": "dark_gray",
+    "skill": "magic",
+    "required_level": 6,
+    "max_level": 10,
+    "intelligence": 11,
+    "time": "45 m",
+    "fun": -3
+  },
+  {
+    "id": "recipe_lab_arcana",
+    "type": "BOOK",
+    "name": {
+      "str": "奎因实验室杂志",
+      "str_pl": "奎因实验室期刊"
+    },
+    "description": "这本厚厚的活页夹包含了许多关于反常材料研究的报告，以及涉及各种超自然现象的实验日志。尽管写作的基调传达出对每一个发现越来越超自然的精华越来越失望，但人们还是努力对发生的事件背后所涉及的物理现象进行假设…",
+    "weight": "2000 g",
+    "volume": "500 ml",
+    "price": 56000,
+    "price_postapoc": 2000,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "recipe_lab_elec",
+    "color": "light_green",
+    "skill": "magic",
+    "required_level": 5,
+    "max_level": 8,
+    "intelligence": 12,
+    "time": "45 m",
+    "fun": -2
+  },
+  {
+    "id": "note_grove",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "破烂的纸条"
+    },
+    "description": "字迹潦草的旧纸片。",
+    "snippet_category": "note_grove"
+  },
+  {
+    "id": "note_sanguine",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "血迹斑斑的便条"
+    },
+    "description": "一张被旧的干血弄脏的纸。",
+    "snippet_category": "note_sanguine"
+  },
+  {
+    "id": "note_chalice",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "奇怪的音符"
+    },
+    "description": "一张纸，上面有奇怪的文字。",
+    "snippet_category": "note_chalice"
+  },
+  {
+    "id": "note_flame",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "签过字的笔记"
+    },
+    "description": "一张纸，上面写着字，边缘焦灼，仿佛是匆忙从壁炉里救出来的。",
+    "snippet_category": "note_flame"
+  },
+  {
+    "id": "note_sanguine_tenet",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "血迹斑斑的便条"
+    },
+    "description": "一张被旧的干血弄脏的纸。",
+    "snippet_category": "note_sanguine_tenet"
+  },
+  {
+    "id": "note_chalice_tenet",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "奇怪的音符"
+    },
+    "description": "一张纸，上面有奇怪的文字。",
+    "snippet_category": "note_chalice_tenet"
+  },
+  {
+    "id": "note_flame_tenet",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "签过字的笔记"
+    },
+    "description": "一张纸，上面写着字，边缘焦灼，仿佛是匆忙从壁炉里救出来的。",
+    "snippet_category": "note_flame_tenet"
+  },
+  {
+    "id": "note_starry_missive",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "旧信件"
+    },
+    "description": "一张风化的旧纸。",
+    "snippet_category": "note_starry_correspondence"
+  },
+  {
+    "id": "note_soa_mission",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "折叠的钞票"
+    },
+    "description": "折叠整齐的纸条。",
+    "snippet_category": "note_soa_journal"
+  },
+  {
+    "id": "arcanemap",
+    "type": "GENERIC",
+    "category": "books",
+    "name": {
+      "str": "奇怪的地图"
+    },
+    "description": "这是当地的手绘地图。不管是谁创造了这个，他已经在几个地方做了标记，似乎是在一个偏僻的地方。使用它可以在地图上标记这些奇怪的位置。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": 5000,
+    "price_postapoc": 1000,
+    "to_hit": -1,
+    "material": [
+      "paper"
+    ],
+    "symbol": ";",
+    "looks_like": "survivormap",
+    "color": "white",
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 180,
+      "terrain": [
+        "hiway",
+        "road",
+        "bridge",
+        "curious_structure",
+        "strange_grove",
+        "impact_site",
+        "island_temple_1",
+        "cabin_strange",
+        "standing_stones",
+        "temple_stairs",
+        "shrine_anomaly"
+      ],
+      "message": "你会在地图上添加奇怪的庙宇，毁坏的神殿，奇怪的建筑，撞击地点，奇特的神龛和奇怪的小树林。"
+    }
+  },
+  {
+    "id": "index_potioncraft",
+    "copy-from": "arcana_note_base",
+    "sub": "book_potioncraft",
+    "type": "TOOL",
+    "name": {
+      "str": "炼金术参考注释",
+      "str_pl": "炼金术参考注释集"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "//": "All reference notes are post-cataclysm, and only useful to people already intimately familiar with the base book.",
+    "price_postapoc": 150,
+    "description": "一堆叠得整整齐齐的纸，里面装满了深奥的化学公式和历史脚注，其中一些似乎是从古希腊语、拉丁语、阿拉伯语甚至汉语中摘录的。它详细介绍了一位经验丰富的炼金术士的发现和实践，除了必要的信息和提示之外什么也没有，这可能对博学多才的作者有益。"
+  },
+  {
+    "id": "index_scrollcraft",
+    "copy-from": "arcana_note_base",
+    "sub": "book_scrollcraft",
+    "type": "TOOL",
+    "name": {
+      "str": "抄写员参考笔记",
+      "str_pl": "抄写员参考笔记集"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 200,
+    "description": "一把卷起的纸，上面写满了奇怪的宗教风景的引文和粗略的草图。它详细地研究了一个经验丰富的文士，精通知识，伪装成异域宗教诗歌，只包含基本信息和提示，为可能是学识渊博的作者的利益。"
+  },
+  {
+    "id": "index_bloodmagic",
+    "copy-from": "arcana_note_base",
+    "sub": "book_bloodmagic",
+    "type": "TOOL",
+    "name": {
+      "str": "血宗参考笔记",
+      "str_pl": "一套血宗的参考笔记"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 210,
+    "description": "一本皱巴巴的、破烂的文件集，里面充满了病态仪式的轮廓和关于血液问题的令人毛骨悚然的参考。它详细介绍了一个经验丰富的血法师的研究，除了基本的信息和提示之外什么都没有，这可能对博学的作者有益。"
+  },
+  {
+    "id": "index_hexenhammer",
+    "copy-from": "arcana_note_base",
+    "sub": "book_hexenhammer",
+    "type": "TOOL",
+    "name": {
+      "str": "清洁火焰参考注释",
+      "str_pl": "火焰净化参考集"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 210,
+    "description": "一个精心收集的文件，概述了神圣的仪式和重要的做法，混合了各种宗教活动证明了一个秩序，保护人类免受危险的魔法。它详细介绍了一个经验丰富的法师猎人的研究，除了基本的信息和提示之外什么都没有，这可能对博学的作者有好处。"
+  },
+  {
+    "id": "index_sacrifice",
+    "copy-from": "arcana_note_base",
+    "sub": "book_sacrifice",
+    "type": "TOOL",
+    "name": {
+      "str": "神秘参考笔记",
+      "str_pl": "神秘参考注释集"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 200,
+    "description": "一种精心保存的各种各样的文件，大多装满了对一个超自然的上帝的赞美诗和其他不寻常的引语。进一步阅读后，很明显，每首歌和每段经文都有仪式的目的，详细介绍了一位有经验的学者对这一非尘世信仰的研究，除了基本的信息和提醒之外，什么都没有，这对可能学识渊博的作者是有益的。"
+  },
+  {
+    "id": "index_syncretism",
+    "copy-from": "arcana_note_base",
+    "sub": "book_syncretism",
+    "type": "TOOL",
+    "name": {
+      "str": "神秘参考注释",
+      "str_pl": "一套神秘的参考笔记"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 270,
+    "description": "一堆乱七八糟的文件，上面写满了各种奇怪的仪式，似乎来自不同的矛盾来源。写这本书的人是一个游历甚广的神秘主义者的学生，他们用基本的信息和提示来充实自己的研究，以期对博学的作者有所裨益。"
+  },
+  {
+    "id": "index_summoning",
+    "copy-from": "arcana_note_base",
+    "sub": "book_summoning",
+    "type": "TOOL",
+    "name": {
+      "str": "传唤人参考笔记",
+      "str_pl": "召唤师参考笔记集"
+    },
+    "weight": "60 g",
+    "volume": "100ml",
+    "price_postapoc": 200,
+    "description": "整齐有序的文件集，充满奇怪的符号和杂乱无章的文字。有几处文字被令人不安的超自然恐怖的细节草图打断。它详细介绍了一个经验丰富的传唤者的发现，除了基本的信息和提示之外什么都没有，这可能对博学的作者有益。"
+  },
+  {
+    "id": "cf_rep_trade_arrangement",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "贸易安排",
+      "str_pl": "成套贸易安排"
+    },
+    "description": "索菲亚手写的基本工具和用品清单，以及各种剩余物品的清单。"
+  },
+  {
+    "id": "cf_rep_trade_receipt",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "贸易协定收据",
+      "str_pl": "贸易协定收据"
+    },
+    "description": "一份匆忙打印的打印件，确认了自由商人和乡村教堂幸存者之间的安排。"
+  },
+  {
+    "id": "manual_cleansingflame",
+    "copy-from": "book_martial",
+    "type": "GENERIC",
+    "name": {
+      "str": "剑与锤之路",
+      "str_pl": "剑与锤之路的复制品"
+    },
+    "description": "一份手写的抄本，详细描述了一个古怪的秩序、邪恶的猎人和超凡脱俗的战斗方法。",
+    "price": 200000,
+    "price_postapoc": 20000,
+    "looks_like": "manual_swordsmanship",
+    "book_data": {
+      "martial_art": "style_cleansingflame"
+    }
+  },
+  {
+    "id": "offering_mission_notes",
+    "copy-from": "arcana_note_base",
+    "type": "GENERIC",
+    "weight": "2000 g",
+    "volume": "1500 ml",
+    "material": [
+      "clay"
+    ],
+    "color": "brown",
+    "looks_like": "ceramic_armor",
+    "price": 100000,
+    "price_postapoc": 0,
+    "name": {
+      "str": "题字泥碑"
+    },
+    "description": "一块小小的粘土碑，上面用古怪的文字写着关于超自然事物的论述。它的大部分内容几乎难以辨认，与哲学有关的东西比任何实际问题都要多，但合适的人也许能够从中汲取一些有用的东西。",
+    "flags": [
+      "NO_SALVAGE",
+      "TRADER_AVOID",
+      "TRADER_KEEP",
+      "MAGIC_FOCUS"
+    ]
+  },
+  {
+    "id": "arcana_dream_journal",
+    "type": "BOOK",
+    "name": {
+      "str": "漫话日记"
+    },
+    "description": "一个小平装本笔记本，里面有一些不幸的前幸存者的日记。大多数条目形成了一个梦境日记，而不是叙述那天发生的一切，还有一些条目的日期甚至不符合顺序。大部分看起来像是胡说八道，但也许有人能解释。",
+    "weight": "340 g",
+    "volume": "750 ml",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "priest_diary",
+    "symbol": "?",
+    "color": "light_gray",
+    "intelligence": 12,
+    "time": "30 m",
+    "fun": -1,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "sanguine_mission_notes",
+    "type": "BOOK",
+    "name": {
+      "str": "圣血简编"
+    },
+    "description": "一种皮革装订的笔记本，其内容包括手写的笔记和草图，似乎是由至少两个不同的人写的，以及一些其他文学作品的木版印刷品。尽管它的主题是病态的，各种各样的事件和仪式的总结和阐述，要想真正从书中收集到任何有用的东西，就需要一个精通其中细节异常活动的人进行广泛的研究。",
+    "weight": "454 g",
+    "volume": "1 L",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "priest_diary",
+    "symbol": "?",
+    "color": "light_gray",
+    "intelligence": 14,
+    "time": "45 m",
+    "fun": -2,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "type": "faction",
+    "id": "cleansing_flame",
+    "name": "净化之火",
+    "likes_u": 0,
+    "respects_u": 0,
+    "known_by_u": false,
+    "size": 50,
+    "power": 100,
+    "food_supply": 115200,
+    "wealth": 25000000,
+    "currency": "CF_golden_scale",
+    "relations": {
+      "cleansing_flame": {
+        "kill on sight": false,
+        "watch your back": true,
+        "share my stuff": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "defends your space": true,
+        "knows your voice": true
+      },
+      "your_followers": {
+        "kill on sight": false,
+        "watch your back": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "knows your voice": true
+      },
+      "sanguine_order_remnant": {
+        "kill on sight": true,
+        "knows your voice": true
+      }
+    },
+    "description": "在大灾变前的某个时期，当地的宗教融合组织。现在，他们的残余物致力于追捕危险的魔法和超自然的怪物。"
+  },
+  {
+    "type": "faction",
+    "id": "keeper_remnant",
+    "name": "孤独的隐士",
+    "likes_u": 0,
+    "respects_u": 0,
+    "known_by_u": false,
+    "size": 1,
+    "power": 100,
+    "food_supply": 20000,
+    "wealth": 30000,
+    "lone_wolf_faction": true,
+    "relations": {
+      "keeper_remnant": {
+        "kill on sight": false,
+        "watch your back": true,
+        "share my stuff": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "defends your space": true,
+        "knows your voice": true
+      },
+      "your_followers": {
+        "kill on sight": false,
+        "watch your back": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "knows your voice": true
+      },
+      "cleansing_flame": {
+        "knows your voice": true
+      },
+      "sanguine_order_remnant": {
+        "knows your voice": true
+      }
+    },
+    "description": "一个孤独的幸存者，似乎只对远离旧世界废墟的平静生活感兴趣。他好像有点不对劲。。。"
+  },
+  {
+    "type": "faction",
+    "id": "sanguine_order_remnant",
+    "name": "血淋淋的遗骸",
+    "likes_u": -5,
+    "respects_u": -5,
+    "known_by_u": false,
+    "size": 7,
+    "power": 100,
+    "food_supply": 85000,
+    "wealth": 300000,
+    "relations": {
+      "sanguine_order_remnant": {
+        "kill on sight": false,
+        "watch your back": true,
+        "share my stuff": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "defends your space": true,
+        "knows your voice": true
+      },
+      "your_followers": {
+        "knows your voice": true
+      },
+      "cleansing_flame": {
+        "kill on sight": true,
+        "knows your voice": true
+      }
+    },
+    "description": "大灾变前嗜血的伪邪教的残羹剩饭。剩下的人仍在继续研究引导他们走上杀戮之路的研究，从过去的失败中汲取一点微光。"
+  },
+  {
+    "type": "faction",
+    "id": "sanguine_shrike_splinter",
+    "name": "血质伯劳鸟分裂细胞",
+    "likes_u": -1,
+    "respects_u": -1,
+    "known_by_u": false,
+    "size": 5,
+    "power": 100,
+    "food_supply": 20000,
+    "wealth": 30000,
+    "relations": {
+      "sanguine_shrike_splinter": {
+        "kill on sight": false,
+        "watch your back": true,
+        "share my stuff": true,
+        "guard your stuff": true,
+        "lets you in": true,
+        "defends your space": true,
+        "knows your voice": true
+      },
+      "your_followers": {
+        "knows your voice": true
+      },
+      "sanguine_order_remnant": {
+        "kill on sight": true,
+        "knows your voice": true
+      },
+      "cleansing_flame": {
+        "knows your voice": true
+      }
+    },
+    "description": "少数幸存者曾是一个现已被打破的杀人邪教的精英“猎人”。他们的行为违背了他们的秩序，他们的动机尚不清楚。"
+  }
+]

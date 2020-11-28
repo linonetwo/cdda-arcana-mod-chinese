@@ -1,0 +1,19 @@
+[
+  {
+    "type": "SPECIES",
+    "id": "ARCANA_SUMMONED",
+    "description": "召唤的怪物",
+    "footsteps": "微弱的耳语。"
+  },
+  {
+    "type": "SPECIES",
+    "//": "This is for a touch of compatibility with Magiclysm.",
+    "id": "DRAGON",
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ]
+  }
+]

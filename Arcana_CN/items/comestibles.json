@@ -1,0 +1,442 @@
+[
+  {
+    "id": "numbness_potion",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "category": "drugs",
+    "name": {
+      "str": "黑药",
+      "str_pl": "黑药"
+    },
+    "description": "一种奇怪的黑色液体，闻起来像死亡。据称，这是创造长生不老药的第一步。喝这个会使身体麻木，但会让你有点迟钝。",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "//": "Uncommon but still producible, medical items generally shot up in value post-cataclysm.",
+    "price": 2000,
+    "price_postapoc": 4000,
+    "phase": "liquid",
+    "container": "bottle_glass",
+    "looks_like": "poppy_pain",
+    "symbol": "~",
+    "color": "dark_gray",
+    "healthy": -4,
+    "fun": -4,
+    "freezing_point": -150,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You drink the potion and feel a strange numbness spread through your body.",
+      "effects": [
+        {
+          "id": "potion_numbness",
+          "duration": 900
+        }
+      ]
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "strength_potion",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "category": "drugs",
+    "name": {
+      "str": "白色药水",
+      "str_pl": "白色药水"
+    },
+    "description": "一种奇怪的白色液体，气味让你鼻子发痒。据说，这是创造长生不老药的第二步。喝这种酒会使身体强壮，但会有轻微的疼痛和其他副作用。",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "price": 3000,
+    "price_postapoc": 6000,
+    "phase": "liquid",
+    "container": "bottle_glass",
+    "looks_like": "poppy_pain",
+    "symbol": "~",
+    "color": "dark_gray",
+    "healthy": -2,
+    "fun": -2,
+    "freezing_point": -150,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You drink the potion and feel wicked power spread through your body.",
+      "effects": [
+        {
+          "id": "potion_strength",
+          "duration": 900
+        }
+      ]
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "speed_potion",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "category": "drugs",
+    "name": {
+      "str": "黄色药水",
+      "str_pl": "黄色药水"
+    },
+    "description": "一种奇怪的黄色液体，有醉人的气味。据称，这是创造长生不老药的第三步。喝这个可以提高你的速度和灵巧度，但这不是一个愉快的体验。",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "price": 4000,
+    "price_postapoc": 8000,
+    "phase": "liquid",
+    "container": "bottle_glass",
+    "looks_like": "poppy_pain",
+    "symbol": "~",
+    "color": "dark_gray",
+    "healthy": 2,
+    "fun": 2,
+    "freezing_point": -150,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You drink the potion and feel a sudden tension spread through your body.",
+      "effects": [
+        {
+          "id": "potion_speed",
+          "duration": 900
+        }
+      ]
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "healing_potion",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "category": "drugs",
+    "name": {
+      "str": "红色药水",
+      "str_pl": "红色药水"
+    },
+    "description": "一种散发出甜味的奇怪的微红色液体。长生不老药，还是仅仅是一种模仿？喝这种药可以治好很多病，也可以治愈一点损伤。它可以治愈出血，避免感染，并清除一些疾病，包括真菌感染，但它不能清除一个感染的咬口，还没有站稳脚跟。",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "price": 5000,
+    "price_postapoc": 10000,
+    "phase": "liquid",
+    "container": "bottle_glass",
+    "looks_like": "poppy_pain",
+    "symbol": "~",
+    "color": "light_red",
+    "healthy": 4,
+    "fun": 4,
+    "freezing_point": -150,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You drink the potion and feel a pleasant warmth spread through your body.",
+      "effects": [
+        {
+          "id": "potion_healing",
+          "duration": 900
+        }
+      ],
+      "vitamins": [
+        [
+          "blood",
+          2500
+        ],
+        [
+          "redcells",
+          2500
+        ]
+      ],
+      "damage_over_time": [
+        {
+          "damage_type": "true",
+          "duration": "1 s",
+          "amount": -5,
+          "bodyparts": [
+            "torso",
+            "head",
+            "arm_l",
+            "leg_l",
+            "arm_r",
+            "leg_r"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "red_black_vulnerary",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "drugs",
+    "//": "Technically carmine with purpleish-red, not black and red.  Lower base healing than water talisman, but better results with first aid skill.",
+    "name": {
+      "str": "胭脂红",
+      "str_pl": "胭脂红"
+    },
+    "description": "浸在炼金术混合物中的一块布片，形成一种药膏，使其效果更加精细和集中。它可以治愈伤口，而不仅仅是避免失血，在感染伤口变成脓毒症之前清除伤口。然而，它对更深层次的疾病失去作用，只会阻止孢子并提供一些止痛效果。",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "price": 4500,
+    "price_postapoc": 9000,
+    "looks_like": "disinrag",
+    "symbol": "!",
+    "color": "red",
+    "charges": 4,
+    "stack_size": 9,
+    "use_action": {
+      "type": "heal",
+      "limb_power": 3,
+      "head_power": 3,
+      "torso_power": 3,
+      "limb_scaling": 2.7,
+      "head_scaling": 2.7,
+      "torso_scaling": 2.7,
+      "bleed": 30,
+      "bite": 0.95,
+      "move_cost": 200,
+      "effects": [
+        {
+          "id": "potion_vulnerary",
+          "duration": 300
+        }
+      ]
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "yellow_white_incense",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "drugs",
+    "name": {
+      "str": "柠檬香",
+      "str_pl": "柠檬香"
+    },
+    "//": "Citrine isn't quite white-yellow either, but jasmine incense would imply the flower rather than the color.  Last piece of advice in the description, while common sense, is only really a concern with sleep deprivation enabled.",
+    "description": "一种渗入可燃木炭或树脂基的炼金术混合物，产生一种特殊的香。点燃它会迅速烧掉这种奇怪的混合物，用一种类似于最初用来制造它的药剂的集中效果来激励它的使用者。它用它对强度和速度的影响来换取通过不寻常的方法直接缓解疲劳，尽管不建议长期使用而不休息。",
+    "weight": "550 g",
+    "volume": "250 ml",
+    "price": 3500,
+    "price_postapoc": 7000,
+    "looks_like": "charcoal",
+    "symbol": "!",
+    "color": "light_gray",
+    "charges": 2,
+    "stack_size": 9,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "Wisps of smoke rapidly fade away as you light the incense, filling you with energy.",
+      "effects": [
+        {
+          "id": "potion_incense",
+          "duration": 900
+        }
+      ],
+      "charges_needed": {
+        "fire": 1
+      },
+      "moves": 50
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "dragonblood_mutagen",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "category": "drugs",
+    "name": {
+      "str": "血像",
+      "str_pl": "血像"
+    },
+    "looks_like": "blood",
+    "description": "一种凝固的液体，有点像血，似乎有自己的生命在跳动。对开发一个超凡脱俗生物的不完全研究工作，可以永久地改变身体和思想。然而，如果没有这种力量的原始来源，它只能走这么远。",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": 12000,
+    "price_postapoc": 3000,
+    "phase": "liquid",
+    "container": "flask_glass",
+    "symbol": "~",
+    "color": "red",
+    "healthy": -6,
+    "fun": -8,
+    "charges": 4,
+    "freezing_point": -10,
+    "use_action": {
+      "type": "mutagen",
+      "mutation_category": "DRAGONBLOOD"
+    },
+    "flags": [
+      "NO_INGEST",
+      "EATEN_COLD",
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "flame_talisman",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "tools",
+    "name": {
+      "str": "火焰护身符"
+    },
+    "description": "一种粗糙的纸制护身符，上面有奇怪的图案，并涂有少量的祭品。如果你走投无路，它可以用来迅速点火。",
+    "//": "Talismans are natural magic, rare to non-existent pre-cataclysm as they develop from survivors studying otherworldly phenomena and connecting it to familiar concepts.",
+    "price_postapoc": 300,
+    "weight": "150 g",
+    "volume": "100 ml",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "birchbark",
+    "symbol": ",",
+    "color": "cyan",
+    "charges": 10,
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "firestarter",
+      "moves": 5
+    },
+    "flags": [
+      "NO_SALVAGE",
+      "NO_INGEST",
+      "FIRESTARTER",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "water_talisman",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "tools",
+    "name": {
+      "str": "水符"
+    },
+    "description": "一种粗糙的纸护身符，上面有奇怪的图案，上面涂有猎人的祭品。它可以用来治疗小伤口，同时对某些炼金术效果提供有限的抵抗力。",
+    "price_postapoc": 600,
+    "weight": "150 g",
+    "volume": "100 ml",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "birchbark",
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "heal",
+      "limb_power": 5,
+      "head_power": 5,
+      "torso_power": 5,
+      "limb_scaling": 1,
+      "head_scaling": 1,
+      "torso_scaling": 1,
+      "bleed": 15,
+      "bite": 0.5,
+      "move_cost": 25,
+      "effects": [
+        {
+          "id": "talisman_warding",
+          "duration": 600
+        }
+      ]
+    },
+    "flags": [
+      "NO_SALVAGE",
+      "NO_INGEST",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "earth_talisman",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "tools",
+    "name": {
+      "str": "土符"
+    },
+    "description": "一种粗糙的纸制护身符，上面有奇怪的图案，并涂有特殊的祭品。使用它将召唤和改变一个奇怪的土石方结构，在绝望的时候充当一个贫瘠的避难所。",
+    "price_postapoc": 1200,
+    "weight": "150 g",
+    "volume": "100 ml",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "birchbark",
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "deploy_tent",
+      "radius": 2,
+      "broken_type": "candle_barrier_aftermath",
+      "wall": "f_spires_arcana",
+      "floor": "f_pozdol_arcana",
+      "floor_center": "f_altar_arcana",
+      "door_opened": "f_door_arcana_o",
+      "door_closed": "f_door_arcana_c"
+    },
+    "flags": [
+      "NO_SALVAGE",
+      "NO_INGEST",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "air_talisman",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "tools",
+    "name": {
+      "str": "空中护身符"
+    },
+    "description": "一种粗糙的纸制护身符，上面有奇怪的图案，涂有纯祭品。使用它可以将附近召唤的怪物绑定为熟人，如果他们不是敌对的，允许他们用于更复杂的工作。此外，它将为它们注入保护性能量，赋予它们对大多数环境危害的免疫力。保护作用持续一天，黏结作用持续200天。",
+    "price_postapoc": 2400,
+    "weight": "150 g",
+    "volume": "100 ml",
+    "material": [
+      "paper"
+    ],
+    "looks_like": "birchbark",
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_pet",
+      "no_fail": true,
+      "level": 0
+    },
+    "flags": [
+      "NO_SALVAGE",
+      "NO_INGEST",
+      "NUTRIENT_OVERRIDE"
+    ]
+  }
+]

@@ -1,0 +1,533 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER",
+    "responses": [
+      {
+        "text": "你对其他的行为，其他奇怪的力量有什么了解？",
+        "topic": "TALK_BONE_SEER_POWER",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "seer_mark"
+            },
+            {
+              "u_has_any_trait": [
+                "PROF_ARCANIST",
+                "PROF_ARCANIST2",
+                "PROF_CLEANSINGFLAME",
+                "PROF_CLEANSINGFLAME2",
+                "PROF_SANGUINE",
+                "PROF_CHALICE",
+                "THRESH_VEIL",
+                "THRESH_DRAGONBLOOD"
+              ]
+            },
+            {
+              "not": {
+                "u_has_var": "gave_monsterpart",
+                "type": "dialogue",
+                "context": "beyond",
+                "value": "yes"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER",
+    "dynamic_line": "我不知道你要什么。我只是收集骨头听他们的歌。也许还有其他的诗句需要收集，但它们会使人误入歧途。",
+    "responses": [
+      {
+        "text": "我可以教很多东西，作为你给我的教训的补偿。我的主人希望我传播他的话。",
+        "condition": {
+          "u_has_trait": "THRESH_VEIL"
+        },
+        "switch": true,
+        "topic": "TALK_BONE_SEER_POWER_CHALICE"
+      },
+      {
+        "text": "尽管你的做法很病态，但它们并没有真正的魔力。这只是一个宗教仪式。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "switch": true,
+        "topic": "TALK_BONE_SEER_POWER_CLEANSINGFLAME"
+      },
+      {
+        "text": "你在生活中寻求力量。不管是骨头、血肉还是血肉，都有更大的真理需要学习。",
+        "condition": {
+          "u_has_trait": "PROF_SANGUINE"
+        },
+        "switch": true,
+        "topic": "TALK_BONE_SEER_POWER_SANGUINE"
+      },
+      {
+        "text": "看看我。你以前肯定见过突变体，但这里还有更深刻的东西。来自这个世界的力量让我走上了这条路。",
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
+        "topic": "TALK_BONE_SEER_POWER_DRAGONBLOOD"
+      },
+      {
+        "text": "也许在研究骨头，特别是那些被超越的事物的骨骼研究中，还有其他的东西需要学习。",
+        "topic": "TALK_BONE_SEER_POWER_GENERAL"
+      },
+      {
+        "text": "没有关系。没什么。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_CHALICE",
+    "dynamic_line": "我有我的信念，我会紧跟在心，但我不会否认你的远见。只要不妨碍我的工作。你追求什么目的？",
+    "responses": [
+      {
+        "text": "我想让你看看未来的潜力。",
+        "topic": "TALK_BONE_SEER_POWER_POTENTIAL"
+      },
+      {
+        "text": "你知不知道有来自远方的力量，他们追求着无数的目标？",
+        "topic": "TALK_BONE_SEER_POWER_MYRIAD"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_POTENTIAL",
+    "dynamic_line": "许多事物都有潜力，但很少有事物具有同样的持久性。我对你所寻求的一切一无所知，只知道它在某种程度上受制于循环，而骨头却不是。",
+    "responses": [
+      {
+        "text": "也许我可以给你看些能启发你的东西，就像你启发了我一样。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "所以你声称。也许下次，我会告诉你隐藏的真相。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_OFFER",
+    "dynamic_line": "是这样吗？我在听呢。",
+    "responses": [
+      {
+        "text": "你怎么看这个？这是一个怪物的牙，它不属于这个世界，用超自然的水晶制成。",
+        "condition": {
+          "u_has_item": "graboid_fang"
+        },
+        "topic": "TALK_BONE_SEER_POWER_OFFER_GRABOID_FANG"
+      },
+      {
+        "text": "这个怎么样？从一个超自然的怪物身上撕下来的牙。",
+        "condition": {
+          "u_has_item": "monster_fang"
+        },
+        "topic": "TALK_BONE_SEER_POWER_OFFER_MONSTER_FANG"
+      },
+      {
+        "text": "这些骨头是一个扭曲的结，是超自然的存在。这能证明我的观点吗？",
+        "condition": {
+          "u_has_item": "bone_twisted"
+        },
+        "topic": "TALK_BONE_SEER_POWER_OFFER_BONE_TWISTED"
+      },
+      {
+        "text": "这是一个被外界触碰的生物的指骨。够了吗？",
+        "condition": {
+          "u_has_item": "gracken_knuckles"
+        },
+        "topic": "TALK_BONE_SEER_POWER_OFFER_GRACKEN_KNUCKLES"
+      },
+      {
+        "text": "我不确定什么是合适的。也许下次吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_OFFER_GRABOID_FANG",
+    "dynamic_line": "真奇怪。通常我会认为这是愚蠢的，因为石头会唱什么歌？但我能听到它的低语，它像一首用另一种语言唱的歌，但它唱起来却像骨头一样。我不知道怎么才能报答你，但你愿意放弃吗？",
+    "responses": [
+      {
+        "text": "前进。这是你的。",
+        "effect": [
+          {
+            "u_consume_item": "graboid_fang"
+          },
+          {
+            "u_add_var": "gave_monsterpart",
+            "type": "dialogue",
+            "context": "beyond",
+            "value": "yes"
+          }
+        ],
+        "topic": "TALK_BONE_SEER_POWER_STUDY"
+      },
+      {
+        "text": "我现在还不能放弃。我很抱歉。",
+        "topic": "TALK_BONE_SEER_POWER_REFUSAL"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_STUDY",
+    "dynamic_line": "非常感谢。我需要一些时间来收集它的歌曲。也许你是对的，这件事比我所目睹的还要多。这些诗句远远超出我的经验，其中肯定有很大的力量…",
+    "responses": [
+      {
+        "text": "如果你不介意的话，我们还有很多事情要讨论。",
+        "topic": "TALK_BONE_SEER"
+      },
+      {
+        "text": "不客气。现在就这些了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_REFUSAL",
+    "dynamic_line": "我懂了。不管怎样，你有我的好奇心。那下次吧。我要听听你所听到的，看看这些奇怪的骨头所唱的诗句是否有价值。",
+    "responses": [
+      {
+        "text": "我们拭目以待。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_OFFER_MONSTER_FANG",
+    "dynamic_line": "象牙，比骨头更短暂，也更短暂，但却一成不变。我能听到低语的诗句，这首歌的共鸣是我从未听过的。如果你所说的奇怪的话有什么道理，我必须亲自去查证。求你了，我想我不能好好报答你，但你愿意放弃吗？",
+    "responses": [
+      {
+        "text": "前进。这是你的。",
+        "effect": [
+          {
+            "u_consume_item": "monster_fang"
+          },
+          {
+            "u_add_var": "gave_monsterpart",
+            "type": "dialogue",
+            "context": "beyond",
+            "value": "yes"
+          }
+        ],
+        "topic": "TALK_BONE_SEER_POWER_STUDY"
+      },
+      {
+        "text": "我现在还不能放弃。我很抱歉。",
+        "topic": "TALK_BONE_SEER_POWER_REFUSAL"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_OFFER_BONE_TWISTED",
+    "dynamic_line": "即使是在那些摇摇欲坠的亡灵之中，我也从未见过他们骨子里如此的不和和争斗。你几乎可以读懂刻在每一个纠结的表面上的经文，是什么能创造出这样的东西？拜托，你必须把它给我。我不知道我是否能报答你的好意…",
+    "responses": [
+      {
+        "text": "前进。这是你的。",
+        "effect": [
+          {
+            "u_consume_item": "bone_twisted"
+          },
+          {
+            "u_add_var": "gave_monsterpart",
+            "type": "dialogue",
+            "context": "beyond",
+            "value": "yes"
+          }
+        ],
+        "topic": "TALK_BONE_SEER_POWER_STUDY"
+      },
+      {
+        "text": "我现在还不能放弃。我很抱歉。",
+        "topic": "TALK_BONE_SEER_POWER_REFUSAL"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_OFFER_GRACKEN_KNUCKLES",
+    "dynamic_line": "啊，这是一种非常传统的方式来聆听歌曲，掌握内在的力量。我从来没听过这些诗。这是真的吗，从这些骨头中还有更多的东西要学吗？我不能报答你，但是请。如果你愿意和他们分开…",
+    "responses": [
+      {
+        "text": "前进。这是你的。",
+        "effect": [
+          {
+            "u_consume_item": "gracken_knuckles"
+          },
+          {
+            "u_add_var": "gave_monsterpart",
+            "type": "dialogue",
+            "context": "beyond",
+            "value": "yes"
+          }
+        ],
+        "topic": "TALK_BONE_SEER_POWER_STUDY"
+      },
+      {
+        "text": "我现在还不能放弃。我很抱歉。",
+        "topic": "TALK_BONE_SEER_POWER_REFUSAL"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_MYRIAD",
+    "dynamic_line": "尽管我不知道他们的名字，但我敢肯定。但是，他们都受制于我们所陷入的周期。",
+    "responses": [
+      {
+        "text": "我可以给你看一些你可以学习的东西。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "也许你是对的。到时候见吧。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_CLEANSINGFLAME",
+    "dynamic_line": "这不仅仅是一种仪式。你听过这些歌，是吗？你还需要什么？",
+    "responses": [
+      {
+        "text": "我可以给你看些东西来解释我所说的。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "没有关系。争论是没有意义的。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_SANGUINE",
+    "dynamic_line": "我并不是单纯出于对权力的贪欲，在这些骨头里聚集力量，聚敛歌曲。这是我的责任，收集诗句，与我的亲属。",
+    "responses": [
+      {
+        "text": "我可以给你看一些东西，让你所谓的歌曲的力量看起来像儿戏。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "我没有时间来反驳你的妄想。我没什么可说的了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_DRAGONBLOOD",
+    "dynamic_line": "无论你的肉体采取什么形式，在你的力量之下，它一直都是一样的。一如既往。无论你面对哪一张脸，你回答谁的名字，骨头都是一样的。从现在开始，直到这个循环被打破。",
+    "responses": [
+      {
+        "text": "我觉得我的骨头跟以前不一样了，跟现在不一样了，还有其他的东西。",
+        "topic": "TALK_BONE_SEER_POWER_DRAGONBLOOD_SMARTASS"
+      },
+      {
+        "text": "但是，还有更多的事情要做。我可以给你看。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "你对真正的力量一无所知。我没有兴趣劝你不要做蠢事。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_DRAGONBLOOD_SMARTASS",
+    "dynamic_line": "你想得太离谱了。如果你的思考方式是真的，那么失去一条腿会使你变得不同。在这一切的背后，是那首超越你细微差别的歌。",
+    "responses": [
+      {
+        "text": "好吧。但也许我还有东西可以证明我的观点。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_POWER_GENERAL",
+    "dynamic_line": "也许这是真的。但在不死所带来的污染之下，骨头仍在歌唱。没有经验的人很难破译它们，但它们的性质已经从根本上改变了。我很好奇，你觉得还有什么课没有学过？",
+    "responses": [
+      {
+        "text": "我可能有更好的解释。",
+        "topic": "TALK_BONE_SEER_POWER_OFFER"
+      },
+      {
+        "text": "也许下次吧，我需要考虑一下。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_END",
+    "responses": [
+      {
+        "text": "也许这是真的。但你有什么把握，任何一只凡人之手都能结束这个循环？",
+        "condition": {
+          "u_has_trait": "THRESH_VEIL"
+        },
+        "topic": "TALK_BONE_SEER_CYCLE_PARAGON"
+      },
+      {
+        "text": "你说的是一种危险的愚蠢，毁灭世界。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "topic": "TALK_BONE_SEER_CYCLE_CLEANSINGFLAME"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_CYCLE_PARAGON",
+    "dynamic_line": "在这项任务中，我不是一个人。无论我的肉体承受多少死亡，我都要继续我的工作。尽可能多次。然而，有趣的是，你说话的时候好像有超出常人能力的东西，丝毫不受周期的影响。周期是包罗万象的。所有可能活着的人，不管他们是否出生，都要归功于这一点。",
+    "responses": [
+      {
+        "text": "还有一个人分配了一个很有意义的任务。也许我们的任务最终会一致。",
+        "condition": {
+          "u_has_trait": "seer_mark"
+        },
+        "switch": true,
+        "topic": "TALK_BONE_SEER_CYCLE_PARAGON_MARKED"
+      },
+      {
+        "text": "我有我自己的任务，我们会看看它是否会引导我们走上同一条路。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_BONE_SEER_CYCLE_PARAGON_OTHER"
+      },
+      {
+        "text": "我们看看这是否成立。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_CYCLE_PARAGON_MARKED",
+    "dynamic_line": {
+      "u_has_var": "gave_monsterpart",
+      "type": "dialogue",
+      "context": "beyond",
+      "value": "yes",
+      "no": "总有一天，在这肉身上或在另一个周期里，我们将看到。现在，有些工作我必须去做。",
+      "yes": "你给我看了那些奇特的骨头里的迷人的诗句，我们拭目以待。我要听听你的礼物给我的那首歌，然后我们看看它的走向。如果你的赞助人，不管他是谁，真的有办法打破这个循环，那么也许这就是他把这个循环带到更高的高度的方法，让我们更接近于收集歌曲…"
+    },
+    "responses": [
+      {
+        "text": "很好。我们拭目以待。",
+        "topic": "TALK_BONE_SEER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_CYCLE_PARAGON_OTHER",
+    "dynamic_line": "我不知道你追求这项任务的目的是什么，但我不愿意相信这一点。有许多工作要做，还有许多错误的预兆会把我们引入歧途。",
+    "responses": [
+      {
+        "text": "如果你坚持的话。不过，还有更多的问题需要讨论。",
+        "topic": "TALK_BONE_SEER"
+      },
+      {
+        "text": "你是这么说的。现在就这些了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BONE_SEER_CYCLE_CLEANSINGFLAME",
+    "dynamic_line": "我们执着于自己的生命，即使知道自己已经遭受了上千次的死亡。只有时间会告诉我们，当这个循环被打破时，我们的未来会怎样，但是，让我们从这种折磨中解脱出来，对我们来说不是更好吗？",
+    "responses": [
+      {
+        "text": "你只会发现痛苦，追求这种疯狂。我不会阻止你的。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "[攻击]我不能让你继续这样做。如果你的妄想是真的，那只会带来更多的痛苦。",
+        "effect": "insult_combat",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MISSION_OFFER_SEER",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "这散发着血魔法的味道。你明白你对我的要求吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_any_trait": [
+                "PROF_CLEANSINGFLAME",
+                "PROF_CLEANSINGFLAME2"
+              ]
+            },
+            {
+              "not": {
+                "u_has_var": "blood_magic_query",
+                "type": "dialogue",
+                "context": "blood_magic",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_MISSION_SEER_BLOOD_MAGIC"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MISSION_SEER_BLOOD_MAGIC",
+    "type": "talk_topic",
+    "dynamic_line": "我怀疑是你不明白。这是可以理解的，但这就是为什么我给你这个机会来学习这些骨头想要唱的诗。我不知道你叫它什么，但这不是血的东西。血是一种不纯洁的东西，太短暂了，无法提供有价值的歌曲。它是肆意地蜕变的，没有骨头所携带的永恒。",
+    "//": "This is framed in such a way that it idiotproofs the dialogue, because TALK_NONE can potentially put you into a loop.",
+    "responses": [
+      {
+        "text": "如果你坚持，我们拭目以待。再解释一遍你对我的要求。",
+        "topic": "TALK_MISSION_OFFER_SEER",
+        "effect": {
+          "u_add_var": "blood_magic_query",
+          "type": "dialogue",
+          "context": "blood_magic",
+          "value": "yes"
+        }
+      },
+      {
+        "text": "我需要时间考虑一下。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "[攻击]你正在危险地接近你不真正理解的东西。我不能让你腐蚀别人。幼儿保育和教育委员会，圣马格姆…",
+        "effect": "insult_combat",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

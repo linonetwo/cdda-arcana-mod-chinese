@@ -1,0 +1,70 @@
+[
+  {
+    "id": "bio_electrothermal_arc_projector",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "电热电弧投影仪"
+    },
+    "looks_like": "bio_int_enhancer",
+    "description": "一种用于右手和手臂的小型植入物，可以发射外来的能量，在目标之间反弹，电击并烧死它击中的任何物体。",
+    "price": 850000,
+    "price_postapoc": 5500,
+    "weight": "500 g",
+    "difficulty": 6
+  },
+  {
+    "id": "bio_rift_focus_projector",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "裂缝聚焦投射CBM"
+    },
+    "looks_like": "bio_int_enhancer",
+    "description": "一种用于右手和手臂的小植入物，在现实中制造出小洞，聚焦到超自然能量的光束中。虽然威力强大，但机器人目标和一些超自然生物对它免疫。",
+    "price": 940000,
+    "price_postapoc": 6000,
+    "weight": "500 g",
+    "difficulty": 6
+  },
+  {
+    "id": "bio_essence_surge_cell",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "精华浪涌电池CBM"
+    },
+    "looks_like": "bio_int_enhancer",
+    "description": "将精华转化为仿生能量的小型发电机。可容纳100粒标准精华、血之精华精华、暗精华、结晶精华。",
+    "price": 900000,
+    "price_postapoc": 9000,
+    "weight": "600 g",
+    "difficulty": 8
+  },
+  {
+    "id": "bio_temporal_stimulation",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "时间刺激CBM"
+    },
+    "looks_like": "bio_int_enhancer",
+    "description": "使用奇异的能量，使用者可以在有限的范围内扭曲时间，以增加速度和耐力，以增加疲劳为代价。",
+    "price": 1400000,
+    "price_postapoc": 6000,
+    "difficulty": 9
+  },
+  {
+    "id": "bio_life_sign_suppression",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "生命体征抑制CBM"
+    },
+    "looks_like": "bio_int_enhancer",
+    "description": "一种能产生破坏性能量的仿生生物，能隐藏使用者的生命力量，使其无法被亡灵察觉，代价是在激活时无法自然愈合。此外，它的影响加剧了野生动物，并引起其他人的不安。",
+    "price": 3000000,
+    "price_postapoc": 12500,
+    "difficulty": 11
+  }
+]

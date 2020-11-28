@@ -1,0 +1,369 @@
+[
+  {
+    "id": "halo_clairvoyance",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "象牙光环"
+    },
+    "description": "一种奇异的光芒渗透你的身体，赋予你看不见的东西。",
+    "color": "magenta",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "mutations": [
+            "ARCANA_CLAIRVOYANCE_LESSER"
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
+    "id": "halo_shadowsnakes",
+    "//": "ID retained for simplicity.",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑曜光环"
+    },
+    "description": "一种奇异的光芒渗透你的身体，用超自然的魔法蒙蔽攻击者。",
+    "color": "dark_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "hit_me_effect": [
+            {
+              "id": "arcana_react_shadowy_shield",
+              "message": "在 %2$s 有一缕阴影突然出现",
+              "npc_message": "一缕影子从%1$s跳到%2$s。"
+            }
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
+    "id": "halo_drainlife",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "角晕"
+    },
+    "description": "一种奇怪的光芒渗透你的身体，给你一种生命的感觉。",
+    "color": "dark_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life"
+            }
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
+    "id": "triffid_garland",
+    "type": "ARMOR",
+    "name": {
+      "str": "特里菲德花环"
+    },
+    "description": "戴在脖子上的由另一个世界的鲜艳的花组成的花环。除了花瓣所提供的超凡美丽，它没有实际用途。",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "//": "Arcanist trinkets are explicitly 100% post-cataclysm, minimal value but exotic, and have some minor crafting use.",
+    "price_postapoc": 120,
+    "material": [
+      "veggy"
+    ],
+    "symbol": "[",
+    "looks_like": "holy_symbol_wood",
+    "color": "light_red",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.025
+            },
+            {
+              "value": "MAX_MANA",
+              "multiply": 0.025
+            }
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "FANCY"
+    ]
+  },
+  {
+    "id": "amulet_exotic",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "异域护身符"
+    },
+    "description": "一条镶有一颗宝石的临时项链，一种由某种非自然材料制成的符咒。",
+    "weight": "60 g",
+    "volume": "50 ml",
+    "price_postapoc": 150,
+    "material": [
+      "stone"
+    ],
+    "symbol": "[",
+    "looks_like": "aquamarine_silver_pendant_necklace",
+    "color": "light_gray",
+    "flags": [
+      "FANCY"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.025
+            },
+            {
+              "value": "MAX_MANA",
+              "multiply": 0.025
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": "MEDITATE"
+  },
+  {
+    "id": "brooch_iridescent",
+    "type": "ARMOR",
+    "name": {
+      "str": "彩虹色胸针",
+      "str_pl": "彩虹色胸针"
+    },
+    "description": "珍珠胸针一种手工制作的圆盘胸针，由一种奇怪的、神秘的材料制成，有点像珍珠母。",
+    "weight": "52 g",
+    "volume": "50 ml",
+    "price_postapoc": 200,
+    "material": [
+      "stone"
+    ],
+    "symbol": "[",
+    "looks_like": "jade_brooch",
+    "color": "dark_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.025
+            },
+            {
+              "value": "MAX_MANA",
+              "multiply": 0.025
+            }
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "FANCY"
+    ]
+  },
+  {
+    "id": "mana_gem",
+    "type": "ARMOR",
+    "name": {
+      "str": "精华宝石"
+    },
+    "description": "一种嵌在铜护身符里的奇怪的蓝色石头，戴在脖子上。它能够储存相当数量的各种魔法能量储备，佩戴后可以更快地重新装填魔法武器。",
+    "weight": "250 g",
+    "volume": "50 ml",
+    "price_postapoc": 9000,
+    "price": 3000,
+    "material": [
+      "copper",
+      "essencemat"
+    ],
+    "symbol": "[",
+    "looks_like": "copper_locket",
+    "color": "blue",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.1
+            },
+            {
+              "value": "MAX_MANA",
+              "multiply": 0.01
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "essence_pure_type": 10,
+          "essence_type": 100,
+          "essence_blood_type": 300,
+          "essence_dull_type": 3000
+        },
+        "moves": 10
+      }
+    ]
+  },
+  {
+    "id": "satchel_eternity",
+    "type": "ARMOR",
+    "name": {
+      "str": "永恒的背包",
+      "str_pl": "永恒的背包"
+    },
+    "description": "一种用华丽的纺织品图案装饰的小布袋，描绘了一种超凡脱俗的抽象图案，并进一步用铜环和扣环装饰。据说，它代表了对未知事物更广泛的知识的探索，专注于寻找新发现的效用和目的。它利用漩涡的力量来存储大量可以轻易访问的项目，但是门户的不稳定性会引起外界的注意。你也可以用它来放置某些物品，以便更快地进入，如果它是一个神奇的焦点。",
+    "weight": "610 g",
+    "volume": "500 ml",
+    "price": 100000,
+    "price_postapoc": 10000,
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "cotton",
+      "copper"
+    ],
+    "symbol": "[",
+    "looks_like": "leather_pouch",
+    "color": "light_red",
+    "covers": [
+      "torso"
+    ],
+    "coverage": 15,
+    "encumbrance": 15,
+    "material_thickness": 1,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "hit_me_effect": [
+            {
+              "id": "arcana_react_satchel_attention",
+              "hit_self": true,
+              "once_in": 20,
+              "message": "你觉得有什么东西在看着你。。。",
+              "npc_message": "一种奇怪的恶意气氛似乎短暂地围绕着%1$s。"
+            },
+            {
+              "id": "arcana_react_satchel_teleport",
+              "hit_self": true,
+              "once_in": 20,
+              "message": "你觉得自己被拉向了一个不存在的方向！",
+              "npc_message": "%1$s突然消失了！"
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "spoil_multiplier": 0.9,
+        "weight_multiplier": 0.25,
+        "max_contains_volume": "75 L",
+        "max_contains_weight": "150 kg",
+        "moves": 80
+      },
+      {
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "25 kg",
+        "moves": 0,
+        "rigid": true,
+        "holster": true,
+        "flag_restriction": [
+          "MAGIC_FOCUS"
+        ]
+      },
+      {
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "25 kg",
+        "moves": 0,
+        "rigid": true,
+        "holster": true,
+        "flag_restriction": [
+          "MAGIC_FOCUS"
+        ]
+      },
+      {
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "25 kg",
+        "moves": 0,
+        "rigid": true,
+        "holster": true,
+        "flag_restriction": [
+          "MAGIC_FOCUS"
+        ]
+      },
+      {
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "25 kg",
+        "moves": 0,
+        "rigid": true,
+        "holster": true,
+        "flag_restriction": [
+          "MAGIC_FOCUS"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "Store what magical focus?",
+      "holster_msg": "You store your %s"
+    },
+    "flags": [
+      "WAIST",
+      "OVERSIZE",
+      "TRADER_KEEP_EQUIPPED",
+      "TARDIS"
+    ]
+  }
+]

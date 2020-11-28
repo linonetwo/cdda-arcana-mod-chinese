@@ -1,0 +1,161 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_CF_PURIFIER",
+    "dynamic_line": {
+      "npc_has_trait": "FIX_CF_GM",
+      "yes": {
+        "u_has_effect": "cf_mission_1",
+        "yes": "欢迎回来。很高兴见到你。",
+        "no": {
+          "u_has_trait": "PROF_SANGUINE",
+          "yes": "不用麻烦，乐观主义者，欢迎你来这里。",
+          "no": {
+            "u_has_any_trait": [
+              "PROF_CLEANSINGFLAME",
+              "PROF_CLEANSINGFLAME2"
+            ],
+            "yes": {
+              "u_male": "Welcome, Brother.",
+              "no": "欢迎，姐姐。"
+            },
+            "no": {
+              "u_has_any_trait": [
+                "PROF_CHALICE",
+                "THRESH_VEIL"
+              ],
+              "yes": "你好，守卫。",
+              "no": "问候语。"
+            }
+          }
+        }
+      },
+      "no": {
+        "u_has_any_trait": [
+          "PROF_CLEANSINGFLAME",
+          "PROF_CLEANSINGFLAME2"
+        ],
+        "yes": {
+          "u_male": "Good to see you, Brother.  What can I do for you?",
+          "no": "很高兴见到你，姐姐。我能为你做什么？"
+        },
+        "no": "你好，我能为你效劳吗？"
+      }
+    },
+    "responses": [
+      {
+        "text": "你是谁？",
+        "topic": "TALK_CF_PURIFIER_WHO",
+        "condition": {
+          "not": {
+            "u_has_any_trait": [
+              "PROF_CLEANSINGFLAME",
+              "PROF_CLEANSINGFLAME2"
+            ]
+          }
+        }
+      },
+      {
+        "text": "只剩下你一个人了吗？",
+        "topic": "TALK_CF_PURIFIER_REMAIN",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        }
+      },
+      {
+        "text": "你在这里做什么？",
+        "topic": "TALK_CF_PURIFIER_DO"
+      },
+      {
+        "text": "关于这个地方你能告诉我些什么？",
+        "topic": "TALK_CF_PURIFIER_WHERE"
+      },
+      {
+        "text": "你有什么要交易的吗？",
+        "effect": "start_trade",
+        "condition": {
+          "not": {
+            "npc_has_trait": "FIX_CF_GM"
+          }
+        },
+        "switch": true,
+        "topic": "TALK_CF_PURIFIER"
+      },
+      {
+        "text": "好吧，再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CF_PURIFIER_WHO",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "FIX_CF_GM",
+      "yes": "我是尼古拉斯。对我过去的样子没什么可说的。我们都是兄弟，努力确保我们的生存。",
+      "no": "我自己？现在只是个幸存者，以前是个机械师。很少有电子方面的经验，当我和其他人一起工作时，这些经验就派上了用场。老实说，我不是专家，那是尼克的工作。"
+    },
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_CF_PURIFIER"
+      }
+    ]
+  },
+  {
+    "id": "only",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "FIX_CF_GM",
+      "yes": {
+        "u_has_trait": "PROF_CLEANSINGFLAME2",
+        "yes": "我知道还有其他一些孤立的联系方式，但与他们取得联系将是困难的。我知道我们的关系网没有了。",
+        "no": "索菲亚和我正在努力寻找并与其他人取得联系，但我不确定还有多少狩猎聚会，也不知道还有多少外部联系人还活着。只有时间会证明一切。"
+      },
+      "no": {
+        "u_has_trait": "PROF_CLEANSINGFLAME2",
+        "yes": "好吧，很明显就是你！你也是城市里的一个联系人，我凭直觉就知道，这是有意义的，对吧？然后这里到处都是真正的猎人，而且……嗯，我不知道别的。我希望尼克能知道更多。",
+        "no": "所有人都在这里，可能还有其他一些联系人尼古拉斯可能知道更多。但是，我们在这里，索菲亚和她的朋友们在这里，我们还活着。总比什么都没有好，比很多人都能说的好，对吧？好吧，除了前面提到的那些人因为他们死了而什么都不能说，但是你知道我的意思…"
+      }
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_CF_PURIFIER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CF_PURIFIER_DO",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "FIX_CF_GM",
+      "yes": "我们是兄弟们非正式联系网络的一部分。除了一些官员愿意另眼相看，还有一些古怪的收藏家表示支持，我们大多数人基本上都是童子军。我们会调查更多…公共区域潜在异常的线索，并尽可能保护他们。其实我们当中并没有那么多人，就像整个净化之火在整个地区蔓延开来一样。",
+      "no": "在这一切开始之前，我就是我们所说的“神秘净化器”。除了一种花哨的说法，我们调查了那些普通猎人不会完全融入的地区的异常情况。一般来说，只有那些受过训练的人进入敌对的地方，拆除他们无法安全提取的文物，才真正有资格获得这个称号。但是，就像史密斯夫妇和医务人员仍然是狩猎队的一员一样，这个头衔也流传开来。"
+    },
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_CF_PURIFIER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CF_PURIFIER_WHERE",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "FIX_CF_GM",
+      "yes": "索菲亚是最能告诉你这个地方的人。教堂，不完全是我作为净化者的专长。你倾向于在旧的重新利用的工业建筑和研究设施中找到可操作的情报，而不是大教堂。再说一次，这些天你永远不知道。",
+      "no": "我很久没来了。在我成为“净化之火”成员之前，事实上可能是个青少年。回想起帕里塞德斯，我就别无选择了。但是，我敢打赌牧师就是索菲亚同意让我们使用这个地方的人。不过我想中心的执事现在应该负责了。"
+    },
+    "responses": [
+      {
+        "text": "哦，好吧。",
+        "topic": "TALK_CF_PURIFIER"
+      }
+    ]
+  }
+]

@@ -1,0 +1,520 @@
+[
+  {
+    "id": "arcana_mark_destructive_absorption",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：破坏性吸收"
+    },
+    "description": "乐观的马克\n使用这个法术会消耗你周围的能量，在现实中制造一个空白，对一个目标产生破坏性效果。机器和一些超凡脱俗的生物将对这种攻击免疫，但是引导这些能量的副作用仍然会影响到你，助长你的内心之火。当心撕碎现实结构的风险。",
+    "message": "以一种奇怪的姿态，面纱的织物扭曲和腐烂。%s ！",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_destructive_absorption_side_effects",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
+    "min_damage": 70,
+    "max_damage": 360,
+    "damage_increment": 58,
+    "min_range": 3,
+    "max_range": 6,
+    "range_increment": 0.6,
+    "skill": "magic",
+    "max_level": 5,
+    "difficulty": 100,
+    "base_casting_time": 385,
+    "final_casting_time": 352,
+    "casting_time_increment": -6.6,
+    "energy_source": "HP",
+    "base_energy_cost": 44,
+    "final_energy_cost": 33,
+    "energy_increment": -2.2,
+    "damage_type": "cold",
+    "field_id": "fd_fatigue",
+    "field_chance": 20,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "arcana_mark_displacing_slash",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：替换斜杠"
+    },
+    "description": "神迹\n魔法符号将与你选择的敌对目标交换位置。虽然它不会直接伤害你选择的目标，但任何被你发现的血腥地带中的东西都会受到严重伤害。",
+    "message": "你向前冲，手臂伸向目标。%s ！",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL",
+      "SWAP_POS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_displacing_slash_aoe",
+        "hit_self": false,
+        "max_level": 5
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "downed",
+    "energy_source": "HP",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 5,
+    "min_range": 24,
+    "max_range": 32,
+    "range_increment": 1.6,
+    "base_casting_time": 175,
+    "final_casting_time": 160,
+    "casting_time_increment": -3,
+    "base_energy_cost": 20,
+    "final_energy_cost": 15,
+    "energy_increment": -1,
+    "min_duration": 1600,
+    "max_duration": 6400,
+    "duration_increment": 960,
+    "field_id": "fd_blood",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_mark_drain_life",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：吸取生命"
+    },
+    "description": "鲜血马克\n使用此咒语将用一个有角的光环涂抹你，给予你吸取生命的效果。代价可能大于回报。",
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_drain_life_fatigue",
+        "hit_self": false
+      }
+    ],
+    "message": "你的手势，充满了对狩猎的渴望。%s ！",
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_drainlife",
+    "energy_source": "HP",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 5,
+    "base_casting_time": 245,
+    "final_casting_time": 224,
+    "casting_time_increment": -4.2,
+    "base_energy_cost": 28,
+    "final_energy_cost": 21,
+    "energy_increment": -1.4,
+    "min_duration": 108000,
+    "max_duration": 180000,
+    "duration_increment": 14400
+  },
+  {
+    "id": "arcana_mark_elemental_sign",
+    "type": "SPELL",
+    "name": {
+      "str": "标记：元素符号"
+    },
+    "description": "神迹鲜血马克\n将给予火的完全免疫，并吸收周围的热量。",
+    "message": "只要一个手势，你内心的火焰就会燃烧起来。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_coldness",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_elemental_stun",
+        "hit_self": false,
+        "max_level": 5
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "heat_ward_true",
+    "energy_source": "HP",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 5,
+    "base_casting_time": 210,
+    "final_casting_time": 192,
+    "casting_time_increment": -3.6,
+    "base_energy_cost": 24,
+    "final_energy_cost": 18,
+    "energy_increment": -1.2,
+    "min_duration": 45000,
+    "max_duration": 75000,
+    "duration_increment": 6000
+  },
+  {
+    "id": "arcana_mark_infernal_flame",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：地狱之气"
+    },
+    "description": "神迹鲜血马克\n将引导你的内心之火变成毁灭性的爆炸，造成可怕的烧伤，并在大地上留下永久的伤疤。小心地在盟友周围使用它，并注意到这会消耗热量，就像发射普通的龙火一样，并且有可能破坏现实的结构。",
+    "message": "一道火焰从你的嘴里跳出来，用手一挥就变成了邪恶的火焰。%s ！",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_infernal_flame_side_effects",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_corruption",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_field",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_noise",
+        "hit_self": false,
+        "max_level": 5
+      }
+    ],
+    "min_damage": 14,
+    "max_damage": 72,
+    "damage_increment": 11.6,
+    "effect_str": "bleed",
+    "min_duration": 600,
+    "max_duration": 1200,
+    "duration_increment": 120,
+    "min_range": 9,
+    "max_range": 14,
+    "range_increment": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 5,
+    "difficulty": 20,
+    "skill": "magic",
+    "base_casting_time": 140,
+    "final_casting_time": 128,
+    "casting_time_increment": -2.4,
+    "energy_source": "HP",
+    "base_energy_cost": 12,
+    "final_energy_cost": 9,
+    "energy_increment": -0.6,
+    "damage_type": "heat",
+    "field_id": "fd_fire",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.4,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_mark_malevolent_gaze",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：恶意的凝视"
+    },
+    "description": "鲜血马克\n使用此咒语将打击一个具有强大的时间效果的目标，它不会造成任何伤害，但它会暂时冻结你的猎物，让它们在随后的一段时间内减速。",
+    "message": "当你集中你的仇恨时，你的瞳孔会短暂地缩小成细缝。%s ！",
+    "effect": "mod_moves",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_malevolent_gaze_slowdown",
+        "hit_self": false,
+        "max_level": 5
+      }
+    ],
+    "min_damage": -1500,
+    "max_damage": -3000,
+    "damage_increment": -300,
+    "min_range": 5,
+    "max_range": 10,
+    "range_increment": 1,
+    "max_level": 5,
+    "difficulty": 50,
+    "skill": "magic",
+    "base_casting_time": 210,
+    "final_casting_time": 192,
+    "casting_time_increment": -3.6,
+    "energy_source": "HP",
+    "base_energy_cost": 24,
+    "final_energy_cost": 18,
+    "energy_increment": -1.2
+  },
+  {
+    "id": "arcana_mark_might",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：权力"
+    },
+    "description": "使用此咒语可以暂时提升力量。它只能用在你身上。",
+    "message": "当你完成仪式动作时，一股战斗的欲望涌上你的心头。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_might",
+    "energy_source": "HP",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 5,
+    "base_casting_time": 210,
+    "final_casting_time": 192,
+    "casting_time_increment": -3.6,
+    "base_energy_cost": 24,
+    "final_energy_cost": 18,
+    "energy_increment": -1.2,
+    "min_duration": 90000,
+    "max_duration": 150000,
+    "duration_increment": 12000
+  },
+  {
+    "id": "arcana_mark_revenant_blood",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：复仇之血"
+    },
+    "description": "鲜血马克\n使用此咒语将使你的内心之火燃烧得更热，除了防止食物和水中的瘟疫，以及燃烧真菌的影响之外，还能增加耐力。然而，身体会更快地消耗掉它的储备。",
+    "message": "有了一个标志，你会感到你的血液燃烧着神奇的力量。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dragonblood_clarity",
+    "energy_source": "HP",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 5,
+    "base_casting_time": 175,
+    "final_casting_time": 160,
+    "casting_time_increment": -3,
+    "base_energy_cost": 20,
+    "final_energy_cost": 15,
+    "energy_increment": -1,
+    "min_duration": 36000,
+    "max_duration": 60000,
+    "duration_increment": 4800
+  },
+  {
+    "id": "arcana_mark_summon_dark_wyrm",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：召唤黑暗精灵"
+    },
+    "description": "鲜血的马克\n使用这个咒语将召唤一个黑暗的幽灵。虽然它在最大功率下是永久的，但它是否会服从你完全取决于机会。",
+    "message": "你的手势使地面移动流动，一个漆黑的形体从地球上滑出。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "PERMANENT",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_dark_wyrm_summoned",
+    "energy_source": "HP",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 5,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 4,
+    "max_range": 7,
+    "range_increment": 0.6,
+    "base_casting_time": 210,
+    "final_casting_time": 192,
+    "casting_time_increment": -3.6,
+    "base_energy_cost": 24,
+    "final_energy_cost": 18,
+    "energy_increment": -1.2,
+    "min_duration": 900000,
+    "max_duration": 5400000,
+    "duration_increment": 900000
+  },
+  {
+    "id": "arcana_mark_summon_fiend",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：召唤恶魔"
+    },
+    "description": "神迹鲜血马克\n将召唤一个灰白的复仇者。虽然它在最大功率下是永久的，但它是否会服从你完全取决于机会。",
+    "message": "随着手语，一股鲜活的火焰从地面喷发出来，凝固成一个烧焦的人形。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "PERMANENT",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_zombie_fiend_summoned",
+    "energy_source": "HP",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 5,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 4,
+    "max_range": 7,
+    "range_increment": 0.6,
+    "base_casting_time": 175,
+    "final_casting_time": 160,
+    "casting_time_increment": -3,
+    "base_energy_cost": 20,
+    "final_energy_cost": 15,
+    "energy_increment": -1,
+    "min_duration": 720000,
+    "max_duration": 4320000,
+    "duration_increment": 720000
+  },
+  {
+    "id": "arcana_mark_summon_jabberwock",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：召唤贾伯沃克"
+    },
+    "description": "鲜血的马克\n使用这个法术将召唤一个肉身的傀儡。虽然它在最大功率下是永久的，但它是否会服从你完全取决于机会。",
+    "message": "大地在你的命令下扭曲，一大群腐烂的尸体从混乱中出现，融合在一起变成了一个可憎的东西。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "PERMANENT",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_jabberwock_summoned",
+    "energy_source": "HP",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 5,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 4,
+    "max_range": 7,
+    "range_increment": 0.6,
+    "base_casting_time": 245,
+    "final_casting_time": 224,
+    "casting_time_increment": -4.2,
+    "base_energy_cost": 28,
+    "final_energy_cost": 21,
+    "energy_increment": -1.4,
+    "min_duration": 1080000,
+    "max_duration": 6480000,
+    "duration_increment": 1080000
+  },
+  {
+    "id": "arcana_mark_surge_adrenaline",
+    "type": "SPELL",
+    "name": {
+      "str": "印记：肾上腺素激增"
+    },
+    "description": "乐观的马克\n使用这个咒语会在紧急情况下引起肾上腺素的激增，尽管之后也有同样的缺点。它只能用在你身上。",
+    "message": "你的手势激起了本能的冲动，促使你去杀人。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "effect_str": "adrenaline",
+    "max_level": 5,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 105,
+    "final_casting_time": 96,
+    "casting_time_increment": -1.8,
+    "base_energy_cost": 12,
+    "final_energy_cost": 9,
+    "energy_increment": -0.6,
+    "difficulty": 20,
+    "skill": "magic",
+    "min_duration": 36000,
+    "max_duration": 60000,
+    "duration_increment": 4800,
+    "energy_source": "HP"
+  }
+]

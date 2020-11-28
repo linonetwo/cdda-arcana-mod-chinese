@@ -1,0 +1,548 @@
+[
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_agility",
+    "name": {
+      "str": "图案：敏捷"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_AGILE",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，无尽的螺旋交织在一起。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_clairvoyance",
+    "name": {
+      "str": "图样：透视"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_CLAIRVOYANCE",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，一张充满异国情调的眼睛图案的重叠网。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_clarity_blood",
+    "name": {
+      "str": "图样：血液清澈"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_CLARITY",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，一个看似不可能的几何图形的炼金术圆圈。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_confuse_monster",
+    "name": {
+      "str": "图样：迷惑怪物"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_CONFUSE",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，一圈神秘的书法让位于不人道的意象。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_conjure_acid",
+    "name": {
+      "str": "图样：变酸"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_ACID",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，令人目眩的轨道图，几乎像是某种复杂化合物的模型。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_consecrate",
+    "name": {
+      "str": "图样：圣化"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_CONSECRATELESSER",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，就像翅膀上笼罩着的光线。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_eclipse",
+    "name": {
+      "str": "图样：日蚀"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_ECLIPSE",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，符号渐渐消失在难以理解的主题中。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_elemental_burst",
+    "name": {
+      "str": "图样：元素爆发"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_ELEMENTALBURST",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的模式，在你的脑海里激起奇怪的本能反应。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_flame_armor",
+    "name": {
+      "str": "图样：暖房"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_FLAMEARMOR",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，奇怪的图案，像舞动的火焰一样摇曳。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_free_action",
+    "name": {
+      "str": "图案：自由动作"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_FREEACTION",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，复杂的线条给人一种立体的印象。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_frost_armor",
+    "name": {
+      "str": "图样：冷库"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_FROSTARMORLESSER",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇异的图案，外星人天空的星座。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_healing",
+    "name": {
+      "str": "图样：愈合"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_HEAL",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，复杂的解剖图像和神秘的图表。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_insight",
+    "name": {
+      "str": "图案：洞察"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_INSIGHT",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，奇特的符号与超现实主义的风景融合在一起。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_lightning_ward",
+    "name": {
+      "str": "图样：闪电守卫"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_ELECRESIST",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，无尽的线路交叉和弯曲，以违反几何定律的方式。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_might",
+    "name": {
+      "str": "模式：权力"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_STRENGTH",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着那些奇怪的图案，一个迷宫般的图案，流淌着对超自然动物的模糊印象。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_overgrowth",
+    "name": {
+      "str": "模式：过度增长"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_PLANTS",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你深深地凝视着那些奇怪的图案，像不断变换的常春藤一样编织着。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_serpentine_shield",
+    "name": {
+      "str": "图样：蛇纹石盾牌"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_SHADOWSNAKES",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，盘绕的蛇形线条蜿蜒成无尽的大毒蛇图案。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_shockstorm",
+    "name": {
+      "str": "图样：冲击风暴"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_LIGHTNING",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，不规则的锯齿状的艺术品折叠在自己身上。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_summon_giant_centipedes",
+    "name": {
+      "str": "图样：召唤蜈蚣"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_BUGSLESSER",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，奇怪的线性图案让位于更有机的图案。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_sundering_quake",
+    "name": {
+      "str": "图样：碎裂地震"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_SUNDERINGQUAKE",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，外星人的符号和艺术品扭曲成更有序的形式。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_pattern_ward_against_evil",
+    "name": {
+      "str": "图样：辟邪"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "ARCANA_CLERIC",
+    "description": "这将授予一个特定的法术变异。",
+    "message": "你凝视着奇怪的图案，无尽的符号和图表与超凡脱俗的图像融合在一起。。。",
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ]
+  }
+]

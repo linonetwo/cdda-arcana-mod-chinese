@@ -1,0 +1,480 @@
+[
+  {
+    "id": "essence",
+    "type": "AMMO",
+    "category": "other",
+    "name": {
+      "str": "精华",
+      "str_pl": "精华"
+    },
+    "description": "一团奇怪的发光的小汽粒。它散发出一种舒缓的温暖，感觉出奇的结实，甚至几乎是活生生的。",
+    "//": "Essence in general was fairly rare pre-cataclysm, though arcanists didn't really trade it around much.  Books were the most important focus of external contacts.",
+    "volume": "10 ml",
+    "price": 1500,
+    "price_postapoc": 750,
+    "material": [
+      "arcana_fuel_essence"
+    ],
+    "symbol": "=",
+    "color": "blue",
+    "count": 1,
+    "ammo_type": "essence_type",
+    "effects": [
+      "NEVER_MISFIRES",
+      "NON-FOULING"
+    ],
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "essence_blood",
+    "type": "AMMO",
+    "category": "other",
+    "name": {
+      "str": "血之精华",
+      "str_pl": "血之精华"
+    },
+    "description": "一种奇怪的发光的微粒，从生物身上排出。",
+    "volume": "5 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "material": [
+      "arcana_fuel_essence_blood"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "count": 1,
+    "ammo_type": "essence_blood_type",
+    "effects": [
+      "NEVER_MISFIRES",
+      "NON-FOULING"
+    ],
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "essence_dull",
+    "type": "AMMO",
+    "category": "other",
+    "name": {
+      "str": "沉闷精华",
+      "str_pl": "沉闷精华"
+    },
+    "description": "一种黑色粉末状的奇怪的精华，由破坏性的“奉献”一个魔法物品而形成。",
+    "volume": "1 ml",
+    "price": 50,
+    "price_postapoc": 25,
+    "material": [
+      "arcana_fuel_essence_dull"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "count": 1,
+    "ammo_type": "essence_dull_type",
+    "effects": [
+      "NEVER_MISFIRES",
+      "NON-FOULING"
+    ],
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "essence_pure",
+    "type": "AMMO",
+    "category": "other",
+    "name": {
+      "str": "结晶精华",
+      "str_pl": "结晶精华"
+    },
+    "description": "一小片晶莹剔透的水晶，由超凡脱俗的精华组成，为强大的魔法提供燃料。",
+    "//": "Extremely rare pre-cataclysm, and now still highly valuable due to being very high-energy.",
+    "volume": "15 ml",
+    "price": 15000,
+    "price_postapoc": 7500,
+    "material": [
+      "arcana_fuel_essence_pure"
+    ],
+    "symbol": "=",
+    "color": "cyan",
+    "count": 1,
+    "ammo_type": "essence_pure_type",
+    "effects": [
+      "NEVER_MISFIRES",
+      "NON-FOULING"
+    ],
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_arcana_unpowered",
+    "name": {
+      "str": "奇异箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "arrow_wood_heavy",
+    "description": "一种简单的有羽毛的木制箭杆，有一个用某种奇怪的材料雕刻的箭头。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 100,
+    "weight": "30 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "stab",
+      "armor_penetration": 1,
+      "constant_damage_multiplier": 1.3
+    },
+    "dispersion": 140,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 6,
+    "effects": [
+      "RECOVER_50"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "bolt_arcana_unpowered",
+    "name": {
+      "str": "奇异的螺栓"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "bolt_makeshift",
+    "description": "一种发射奇异能量的弩箭，头部由某种奇怪的材料雕刻而成。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 100,
+    "weight": "27 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "bolt",
+    "damage": {
+      "damage_type": "stab",
+      "constant_damage_multiplier": 1.3,
+      "armor_penetration": 1
+    },
+    "dispersion": 150,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 6,
+    "effects": [
+      "RECOVER_50"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_arcana_flame",
+    "name": {
+      "str": "灼热的异域箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "arrow_arcana_unpowered",
+    "description": "一支射出奇异能量的箭，尖端有一条超自然的物质。能够在撞击时击毙目标。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "30 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "heat",
+      "amount": 12,
+      "armor_penetration": 2
+    },
+    "dispersion": 125,
+    "range": 1,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 3,
+    "effects": [
+      "RECOVER_40",
+      "INCENDIARY",
+      "AMMO_ARCANA_FIRE_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "bolt_arcana_flame",
+    "name": {
+      "str": "灼热的异域闪电"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "bolt_arcana_unpowered",
+    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时击毙目标。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "27 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "bolt",
+    "damage": {
+      "damage_type": "heat",
+      "amount": 10,
+      "armor_penetration": 2
+    },
+    "dispersion": 110,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 4,
+    "effects": [
+      "RECOVER_40",
+      "INCENDIARY",
+      "AMMO_ARCANA_FIRE_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_arcana_water",
+    "name": {
+      "str": "冬日异域箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "arrow_arcana_unpowered",
+    "description": "一支射出奇异能量的箭，尖端有一条超自然的物质。能够在撞击时击昏目标。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "30 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "cold",
+      "amount": 16,
+      "armor_penetration": 3
+    },
+    "dispersion": 125,
+    "range": 1,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 4,
+    "effects": [
+      "RECOVER_30",
+      "BEANBAG",
+      "AMMO_ARCANA_WATER_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "bolt_arcana_water",
+    "name": {
+      "str": "冬日异域风情"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "bolt_arcana_unpowered",
+    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时击昏目标。一旦发射，很有可能完好无损。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "27 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "bolt",
+    "damage": {
+      "damage_type": "cold",
+      "amount": 12,
+      "armor_penetration": 3
+    },
+    "dispersion": 110,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 5,
+    "effects": [
+      "RECOVER_30",
+      "BEANBAG",
+      "AMMO_ARCANA_WATER_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_arcana_earth",
+    "name": {
+      "str": "土制异域箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "arrow_arcana_unpowered",
+    "description": "一支射出奇异能量的箭，尖端有一条超自然的物质。能够在撞击时减缓和腐蚀目标，留下酸性物质。一旦发射，保持原样的几率很低。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "30 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "acid",
+      "amount": 20,
+      "armor_penetration": 4
+    },
+    "dispersion": 125,
+    "range": 1,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 5,
+    "effects": [
+      "RECOVER_20",
+      "PARALYZEPOISON",
+      "AMMO_ARCANA_EARTH_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "bolt_arcana_earth",
+    "name": {
+      "str": "土制异形螺栓"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "bolt_arcana_unpowered",
+    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时减缓和腐蚀目标，留下酸性物质。一旦发射，保持原样的几率很低。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "27 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "bolt",
+    "damage": {
+      "damage_type": "acid",
+      "amount": 16,
+      "armor_penetration": 4
+    },
+    "dispersion": 110,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 6,
+    "effects": [
+      "RECOVER_20",
+      "PARALYZEPOISON",
+      "AMMO_ARCANA_EARTH_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_arcana_air",
+    "name": {
+      "str": "雷鸣异域箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "arrow_arcana_unpowered",
+    "description": "一支射出奇异能量的箭，尖端有一条超自然的物质。能够在撞击时使目标失明，留下闪电。一旦发射，保持完整的可能性很低。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "30 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "electric",
+      "amount": 24,
+      "armor_penetration": 5
+    },
+    "dispersion": 125,
+    "range": 1,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 6,
+    "effects": [
+      "RECOVER_10",
+      "BLINDS_EYES",
+      "WIDE",
+      "AMMO_ARCANA_AIR_EFFECT",
+      "NO_EMBED"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "bolt_arcana_air",
+    "name": {
+      "str": "霹雳奇葩"
+    },
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "bolt_arcana_unpowered",
+    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时使目标失明，留下闪电。一旦发射，保持完整的可能性很低。",
+    "material": [
+      "wood",
+      "essencemat"
+    ],
+    "volume": "125 ml",
+    "price_postapoc": 250,
+    "weight": "27 g",
+    "bashing": 6,
+    "cutting": 2,
+    "ammo_type": "bolt",
+    "damage": {
+      "damage_type": "electric",
+      "amount": 20,
+      "armor_penetration": 5
+    },
+    "dispersion": 110,
+    "loudness": 0,
+    "count": 5,
+    "show_stats": true,
+    "critical_multiplier": 7,
+    "effects": [
+      "RECOVER_10",
+      "BLINDS_EYES",
+      "WIDE",
+      "AMMO_ARCANA_AIR_EFFECT",
+      "NO_EMBED"
+    ]
+  }
+]

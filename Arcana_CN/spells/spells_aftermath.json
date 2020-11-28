@@ -1,0 +1,2073 @@
+[
+  {
+    "id": "arcana_aftermath_capacitance_stun",
+    "type": "SPELL",
+    "name": {
+      "str": "电容电击"
+    },
+    "description": "这是为了使电容sap从用户身上移开。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "min_damage": -400,
+    "max_damage": -400
+  },
+  {
+    "id": "arcana_aftermath_capacitance_zap",
+    "type": "SPELL",
+    "name": {
+      "str": "电容放电"
+    },
+    "description": "这个存在是为了让电容扎普的用户。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ],
+    "effect_str": "zapped",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 400,
+    "max_duration": 400,
+    "min_damage": 1,
+    "max_damage": 4,
+    "damage_type": "electric"
+  },
+  {
+    "id": "arcana_aftermath_conjure_acid_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤酸刺"
+    },
+    "description": "损失的一半，更集中的AoE。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "damage_type": "acid",
+    "max_level": 10,
+    "min_damage": 9,
+    "max_damage": 57,
+    "damage_increment": 4.8,
+    "min_aoe": 0,
+    "max_aoe": 2,
+    "aoe_increment": 0.2,
+    "min_range": 5,
+    "max_range": 15,
+    "range_increment": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_conjure_acid_noise",
+    "name": {
+      "str": "变酸噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a splash!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 18,
+    "max_damage": 114,
+    "damage_increment": 9.6,
+    "min_range": 5,
+    "max_range": 15,
+    "range_increment": 1,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_conjure_flame_bash",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤火焰猛击"
+    },
+    "description": "破坏范围内的地形。",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_flame_bash_extra",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "effect": "bash",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 10,
+    "min_damage": 10,
+    "max_damage": 40,
+    "damage_increment": 3,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 1.2,
+    "min_aoe": 1,
+    "max_aoe": 5,
+    "aoe_increment": 0.4
+  },
+  {
+    "id": "arcana_aftermath_conjure_flame_bash_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "额外召唤火焰猛击"
+    },
+    "description": "在魔法代码中解决错误的肮脏黑客。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect_str": "arcana_pulse",
+    "max_level": 10,
+    "min_damage": 24,
+    "max_damage": 12,
+    "damage_increment": -1.2,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 1.2,
+    "min_aoe": 1,
+    "max_aoe": 5,
+    "aoe_increment": 0.4
+  },
+  {
+    "id": "arcana_aftermath_conjure_flame_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "尖刺火焰召唤"
+    },
+    "description": "任何被夹在中间的东西都会受到双倍的伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "min_damage": 9,
+    "max_damage": 57,
+    "damage_increment": 4.8,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 1.2,
+    "min_aoe": 0,
+    "max_aoe": 2,
+    "aoe_increment": 0.2,
+    "max_level": 10,
+    "damage_type": "heat"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_conjure_flame_noise",
+    "name": {
+      "str": "召唤火焰噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "an explosion!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 18,
+    "max_damage": 114,
+    "damage_increment": 9.6,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 1.2,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_conjure_miasma_fungicide",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤毒气杀菌剂"
+    },
+    "description": "这增加了一个不错的机会产卵杀菌气体。",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "message": "",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "field_id": "fd_fungicidal_gas",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_conjure_miasma_nuke",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤乌烟瘴气"
+    },
+    "description": "这也增加了产生放射性气体的可能性。",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "message": "",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "field_id": "fd_nuke_gas",
+    "field_chance": 5,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_conjure_miasma_tear",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤毒气催泪瓦斯"
+    },
+    "description": "这也增加了产生催泪瓦斯的机会。",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "message": "",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "field_id": "fd_tear_gas",
+    "field_chance": 4,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_conjure_miasma_noise",
+    "name": {
+      "str": "制造烟雾噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a rush of wind!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 20,
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_conjure_shadow_field_blindness",
+    "type": "SPELL",
+    "name": {
+      "str": "后遗症：影盲"
+    },
+    "description": "这会使目标瞬间失明。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT"
+    ],
+    "effect_str": "blind",
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 540
+  },
+  {
+    "id": "arcana_aftermath_consecrate_dispel_summons",
+    "type": "SPELL",
+    "name": {
+      "str": "后果：神圣化驱散召唤"
+    },
+    "description": "在效果范围内对任何敌对召唤的怪物造成越来越大的伤害。",
+    "message": "",
+    "valid_targets": [
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_dark_wyrm_summoned",
+      "mon_zombie_fiend_summoned",
+      "mon_jabberwock_summoned",
+      "mon_homunculus_summoned",
+      "mon_thing_summoned",
+      "mon_dog_skeleton_summoned",
+      "mon_skeleton_summoned",
+      "mon_vortex_summoned",
+      "mon_yugg_summoned",
+      "mon_kreck_summoned",
+      "mon_triffid_summoned",
+      "mon_flesh_angel_summoned",
+      "mon_hunting_horror_summoned",
+      "mon_mi_go_summoned",
+      "mon_flying_polyp_summoned",
+      "mon_shoggoth_summoned",
+      "mon_shadow_summoned",
+      "mon_shadow_snake_summoned",
+      "mon_centipede_giant_summoned",
+      "mon_shadow_summoned_fake",
+      "mon_shadow_snake_summoned_fake",
+      "mon_seraphic_shade_fake"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dazed",
+    "max_level": 20,
+    "min_damage": 40,
+    "max_damage": 320,
+    "damage_increment": 14,
+    "damage_type": "pure",
+    "min_aoe": 6,
+    "max_aoe": 18,
+    "aoe_increment": 0.6,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 0.7,
+    "min_duration": 1600,
+    "max_duration": 16000,
+    "duration_increment": 720
+  },
+  {
+    "id": "arcana_aftermath_consecrate_daze_intruders",
+    "type": "SPELL",
+    "name": {
+      "str": "后果：使入侵者神化"
+    },
+    "description": "眩晕特定的幽冥怪物。",
+    "message": "",
+    "valid_targets": [
+      "hostile"
+    ],
+    "//": "If we ever get a saner way to do this...",
+    "targeted_monster_ids": [
+      "mon_boomer_fungus",
+      "mon_fungal_blossom",
+      "mon_fungal_hedgerow",
+      "mon_fungal_tendril",
+      "mon_fungal_wall",
+      "mon_fungaloid",
+      "mon_fungaloid_queen",
+      "mon_fungaloid_seeder",
+      "mon_fungaloid_tower",
+      "mon_fungaloid_young",
+      "mon_spore",
+      "mon_zombie_fungus",
+      "mon_zombie_gasbag_fungus",
+      "mon_zombie_smoker_fungus",
+      "mon_skeleton_hulk_fungus",
+      "mon_zombie_child_fungus",
+      "mon_ant_fungus",
+      "mon_spider_fungus",
+      "mon_marloss_zealot_f",
+      "mon_marloss_zealot_m",
+      "mon_mi_go",
+      "mon_mi_go_slaver",
+      "mon_mi_go_surgeon",
+      "mon_mi_go_guard",
+      "mon_mi_go_myrmidon",
+      "mon_mi_go_scout",
+      "mon_blank",
+      "mon_blob",
+      "mon_blob_brain",
+      "mon_blob_large",
+      "mon_blob_small",
+      "mon_breather",
+      "mon_breather_hub",
+      "mon_darkman",
+      "mon_dog_thing",
+      "mon_flaming_eye",
+      "mon_flying_polyp",
+      "mon_gelatin",
+      "mon_gozu",
+      "mon_gracke",
+      "mon_headless_dog_thing",
+      "mon_hound_tindalos",
+      "mon_hound_tindalos_afterimage",
+      "mon_hunting_horror",
+      "mon_kreck",
+      "mon_shadow",
+      "mon_shadow_snake",
+      "mon_shoggoth",
+      "mon_thing",
+      "mon_vortex",
+      "mon_yugg",
+      "mon_leech_blossom",
+      "mon_leech_stalk",
+      "mon_leech_pod_cluster",
+      "mon_leech_root_runner",
+      "mon_leech_root_drone",
+      "mon_biollante_sprig",
+      "mon_biollante_sprout",
+      "mon_biollante",
+      "mon_creeper_hub",
+      "mon_creeper_vine",
+      "mon_triffid_sprig",
+      "mon_triffid_young",
+      "mon_triffid",
+      "mon_triffid_queen",
+      "mon_vinebeast",
+      "mon_fungal_fighter",
+      "mon_triffid_flower",
+      "mon_triffid_heart",
+      "mon_spirit_of_fire",
+      "mon_moruboru",
+      "mon_archon",
+      "mon_dracolich",
+      "mon_seraphic_shade"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dazed",
+    "max_level": 20,
+    "min_damage": 10,
+    "max_damage": 100,
+    "damage_increment": 4.5,
+    "damage_type": "pure",
+    "min_aoe": 6,
+    "max_aoe": 18,
+    "aoe_increment": 0.6,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 0.7,
+    "min_duration": 1600,
+    "max_duration": 16000,
+    "duration_increment": 720
+  },
+  {
+    "id": "arcana_aftermath_consecrate_lesser",
+    "type": "SPELL",
+    "name": {
+      "str": "后遗症：圣化效果较小"
+    },
+    "description": "次级咒语的较弱版本，有效目标范围较窄。大多数老板和许多更强硬的怪物都被排除在外。",
+    "message": "",
+    "valid_targets": [
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_boomer_fungus",
+      "mon_fungal_blossom",
+      "mon_fungal_tendril",
+      "mon_fungaloid",
+      "mon_fungaloid_young",
+      "mon_spore",
+      "mon_zombie_fungus",
+      "mon_zombie_gasbag_fungus",
+      "mon_zombie_smoker_fungus",
+      "mon_skeleton_hulk_fungus",
+      "mon_zombie_child_fungus",
+      "mon_ant_fungus",
+      "mon_spider_fungus",
+      "mon_mi_go",
+      "mon_blank",
+      "mon_blob",
+      "mon_blob_large",
+      "mon_blob_small",
+      "mon_breather",
+      "mon_dog_thing",
+      "mon_flaming_eye",
+      "mon_flying_polyp",
+      "mon_gelatin",
+      "mon_gozu",
+      "mon_gracke",
+      "mon_headless_dog_thing",
+      "mon_hound_tindalos_afterimage",
+      "mon_hunting_horror",
+      "mon_kreck",
+      "mon_shadow",
+      "mon_shadow_snake",
+      "mon_shoggoth",
+      "mon_thing",
+      "mon_vortex",
+      "mon_yugg",
+      "mon_leech_stalk",
+      "mon_leech_pod_cluster",
+      "mon_leech_root_runner",
+      "mon_leech_root_drone",
+      "mon_biollante_sprig",
+      "mon_biollante_sprout",
+      "mon_creeper_vine",
+      "mon_triffid_sprig",
+      "mon_triffid_young",
+      "mon_triffid",
+      "mon_dark_wyrm_summoned",
+      "mon_zombie_fiend_summoned",
+      "mon_jabberwock_summoned",
+      "mon_homunculus_summoned",
+      "mon_thing_summoned",
+      "mon_dog_skeleton_summoned",
+      "mon_skeleton_summoned",
+      "mon_vortex_summoned",
+      "mon_yugg_summoned",
+      "mon_kreck_summoned",
+      "mon_triffid_summoned",
+      "mon_flesh_angel_summoned",
+      "mon_hunting_horror_summoned",
+      "mon_mi_go_summoned",
+      "mon_flying_polyp_summoned",
+      "mon_shoggoth_summoned",
+      "mon_shadow_summoned",
+      "mon_shadow_snake_summoned",
+      "mon_centipede_giant_summoned",
+      "mon_shadow_summoned_fake",
+      "mon_shadow_snake_summoned_fake",
+      "mon_seraphic_shade_fake"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dazed",
+    "max_level": 10,
+    "min_damage": 5,
+    "max_damage": 50,
+    "damage_increment": 4.5,
+    "damage_type": "pure",
+    "min_aoe": 6,
+    "max_aoe": 18,
+    "aoe_increment": 0.6,
+    "min_range": 12,
+    "max_range": 20,
+    "range_increment": 0.8,
+    "min_duration": 2400,
+    "max_duration": 14400,
+    "duration_increment": 1200
+  },
+  {
+    "id": "arcana_magic_dampening_aoe",
+    "type": "SPELL",
+    "name": {
+      "str": "后果：置换AoE"
+    },
+    "description": "这会增加周围环境的额外雾。",
+    "message": "",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "effect_str": "dazed",
+    "max_level": 10,
+    "min_range": 1,
+    "max_range": 4,
+    "range_increment": 0.3,
+    "min_aoe": 360,
+    "max_aoe": 360,
+    "min_duration": 900,
+    "max_duration": 4500,
+    "duration_increment": 450,
+    "field_id": "fd_fog",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_displacing_slash_aoe",
+    "type": "SPELL",
+    "name": {
+      "str": "后果：替换Slash AoE"
+    },
+    "description": "这会增加周围环境的额外伤害和场效应。",
+    "message": "",
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "effect_str": "downed",
+    "damage_type": "cut",
+    "max_level": 5,
+    "min_damage": 28,
+    "max_damage": 144,
+    "damage_increment": 23.2,
+    "min_range": 2,
+    "max_range": 4,
+    "range_increment": 0.4,
+    "min_aoe": 360,
+    "max_aoe": 360,
+    "min_duration": 1600,
+    "max_duration": 6400,
+    "duration_increment": 960,
+    "field_id": "fd_blood",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_divine_storm_blast",
+    "type": "SPELL",
+    "name": {
+      "str": "神圣风暴"
+    },
+    "description": "这会震动周围区域以获得额外的伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_TARGET"
+    ],
+    "min_damage": 10,
+    "max_damage": 80,
+    "damage_increment": 3.5,
+    "min_range": 3,
+    "max_range": 15,
+    "range_increment": 0.6,
+    "min_aoe": 10,
+    "max_aoe": 30,
+    "aoe_increment": 0.1,
+    "max_level": 20,
+    "min_duration": 800,
+    "max_duration": 8000,
+    "duration_increment": 360,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_divine_storm_noise",
+    "name": {
+      "str": "神圣的风暴噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a clap of thunder!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 20,
+    "min_damage": 20,
+    "max_damage": 160,
+    "damage_increment": 7,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_destructive_absorption_side_effects",
+    "type": "SPELL",
+    "name": {
+      "str": "破坏性吸收副作用"
+    },
+    "description": "这是为了使破坏性吸收给你额外的营养和其他副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "destructive_absorption_side_effects",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 3000,
+    "max_duration": 6000,
+    "duration_increment": 600
+  },
+  {
+    "id": "arcana_aftermath_drain_life_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "吸取生命疲劳"
+    },
+    "description": "这一点的存在可能会给龙血版的吸取生命带来腐蚀性的副作用。",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "valid_targets": [
+      "ground"
+    ],
+    "min_aoe": 4,
+    "max_aoe": 4,
+    "field_id": "fd_fatigue",
+    "field_chance": 100,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_eclipse_darkness",
+    "name": {
+      "str": "日蚀黑暗"
+    },
+    "description": "长达3小时的黑暗。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "timed_event",
+    "shape": "blast",
+    "effect_str": "dim",
+    "max_level": 10,
+    "min_duration": 540000,
+    "max_duration": 1080000,
+    "duration_increment": 54000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_eclipse_fatigue",
+    "name": {
+      "str": "日蚀疲劳"
+    },
+    "description": "基本上是人工制品效应，除了它会出现在现实泡沫的任何地方。期待一切。。。",
+    "valid_targets": [
+      "ground",
+      "self",
+      "ally",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "message": "",
+    "field_id": "fd_fatigue",
+    "field_chance": 2,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "field_intensity_variance": 0.5,
+    "min_range": 60,
+    "max_range": 60,
+    "flags": [
+      "RANDOM_TARGET"
+    ]
+  },
+  {
+    "id": "arcana_aftermath_eclipse_halo",
+    "type": "SPELL",
+    "name": {
+      "str": "日食晕"
+    },
+    "description": "添加标准救生圈。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_drainlife",
+    "max_level": 10,
+    "min_duration": 180000,
+    "max_duration": 360000,
+    "duration_increment": 18000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_eclipse_wonder",
+    "name": {
+      "str": "日蚀奇观"
+    },
+    "description": "召唤1d5合法的地下怪物。与大多数召唤法术不同，这些都是100%的新入侵者。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 1,
+    "max_damage": 5,
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_eclipse_wonder_gracke"
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder_gelatin"
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder_kreck"
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder_mi_go"
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder_flaming_eye"
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder_flying_polyp"
+      }
+    ]
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_gracke",
+    "type": "SPELL",
+    "name": {
+      "str": "日蚀格拉肯"
+    },
+    "description": "一个闯入者！",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_gracke",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_gelatin",
+    "type": "SPELL",
+    "name": {
+      "str": "日蚀阿米巴霉"
+    },
+    "description": "史莱姆状的闯入者！",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_gelatin",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_kreck",
+    "type": "SPELL",
+    "name": {
+      "str": "日蚀克雷克"
+    },
+    "description": "斯莫尔入侵者！",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_kreck",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_mi_go",
+    "type": "SPELL",
+    "name": {
+      "str": "日蚀米去"
+    },
+    "description": "英特鲁索，没有你的朋友。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_mi_go",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_flaming_eye",
+    "type": "SPELL",
+    "name": {
+      "str": "月蚀红眼"
+    },
+    "description": "也是一个闯入者，而且可能是最多的！！有趣！！善良。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_flaming_eye",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_aftermath_eclipse_wonder_flying_polyp",
+    "type": "SPELL",
+    "name": {
+      "str": "日食飞虫"
+    },
+    "description": "看它可能连续五次滚动这个效果。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "RANDOM_TARGET",
+      "HOSTILE_SUMMON"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_flying_polyp",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 1000,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_magic_elemental_burst_line",
+    "type": "SPELL",
+    "name": {
+      "str": "元素爆炸线"
+    },
+    "description": "这就分散了伤害，使得在AoE中捕获的每一件东西都更难被谋杀。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "min_damage": 21,
+    "max_damage": 133,
+    "damage_increment": 11.2,
+    "damage_type": "pure",
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "max_level": 10
+  },
+  {
+    "id": "arcana_magic_elemental_burst_wonder",
+    "type": "SPELL",
+    "name": {
+      "str": "元素爆发奇迹"
+    },
+    "description": "这将选择使用哪一组副作用。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_burst_water",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_elemental_burst_fire",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_elemental_burst_wind",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_elemental_burst_earth",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 10,
+    "max_aoe": 20,
+    "aoe_increment": 1,
+    "max_level": 10
+  },
+  {
+    "id": "arcana_aftermath_elemental_burst_water",
+    "type": "SPELL",
+    "name": {
+      "str": "元素爆裂水"
+    },
+    "description": "制造雾并减慢受害者的速度。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_noise_water",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "paralyzepoison",
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 10,
+    "max_aoe": 20,
+    "aoe_increment": 1,
+    "max_level": 10,
+    "min_duration": 2100,
+    "max_duration": 12600,
+    "duration_increment": 1050,
+    "field_id": "fd_fog",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_elemental_burst_fire",
+    "type": "SPELL",
+    "name": {
+      "str": "元素爆发火"
+    },
+    "description": "制造火，可怕的燃烧，因为不再直接使用热伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_noise_fire",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "onfire",
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 10,
+    "max_aoe": 20,
+    "aoe_increment": 1,
+    "max_level": 10,
+    "min_duration": 1400,
+    "max_duration": 5600,
+    "duration_increment": 420,
+    "field_id": "fd_fire",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_elemental_burst_wind",
+    "type": "SPELL",
+    "name": {
+      "str": "元素暴风"
+    },
+    "description": "制造闪电并杀死受害者。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_noise_wind",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "zapped",
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 10,
+    "max_aoe": 20,
+    "aoe_increment": 1,
+    "max_level": 10,
+    "min_duration": 600,
+    "max_duration": 1200,
+    "duration_increment": 60,
+    "field_id": "fd_electricity",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_aftermath_elemental_burst_earth",
+    "type": "SPELL",
+    "name": {
+      "str": "元素爆炸地球"
+    },
+    "description": "产生酸腐蚀受害者。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_elemental_noise_earth",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "corroding",
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 10,
+    "max_aoe": 20,
+    "aoe_increment": 1,
+    "max_level": 10,
+    "min_duration": 2100,
+    "max_duration": 12600,
+    "duration_increment": 1050,
+    "field_id": "fd_acid",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_elemental_noise_water",
+    "name": {
+      "str": "元素爆裂噪声水"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a splash!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 42,
+    "max_damage": 266,
+    "damage_increment": 22.4,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_elemental_noise_fire",
+    "name": {
+      "str": "元素爆裂声火"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "the crackle of flames!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 42,
+    "max_damage": 266,
+    "damage_increment": 22.4,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_elemental_noise_wind",
+    "name": {
+      "str": "元素爆炸噪声风"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a rush of wind!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 42,
+    "max_damage": 266,
+    "damage_increment": 22.4,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_elemental_noise_earth",
+    "name": {
+      "str": "元素爆炸噪音地球"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "the rumble of shifting stone!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 42,
+    "max_damage": 266,
+    "damage_increment": 22.4,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_elemental_coldness",
+    "type": "SPELL",
+    "name": {
+      "str": "元素标记寒冷"
+    },
+    "description": "它的存在是为了使这个区域的树液温度成为元素。",
+    "effect": "attack",
+    "shape": "blast",
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "min_aoe": 5,
+    "max_aoe": 10,
+    "aoe_increment": 1,
+    "max_level": 5,
+    "field_id": "fd_cold_air1",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "arcana_aftermath_elemental_stun",
+    "type": "SPELL",
+    "name": {
+      "str": "元素符号眩晕"
+    },
+    "description": "这是为了给元素符号短暂的冻结敌人。",
+    "effect": "mod_moves",
+    "shape": "blast",
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "min_damage": -1500,
+    "max_damage": -3000,
+    "damage_increment": -300,
+    "min_aoe": 5,
+    "max_aoe": 10,
+    "aoe_increment": 1,
+    "max_level": 5
+  },
+  {
+    "id": "arcana_aftermath_healing_side_effects",
+    "type": "SPELL",
+    "name": {
+      "str": "治疗副作用"
+    },
+    "description": "这是为了给予愈合的长期副作用。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "effect_str": "arcane_healing_side_effects",
+    "max_level": 10,
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "min_duration": 2880000,
+    "max_duration": 3600000
+  },
+  {
+    "id": "arcana_aftermath_holy_flare_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "神圣耀斑钉"
+    },
+    "description": "增加圣火中心的任何东西的伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "downed",
+    "min_damage": 10,
+    "max_damage": 80,
+    "damage_increment": 3.5,
+    "min_range": 8,
+    "max_range": 30,
+    "range_increment": 1.1,
+    "min_aoe": 0,
+    "max_aoe": 2,
+    "aoe_increment": 0.1,
+    "max_level": 20,
+    "damage_type": "heat",
+    "min_duration": 200,
+    "max_duration": 2000,
+    "duration_increment": 90
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_holy_flare_noise",
+    "name": {
+      "str": "神圣的闪光声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "an explosion!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 20,
+    "min_damage": 20,
+    "max_damage": 160,
+    "damage_increment": 7,
+    "min_range": 8,
+    "max_range": 30,
+    "range_increment": 1.1,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_infernal_flame_corruption",
+    "type": "SPELL",
+    "name": {
+      "str": "地狱气息腐化"
+    },
+    "description": "这只不过是为了给地狱之火增加对自然地形的破坏。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "message": "",
+    "effect_str": "arcana_fire_dragonblood3",
+    "max_level": 5,
+    "min_damage": 4,
+    "max_damage": 2,
+    "damage_increment": -0.5,
+    "min_aoe": 4,
+    "max_aoe": 10,
+    "aoe_increment": 1.2
+  },
+  {
+    "id": "arcana_aftermath_infernal_flame_field",
+    "type": "SPELL",
+    "name": {
+      "str": "地狱气息场"
+    },
+    "description": "这是为了增加一个机会，在无间道的呼吸冲击后，持续的异常火焰。",
+    "effect": "attack",
+    "shape": "line",
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "min_range": 9,
+    "max_range": 14,
+    "range_increment": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 5,
+    "field_id": "fd_flame_burst",
+    "field_chance": 25,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.4,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_infernal_flame_noise",
+    "name": {
+      "str": "地狱般的呼吸噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "an unholy roar of flames!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 5,
+    "min_damage": 14,
+    "max_damage": 72,
+    "damage_increment": 11.6,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_infernal_flame_side_effects",
+    "type": "SPELL",
+    "name": {
+      "str": "地狱气息副作用"
+    },
+    "description": "这是为了让地狱的气息吸干饥饿。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "dragonbreath_side_effects",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 100,
+    "max_duration": 100
+  },
+  {
+    "id": "arcana_aftermath_malevolent_gaze_slowdown",
+    "type": "SPELL",
+    "name": {
+      "str": "恶意凝视减速"
+    },
+    "description": "这是为了给目标增加一些额外的减速。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "paralyzepoison",
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 5,
+    "max_range": 10,
+    "range_increment": 1,
+    "max_level": 5,
+    "min_duration": 45000,
+    "max_duration": 75000,
+    "duration_increment": 6000
+  },
+  {
+    "id": "arcana_aftermath_capacitance_zap",
+    "type": "SPELL",
+    "name": {
+      "str": "电容放电"
+    },
+    "description": "这个存在是为了让电容扎普的用户。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ],
+    "effect_str": "zapped",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 400,
+    "max_duration": 400,
+    "min_damage": 1,
+    "max_damage": 4,
+    "damage_type": "electric"
+  },
+  {
+    "id": "arcana_aftermath_radiant_burst_line",
+    "type": "SPELL",
+    "name": {
+      "str": "辐射爆发锥"
+    },
+    "description": "这给辐射爆发增加了一道狭窄的闪电。",
+    "message": "",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "damage_type": "electric",
+    "min_range": 6,
+    "max_range": 36,
+    "range_increment": 1.5,
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "max_level": 20,
+    "min_duration": 1200,
+    "max_duration": 12000,
+    "duration_increment": 540,
+    "field_id": "fd_electricity",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.1,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_radiant_burst_noise",
+    "name": {
+      "str": "辐射突发噪声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a roar of thunder!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 20,
+    "min_damage": 30,
+    "max_damage": 240,
+    "damage_increment": 10.5,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_shockstorm_line",
+    "type": "SPELL",
+    "name": {
+      "str": "冲击线"
+    },
+    "description": "随机闪电。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "SILENT"
+    ],
+    "message": "",
+    "effect": "attack",
+    "shape": "line",
+    "max_level": 10,
+    "min_range": 4,
+    "max_range": 12,
+    "range_increment": 0.8,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "field_id": "fd_electricity",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_shockstorm_noise",
+    "name": {
+      "str": "辐射突发噪声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "an electric crackle!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 10,
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_aftermath_sundering_quake_boulders",
+    "type": "SPELL",
+    "name": {
+      "str": "破碎的地震巨石"
+    },
+    "description": "它的存在是为了增加碎石和其他变化，以粉碎地震。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_sundering_quake",
+    "max_level": 10,
+    "min_damage": 4,
+    "max_damage": 2,
+    "damage_increment": -0.2,
+    "min_range": 10,
+    "max_range": 20,
+    "range_increment": 1,
+    "min_aoe": 3,
+    "max_aoe": 8,
+    "aoe_increment": 0.5
+  },
+  {
+    "id": "arcana_aftermath_sundering_quake_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "破碎地震附加"
+    },
+    "description": "在魔法代码中解决错误的肮脏黑客。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect_str": "arcana_pulse",
+    "max_level": 10,
+    "min_damage": 15,
+    "max_damage": 5,
+    "damage_increment": -1,
+    "min_range": 10,
+    "max_range": 20,
+    "range_increment": 1,
+    "min_aoe": 3,
+    "max_aoe": 8,
+    "aoe_increment": 0.5
+  },
+  {
+    "id": "arcana_aftermath_suppression_buff",
+    "type": "SPELL",
+    "name": {
+      "str": "缓冲抑制"
+    },
+    "description": "它的存在是为了赋予压制长期的地位效应。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect_str": "arcana_suppression",
+    "max_level": 5,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 360000,
+    "max_duration": 720000,
+    "duration_increment": 180000
+  },
+  {
+    "id": "arcana_aftermath_surge_adrenaline_timewarp",
+    "type": "SPELL",
+    "name": {
+      "str": "涌动力时间扭曲"
+    },
+    "description": "扎瓦鲁多！这是为了让澎湃的力量给你一个自由的移动。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "max_level": 20,
+    "min_damage": 200,
+    "max_damage": 2000,
+    "damage_increment": 90,
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75
+  },
+  {
+    "id": "arcana_aftermath_wave_destruction_pulse",
+    "type": "SPELL",
+    "name": {
+      "str": "破坏脉冲波"
+    },
+    "description": "这增加了射程范围内的地形的实际效果。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_wave_destruction_pulse_extra",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "message": "",
+    "effect": "bash",
+    "shape": "blast",
+    "max_level": 20,
+    "min_damage": 30,
+    "max_damage": 60,
+    "damage_increment": 1.5,
+    "min_aoe": 8,
+    "max_aoe": 30,
+    "aoe_increment": 1.4
+  },
+  {
+    "id": "arcana_aftermath_wave_destruction_pulse_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "额外的破坏波脉冲"
+    },
+    "description": "在魔法代码中解决错误的肮脏黑客。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect_str": "arcana_pulse",
+    "max_level": 20,
+    "min_damage": 12,
+    "max_damage": 4,
+    "damage_increment": -0.4,
+    "min_aoe": 8,
+    "max_aoe": 30,
+    "aoe_increment": 1.4
+  },
+  {
+    "id": "arcana_aftermath_wave_destruction_side_effects",
+    "type": "SPELL",
+    "name": {
+      "str": "破坏波副作用"
+    },
+    "description": "这是为了给破坏浪潮带来长期的副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "effect_str": "arcane_pulse_side_effects",
+    "max_level": 10,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 2880000,
+    "max_duration": 3600000
+  },
+  {
+    "id": "arcana_aftermath_wave_destruction_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "毁灭波刺"
+    },
+    "description": "根据距离的不同，这将AoE分为beefy和愚蠢beefy。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "blind",
+    "min_damage": 25,
+    "max_damage": 200,
+    "damage_increment": 8.75,
+    "damage_type": "pure",
+    "min_aoe": 2,
+    "max_aoe": 6,
+    "aoe_increment": 0.2,
+    "max_level": 20,
+    "min_duration": 2000,
+    "max_duration": 20000,
+    "duration_increment": 900
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_aftermath_wave_destruction_noise",
+    "name": {
+      "str": "破坏波噪声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a resounding, otherworldly roar!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "max_level": 20,
+    "min_damage": 50,
+    "max_damage": 400,
+    "damage_increment": 17.5,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  }
+]

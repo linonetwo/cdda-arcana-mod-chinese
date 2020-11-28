@@ -1,0 +1,236 @@
+[
+  {
+    "type": "speech",
+    "speaker": "mon_archon",
+    "sound": "“这具尸体不够，不…”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_archon",
+    "sound": "“这具肉体可能会死，但我是永恒的。”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_archon",
+    "sound": "“你将在死亡中得到启迪。”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“入侵者，你玷污了这个地方。”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade",
+    "sound": "“我能看见你。懦弱的凡人灵魂。”",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade",
+    "sound": "“你们世界上的神不会回应你们的祈祷……”",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade",
+    "sound": "“你的主人把你送死了！”",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade",
+    "sound": "“我会把你复活的外壳送回去给那些派你来的人。”",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_archon",
+    "sound": "“为我服务吧…”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“你的世界只是注定要燃烧的一千个世界中的一个。”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“你要为你的傲慢付出代价！”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“睁开你的眼睛，凡人。”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“掀开面纱，看看真相。”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“抛弃……抛弃……”",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_archon",
+    "sound": "“提交…”",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "“很快，我就要得到属于我的东西。”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_archon",
+      "mon_seraphic_shade"
+    ],
+    "sound": "用超自然的语言吟唱！",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_mi_go",
+    "sound": "“幼儿保育和教育，圣洁的马格姆！”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_mi_go",
+    "sound": "“乱花钱！”",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_mi_go",
+    "sound": "“死亡之地…”",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_mi_go",
+    "sound": "“…小木槌！”",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_summoned",
+    "sound": "微弱的，模糊的耳语。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_summoned",
+    "sound": "安静的，超凡脱俗的嗡嗡声。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_summoned",
+    "sound": "柔和的嗡嗡声。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_summoned",
+    "sound": "几乎听不见的翅膀拍打声。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_summoned",
+    "sound": "“入侵者…”",
+    "volume": 4
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_snake_summoned",
+    "sound": "微弱的、模糊的杂音。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_snake_summoned",
+    "sound": "安静的，超凡脱俗的声音。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_snake_summoned",
+    "sound": "微弱的嘶嘶声。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_snake_summoned",
+    "sound": "几乎听不见的刮擦声。",
+    "volume": 3
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_shadow_snake_summoned",
+    "sound": "“抛弃…”",
+    "volume": 4
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade_fake",
+    "sound": "“抛弃…”",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade_fake",
+    "sound": "“入侵者…”",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade_fake",
+    "sound": "“尼赫斯阿森，瓦拉特…”",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": "mon_seraphic_shade_fake",
+    "sound": "“瓦塔洛斯，阿罗维斯克…”",
+    "volume": 20
+  }
+]

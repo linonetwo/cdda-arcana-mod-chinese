@@ -1,0 +1,55 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "distortion_amp_motor_item",
+    "looks_like": "motor",
+    "name": {
+      "str": "失真放大电机"
+    },
+    "description": "依靠空间畸变放大电流的大功率电动机。可安装多个，以满足不断增长的电力需求。虽然效率不自然，但其反常的性质使其无法连接交流发电机。一旦安装，操作将有误放电的风险。",
+    "weight": "10 kg",
+    "color": "light_cyan",
+    "symbol": ",",
+    "material": [
+      "steel"
+    ],
+    "volume": "6 L",
+    "bashing": 4,
+    "category": "veh_parts",
+    "price": 800000,
+    "price_postapoc": 7000
+  },
+  {
+    "type": "TOOL",
+    "id": "essence_surge_generator_item",
+    "looks_like": "alternator_truck",
+    "name": {
+      "str": "精华浪涌发生器"
+    },
+    "description": "一种紧凑的装置，使用超凡脱俗的机制将精华转化为动力，如果集成到一辆车上，它的输出会大大增加。可靠和安全的使用，至少，即使用面纱的力量发电，在大多数情况下可能是令人望而却步的昂贵。",
+    "weight": "10 kg",
+    "color": "light_cyan",
+    "symbol": ":",
+    "material": [
+      "steel"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "essence_type": 1000
+        },
+        "rigid": true
+      }
+    ],
+    "volume": "6 L",
+    "bashing": 4,
+    "category": "veh_parts",
+    "price": 800000,
+    "price_postapoc": 7000,
+    "ammo": [
+      "essence_type"
+    ],
+    "max_charges": 1000
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "id": "TALK_FREE_MERCHANT_STOCKS",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "[任务]我被要求帮助另一个幸存者社区吸引工作。有谁能帮上忙吗？",
+        "topic": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "我不介意派几个多余的嘴到别的地方去吃。有了公社，至少物资供应问题就少了一点，人们也变得更加勇敢，不敢冒险出去找工作了。但是，把潜在的劳动力转移到其他地方而不是我们的生命线，仍然是有风险的。关于这个社区你能告诉我些什么？",
+      "no": "虽然我很乐意送你几张备用的小口给你吃，让这里的物流不那么麻烦，但我不确定我们是否能负担得起你想要的任何一种交易。我们既需要劳动力又需要物资，只是后者比前者短。和别人谈谈也许事情会解决的。"
+    },
+    "responses": [
+      {
+        "text": "这是一个建立乡村教堂的小社区，开始自给自足了。",
+        "condition": {
+          "u_has_var": "tacoma_started",
+          "type": "knowledge",
+          "context": "flag",
+          "value": "yes"
+        },
+        "topic": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4_EXPLAIN"
+      },
+      {
+        "text": "我会想别的办法的。不过，谢谢你。",
+        "switch": true,
+        "condition": {
+          "u_has_var": "tacoma_started",
+          "type": "knowledge",
+          "context": "flag",
+          "value": "yes"
+        },
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "哦，好吧。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4_EXPLAIN",
+    "dynamic_line": "我懂了。如果他们在找工人，我想我可以安排一下。我们最需要的是另一种食物来源。如果他们的团队正在成长或狩猎，我可以在联系当地一个与该中心打交道的猎人的同时，争取一些多余的劳动力。这将有助于他们保持盈余，而不会给我们的企业带来太大的风险。",
+    "responses": [
+      {
+        "text": "那你说好了。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_free_merchants_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_free_merchants_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "topic": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4_DEAL"
+      },
+      {
+        "text": "我还不确定，我们谈点别的吧。",
+        "topic": "TALK_FREE_MERCHANT_STOCKS"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FREE_MERCHANT_STOCKS_CF_REP_MISSION_4_DEAL",
+    "dynamic_line": "我会让我的联系人安排一个聚会来安排事情。很高兴和你做生意，希望一切顺利。",
+    "responses": [
+      {
+        "text": "谢谢，我们谈点别的吧。",
+        "topic": "TALK_FREE_MERCHANT_STOCKS"
+      },
+      {
+        "text": "非常感谢。到此为止，再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

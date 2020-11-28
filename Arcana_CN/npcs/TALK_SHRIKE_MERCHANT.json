@@ -1,0 +1,212 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_SHRIKE_MERCHANT",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "…亨特。问候语。",
+      "no": "问候语。"
+    },
+    "responses": [
+      {
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_SHRIKE_MERCHANT_GM_PRELUDE"
+      },
+      {
+        "text": "你是谁？",
+        "topic": "TALK_SHRIKE_MERCHANT_WHO"
+      },
+      {
+        "text": "关于这个地方你能告诉我些什么？",
+        "topic": "TALK_SHRIKE_MERCHANT_WHERE"
+      },
+      {
+        "text": "你在这里做什么？",
+        "topic": "TALK_SHRIKE_MERCHANT_DO"
+      },
+      {
+        "text": "你有什么要交易的吗？",
+        "effect": "start_trade",
+        "condition": {
+          "u_has_var": "cf_horace_traded",
+          "type": "flag",
+          "context": "knowledge",
+          "value": "yes"
+        },
+        "topic": "TALK_SHRIKE_MERCHANT"
+      },
+      {
+        "text": "好吧，再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_GM_PRELUDE",
+    "type": "talk_topic",
+    "dynamic_line": "另一只伯劳鸟在一次狩猎中撞上了那些东西。离埃琳娜的藏身处不远，最多东北半英里。"
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_WHO",
+    "type": "talk_topic",
+    "dynamic_line": "伯劳鸟，猎人的猎手。现在我会去寻找任何其他引起麻烦的东西。我想应该做些建设性的事情。",
+    "responses": [
+      {
+        "text": "什么样的麻烦？",
+        "topic": "TALK_SHRIKE_MERCHANT_TROUBLE"
+      },
+      {
+        "text": "我能为你做点什么吗？",
+        "condition": {
+          "not": {
+            "u_has_var": "cf_horace_mission",
+            "type": "flag",
+            "context": "knowledge",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_SHRIKE_MERCHANT_HELP"
+      },
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_TROUBLE",
+    "type": "talk_topic",
+    "dynamic_line": "通常是怪物。如果他们够蠢的话。如果我们听说另一个血法师仍然在那里练习旧的方法，那应该可以让血泵…",
+    "responses": [
+      {
+        "text": "如果你愿意，我可以帮你。",
+        "condition": {
+          "not": {
+            "u_has_var": "cf_horace_mission",
+            "type": "flag",
+            "context": "knowledge",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_SHRIKE_MERCHANT_HELP"
+      },
+      {
+        "text": "哦，好吧。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_HELP",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "哈。那是你的工作，不是吗？追捕邪恶和超自然的人。无意冒犯，但我更喜欢自己处理这些事情。这是一个难得的机会，在不伤害无辜的情况下，充分发挥我的才能。感觉它给我们所谓的道路带来了目标。",
+      "no": "现在，我宁愿把这件事全交给我自己。在这个新的世界里，几乎没有什么乐趣可以享受，而我的这些狩猎活动是一个难得的机会，让我可以做一些有益的事情。"
+    },
+    "speaker_effect": {
+      "effect": {
+        "u_add_var": "cf_horace_mission",
+        "type": "flag",
+        "context": "knowledge",
+        "value": "yes"
+      }
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_WHERE",
+    "type": "talk_topic",
+    "dynamic_line": "这是个好地方。安静，但不太容易受到攻击。似乎女祭司，索菲亚，如果我记得，保持其他猎人排队。从没想过我会和法师猎人一起工作…",
+    "responses": [
+      {
+        "text": "其他人跟你一起去吗？",
+        "topic": "TALK_SHRIKE_MERCHANT_SURVIVORS"
+      },
+      {
+        "text": "好的，明白了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_SURVIVORS",
+    "type": "talk_topic",
+    "dynamic_line": "一个伯劳来找索菲亚讨论事情。她跑了，我是唯一决定留下来的人。",
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHRIKE_MERCHANT_DO",
+    "type": "talk_topic",
+    "dynamic_line": "主要是打猎。现在通常是怪物而不是人。现在效率更高。如果你愿意的话，我还有一些可以交换的东西。",
+    "speaker_effect": {
+      "condition": {
+        "not": {
+          "u_has_var": "cf_horace_traded",
+          "type": "flag",
+          "context": "knowledge",
+          "value": "yes"
+        }
+      },
+      "effect": {
+        "u_add_var": "cf_horace_traded",
+        "type": "flag",
+        "context": "knowledge",
+        "value": "yes"
+      }
+    },
+    "responses": [
+      {
+        "text": "当然，让我们看看你有什么。",
+        "effect": "start_trade",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      },
+      {
+        "text": "也许下次吧，谢谢。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
+  }
+]

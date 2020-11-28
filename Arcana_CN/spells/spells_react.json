@@ -1,0 +1,369 @@
+[
+  {
+    "id": "arcana_react_bane_staff_venom",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：毒液"
+    },
+    "description": "造成一点生物伤害和毒害。",
+    "message": "当你攻击的时候，令人恶心的毒液从你的手杖里流出来。",
+    "flags": [
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect_str": "poison",
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 500,
+    "max_duration": 1500
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_evil_mimic",
+    "name": {
+      "str": "反应：对权力上瘾"
+    },
+    "description": "这增加了一个随机的效果持续时间，模仿邪恶，但技术上不是。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "arcana_evil_mimic",
+    "min_duration": 150000,
+    "max_duration": 210000
+  },
+  {
+    "id": "arcana_react_bloodscourge_fire",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：献祭效应"
+    },
+    "description": "这会导致燃烧。",
+    "message": "",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "onfire",
+    "min_range": 1,
+    "max_range": 1,
+    "min_duration": 200,
+    "max_duration": 400
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_drain_life",
+    "name": {
+      "str": "反应：吸取生命护盾"
+    },
+    "description": "它的存在只是为了在命中时触发自身效果。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "message": "",
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_drain_life_2",
+        "hit_self": true
+      }
+    ]
+  },
+  {
+    "id": "arcana_react_drain_life_2",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：吸取生命效果"
+    },
+    "description": "这会产生治疗施法者的效果。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "sword_mending",
+    "min_damage": -1,
+    "max_damage": -3,
+    "flags": [
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
+    "min_duration": 500,
+    "max_duration": 1000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_drain_life_improved",
+    "name": {
+      "str": "反应：强化的吸取生命护盾"
+    },
+    "description": "它的存在只是为了在命中时触发自身效果。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "message": "",
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_drain_life_improved_2",
+        "hit_self": true
+      }
+    ]
+  },
+  {
+    "id": "arcana_react_drain_life_improved_2",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：吸取生命效果"
+    },
+    "description": "这会产生治疗施法者的效果。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "sword_mending",
+    "min_damage": -3,
+    "max_damage": -6,
+    "flags": [
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
+    "min_duration": 600,
+    "max_duration": 1200
+  },
+  {
+    "id": "arcana_react_satchel_attention",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：提包注意"
+    },
+    "description": "少量的低关注。",
+    "message": "你觉得有什么东西在看着你。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "RANDOM_DURATION"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "attention",
+    "min_duration": 6000,
+    "max_duration": 18000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_satchel_teleport",
+    "name": {
+      "str": "反应：背包传送"
+    },
+    "description": "去找尤特。安全，但配有teleglow。",
+    "extra_effects": [
+      {
+        "id": "arcana_react_satchel_teleglow"
+      }
+    ],
+    "message": "你觉得自己被拉向了一个不存在的方向！",
+    "effect": "teleport_random",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "min_range": 10,
+    "max_range": 20
+  },
+  {
+    "id": "arcana_react_satchel_teleglow",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：挎包Teleglow"
+    },
+    "description": "少量的发光。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "RANDOM_DURATION"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "teleglow",
+    "min_duration": 12000,
+    "max_duration": 24000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_moonstone_touch",
+    "name": {
+      "str": "反应：月光石触摸"
+    },
+    "description": "有点疯狂。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "taint",
+    "extra_effects": [
+      {
+        "id": "arcana_react_moonstone_touch_2"
+      }
+    ],
+    "min_duration": 15000,
+    "max_duration": 45000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_moonstone_touch_2",
+    "name": {
+      "str": "反应：月光石触摸2"
+    },
+    "description": "还有一些疾病伴随着疯狂。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "arcana_moonstone_touch",
+    "min_duration": 200,
+    "max_duration": 400
+  },
+  {
+    "id": "arcana_react_shadowy_shield",
+    "type": "SPELL",
+    "name": {
+      "str": "暗盾效应"
+    },
+    "description": "这会产生一种效果，让攻击者目瞪口呆。",
+    "message": "摇曳的影子向你的攻击者猛击！",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "blind",
+    "damage_type": "cold",
+    "min_damage": 1,
+    "max_damage": 3,
+    "flags": [
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE"
+    ],
+    "sound_type": "combat",
+    "sound_description": "a strange rush of wind!",
+    "min_range": 5,
+    "max_range": 5,
+    "min_duration": 500,
+    "max_duration": 1000,
+    "field_id": "fd_veil_darkness",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_react_nothing",
+    "name": {
+      "str": "反应：没什么"
+    },
+    "description": "肮脏的黑客添加RNG反应效果。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect": "attack",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_react_spear_pestilence_poison",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：麻痹"
+    },
+    "description": "实际的毒害效果。",
+    "message": "你的长矛周围的空气飘荡着飘渺的力量。",
+    "flags": [
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect_str": "paralyzepoison",
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 1000,
+    "max_duration": 2000
+  },
+  {
+    "id": "arcana_react_symbol_judgment_zap",
+    "type": "SPELL",
+    "name": {
+      "str": "反应：电刺激"
+    },
+    "description": "在近战中杀死某人。",
+    "message": "火花从你的武器上跳了出来。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect_str": "zapped",
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 100,
+    "max_duration": 500
+  }
+]

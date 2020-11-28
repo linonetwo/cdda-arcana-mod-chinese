@@ -1,0 +1,203 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_Work1",
+    "responses": [
+      {
+        "text": "如果有另一个需要劳动力的人，那可能还有扩张的空间呢？",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "npc_has_var": "sofia_refugee_convinced",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_CF_REP_MISSION_4",
+    "dynamic_line": {
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "如果你指的是他们创办的公社，我很感激你的建议。但我不认为我会被安排去另一次长途旅行，因为那里有那么多东西。另外，有些人已经需要我了，如果他们为了和我一起搬家而受伤或被杀，我就无法自理了。",
+      "no": "我会想办法解决的。任何事情都比勇敢地面对邪恶的恐怖要好，我这里有一些人，我不想冒着失去他们的风险，如果我们冒险去一些未知的解决方案。"
+    },
+    "responses": [
+      {
+        "text": "实际上，这是一个完全不同的社区。更小，但加强了防御，而且开始能够自给自足了。",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_UNKNOWN",
+        "condition": {
+          "u_has_var": "tacoma_started",
+          "type": "knowledge",
+          "context": "flag",
+          "value": "yes"
+        }
+      },
+      {
+        "text": "可以理解。你知道还有谁能来吗？",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_HELP"
+      },
+      {
+        "text": "哦，好吧。那没关系。",
+        "topic": "TALK_REFUGEE_Boris_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_UNKNOWN",
+    "dynamic_line": "我不能把我的生命，还有我剩下的人的生命，赌在一个我一无所知的地方。我很抱歉。",
+    "responses": [
+      {
+        "text": "你知道有没有人能帮上忙吗？",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_HELP"
+      },
+      {
+        "text": "很好。我得走了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_HELP",
+    "dynamic_line": "尽管一切都很糟糕，但这里的大多数人宁愿冒险去别的地方。每隔一段时间，其他人都会来拜访，他们对外面的事物毫不畏惧。我想这可能有用吗？",
+    "responses": [
+      {
+        "text": "如果你有机会的话，你能帮我宣传一下另一个地方正在找人为他们工作吗？",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_OFFER"
+      },
+      {
+        "text": "我看看能不能想出办法。",
+        "topic": "TALK_REFUGEE_Boris_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_OFFER",
+    "dynamic_line": "我想我可以试试。至少能让我做点什么。他们应该寻求什么样的解决方案？",
+    "responses": [
+      {
+        "text": "当地一群捕猎怪物的人在路边的教区教堂外活动，他们已经开始加固并在附近建造更多的建筑。",
+        "topic": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_DEAL"
+      },
+      {
+        "text": "再想一想，我也许能想出别的办法。",
+        "topic": "TALK_REFUGEE_Boris_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Boris_CF_REP_MISSION_4_DEAL",
+    "dynamic_line": "好吧。我希望这对你有用。我猜你应该和这里的其他人谈谈，如果你不能说服其他人去那里，他们至少可以帮助把消息从另一个社区传出去。",
+    "responses": [
+      {
+        "text": "我已经问过其他几个人了，希望能有所帮助。我应该去前哨看看。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_2",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "非常感谢。我现在就继续做。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_2",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_1",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "非常感谢。我会继续四处打听，看看这是怎么回事。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_1",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "switch": true,
+        "default": true,
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

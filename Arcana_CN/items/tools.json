@@ -1,0 +1,3091 @@
+[
+  {
+    "id": "tindalos_whistle",
+    "copy-from": "tindalos_whistle",
+    "type": "TOOL",
+    "name": {
+      "str": "廷达洛斯哨声",
+      "str_pl": "丁达洛的哨声"
+    },
+    "description": "这是一个小哨子，如果不是因为不寻常的标记和异国情调的材料，它像狗的哨子。它发出的奇怪的声音显然不是为了叫唤犬科动物，或任何与此维度相关的东西。",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "charges_per_use": 1
+  },
+  {
+    "id": "portal",
+    "copy-from": "portal",
+    "type": "TOOL",
+    "name": {
+      "str": "入口生成器"
+    },
+    "initial_charges": 2,
+    "max_charges": 2,
+    "charges_per_use": 1
+  },
+  {
+    "id": "bot_vortex",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": {
+      "str": "执政官魔法"
+    },
+    "description": "产生一个阴影，由执政官的主人使用。如果你找到了其中一个，这就是一个臭虫。",
+    "material": [
+      "essencemat"
+    ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_shadow_summoned",
+      "place_randomly": true
+    },
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "bot_shadows_fake",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": {
+      "str": "执政官魔法"
+    },
+    "description": "产生一个假阴影，由天使之影使用。如果你找到了其中一个，这就是一个臭虫。",
+    "material": [
+      "essencemat"
+    ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_shadow_summoned_fake",
+      "place_randomly": true
+    },
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "bot_seraphic_mimic",
+    "type": "TOOL",
+    "name": {
+      "str": "仿执政官"
+    },
+    "description": "产生一个六边形阴影的副本。如果你找到了其中一个，这就是一个臭虫。",
+    "material": [
+      "essencemat"
+    ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_seraphic_shade_fake",
+      "place_randomly": true
+    },
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "stinger_flute",
+    "type": "TOOL",
+    "copy-from": "bone_flute",
+    "name": {
+      "str": "毒刺长笛",
+      "str_pl": "毒刺长笛"
+    },
+    "description": "一种有五个指孔的抛光长笛，由某种异国怪物的毒刺雕刻而成。把它放在嘴里应该是安全的。",
+    "material": [
+      "flesh"
+    ],
+    "color": "light_gray",
+    "//": "As noted with wearable trinkets made from monsterparts, these are post-cata only.",
+    "price_postapoc": 250,
+    "use_action": {
+      "type": "musical_instrument",
+      "volume": 12,
+      "fun": -6,
+      "fun_bonus": 2,
+      "speed_penalty": 10,
+      "description_frequency": 20,
+      "player_descriptions": [
+        "You play a little tune on your flute.",
+        "You play an eerie piece on your flute.",
+        "You play a piece on your flute that sounds downright otherworldly.",
+        "Your flute resounds with the piping of a terrible swarm."
+      ]
+    }
+  },
+  {
+    "id": "charm_bone",
+    "type": "GENERIC",
+    "name": {
+      "str": "骨符"
+    },
+    "description": "一种由某种超自然的骨头或象牙制成的小护身符，上面刻有同样超凡脱俗的肖像。",
+    "weight": "38 g",
+    "volume": "50 ml",
+    "price_postapoc": 200,
+    "material": [
+      "bone"
+    ],
+    "symbol": ",",
+    "looks_like": "small_relic",
+    "color": "white",
+    "use_action": "MEDITATE"
+  },
+  {
+    "id": "offering_chalice",
+    "type": "TOOL",
+    "name": {
+      "str": "献祭圣杯"
+    },
+    "description": "这是一个奇怪的金杯，上面刻着一些陌生的文字。它充满了一种你似乎无法倒出的黑色粘稠液体。使用它可以让你进行一种仪式，将你自己的生命力转化为血之精华。这样做将需要15分钟，在最后对你的身体造成伤害，以及严重后果，如果过度使用。。。",
+    "weight": "2500 g",
+    "volume": "1 L",
+    "price": 160000,
+    "price_postapoc": 3000,
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "gold"
+    ],
+    "symbol": ";",
+    "looks_like": "small_relic",
+    "color": "yellow",
+    "flags": [
+      "MAGIC_FOCUS",
+      "USE_PLAYER_ENERGY"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      "MEDITATE",
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_chalice_offering",
+        "no_fail": true,
+        "need_wielding": true,
+        "level": 0
+      }
+    ]
+  },
+  {
+    "id": "blood_athame",
+    "type": "TOOL",
+    "//": "By necessity can't yet define this to use copy-from, as qualities will break it.",
+    "category": "weapons",
+    "name": {
+      "str": "银器"
+    },
+    "description": "一把华丽的银匕首，似乎是为了祭祀而制作的。它似乎比银更锋利。它可以用来进行一个仪式，将你的生命力转化为血之精华。这样做将需要5分钟，造成失血和损伤的最后，以及潜在的后果，如果过度使用。。。",
+    "weight": "1302 g",
+    "volume": "750 ml",
+    "longest_side": "50 cm",
+    "price": 24000,
+    "price_postapoc": 2000,
+    "to_hit": 1,
+    "bashing": 3,
+    "cutting": 16,
+    "material": [
+      "silver"
+    ],
+    "symbol": "/",
+    "looks_like": "knife_butcher",
+    "color": "red",
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        15
+      ]
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_athame_sanguine_art",
+        "no_fail": true,
+        "need_wielding": true,
+        "level": 0
+      }
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_KNIFE",
+      "USE_PLAYER_ENERGY"
+    ]
+  },
+  {
+    "id": "sun_sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "清廉之剑"
+    },
+    "//": "Stats are a blend of the available swords you can use to make it, same deal as the mantle of shadows.",
+    "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。当它被神圣的魔法精华所驱动时，它有能力穿透黑暗。",
+    "weight": "1360 g",
+    "volume": "2 L",
+    "longest_side": "95 cm",
+    "price": 150000,
+    "price_postapoc": 7500,
+    "to_hit": 2,
+    "bashing": 10,
+    "cutting": 32,
+    "material": [
+      "steel",
+      "gold"
+    ],
+    "symbol": "/",
+    "looks_like": "arming_sword",
+    "color": "yellow",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_dull_type": 20
+        }
+      }
+    ],
+    "max_charges": 20,
+    "ammo": "essence_dull_type",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "use_action": [
+      {
+        "target": "sun_sword_on",
+        "msg": "The blade gives off a brilliant glow as you invoke its power!",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "The sword needs energy to serve its purpose.",
+        "menu_text": "Awaken the holy blade",
+        "type": "transform"
+      }
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "NO_SALVAGE",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "sun_sword_on",
+    "type": "TOOL",
+    "copy-from": "sun_sword",
+    "repairs_like": "sun_sword",
+    "category": "weapons",
+    "name": {
+      "str": "清廉剑（开）",
+      "str_pl": "清廉剑（上）"
+    },
+    "//": "Weapons normally come with the vorpal flag, not the technique.  But gaining the technique through normal means likely breaks with transforming weapons.",
+    "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。刀片发出强烈的白光和灼热。",
+    "turns_per_charge": 100,
+    "revert_to": "sun_sword",
+    "techniques": [
+      "WBLOCK_2",
+      "tec_weapon_incorruptible_slash"
+    ],
+    "use_action": [
+      {
+        "type": "firestarter",
+        "moves": 30
+      },
+      {
+        "menu_text": "Turn off",
+        "type": "transform",
+        "msg": "The sword's radiance fades.",
+        "target": "sun_sword"
+      }
+    ],
+    "relative": {
+      "cutting": 3
+    },
+    "extend": {
+      "flags": [
+        "FIRE",
+        "LIGHT_240",
+        "CHARGEDIM",
+        "FLAMING",
+        "NONCONDUCTIVE"
+      ]
+    },
+    "delete": {
+      "flags": [
+        "SHEATH_SWORD"
+      ]
+    }
+  },
+  {
+    "id": "hexenhammer",
+    "type": "TOOL",
+    "category": "weapons",
+    "copy-from": "warhammer",
+    "name": {
+      "str": "猎人之锤",
+      "str_pl": "猎人之锤"
+    },
+    "description": "一种镶有银的战锤，上面刻有古拉丁语的宗教祈祷词。很多魔法物品都可以用这个道具净化。使用它将引导神圣的精华进入一个惊人的闪光。虽然使用它是一把双刃剑，但它会对黑暗生物产生进一步的影响。",
+    "price": 80000,
+    "price_postapoc": 4500,
+    "material": [
+      "iron",
+      "silver",
+      "wood"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_dull_type": 3
+        }
+      }
+    ],
+    "max_charges": 3,
+    "charges_per_use": 3,
+    "ammo": "essence_dull_type",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_hammerzeit",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    },
+    "relative": {
+      "weight": "360 g",
+      "bashing": 2,
+      "price": 12000
+    },
+    "extend": {
+      "flags": [
+        "NO_SALVAGE"
+      ]
+    }
+  },
+  {
+    "id": "spear_pestilence",
+    "type": "TOOL",
+    "copy-from": "spear_steel",
+    "category": "weapons",
+    "name": {
+      "str": "瘟疫之矛",
+      "str_pl": "瘟疫之矛"
+    },
+    "description": "一种粗壮的带有邪恶刺的钢矛，用几丁质雕刻的精致图案装饰。使用它将临时召唤变异害虫来帮助你，使用它可以使移动更容易。",
+    "price": 120000,
+    "price_postapoc": 3500,
+    "material": [
+      "steel",
+      "wood",
+      "chitin"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_type": 9
+        }
+      }
+    ],
+    "max_charges": 9,
+    "charges_per_use": 1,
+    "ammo": "essence_type",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "MOVE_COST",
+              "add": -25
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_spear_pestilence_poison",
+              "once_in": 3,
+              "message": "你的长矛周围的空气飘荡着飘渺的力量。",
+              "npc_message": "%1$s周围的空气以空灵的力量摇摆。"
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_pestilence",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    },
+    "relative": {
+      "weight": 540,
+      "bashing": 2
+    },
+    "extend": {
+      "flags": [
+        "NO_SALVAGE",
+        "MAGIC_FOCUS",
+        "TRADER_KEEP_EQUIPPED"
+      ]
+    }
+  },
+  {
+    "id": "scroll_sun",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "神光卷轴",
+      "str_pl": "神圣的光明卷轴"
+    },
+    "description": "这是一个卷轴，上面有奇怪的文字和太阳图案的插图，代表着一个超凡脱俗的太阳神。使用它会使肾上腺素激增，瞬间减慢时间，同时发出耀眼的光芒。",
+    "price": 12000,
+    "price_postapoc": 4000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开神圣的光卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_sun",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_moon",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "黑暗神圣卷轴",
+      "str_pl": "黑暗的神圣卷轴"
+    },
+    "description": "这是一个卷轴，上面有奇怪的文字和对月亮周期的描绘，代表着一个超凡脱俗的月亮神。使用它将在黑暗中笼罩该区域，使敌人暂时失明。",
+    "price": 12000,
+    "price_postapoc": 4000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开黑暗的神圣卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_moon",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_artiface",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "神圣命令卷轴",
+      "str_pl": "神圣的命令卷轴"
+    },
+    "description": "这是一个卷轴，上面有奇怪的文字和士兵的形象，代表着一个超自然的秩序神。使用它会尝试将生物暂时束缚在你的意志上。然而，将你的思想向外投射的突如其来的冲击会让你痛苦地眩晕。",
+    "price": 14000,
+    "price_postapoc": 5000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开神圣的命令卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_artifice",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_nature",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "再生神卷",
+      "str_pl": "重生的神圣卷轴"
+    },
+    "description": "这是一幅卷轴，上面写着奇怪的文字和奇异的自然风光，代表着一位超凡脱俗的混沌之神。使用它将召唤一个强大的治疗咒语，同时使该地区的生命变得狂野。然而，使用它有可能以不正常的方式变异。",
+    "price": 14000,
+    "price_postapoc": 5000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开重生的神圣卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_nature",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_destruction",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "神破卷轴",
+      "str_pl": "神破卷轴"
+    },
+    "description": "这是一幅卷轴，上面写着奇怪的文字和无尽的战斗场面，代表着一个超凡脱俗的战神。使用它会引起雷鸣般的轰鸣，倒塌建筑物，伤害周围的生物，代价是吸引超自然的注意力。",
+    "price": 16000,
+    "price_postapoc": 6000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开了神圣的分裂卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_destruction",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_subversion",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "不和谐神圣卷轴",
+      "str_pl": "神圣的不和卷轴"
+    },
+    "description": "这是一幅卷轴，上面有奇怪的文字和奇特的旋转符号，代表着一个超凡脱俗的骗子神。使用它会传送你离开，留下你曾经存在过的危险。虽然你总能安全抵达目的地，但你可能会遭受其他后果。",
+    "price": 16000,
+    "price_postapoc": 6000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开了不和谐的神圣卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_scroll_subversion",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "summon_kreck",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "诡计铭文",
+      "str_pl": "诡计铭文"
+    },
+    "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。很容易控制。",
+    "price": 150000,
+    "price_postapoc": 1000,
+    "use_action": {
+      "target": "summon_kreck_on",
+      "msg": "The glyph of trickery gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_kreck_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "诡计雕文（激活）",
+      "str_pl": "诡计雕文（激活）"
+    },
+    "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。",
+    "price": 150000,
+    "price_postapoc": 1000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_kreck_summoned",
+      "friendly_msg": "The kreck looks up at you expectantly, as if wondering what sort of shenanigans you're plotting.",
+      "hostile_msg": "The kreck mimics your movements erratically, cavorting about to mock you!",
+      "difficulty": 1,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_blank",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "根字形",
+      "str_pl": "根字形"
+    },
+    "//": "ID retained to prevent tileset breakage, monster summoned was changed due to blank bodies being outright useless.",
+    "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。很容易控制。",
+    "price": 150000,
+    "price_postapoc": 2000,
+    "use_action": {
+      "target": "summon_blank_on",
+      "msg": "The glyph of the root gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_blank_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "根字形（活动）",
+      "str_pl": "根字形（活动）"
+    },
+    "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。",
+    "price": 150000,
+    "price_postapoc": 2000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_triffid_summoned",
+      "friendly_msg": "The movement of the plant creature is hard to read, but you suspect it is either friendly, or doesn't regard you as a threat.",
+      "hostile_msg": "Even without words or recognizable body language, it quickly becomes apparent that the plant monster is hostile.",
+      "difficulty": 2,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_flaming_eye",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "火坑雕文",
+      "str_pl": "火坑雕文"
+    },
+    "//": "ID retained to prevent tileset breakage, monster summoned was changed due to flaming eyes being useless if friendly.",
+    "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。它有点容易控制。",
+    "price": 150000,
+    "price_postapoc": 3000,
+    "use_action": {
+      "target": "summon_flaming_eye_on",
+      "msg": "The glyph of Gehenna gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_flaming_eye_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "火坑雕文（激活）",
+      "str_pl": "火坑雕文（激活）"
+    },
+    "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。",
+    "price": 150000,
+    "price_postapoc": 3000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_flesh_angel_summoned",
+      "friendly_msg": "A twisted mimicry of the divine is called forth, bound to your will.",
+      "hostile_msg": "The flesh angel levels a wicked gaze upon you, ignoring your commands.",
+      "difficulty": 3,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_hunting_horror",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "爬行混沌雕文",
+      "str_pl": "爬行混沌雕文"
+    },
+    "//": "Explanation: In Lovecraft's work, The Crawling Chaos is one of Nyarlathotep's names, and hunting horrors are associated with him.  The success and failure messages below spell it out rather plainly.",
+    "description": "奇怪的银徽章，不规则地刻着难以辨认的符文。使用它会引起一种狩猎恐惧，并将其与你的意志捆绑在一起。有希望地。它有点容易控制。",
+    "price": 150000,
+    "price_postapoc": 4000,
+    "use_action": {
+      "target": "summon_hunting_horror_on",
+      "msg": "The glyph of Crawling Chaos gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_hunting_horror_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "爬行混沌雕文（激活）",
+      "str_pl": "爬行混沌雕文（活动）"
+    },
+    "description": "奇怪的银徽章，不规则地刻着难以辨认的符文。使用它会引起一种狩猎恐惧，并将其与你的意志捆绑在一起。有希望地。",
+    "price": 150000,
+    "price_postapoc": 4000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_hunting_horror_summoned",
+      "friendly_msg": "The hunting horror is at your beck and call.  A gift from the Stalker among the Stars?",
+      "hostile_msg": "You feel the gaze of Nyarlathotep upon you.  How foolish of you, to steal the harrier of the Faceless God!",
+      "difficulty": 4,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_dark_wyrm",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "眼影",
+      "str_pl": "眼影"
+    },
+    "//": "Explanation: Petrified eyes are associated with dark wyrms due to the mine finale that features one.",
+    "description": "一种奇怪的银色徽章，上面刻着蛇形图案。使用它会召唤出一个黑暗的蛆，并把它束缚在你的意志上。这有点难以控制。",
+    "price": 150000,
+    "price_postapoc": 5000,
+    "use_action": {
+      "target": "summon_dark_wyrm_on",
+      "msg": "The glyph of the eye gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_dark_wyrm_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "眼影（活动）",
+      "str_pl": "眼影（活动）"
+    },
+    "description": "一种奇怪的银色徽章，上面刻着蛇形图案。使用它会召唤出一个黑暗的蛆，并把它束缚在你的意志上。有希望地。",
+    "price": 150000,
+    "price_postapoc": 5000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_dark_wyrm_summoned",
+      "friendly_msg": "The wyrm springs forth, seeming to regard you passively, or at least ignoring your presence.",
+      "hostile_msg": "The wyrm springs forth, reacting to unfamiliar sounds and scent with a malevolent screech!",
+      "difficulty": 5,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_mi_go",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "尤戈斯雕文",
+      "str_pl": "尤戈斯雕文"
+    },
+    "//": "Explanation: Yuggoth is a fictional planet from Lovecraft's work, stated to have been colonized by the mi-go.",
+    "description": "一种奇怪的银徽章，上面刻有奇怪的几丁质实体。使用它会引起一个迷走，并约束它与你的意志。有希望地。这有点难以控制。",
+    "price": 150000,
+    "price_postapoc": 6000,
+    "use_action": {
+      "target": "summon_mi_go_on",
+      "msg": "The glyph of Yuggoth gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_mi_go_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "尤戈斯雕文（活跃）",
+      "str_pl": "尤戈斯雕文（活跃）"
+    },
+    "description": "一种奇怪的银徽章，上面刻有奇怪的几丁质实体。使用它会引起一个迷走，并约束它与你的意志。有希望地。",
+    "price": 150000,
+    "price_postapoc": 6000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_mi_go_summoned",
+      "friendly_msg": "You recite an incantation, and the mi-go's response is a quiet murmur in some unknown language.  It seems to be friendly.",
+      "hostile_msg": "You begin to recite an incantation, only for the mi-go to parrot your words, mocking your effort to control it!",
+      "difficulty": 6,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_jabberwock",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "傀儡雕文",
+      "str_pl": "傀儡雕文"
+    },
+    "description": "一种奇怪的银徽章，上面用一种未知的语言刻着反写。使用它会引起一种刺耳的叫声，并将其与你的意志捆绑在一起。有希望地。这很难控制。",
+    "price": 150000,
+    "price_postapoc": 7000,
+    "use_action": {
+      "target": "summon_jabberwock_on",
+      "msg": "The glyph of the golem gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_jabberwock_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "傀儡雕文（活动）",
+      "str_pl": "傀儡雕文（活动）"
+    },
+    "description": "一种奇怪的银徽章，上面用一种未知的语言刻着反写。使用它会引起一种刺耳的叫声，并将其与你的意志捆绑在一起。有希望地。",
+    "price": 150000,
+    "price_postapoc": 7000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_jabberwock_summoned",
+      "friendly_msg": "You hear a strange burbling, the creature bound to your will.",
+      "hostile_msg": "Eyes of flame meet your gaze, the creature resists your attempt to control it!",
+      "difficulty": 7,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_flying_polyp",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "普纳科图铭文",
+      "str_pl": "普纳科图象形文字"
+    },
+    "//": "Explanation: In Lovecraft's works, the Pnakotic Manuscripts were associated with the city of this name, which was overrun by flying polyps in their conflict with the species that built the city.",
+    "description": "一种奇怪的银徽章，上面刻着一种类似珊瑚的奇怪图案。使用它会召唤出一个会飞的息肉，并将它绑定到你的意志上。有希望地。这很难控制。",
+    "price": 150000,
+    "price_postapoc": 8000,
+    "use_action": {
+      "target": "summon_flying_polyp_on",
+      "msg": "The glyph of Pnakotus gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_flying_polyp_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "普纳科特斯雕文（活动）",
+      "str_pl": "普纳科图象形文字（活动）"
+    },
+    "description": "一种奇怪的银徽章，上面刻着一种类似珊瑚的奇怪图案。使用它会召唤出一个会飞的息肉，并将它绑定到你的意志上。有希望地。",
+    "price": 150000,
+    "price_postapoc": 8000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_flying_polyp_summoned",
+      "friendly_msg": "The flying polyp twitches for a moment, before its movement steadies.  It seems to be friendly.",
+      "hostile_msg": "The flying polyp twitches erratically, reacting to your presence with apparent hostility!",
+      "difficulty": 8,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_yugg",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "钚铭文",
+      "str_pl": "普劳顿铭文"
+    },
+    "//": "Plouton, Latinized as Pluto, is another name for Hades, and reflects the association with wealth the god had by the time the name was in common use.",
+    "description": "一个奇怪的银质徽章，上面刻有古代克托尼亚人的财富。使用它会召唤出一个尤格，并把它束缚在你的意志上。有希望地。这很难控制。",
+    "price": 150000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "target": "summon_yugg_on",
+      "msg": "The glyph of Plouton gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_yugg_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "普劳顿雕文（活动）",
+      "str_pl": "普劳顿雕文（活动）"
+    },
+    "description": "一个奇怪的银质徽章，上面刻有古代克托尼亚人的财富。使用它会召唤出一个尤格，并把它束缚在你的意志上。有希望地。",
+    "price": 150000,
+    "price_postapoc": 9000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_yugg_summoned",
+      "friendly_msg": "With the riches of a dead world as an offering, you bind the yugg to serve you.  You feel like this is the opposite of how it normally works.",
+      "hostile_msg": "An offering of wealth is not enough to placate a servant of Ubb.  The creature turns hostile!",
+      "difficulty": 9,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "summon_shoggoth",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "古老事物铭文",
+      "str_pl": "古老事物的铭文"
+    },
+    "//": "Explanation: The Elder Things in Lovecraft's work were the creators of shoggoths.",
+    "description": "一个奇怪的银徽章，上面刻着许多奇怪的眼睛符号。使用它会发出一声嘘声，并把它束缚在你的意志上。有希望地。这很难控制。",
+    "price": 150000,
+    "price_postapoc": 10000,
+    "use_action": {
+      "target": "summon_shoggoth_on",
+      "msg": "The glyph of the Elder Things gives off a faint green glow.",
+      "target_charges": 0,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "summon_shoggoth_on",
+    "type": "TOOL",
+    "copy-from": "silver_glyph",
+    "name": {
+      "str": "长者之物雕文（活跃）",
+      "str_pl": "长者之物雕文（活跃）"
+    },
+    "description": "一个奇怪的银徽章，上面刻着许多奇怪的眼睛符号。使用它会发出一声嘘声，并把它束缚在你的意志上。有希望地。这很难控制。",
+    "price": 150000,
+    "price_postapoc": 10000,
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "revert_to": "silver_glyph",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_shoggoth_summoned",
+      "friendly_msg": "You hear a voice in your mind.  \"Tekili ...l-li?\"  Your mind exerts a strange influence upon the shoggoth.",
+      "hostile_msg": "You hear a voice in your mind.  \"Tekeli-li!\"  The shoggoth resists your efforts to control it!",
+      "difficulty": 10,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skill1": "magic"
+    }
+  },
+  {
+    "id": "scroll_spell_sun",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（连续）",
+      "str_pl": "图案卷轴（连续）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将驱除困扰大地的各种超自然的腐败迹象，并使一些来自远方的生物眩晕。”",
+    "//": "Pattern scrolls were extremely rare pre-cataclysm as spell development was in its infancy, but now they're all quite useful in various ways.  Divine pattern scrolls especially were almost non-existent.",
+    "price_postapoc": 12000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_consecrate",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_moon",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "花样卷轴（御寒）",
+      "str_pl": "图案卷轴（御寒）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语可以抵御寒冷及其所有副作用。”",
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_frost_armor",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_artiface",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（碎震）",
+      "str_pl": "图案卷轴（碎震）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将摧毁建筑并将其埋在瓦砾中，但生物不会受到伤害。”",
+    "price_postapoc": 10000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_sundering_quake",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_nature",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（元素爆发）",
+      "str_pl": "图案卷轴（元素爆发）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将以随机元素效果爆炸一个锥形区域，对中心的敌人造成双倍伤害",
+    "price_postapoc": 10000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_elemental_burst",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_destruction",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（召唤蜈蚣）",
+      "str_pl": "图案卷轴（召唤蜈蚣）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将召唤变异的害虫，这将是忠诚的但不是永久的",
+    "price_postapoc": 8000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_summon_giant_centipedes",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_subversion",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（月蚀）",
+      "str_pl": "图案滚动（月蚀）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将带来怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。”",
+    "price_postapoc": 12000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_eclipse",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "bloodaxe",
+    "copy-from": "hatchet",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "维恩雷弗"
+    },
+    "description": "斧头斧头的斧头稍微亮了一点，染上了干血的暗淡颜色。使用它会将血之精华导入一个危险的爆炸，爆炸半径相当大。它会给你很少的时间来逃避，明智地利用它。",
+    "price": 40000,
+    "price_postapoc": 6000,
+    "symbol": ";",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 3
+        }
+      }
+    ],
+    "max_charges": 3,
+    "ammo": "essence_blood_type",
+    "weight": "707 g",
+    "volume": "750 ml",
+    "longest_side": "45 cm",
+    "relative": {
+      "bashing": -2,
+      "weight": "-200 g"
+    },
+    "use_action": [
+      {
+        "target": "bloodaxe_act",
+        "msg": "You draw upon the axe's energy, and the axehead glows a bright red!",
+        "need_charges": 3,
+        "need_charges_msg": "The axe requires 3 blood essence to invoke this power.",
+        "active": true,
+        "need_wielding": true,
+        "menu_text": "Activate explosive rune",
+        "type": "transform"
+      }
+    ],
+    "extend": {
+      "flags": [
+        "NO_SALVAGE",
+        "TRADER_KEEP_EQUIPPED"
+      ]
+    }
+  },
+  {
+    "id": "bloodaxe_act",
+    "//": "Can't use copy-from because qualities refuse to be deleted, causing it to try and chop wood instead of exploding.",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "发光细脉"
+    },
+    "description": "一把改良的斧头，斧头发出邪恶的红光。扔掉它可能是个聪明的主意，因为你几乎没有时间逃避它的冲击。",
+    "weight": "707 g",
+    "volume": "750 ml",
+    "longest_side": "45 cm",
+    "price": 40000,
+    "price_postapoc": 6000,
+    "to_hit": 1,
+    "bashing": 10,
+    "cutting": 7,
+    "thrown_damage": [
+      {
+        "damage_type": "cold",
+        "amount": 18
+      }
+    ],
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": ";",
+    "looks_like": "hatchet",
+    "color": "brown",
+    "max_charges": 3,
+    "turns_per_charge": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 3
+        }
+      }
+    ],
+    "ammo": "essence_blood_type",
+    "revert_to": "bloodaxe",
+    "use_action": {
+      "type": "explosion",
+      "fields_type": "fd_blood",
+      "fields_radius": 3,
+      "fields_min_density": 3,
+      "fields_max_density": 3,
+      "sound_volume": 1,
+      "sound_msg": "Drip.",
+      "no_deactivate_msg": "You can't dispel the effect.  Might want to try throwing it instead.",
+      "explosion": {
+        "power": 1500,
+        "distance_factor": 0.45
+      }
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "LIGHT_8",
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "NO_RELOAD"
+    ]
+  },
+  {
+    "id": "totem_elecresist",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "琥珀色海豹：闪电守卫",
+      "str_pl": "琥珀海豹：闪电守卫"
+    },
+    "description": "一小块雕刻得超凡脱俗的琥珀。激活它来集中你的注意力，创造一个神奇的标志，保护你免受雷击。这将完全消耗该项目。",
+    "//": "Magic seals are all explicitly a post-cataclysm development, as this path towards development of natural magic did not exist without more monsters to study.",
+    "price_postapoc": 4500,
+    "color": "light_gray",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_lightning_ward",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_cleric",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "天使印章：抵御邪恶",
+      "str_pl": "天使封印：抵御邪恶"
+    },
+    "description": "一种有翅膀的小雕像，由一种奇怪的彩虹石雕刻而成。激活它来集中你的注意力，创造一个魔法符号，保护你免受各种不正常的影响。这将完全消耗该项目。",
+    "price_postapoc": 4500,
+    "color": "light_green",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_ward_against_evil",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_agile",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "骨印：敏捷",
+      "str_pl": "骨海豹：敏捷"
+    },
+    "description": "用超自然的骨头刻出来的一小套骰子。激活它来集中你的注意力，创造一个神奇的符号，给予一个暂时的敏捷效果。这将完全消耗该项目。",
+    "price_postapoc": 5500,
+    "color": "white",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_agility",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_confusion",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "甲壳质怪物：迷惑海豹",
+      "str_pl": "甲壳海豹：迷惑怪物"
+    },
+    "description": "从邪恶的毒刺上刻出来的小令牌。激活它来集中你的注意力，创造一个魔法符号，让你周围的怪物感到困惑。这将完全消耗该项目。",
+    "price_postapoc": 3500,
+    "color": "dark_gray",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_confuse_monster",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_strength",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "匕首印：权力",
+      "str_pl": "匕首海豹：权力"
+    },
+    "description": "用奇怪的象牙雕刻的微型匕首。激活它来集中你的注意力，创造一个神奇的符号，给予力量一个暂时的提升。这将完全消耗该项目。",
+    "price_postapoc": 5500,
+    "color": "white",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_might",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_clairvoyance",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "永恒印记：千里眼",
+      "str_pl": "永恒海豹：透视"
+    },
+    "description": "一种黑色闪闪发光的象牙的小圆形物。激活你的心灵，创造一个暂时的专注力。这将完全消耗该项目。",
+    "price_postapoc": 4500,
+    "color": "light_gray",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_clairvoyance",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_free_action",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "靛蓝印章：自由行动",
+      "str_pl": "靛蓝海豹：自由行动"
+    },
+    "description": "鲜艳的紫色花瓣的小装饰品。激活它来集中你的注意力，创造一个神奇的标志，保护你免受麻痹和其他障碍的影响。这将完全消耗该项目。",
+    "price_postapoc": 4500,
+    "color": "magenta",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_free_action",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_invis",
+    "copy-from": "totem_base",
+    "//": "ID retained to avoid breaking stuff.",
+    "type": "TOOL",
+    "name": {
+      "str": "黑曜印章：暗影之盾",
+      "str_pl": "黑曜石海豹：暗影之盾"
+    },
+    "description": "一块不自然的黑色石头，形状古怪。激活它来集中你的注意力，创造一个魔法符号，给予一个临时的防御效果，用活生生的影子攻击攻击者。这将完全消耗该项目。",
+    "price_postapoc": 4000,
+    "color": "dark_gray",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_serpentine_shield",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_plants",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "红海豹",
+      "str_pl": "猩红海豹：过度生长"
+    },
+    "description": "一种由花瓣编织而成的小装饰品，一种超凡脱俗的鲜红色调。激活它，集中你的思想，创造一个神奇的标志，并带来森林。这将完全消耗该项目。",
+    "price_postapoc": 4000,
+    "color": "red",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_overgrowth",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_flamearmor",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "星石海豹：抵御高温",
+      "str_pl": "星际海豹：抵御高温"
+    },
+    "description": "一种由看起来像流星一样的材料雕刻而成的闪闪发光的圆盘。激活它来集中你的注意力，创造一个神奇的符号，获得对热量和烟雾的暂时抵抗力。直接接触火焰仍然会伤害你。这将完全消耗该项目。",
+    "price_postapoc": 4500,
+    "color": "dark_gray",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_heat_ward",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_insight",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "撕开封印：洞察",
+      "str_pl": "撕裂封印：洞察力"
+    },
+    "description": "从一个神秘的蓝色球体雕刻而成的奇特的折射宝石。激活它来集中你的注意力，创造一个神奇的符号，暂时提升你的感知力。这将完全消耗该项目。",
+    "price_postapoc": 5500,
+    "color": "white",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_insight",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_clarity",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "刺印：血的清澈",
+      "str_pl": "刺海豹：血的清澈"
+    },
+    "description": "从一个巨大的刺上刻出来的锋利的针。激活它来集中你的注意力，创造一个神奇的标志，保护你免受寄生虫和瞳孔的侵害。这将完全消耗该项目。",
+    "price_postapoc": 4500,
+    "color": "magenta",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_clarity_blood",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_lightning",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "雷霆封印：冲击风暴",
+      "str_pl": "雷霆海豹突击队"
+    },
+    "description": "一小块奇怪的水晶，摇曳着，仿佛远方的风暴在里面肆虐。激活它来集中你的注意力，创造一个魔法符号，在你周围召唤闪电。这将完全消耗该项目。",
+    "price_postapoc": 5000,
+    "color": "pink",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_shockstorm",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_heal",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "编织海豹：治疗",
+      "str_pl": "编织海豹：治疗"
+    },
+    "description": "一个缠结在一起的流动的，模制的骨头。激活它来集中你的思想，创造一个神奇的迹象，并轻微地治愈身体。这将完全消耗该项目。",
+    "price_postapoc": 6000,
+    "color": "white",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_healing",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "totem_acidspray",
+    "copy-from": "totem_base",
+    "type": "TOOL",
+    "name": {
+      "str": "喷酸：Wyrm Seal",
+      "str_pl": "Wyrm Seals：酸雾"
+    },
+    "description": "一块刻有刺鼻气味、超凡脱俗肉体的鳞片。激活它来集中你的注意力，创造一个神奇的符号，召唤出一股酸雾。这将完全消耗该项目。",
+    "price_postapoc": 5000,
+    "color": "blue",
+    "use_action": {
+      "type": "countdown",
+      "name": "Use magic seal",
+      "message": "法印闪烁着，散发着能量。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_magic_conjure_acid",
+      "no_fail": true,
+      "level": 5
+    }
+  },
+  {
+    "id": "scroll_spell_agile",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（敏捷）",
+      "str_pl": "图案卷轴（敏捷）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将获得暂时的速度和敏捷增强效果。”",
+    "//": "Unlike divine pattern scrolls, basic pattern scrolls were rare but at least existed pre-cataclysm.",
+    "price": 300000,
+    "price_postapoc": 11000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_agility",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_clairvoyance",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（透视）",
+      "str_pl": "图案卷轴（透视）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语会用象牙色的光环涂抹你，让你看不见东西。”",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_clairvoyance",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_clarity",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（血清）",
+      "str_pl": "图案卷轴（血液清澈）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语可以保护你不受寄生虫和瞳孔的伤害。”",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_clarity_blood",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_confusion",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（迷惑怪物）",
+      "str_pl": "图案卷轴（迷惑怪物）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将击昏你周围区域的所有敌人。”",
+    "price": 300000,
+    "price_postapoc": 7000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_confuse_monster",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_acidspray",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（变酸）",
+      "str_pl": "图案卷轴（变酸）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将在目标点召唤出一股酸液喷溅，对中心的敌人造成双倍伤害。”",
+    "price": 300000,
+    "price_postapoc": 10000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_conjure_acid",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_flame_armor",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（防暑）",
+      "str_pl": "图案卷轴（防热）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将对热量和烟雾产生暂时的抵抗力，但不能直接接触火",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_flame_armor",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_free_action",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（自由动作）",
+      "str_pl": "图案滚动（自由操作）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将对麻痹效果和其他障碍提供保护。”",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_free_action",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_heal",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（治疗）",
+      "str_pl": "图案卷轴（治疗）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语可以止血和愈合伤口，尽管长期使用可能是有害的。”",
+    "price": 300000,
+    "price_postapoc": 12000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_healing",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_insight",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（细节）",
+      "str_pl": "图案卷轴（细节）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将暂时提升感知力。”",
+    "price": 300000,
+    "price_postapoc": 11000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_insight",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_elecresist",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（闪电守卫）",
+      "str_pl": "图案卷轴（闪电守卫）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个法术将给予你闪电免疫，代价是减慢你的速度。”",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_lightning_ward",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_might",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（可能）",
+      "str_pl": "图案滚动（可能）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将暂时增强力量。”",
+    "price": 300000,
+    "price_postapoc": 11000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_might",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_plants",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（过度生长）",
+      "str_pl": "图案卷轴（过度生长）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）在88森林喷发的地方，你将召唤出一个“88森林喷发”的咒语",
+    "price": 300000,
+    "price_postapoc": 8000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_overgrowth",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_invis",
+    "copy-from": "scroll_magic_base",
+    "//": "ID retained to avoid breaking stuff.",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（暗盾）",
+      "str_pl": "图案卷轴（暗影盾牌）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将用黑曜石光环涂抹你，给予你的攻击者一个暂时的防御效果，使你的攻击者失明。”",
+    "price": 300000,
+    "price_postapoc": 8000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_serpentine_shield",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_lightning",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（冲击波）",
+      "str_pl": "图案卷轴（冲击波）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语会在你周围召唤闪电，伤害任何靠近你的敌人。”",
+    "price": 300000,
+    "price_postapoc": 10000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_shockstorm",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "scroll_spell_cleric",
+    "copy-from": "scroll_magic_base",
+    "type": "TOOL",
+    "name": {
+      "str": "图案卷轴（辟邪）",
+      "str_pl": "图案卷轴（辟邪）"
+    },
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将给予一个祝福，保护你免受某些异常的威胁。”",
+    "price": 300000,
+    "price_postapoc": 9000,
+    "use_action": {
+      "type": "countdown",
+      "name": "Unroll",
+      "message": "你展开图案卷轴…"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_pattern_ward_against_evil",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "candle_warding",
+    "type": "TOOL",
+    "name": {
+      "str": "沃丁蜡烛",
+      "str_pl": "沃丁蜡烛"
+    },
+    "description": "一种蜡半透明的蜡烛，不含任何杂质，带有舒缓的气氛。它可以用来放置魔法屏障，也可以用来投射微弱的光。这个项目造成的障碍不是不可摧毁的，但它是艰难的。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": 8000,
+    "price_postapoc": 4000,
+    "material": [
+      "essencemat"
+    ],
+    "symbol": ",",
+    "color": "white",
+    "looks_like": "candle",
+    "use_action": [
+      {
+        "target": "candle_warding_active",
+        "msg": "The candle gives off a faint blue flame.",
+        "menu_text": "Light candle of warding",
+        "type": "transform"
+      },
+      {
+        "type": "deploy_furn",
+        "furn_type": "f_candle_barrier_playermade"
+      }
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "candle_warding_active",
+    "type": "TOOL",
+    "name": {
+      "str": "沃丁之烛（开）",
+      "str_pl": "沃丁蜡烛（开）"
+    },
+    "description": "一种蜡半透明的蜡烛，不含任何杂质，带有舒缓的气氛。它的灯芯被一种幽灵般的蓝色火焰点燃，发出的光没有热量。它也可以用来放置一个魔法屏障，一个既坚固又不坚不可摧的屏障。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": 8000,
+    "price_postapoc": 4000,
+    "material": [
+      "essencemat"
+    ],
+    "looks_like": "candle_lit",
+    "repairs_like": "candle_warding",
+    "symbol": ",",
+    "color": "white",
+    "use_action": [
+      {
+        "target": "candle_warding",
+        "msg": "The candle's wick is extinguished.",
+        "menu_text": "Extinguish candle of warding",
+        "type": "transform"
+      },
+      {
+        "type": "deploy_furn",
+        "furn_type": "f_candle_barrier_playermade"
+      }
+    ],
+    "flags": [
+      "NO_SALVAGE",
+      "LIGHT_12"
+    ]
+  },
+  {
+    "id": "dimensional_warp_trap",
+    "type": "TOOL",
+    "name": {
+      "str": "虚幻的碎片",
+      "str_pl": "虚幻的碎片"
+    },
+    "description": "一种由16角银制成的护身符，扭曲后可诱捕一块尖锐的结晶精华。聚焦它的能量就像一个镜头，使用它会在面纱上撕开一个缺口，形成一个入口。为现在失去的仪式而设计的裂痕，现在只会让不属于这个世界的东西进来，不管你能为这个功能设计什么疯狂的目的。",
+    "weight": "285 g",
+    "volume": "250 ml",
+    "price": 150000,
+    "price_postapoc": 10000,
+    "to_hit": -2,
+    "cutting": 1,
+    "material": [
+      "silver",
+      "essencemat"
+    ],
+    "symbol": ";",
+    "color": "cyan",
+    "use_action": {
+      "type": "place_trap",
+      "trap": "tr_portal",
+      "moves": 50,
+      "practice": 0,
+      "done_message": "A thin beam of light emits from the crystal, essence and silver burning away into nothingness as the fabric of reality decays!"
+    }
+  },
+  {
+    "id": "orb_veil",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str": "面纱之珠",
+      "str_pl": "面纱之珠"
+    },
+    "description": "一个神秘的球体，由一块几乎像玻璃一样的黑色石头制成。一个眼睛的图案被加工在里面，用黄金做虹膜和一个钻石瞳孔。据说它代表了一种保护旧知识和旧方法的愿望，并因对进一步启蒙的渴望而得到加强。使用它可以让你看到周围区域的景象，以及其他随机的副作用，同时还能吸引外界不必要的注意。。。",
+    "weight": "2000 g",
+    "volume": "1 L",
+    "price": 120000,
+    "price_postapoc": 10000,
+    "to_hit": -2,
+    "bashing": 6,
+    "material": [
+      "stone",
+      "gold",
+      "diamond"
+    ],
+    "symbol": "*",
+    "looks_like": "diamond",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_pure_type": 1
+        }
+      }
+    ],
+    "max_charges": 1,
+    "charges_per_use": 1,
+    "ammo": "essence_pure_type",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "mutations": [
+            "ARCANA_CLAIRVOYANCE_LESSER",
+            "SCHIZOPHRENIC"
+          ],
+          "values": [
+            {
+              "value": "INTELLIGENCE",
+              "add": 4
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 2
+            },
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.25
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_orb_veil_mapping",
+        "no_fail": true,
+        "level": 0
+      }
+    ],
+    "flags": [
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "staff_druidic",
+    "type": "TOOL",
+    "name": {
+      "str": "德鲁伊教职员",
+      "str_pl": "德鲁伊杖"
+    },
+    "description": "一种用银雕刻装饰的短木棍，描绘了异国情调的自然景色和各种神圣的象征。据说它代表内心深处的本能，经过克制和理性的磨练。使用它可以修复和加固由各种动植物产品和石头制成的物品，但不能修复金属或玻璃等更精细的材料。",
+    "weight": "1310 g",
+    "volume": "2 L",
+    "longest_side": "60 cm",
+    "price": 80000,
+    "price_postapoc": 9000,
+    "bashing": 12,
+    "material": [
+      "wood",
+      "silver"
+    ],
+    "symbol": "/",
+    "looks_like": "cudgel",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_dull_type": 300
+        }
+      }
+    ],
+    "max_charges": 300,
+    "charges_per_use": 1,
+    "ammo": "essence_dull_type",
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "bone",
+          "chitin",
+          "acidchitin",
+          "clay",
+          "cotton",
+          "fur",
+          "leather",
+          "gutskin",
+          "stone",
+          "wood",
+          "wool"
+        ],
+        "skill": "magic",
+        "tool_quality": 20,
+        "cost_scaling": 0,
+        "move_cost": 1000
+      },
+      {
+        "type": "sew_advanced",
+        "materials": [
+          "bone",
+          "chitin",
+          "acidchitin",
+          "clay",
+          "cotton",
+          "fur",
+          "leather",
+          "gutskin",
+          "stone",
+          "wood",
+          "wool"
+        ],
+        "skill": "tailor",
+        "clothing_mods": [
+          "arcana_acidchitin_weave",
+          "arcana_bone_weave",
+          "arcana_chitin_weave",
+          "arcana_clay_weave",
+          "arcana_stone_weave",
+          "arcana_wood_weave"
+        ]
+      }
+    ],
+    "flags": [
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "coalescent_converter",
+    "name": {
+      "str": "聚结变换器"
+    },
+    "description": "从一个奇特的紧凑型反应堆改造而来的装置，完全颠倒了它原来的功能。任何一个电池都能提供足够的电能，它能产生结晶的精华。这一过程相当低效，而且很有可能破坏现实的结构。",
+    "weight": "11 kg",
+    "color": "light_cyan",
+    "looks_like": "portal",
+    "symbol": ":",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ],
+    "volume": "7 L",
+    "bashing": 5,
+    "price": 850000,
+    "price_postapoc": 8000,
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 2400,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "magazine_well": "5 L",
+        "max_contains_volume": "50 L",
+        "max_contains_weight": "400 kg",
+        "item_restriction": [
+          "medium_atomic_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell",
+          "huge_atomic_battery_cell",
+          "battery_car",
+          "medium_storage_battery",
+          "storage_battery",
+          "large_storage_battery"
+        ]
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_coalescent_conversion",
+        "no_fail": true,
+        "level": 0
+      }
+    ]
+  },
+  {
+    "id": "thermic_essence_cutter",
+    "type": "TOOL",
+    "name": {
+      "str": "热香精切割器"
+    },
+    "description": "一种小的铜制装置，能引导魔法火焰，将其聚焦成灼热的白热针尖。焦点太窄，射程短，不能用作武器，而是用来切割金属的。有了护目镜，它可以用来破坏金属屏障。",
+    "weight": "2400 g",
+    "volume": "1 L",
+    "price": 60000,
+    "price_postapoc": 1500,
+    "material": [
+      "copper"
+    ],
+    "looks_like": "copper_knife",
+    "symbol": ";",
+    "color": "red",
+    "ammo": [
+      "essence_dull_type"
+    ],
+    "max_charges": 300,
+    "charges_per_use": 2,
+    "use_action": [
+      "OXYTORCH"
+    ],
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_dull_type": 300
+        }
+      }
+    ]
+  },
+  {
+    "id": "spatial_displacer",
+    "type": "TOOL",
+    "name": {
+      "str": "空间置换器"
+    },
+    "description": "一个最前沿的维度科学，经过大量修改，融入了来自外部的改进。使用它可以将你传送到一个目标位置，这比以前的设备的不确定性有了很大的改善，甚至可以摧毁任何可能使出现不安全的障碍。然而，使用它可能会引起一些不属于这个世界的事物的不必要的注意…",
+    "weight": "1360 g",
+    "volume": "2 L",
+    "price": 900000,
+    "price_postapoc": 1500,
+    "to_hit": -1,
+    "bashing": 4,
+    "material": [
+      "steel"
+    ],
+    "looks_like": "teleporter",
+    "symbol": ";",
+    "color": "magenta",
+    "ammo": [
+      "essence_type"
+    ],
+    "max_charges": 20,
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "essence_type": 20
+        },
+        "rigid": true
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_spatial_displacement",
+        "no_fail": true,
+        "level": 0
+      }
+    ]
+  },
+  {
+    "id": "verge_meteoric",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "流星边缘"
+    },
+    "description": "一种短木棍，完全覆盖着装饰图案，是判断的象征。这个符号的超凡脱俗的存在在扭曲的火焰般的尖头上仍然很明显，现在缠绕在一个黑暗的，闪光的金属魅力周围。使用它可以让你用闪电打击敌人，保护你免受短暂的电伤害。",
+    "weight": "3935 g",
+    "to_hit": 1,
+    "volume": "2500 ml",
+    "longest_side": "60 cm",
+    "//": "Meteoric verge and moonstone scourge require items that did not exist pre-cataclysm.",
+    "price_postapoc": 15000,
+    "bashing": 16,
+    "cutting": 4,
+    "material": [
+      "hardsteel",
+      "gold"
+    ],
+    "symbol": "/",
+    "looks_like": "i_staff",
+    "color": "yellow",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_type": 10
+        }
+      }
+    ],
+    "max_charges": 10,
+    "charges_per_use": 2,
+    "ammo": "essence_type",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_symbol_judgment_zap",
+              "once_in": 3,
+              "message": "火花从你的武器上跳了出来。",
+              "npc_message": "火花从%1$s的武器上跳了出来。"
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_meteoric_verge_bolt",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    },
+    "flags": [
+      "STAB",
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "scourge_moonstone",
+    "type": "TOOL",
+    "category": "weapons",
+    "symbol": "/",
+    "looks_like": "bullwhip_razor",
+    "color": "dark_gray",
+    "name": {
+      "str": "月光石天灾"
+    },
+    "description": "用锋利的乳白色石片和沿着手柄的银色装饰修饰的睫毛。虽然作为一种武器相对有效，但用血之精华为燃料可以恢复它消耗生命的属性，使它成为一种更致命的武器。",
+    "weight": "3500 g",
+    "volume": "2 L",
+    "price_postapoc": 15000,
+    "material": [
+      "leather",
+      "stone",
+      "silver"
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "REACH3",
+      "NO_SALVAGE",
+      "TRADER_KEEP_EQUIPPED"
+    ],
+    "techniques": [
+      "WHIP_DISARM"
+    ],
+    "bashing": 3,
+    "cutting": 21,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 24
+        }
+      }
+    ],
+    "max_charges": 24,
+    "ammo": "essence_blood_type",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life",
+              "once_in": 5
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "target": "scourge_moonstone_on",
+        "msg": "A wicked resonance flows through the whip, and the spikes of moonstone gain a blood-red luster.",
+        "active": true,
+        "need_wielding": true,
+        "need_charges": 1,
+        "need_charges_msg": "The lash hungers for blood.",
+        "type": "transform"
+      }
+    ]
+  },
+  {
+    "id": "scourge_moonstone_on",
+    "copy-from": "scourge_moonstone",
+    "repairs_like": "scourge_moonstone",
+    "type": "GENERIC",
+    "name": {
+      "str": "月光石天灾（开启）",
+      "str_pl": "月光石灾祸（开）"
+    },
+    "description": "用锋利的乳白色石片和沿着手柄的银色装饰修饰的睫毛。石刃反射出一种诡异的红色光泽，拿在手中似乎要灵活得多。",
+    "//": "Turns out that modifying attack speed via relic data doesn't work right for transforming items, so weight-based hacks it is!",
+    "weight": "35 g",
+    "to_hit": 2,
+    "turns_per_charge": 25,
+    "revert_to": "scourge_moonstone",
+    "techniques": [
+      "RAPID",
+      "SWEEP",
+      "WHIP_DISARM",
+      "SPIN",
+      "WIDE"
+    ],
+    "use_action": [
+      {
+        "target": "scourge_moonstone",
+        "msg": "The wicked energy flowing through the whip fades.",
+        "type": "transform"
+      }
+    ]
+  },
+  {
+    "id": "moonstone_fang",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "月光石牙"
+    },
+    "description": "一种由乳白色宝石制成的短而弯曲的尖刺，上面刻有丰富的漩涡状蛇形图案。挥舞它可以让你的生命消耗一点小小的生命，并有可能用魔法蒙蔽攻击者，但它会使身体和心灵生病。调用它会使身体变硬，抵御寒冷。",
+    "weight": "160 g",
+    "volume": "1500 ml",
+    "longest_side": "30 cm",
+    "//": "And the third shrine item, also post-cata only.",
+    "price_postapoc": 10000,
+    "to_hit": 2,
+    "bashing": 3,
+    "cutting": 18,
+    "material": [
+      "stone"
+    ],
+    "symbol": "/",
+    "looks_like": "small_relic",
+    "repairs_like": "blood_athame",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_type": 8
+        }
+      }
+    ],
+    "max_charges": 8,
+    "charges_per_use": 1,
+    "ammo": "essence_type",
+    "techniques": [
+      "RAPID",
+      "DEF_DISARM"
+    ],
+    "qualities": [
+      [
+        "BUTCHER",
+        6
+      ]
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life",
+              "once_in": 5
+            }
+          ],
+          "hit_me_effect": [
+            {
+              "id": "arcana_react_shadowy_shield",
+              "once_in": 5,
+              "message": "在 %2$s 有一缕阴影突然出现",
+              "npc_message": "一缕影子从%1$s跳到%2$s。"
+            }
+          ],
+          "//intermittent_activation": {
+            "effects": [
+              {
+                "frequency": "5 minutes",
+                "spell_effects": [
+                  {
+                    "id": "arcana_react_moonstone_touch"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "The carvings in the stone glow blue for a brief moment, and an uncomfortable warmth spreads through your body.",
+      "effects": [
+        {
+          "id": "cold_ward_true",
+          "duration": 300
+        }
+      ]
+    },
+    "flags": [
+      "STAB",
+      "SHEATH_KNIFE",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "veilblade",
+    "looks_like": "zweihander",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "修复后的礼刀"
+    },
+    "description": "一把双手剑，上面刻有丰富的异国神符，全是用不是这个世界的文字写成的。一旦被破坏，现在又恢复，它只能服务于它最初目的的一部分。用水晶精华为它加油，会给你带来很好的礼物，但会让你走上一条无法回头的路。",
+    "weight": "2267 g",
+    "volume": "3 L",
+    "longest_side": "140 cm",
+    "//": "Arguably it being restored instead of untainted means it should count as a post-cata item, but the original was pre-cata.",
+    "price": 9000000,
+    "price_postapoc": 15000,
+    "to_hit": 2,
+    "bashing": 18,
+    "cutting": 34,
+    "material": [
+      "steel",
+      "essencemat"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_pure_type": 10
+        }
+      }
+    ],
+    "max_charges": 10,
+    "charges_per_use": 1,
+    "ammo": "essence_pure_type",
+    "use_action": {
+      "type": "mutagen_iv",
+      "mutation_category": "VEIL"
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "INTELLIGENCE",
+              "add": 4
+            },
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL",
+      "SWEEP"
+    ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "NONCONDUCTIVE",
+      "NO_UNLOAD",
+      "SHEATH_SWORD",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "draconic_heart_mutator",
+    "type": "TOOL",
+    "name": {
+      "str": "圣心"
+    },
+    "description": "一块鲜红的石化肉，经过净化，镶嵌在一个装饰性的底座上，像一个病态的胸针。它与非自然的力量产生共鸣，仿佛充满了与之隔绝的生物的精华。通过它来引导血之精华会让你走上成为其他东西的道路。一条你不能回头的路。",
+    "weight": "2500 g",
+    "volume": "1 L",
+    "//": "The dracolich was summoned during that nebulous window of time when The Veil was wide enough to allow things to be yanked through, but before Zero Day.  Actually completing what they wanted to do with is a post-cataclysm development, but as with the ritual blades we're still reflecting the value of its original form.",
+    "price": 8000000,
+    "price_postapoc": 12000,
+    "to_hit": -2,
+    "bashing": 3,
+    "material": [
+      "stone",
+      "essencemat"
+    ],
+    "symbol": "*",
+    "looks_like": "petrified_eye",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 10
+        }
+      }
+    ],
+    "max_charges": 10,
+    "charges_per_use": 10,
+    "ammo": "essence_blood_type",
+    "use_action": {
+      "type": "mutagen_iv",
+      "mutation_category": "DRAGONBLOOD"
+    }
+  },
+  {
+    "id": "stormbringer",
+    "type": "TOOL",
+    "copy-from": "zweihander",
+    "name": {
+      "str": "诅咒之刃"
+    },
+    "description": "一种由黑色金属制成的双手剑。它刻有一些不熟悉的符号，你可以在一个脚本中看到一个短语：“尼赫里特·阿舍里”激活它会给持用者带来一股强大的、腐朽的、令人上瘾的吸取生命的魔法，但在效果消失之前，你将无法释怀它。",
+    "material": [
+      "steel",
+      "essencemat"
+    ],
+    "//": "In this case being cursed basically halves its pre-cataclysm value, as it's no longer useful for what the Keepers used it for, and the Sanguine Order's appropriation of it had a very specific focus.",
+    "weight": "2267 g",
+    "volume": "3 L",
+    "longest_side": "140 cm",
+    "price": 4500000,
+    "price_postapoc": 12000,
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 9
+        }
+      }
+    ],
+    "max_charges": 9,
+    "ammo": "essence_blood_type",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "mutations": [
+            "ARCANA_BERSERK_EFFECT"
+          ],
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life_improved"
+            }
+          ],
+          "//intermittent_activation": {
+            "effects": [
+              {
+                "frequency": "10 minutes",
+                "spell_effects": [
+                  {
+                    "id": "arcana_react_evil_mimic"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "target": "stormbringer_on",
+        "msg": "The runes on the blade glow for a moment, the leather wrap of the hilt contorting into winding tendrils that envelop your hand!  You feel a strange bloodlust overtake you!",
+        "active": true,
+        "need_wielding": true,
+        "need_charges": 9,
+        "need_charges_msg": "Nine motes of blood shall awaken the blade.",
+        "menu_text": "Awaken the dark blade",
+        "type": "transform"
+      }
+    ],
+    "relative": {
+      "to_hit": -1,
+      "cutting": -5
+    },
+    "extend": {
+      "flags": [
+        "UNBREAKABLE_MELEE",
+        "NO_SALVAGE",
+        "TRADER_KEEP_EQUIPPED"
+      ]
+    },
+    "delete": {
+      "flags": [
+        "DURABLE_MELEE",
+        "ALWAYS_TWOHAND"
+      ]
+    }
+  },
+  {
+    "id": "stormbringer_on",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "诅咒之刃（开）",
+      "str_pl": "诅咒之刃（开）"
+    },
+    "//": "Funny as it'd be to add the bad weather effect too, that would be a tad silly.  Also still can't use copy-from.",
+    "description": "一种双手剑，由黑色金属制成的刀刃，上面刻有不熟悉的符号。你觉得刀锋渴望鲜血，不肯离开你的手，直到它吃饱为止。",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 9
+        }
+      }
+    ],
+    "max_charges": 9,
+    "turns_per_charge": 800,
+    "ammo": "essence_blood_type",
+    "revert_to": "stormbringer",
+    "revert_msg": "The malevolent energy fades from the cursed blade, returning it to normal.",
+    "weight": "2267 g",
+    "volume": "3 L",
+    "longest_side": "140 cm",
+    "price": 4500000,
+    "price_postapoc": 12000,
+    "to_hit": 1,
+    "bashing": 17,
+    "cutting": 40,
+    "material": [
+      "steel",
+      "essencemat"
+    ],
+    "symbol": "/",
+    "looks_like": "stormbringer",
+    "repairs_like": "stormbringer",
+    "color": "dark_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "mutations": [
+            "ARCANA_BERSERK_EFFECT"
+          ],
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life_improved"
+            }
+          ],
+          "//intermittent_activation": {
+            "effects": [
+              {
+                "frequency": "10 minutes",
+                "spell_effects": [
+                  {
+                    "id": "arcana_react_evil_mimic"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL",
+      "SWEEP",
+      "VORPAL"
+    ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NO_SALVAGE",
+      "NO_UNWIELD",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  }
+]

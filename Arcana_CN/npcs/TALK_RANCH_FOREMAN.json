@@ -1,0 +1,74 @@
+[
+  {
+    "id": "TALK_RANCH_FOREMAN",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_RANCH_FOREMAN_GM_PRELUDE"
+      },
+      {
+        "text": "[任务]我被要求帮助另一个幸存者社区吸引工作。有谁能帮上忙吗？",
+        "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_RANCH_FOREMAN_GM_PRELUDE",
+    "type": "talk_topic",
+    "dynamic_line": "我听说过一些谣言，我知道有些人想在这里旅行，但遇到了这种麻烦。我会把我听到的最新消息转达给你，把它发给你代表的任何人。",
+    "responses": []
+  },
+  {
+    "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4",
+    "type": "talk_topic",
+    "dynamic_line": "恐怕我帮不了你，我们的盘子已经够多了。一旦事情安排好了，我想问问周围的人，但我自己还有很多工作要做。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_RANCH_FOREMAN"
+      }
+    ]
+  }
+]

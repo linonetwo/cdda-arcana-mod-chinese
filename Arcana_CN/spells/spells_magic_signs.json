@@ -1,0 +1,1371 @@
+[
+  {
+    "id": "arcana_magic_agility",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：敏捷"
+    },
+    "description": "神迹\n魔法符号将获得暂时的速度和敏捷增强效果。它可以用在你自己或盟友身上。",
+    "message": "“飘渺的风，指引我的航程……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_agility",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1,
+    "min_duration": 48000,
+    "max_duration": 144000,
+    "duration_increment": 9600
+  },
+  {
+    "id": "arcana_magic_capacitance",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：电容"
+    },
+    "description": "神迹\n魔法符号将引导你的能量进入身体内部的技巧，以疲劳为代价恢复仿生能量。然而，这样做会让你自己感到震惊。",
+    "message": "“诺比斯维图斯……”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_capacitance_zap",
+        "hit_self": true,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_capacitance_stun",
+        "hit_self": true,
+        "max_level": 10
+      }
+    ],
+    "min_damage": 150,
+    "max_damage": 240,
+    "damage_increment": 9,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "max_level": 10,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "BIONIC",
+    "energy_source": "FATIGUE",
+    "difficulty": 50,
+    "skill": "magic",
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6
+  },
+  {
+    "id": "arcana_magic_clairvoyance",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：透视"
+    },
+    "description": "神迹\n魔法符号会用象牙色的光环涂抹你，让你看不见东西。",
+    "message": "“让我看看什么是眼睛永远看不到的…”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_clairvoyance",
+    "energy_source": "FATIGUE",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4,
+    "min_duration": 72000,
+    "max_duration": 216000,
+    "duration_increment": 14400
+  },
+  {
+    "id": "arcana_magic_clarity_blood",
+    "type": "SPELL",
+    "name": {
+      "str": "体征：血液清澈"
+    },
+    "description": "神迹\n魔法符号可以保护你免受寄生虫和瞳孔的伤害。它可以用在你自己或盟友身上。",
+    "message": "“你们很多，但我比你们所有人都多……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "blood_clarity",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1,
+    "min_duration": 24000,
+    "max_duration": 72000,
+    "duration_increment": 4800
+  },
+  {
+    "id": "arcana_magic_cold_ward",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：冷库"
+    },
+    "description": "神迹\n魔法符号可以抵御寒冷及其所有副作用。它可以用在你自己或盟友身上。",
+    "message": "“我是保护的，在困难时期给予怜悯……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "cold_ward",
+    "energy_source": "FATIGUE",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "min_duration": 30000,
+    "max_duration": 90000,
+    "duration_increment": 6000
+  },
+  {
+    "id": "arcana_magic_confuse_monster",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：迷惑怪物"
+    },
+    "description": "神迹\n魔法符号将使你周围的所有敌人眩晕。",
+    "message": "“没有刀锋可以标记我，如果手不能击中真实…”你投%s！",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "stunned",
+    "sound_description": "a faint rush of air",
+    "min_aoe": 5,
+    "max_aoe": 25,
+    "aoe_increment": 2,
+    "max_level": 10,
+    "difficulty": 30,
+    "skill": "magic",
+    "energy_source": "FATIGUE",
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 600,
+    "max_duration": 2400,
+    "duration_increment": 180
+  },
+  {
+    "id": "arcana_magic_conjure_acid",
+    "type": "SPELL",
+    "name": {
+      "str": "征兆：变酸"
+    },
+    "description": "神迹\n魔法符将在目标点召唤出一股酸雨，并击中目标中心造成双倍伤害。对你自己和盟友也很危险。",
+    "message": "“让它像时间一样，在它的道路上侵蚀一切……”你投了%s！",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_acid_spike",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_conjure_acid_noise",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "corroding",
+    "min_damage": 9,
+    "max_damage": 57,
+    "damage_increment": 4.8,
+    "min_range": 5,
+    "max_range": 15,
+    "range_increment": 1,
+    "min_aoe": 2,
+    "max_aoe": 6,
+    "aoe_increment": 0.4,
+    "max_level": 10,
+    "difficulty": 30,
+    "skill": "magic",
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 600,
+    "max_duration": 2400,
+    "duration_increment": 180,
+    "damage_type": "acid",
+    "field_id": "fd_acid",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_magic_conjure_flame",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：召唤火焰"
+    },
+    "description": "神迹\n魔法符号将在目标位置召唤出一场烈火爆炸，引发火灾并破坏地形。任何被夹在中间的东西都会受到双倍的伤害。如果使用不当会伤害施法者。",
+    "message": "“让这成为你的火葬…”你投了%s！",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_flame_spike",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_conjure_flame_bash",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_conjure_flame_noise",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "min_damage": 9,
+    "max_damage": 57,
+    "damage_increment": 4.8,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 1.2,
+    "min_aoe": 1,
+    "max_aoe": 5,
+    "aoe_increment": 0.4,
+    "max_level": 10,
+    "difficulty": 30,
+    "skill": "magic",
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "damage_type": "heat",
+    "field_id": "fd_fire",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5,
+    "spell_class": "SPELL_FIRE"
+  },
+  {
+    "id": "arcana_magic_consecrate",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：圣化"
+    },
+    "description": "神迹\n魔法符号将改变你周围的地形，驱走困扰这片土地的各种超自然的腐败迹象。它也会在一定程度上削弱一些超自然的怪物。",
+    "message": "“我是揭露恶人，用火焰鞭打他们的人……”你投了%s！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_consecrate",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_consecrate_lesser",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "energy_source": "FATIGUE",
+    "max_level": 10,
+    "difficulty": 80,
+    "skill": "magic",
+    "min_damage": 4,
+    "max_damage": 2,
+    "damage_increment": -0.2,
+    "min_aoe": 8,
+    "max_aoe": 12,
+    "aoe_increment": 0.4,
+    "min_range": 12,
+    "max_range": 20,
+    "range_increment": 0.8,
+    "base_casting_time": 360,
+    "final_casting_time": 270,
+    "casting_time_increment": -9,
+    "base_energy_cost": 90,
+    "final_energy_cost": 72,
+    "energy_increment": -1.8
+  },
+  {
+    "id": "arcana_magic_dampening",
+    "//": "ID retained for save compatibility.",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：位移"
+    },
+    "description": "神迹\n魔法符号会将你的位置与你选择的敌对目标交换，让你的受害者头晕目眩，并在你走出的区域前方制造一股雾。",
+    "message": "“如果它是已知的，它可以达到…”你投%s！",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL",
+      "SWAP_POS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_magic_dampening_aoe",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dazed",
+    "energy_source": "FATIGUE",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 10,
+    "min_range": 20,
+    "max_range": 40,
+    "range_increment": 2,
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 900,
+    "max_duration": 4500,
+    "duration_increment": 450,
+    "field_id": "fd_fog",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5,
+    "spell_class": "SPELL_DAMPENING"
+  },
+  {
+    "id": "arcana_magic_eclipse",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：日蚀"
+    },
+    "description": "神迹\n魔法符号将在面纱上造成一个浅层伤害，带出怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。",
+    "message": "“我是那个反抗的人，有限使无限……”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_eclipse",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_eclipse_darkness",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_eclipse_wonder",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_aftermath_eclipse_fatigue",
+        "hit_self": false
+      }
+    ],
+    "energy_source": "FATIGUE",
+    "max_level": 10,
+    "difficulty": 90,
+    "skill": "magic",
+    "base_casting_time": 400,
+    "final_casting_time": 300,
+    "casting_time_increment": -10,
+    "base_energy_cost": 100,
+    "final_energy_cost": 80,
+    "energy_increment": -2,
+    "min_duration": 120000,
+    "max_duration": 360000,
+    "duration_increment": 24000
+  },
+  {
+    "id": "arcana_magic_elemental_burst",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：元素爆发"
+    },
+    "description": "神迹\n魔法符号将以元素力爆炸一个锥形区域，在其尾迹中留下随机的副作用。处于中心线的生物将受到双倍的伤害。小心友军开火的危险！",
+    "message": "“我是居住在所有生物中的，隐藏在混乱中的秩序……”你投了%s！",
+    "effect": "attack",
+    "shape": "cone",
+    "extra_effects": [
+      {
+        "id": "arcana_magic_elemental_burst_line",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_magic_elemental_burst_wonder",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "min_damage": 21,
+    "max_damage": 133,
+    "damage_type": "pure",
+    "damage_increment": 11.2,
+    "min_range": 8,
+    "max_range": 16,
+    "range_increment": 0.8,
+    "min_aoe": 15,
+    "max_aoe": 30,
+    "aoe_increment": 1.5,
+    "max_level": 10,
+    "difficulty": 70,
+    "skill": "magic",
+    "base_casting_time": 320,
+    "final_casting_time": 240,
+    "casting_time_increment": -8,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 80,
+    "final_energy_cost": 64,
+    "energy_increment": -1.6
+  },
+  {
+    "id": "arcana_magic_free_action",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：自由行动"
+    },
+    "description": "神迹\n魔法符号将对麻痹效果和其他障碍提供保护。它可以用在你自己或盟友身上。",
+    "message": "“让没有束缚我的镣铐……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "free_action",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4,
+    "min_duration": 72000,
+    "max_duration": 216000,
+    "duration_increment": 14400
+  },
+  {
+    "id": "arcana_magic_healing",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：愈合"
+    },
+    "description": "魔法符号\n使用此咒语可以止血和愈合伤口，但长期使用可能有害。它可以用在你自己或盟友身上。",
+    "message": "“我们还不至于灭亡……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect_str": "arcane_healing_staunch",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_healing_side_effects",
+        "max_level": 10
+      }
+    ],
+    "min_damage": -8,
+    "max_damage": -24,
+    "damage_increment": -1.6,
+    "max_level": 10,
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "difficulty": 50,
+    "skill": "magic",
+    "min_duration": 100,
+    "max_duration": 100,
+    "energy_source": "FATIGUE"
+  },
+  {
+    "id": "arcana_magic_heat_ward",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：暖气病房"
+    },
+    "description": "神迹\n魔法符号将给予对热量和烟雾的暂时抵抗力。然而，直接接触火焰仍会造成伤害。它可以用在你自己或盟友身上。",
+    "message": "“钢铁不怕回火的火焰……”你铸造了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "heat_ward",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "min_duration": 30000,
+    "max_duration": 90000,
+    "duration_increment": 6000
+  },
+  {
+    "id": "arcana_magic_insight",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：Insight"
+    },
+    "description": "神迹\n魔法符号将暂时提升感知力。它可以用在你自己或盟友身上。",
+    "message": "“耐心地观察和倾听的人都知道……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_insight",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 36000,
+    "max_duration": 108000,
+    "duration_increment": 7200
+  },
+  {
+    "id": "arcana_magic_light",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：灯光"
+    },
+    "description": "神迹\n魔法符号将召唤出一片魔法光场，在你周围徘徊。",
+    "message": "“最小的烛光带来希望直到黎明……”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "FATIGUE",
+    "min_aoe": 4,
+    "max_aoe": 8,
+    "aoe_increment": 0.4,
+    "difficulty": 20,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 120,
+    "final_casting_time": 90,
+    "casting_time_increment": -3,
+    "base_energy_cost": 30,
+    "final_energy_cost": 24,
+    "energy_increment": -0.6,
+    "min_duration": 300000,
+    "max_duration": 2400000,
+    "duration_increment": 210000,
+    "field_id": "fd_veil_light",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "spell_class": "SPELL_LIGHT"
+  },
+  {
+    "id": "arcana_magic_lightning_ward",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：闪电病房"
+    },
+    "description": "神迹\n魔法符号将给予一个完全保护你免受闪电伤害的祝福，但代价是你的速度会减慢一点。它可以施加在你自己或盟友身上。",
+    "message": "“一只脚接一只脚，总是接地……”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "lightning_ward",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1,
+    "min_duration": 24000,
+    "max_duration": 72000,
+    "duration_increment": 4800
+  },
+  {
+    "id": "arcana_magic_might",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：权力"
+    },
+    "description": "神迹\n魔法符号将暂时增强力量。它可以用在你自己或盟友身上。",
+    "message": "“让这是一场光荣的战斗……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_might",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "min_duration": 60000,
+    "max_duration": 180000,
+    "duration_increment": 12000
+  },
+  {
+    "id": "arcana_magic_open_lock",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：开业"
+    },
+    "description": "神迹\n有机会解开锁，打开路障，或者在目标区域打开前进的道路。",
+    "message": "“人类制造的东西总是可以用人类的双手来解开……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_open_lock",
+    "energy_source": "FATIGUE",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 10,
+    "min_damage": 2,
+    "max_damage": 2,
+    "min_range": 5,
+    "max_range": 10,
+    "range_increment": 0.5,
+    "min_aoe": 1,
+    "max_aoe": 5,
+    "aoe_increment": 0.4,
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1
+  },
+  {
+    "id": "arcana_magic_overgrowth",
+    "type": "SPELL",
+    "name": {
+      "str": "征兆：过度生长"
+    },
+    "description": "神迹\n魔法符号将在你的目标位置召唤活森林的喷发。",
+    "message": "“我们将繁荣昌盛，无论土地多么贫瘠……”你投了%s！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_plants",
+    "energy_source": "FATIGUE",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 10,
+    "min_damage": 4,
+    "max_damage": 2,
+    "damage_increment": -0.2,
+    "min_aoe": 2,
+    "max_aoe": 10,
+    "aoe_increment": 0.8,
+    "min_range": 5,
+    "max_range": 10,
+    "range_increment": 0.5,
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8
+  },
+  {
+    "id": "arcana_magic_poison_armor",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：毒甲"
+    },
+    "description": "神迹\n魔法符号将给予一个祝福，保护你免受有毒气体和其他形式的毒气的伤害。它可以用在你自己或盟友身上。",
+    "message": "“我不怕毒液，不管是用言语还是刀剑……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "poison_ward",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 18000,
+    "max_duration": 54000,
+    "duration_increment": 3600,
+    "spell_class": "SPELL_POISONARMOR"
+  },
+  {
+    "id": "arcana_magic_serpentine_shield",
+    "//": "ID retained to avoid breaking saves.",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：暗盾"
+    },
+    "description": "神迹\n魔法符号会用黑曜石光环涂抹你，给予你暂时的防御效果，用超自然的黑暗将攻击者击昏。",
+    "message": "“不要害怕黑暗，要害怕那些引诱你进入黑暗的人……”你投了%s！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_shadowsnakes",
+    "energy_source": "FATIGUE",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4,
+    "min_duration": 36000,
+    "max_duration": 108000,
+    "duration_increment": 7200
+  },
+  {
+    "id": "arcana_magic_shockstorm",
+    "type": "SPELL",
+    "name": {
+      "str": "标志：冲击风暴"
+    },
+    "description": "神迹\n魔法符号会在你周围发出闪电，伤害任何靠近你的人。小心在盟友周围使用它。",
+    "message": "“雷声劈天地……”你投了%s！",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_shockstorm_line",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_shockstorm_line",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_shockstorm_line",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_shockstorm_line",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_shockstorm_noise",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "zapped",
+    "min_damage": 12,
+    "max_damage": 76,
+    "damage_increment": 6.4,
+    "min_aoe": 4,
+    "max_aoe": 12,
+    "aoe_increment": 0.8,
+    "max_level": 10,
+    "difficulty": 20,
+    "skill": "magic",
+    "base_casting_time": 120,
+    "final_casting_time": 90,
+    "casting_time_increment": -3,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 30,
+    "final_energy_cost": 24,
+    "energy_increment": -0.6,
+    "min_duration": 600,
+    "max_duration": 3600,
+    "duration_increment": 300,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 10,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_magic_sundering_quake",
+    "type": "SPELL",
+    "name": {
+      "str": "征兆：大地震"
+    },
+    "description": "神迹\n魔法符号将摧毁建筑并将其掩埋在瓦砾中，但生物将安然无恙。",
+    "message": "“我是那躺在下面的人，用一个词就可以分裂大陆……”你投了%s！",
+    "effect": "bash",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sundering_quake_extra",
+        "hit_self": false,
+        "max_level": 10
+      },
+      {
+        "id": "arcana_aftermath_sundering_quake_boulders",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "min_damage": 20,
+    "max_damage": 40,
+    "damage_increment": 2,
+    "min_range": 10,
+    "max_range": 20,
+    "range_increment": 1,
+    "min_aoe": 3,
+    "max_aoe": 8,
+    "aoe_increment": 0.5,
+    "max_level": 10,
+    "difficulty": 40,
+    "skill": "magic",
+    "energy_source": "FATIGUE",
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1
+  },
+  {
+    "id": "arcana_magic_summon_giant_centipedes",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：召唤蜈蚣"
+    },
+    "description": "神迹\n魔法符号将召唤变异的害虫，这将是忠诚的但不是永久的。",
+    "message": "“我是那个冷酷而又必要的人，因为没有没有死亡就没有生命……”你投了%s！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_centipede_giant_summoned",
+    "energy_source": "FATIGUE",
+    "max_level": 10,
+    "difficulty": 60,
+    "skill": "magic",
+    "min_damage": 1,
+    "max_damage": 3,
+    "damage_increment": 0.2,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.5,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4,
+    "min_duration": 900000,
+    "max_duration": 7200000,
+    "duration_increment": 630000
+  },
+  {
+    "id": "arcana_magic_summon_skeletal_dog",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：召唤骷髅狗"
+    },
+    "description": "神迹\n魔法符号将召唤一个动物复仇者，它将忠诚但不是永久的。",
+    "message": "即使是对死亡的忠诚！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_dog_skeleton_summoned",
+    "energy_source": "FATIGUE",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 10,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.5,
+    "base_casting_time": 160,
+    "final_casting_time": 120,
+    "casting_time_increment": -4,
+    "base_energy_cost": 40,
+    "final_energy_cost": 32,
+    "energy_increment": -0.8,
+    "min_duration": 450000,
+    "max_duration": 3600000,
+    "duration_increment": 315000,
+    "spell_class": "SPELL_SUMMONDOG"
+  },
+  {
+    "id": "arcana_magic_summon_shadow",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：召唤暗影"
+    },
+    "description": "神迹\n会召唤一个活的影子，它是忠诚的，但不是永久的。",
+    "message": "“尼赫丽特，奥特拉·阿特维斯……”你投了%s！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_shadow_summoned",
+    "energy_source": "FATIGUE",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 10,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.5,
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "min_duration": 750000,
+    "max_duration": 6000000,
+    "duration_increment": 525000
+  },
+  {
+    "id": "arcana_magic_summon_shadow_snake",
+    "type": "SPELL",
+    "name": {
+      "str": "招牌：召唤暗影蛇"
+    },
+    "description": "神迹\n会召唤出一个蛇形的活影，它是忠诚的但不是永久的。",
+    "message": "“尼赫丽特，伊沃娜·卡洛……”你投了%s！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_shadow_snake_summoned",
+    "energy_source": "FATIGUE",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 10,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.5,
+    "base_casting_time": 200,
+    "final_casting_time": 150,
+    "casting_time_increment": -5,
+    "base_energy_cost": 50,
+    "final_energy_cost": 40,
+    "energy_increment": -1,
+    "min_duration": 480000,
+    "max_duration": 4800000,
+    "duration_increment": 432000
+  },
+  {
+    "id": "arcana_magic_surge_adrenaline",
+    "type": "SPELL",
+    "name": {
+      "str": "体征：肾上腺素激增"
+    },
+    "description": "魔法符号\n使用这个咒语会在紧急情况下引起肾上腺素的激增，尽管之后也有同样的缺点。它可以用在你自己或盟友身上。",
+    "message": "“战斗还没结束…”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect_str": "adrenaline",
+    "max_level": 10,
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 120,
+    "final_casting_time": 90,
+    "casting_time_increment": -3,
+    "base_energy_cost": 30,
+    "final_energy_cost": 24,
+    "energy_increment": -0.6,
+    "difficulty": 20,
+    "skill": "magic",
+    "min_duration": 24000,
+    "max_duration": 72000,
+    "duration_increment": 4800,
+    "energy_source": "FATIGUE",
+    "spell_class": "SPELL_DAYLIGHT"
+  },
+  {
+    "id": "arcana_magic_ward_against_evil",
+    "type": "SPELL",
+    "name": {
+      "str": "标牌：驱邪"
+    },
+    "description": "神迹\n魔法符号将给予一个祝福，以防止某些异常的威胁。它可以用在你自己或盟友身上。",
+    "message": "“恶人在警戒者面前畏缩……”你投了%s！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "VERBAL",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "cleric_warding",
+    "min_range": 1,
+    "max_range": 10,
+    "range_increment": 0.9,
+    "energy_source": "FATIGUE",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 10,
+    "base_casting_time": 240,
+    "final_casting_time": 180,
+    "casting_time_increment": -6,
+    "base_energy_cost": 60,
+    "final_energy_cost": 48,
+    "energy_increment": -1.2,
+    "min_duration": 30000,
+    "max_duration": 90000,
+    "duration_increment": 6000
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "TALK_SCIENCE_REP",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_FED"
+      ],
+      "yes": "元帅…",
+      "no": "公民…"
+    },
+    "responses": [
+      {
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_SCIENCE_REP_GM_PRELUDE"
+      },
+      {
+        "text": "[任务]我被要求帮助另一个幸存者社区吸引工作。有谁能帮上忙吗？",
+        "topic": "TALK_SCIENCE_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_SCIENCE_REP_GM_PRELUDE",
+    "type": "talk_topic",
+    "dynamic_line": "我不愿意把它描述为超自然的或任何类似的东西，但反常也许是合适的。事实上，最近的信息表明，一些未知的异种生物可能会发起新的攻击。我还没有机会收集大量的数据，但是最近我和我的上级讨论了一些事情，关于最近一次巡逻时，我避开了不符合常规模式的生物。我想我会把这个消息转达给你的恩人。"
+  },
+  {
+    "id": "TALK_SCIENCE_REP_MISSION_4",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "PROF_FED",
+      "yes": "恐怕我对此一无所知，警长。军方派来的代表也许能帮忙，否则四处打听。",
+      "no": "恐怕我对此一无所知。军方派来的代表也许能帮上忙，但他们最近一直疲于奔命。如果你想找工作，最好问问周围的人。"
+    },
+    "responses": [
+      {
+        "text": "哦，好吧。",
+        "topic": "TALK_SCIENCE_REP"
+      }
+    ]
+  }
+]

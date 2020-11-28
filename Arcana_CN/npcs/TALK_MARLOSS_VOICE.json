@@ -1,0 +1,133 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE",
+    "responses": [
+      {
+        "text": "你帮助这些闯入者的目的是什么？",
+        "topic": "TALK_MARLOSS_VOICE_INTERLOPERS",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_trait_flag": "mycus"
+              }
+            },
+            {
+              "u_has_any_trait": [
+                "THRESH_VEIL",
+                "PROF_CHALICE",
+                "PROF_CLEANSINGFLAME",
+                "PROF_CLEANSINGFLAME2"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE_INTERLOPERS",
+    "dynamic_line": "我不明白你的意思。我们寻求和谐，以及对世界的更多了解。我们在这里找到了和平。",
+    "responses": [
+      {
+        "text": "你很危险地不知道这个地方的威胁和他们的意图。",
+        "topic": "TALK_MARLOSS_VOICE_INTERLOPERS_PARAGON",
+        "condition": {
+          "u_has_trait": "THRESH_VEIL"
+        }
+      },
+      {
+        "text": "这些东西不属于这个世界。",
+        "topic": "TALK_MARLOSS_VOICE_INTERLOPERS_CHALICE",
+        "condition": {
+          "u_has_trait": "PROF_CHALICE"
+        }
+      },
+      {
+        "text": "“任何一个超自然的怪物都必须回到它真正的领地，活的或死的。”这是我的职责。不要干涉。",
+        "topic": "TALK_MARLOSS_VOICE_INTERLOPERS_CLEANSINGFLAME",
+        "condition": {
+          "u_has_trait": "PROF_CLEANSINGFLAME"
+        }
+      },
+      {
+        "text": "这些都是必须治愈的感染。",
+        "topic": "TALK_MARLOSS_VOICE_INTERLOPERS_CLEANSINGFLAME2",
+        "condition": {
+          "u_has_trait": "PROF_CLEANSINGFLAME2"
+        }
+      },
+      {
+        "text": "那就好好享受你的宁静吧。我没什么可说的了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE_INTERLOPERS_PARAGON",
+    "dynamic_line": "这个地方是我们的庇护所和养料，是我们在风暴中的平静。但你的意图是什么？我是一个单纯的牧师，我不希望伤害你。",
+    "responses": [
+      {
+        "text": "你是他们的奴隶。我的主人希望我能让你从死亡中解脱。",
+        "topic": "TALK_DONE",
+        "effect": "hostile"
+      },
+      {
+        "text": "总有一天，你会看到这些事情造成的背叛。记住，我给了你合理的警告。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE_INTERLOPERS_CHALICE",
+    "dynamic_line": "如果他们真的来自另一个世界，那么这是一种祝福。一个人只需要有一个开放的思想和心。",
+    "responses": [
+      {
+        "text": "[攻击]够了。愿他锻造你的锁链。",
+        "topic": "TALK_DONE",
+        "effect": "hostile"
+      },
+      {
+        "text": "你需要睁开眼睛。我要让你活着，好让你有一天看到真相。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE_INTERLOPERS_CLEANSINGFLAME",
+    "//": "Corruption of a couple lines translated from the Orphic Hymn To Nature",
+    "dynamic_line": "“万物都是自然的，从母亲那里诞生，母亲既照亮有限又无限。”你真的希望我们得到的祝福受到伤害吗？",
+    "responses": [
+      {
+        "text": "[攻击]你会和他们一样被烧死的，挥霍的。",
+        "topic": "TALK_DONE",
+        "effect": "hostile"
+      },
+      {
+        "text": "我不和你吵架。我希望你能了解隐藏在这里的真正危险。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARLOSS_VOICE_INTERLOPERS_CLEANSINGFLAME2",
+    "dynamic_line": "这是一种祝福，而不是感染。在这样的困难时期，我们感谢庇佑我们的祝福。",
+    "responses": [
+      {
+        "text": "显然对你来说已经太晚了。死吧。",
+        "topic": "TALK_DONE",
+        "effect": "hostile"
+      },
+      {
+        "text": "那我就让你去胡思乱想。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

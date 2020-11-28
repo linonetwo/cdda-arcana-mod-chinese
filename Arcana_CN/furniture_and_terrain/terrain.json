@@ -1,0 +1,60 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_archon_pedestral_backup",
+    "looks_like": "t_pedestal_temple",
+    "name": "奇怪的石杠杆底座",
+    "//": "This is a fallback in case someone has the bright idea of trying to teleport while in the finale, and ends up getting stuck.",
+    "description": "这是一个像石头一样的黑色玄武岩基座，底座上附着着不自然的外来树脂，就像常春藤一样。一个较轻的紫色斑岩的突出物嵌在里面，像是某种未知装置的杠杆。",
+    "symbol": "6",
+    "color": "dark_gray",
+    "move_cost": 0,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "THIN_OBSTACLE"
+    ],
+    "examine_action": "controls_gate"
+  },
+  {
+    "type": "terrain",
+    "id": "t_rock_archon_vault",
+    "looks_like": "t_rock_wall",
+    "name": "暗色石墙",
+    "description": "用看起来像玄武岩的东西做成的砖墙，凿成一个非常光滑的表面。",
+    "symbol": "LINE_OXOX",
+    "color": "light_gray",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_flat_roof",
+    "//": "The fact it doesn't block wind, which you couldn't even notice given it spawns underground, is important for something.",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL"
+    ],
+    "connects_to": "WALL"
+  },
+  {
+    "type": "terrain",
+    "id": "t_rock_archon_barricade",
+    "looks_like": "t_rock_wall",
+    "name": "雕刻墙",
+    "description": "一种由看起来像玄武岩的东西做成的砖墙，上面刻有奇怪的标记，发出一种奇特的光芒。",
+    "symbol": "LINE_OXOX",
+    "color": "light_gray",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_flat_roof",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL"
+    ],
+    "connects_to": "WALL"
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Pablo_Situation",
+    "responses": [
+      {
+        "text": "在那里还有其他的定居点，我被要求帮助寻找工作和贸易的人。",
+        "topic": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "npc_has_var": "sofia_refugee_convinced",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4",
+    "dynamic_line": {
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "我猜你不是指公社。尽管我很想离开这个地方，但我认为我和我的妻子不能在一个完全未知的地方赌博，即使他们正在找工作。我想，可能还有其他人可以应对危险，他们可能会感兴趣。",
+      "no": "我很高兴我们没剩下这么多了，但我真的不太了解其他地方。太冒险了，我很想离开这个鬼地方。不过，我知道还有其他人能应对风险。"
+    },
+    "responses": [
+      {
+        "text": "你知道有谁能帮上忙吗？",
+        "topic": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_ADVICE"
+      },
+      {
+        "text": "你能帮我留意一下可能感兴趣的人吗？",
+        "topic": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_OFFER"
+      },
+      {
+        "text": "好吧。不管怎样，谢谢你。",
+        "topic": "TALK_REFUGEE_Pablo_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_ADVICE",
+    "dynamic_line": {
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "如果你还没有事先和商家商量过，我知道这里的一些常客可能知道该找谁谈谈。有一些军人，一个当地的拾荒者，很少有人在这里和那里。一个不熟悉的经纪人也在那里。",
+      "no": "如果你还没有事先和商家商量过，我知道这里的一些常客可能知道该找谁谈谈。有一些军人，一个当地的拾荒者，很少有人在这里和那里。除此之外，邓诺。"
+    },
+    "responses": [
+      {
+        "text": "你能帮我留意一下其他可能正在找工作的访客吗？",
+        "topic": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_OFFER"
+      },
+      {
+        "text": "我看看能找到什么，谢谢。",
+        "topic": "TALK_REFUGEE_Pablo_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_OFFER",
+    "dynamic_line": "我想我可以试试。你知道他们在哪里吗？还有其他关于他们的事吗？",
+    "responses": [
+      {
+        "text": "他们驻扎在路边不远的一个老教堂里，那里已经建成了当地的前哨基地。",
+        "topic": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_DEAL"
+      },
+      {
+        "text": "再想一想，我会想别的办法的。不过还是谢谢你。",
+        "topic": "TALK_REFUGEE_Pablo_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Pablo_CF_REP_MISSION_4_DEAL",
+    "dynamic_line": "好吧，我会尽我所能的留意。我们希望在这个地区多做点贸易，免得我们挨饿。",
+    "responses": [
+      {
+        "text": "我已经问过其他人了，我应该去看看。回头见。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_2",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我去的时候再问问周围的人。回头见。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_2",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_1",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我还会再问问周围的人。回头见。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_1",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "switch": true,
+        "default": true,
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

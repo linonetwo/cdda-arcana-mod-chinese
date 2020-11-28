@@ -1,0 +1,156 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_John_Situation",
+    "responses": [
+      {
+        "text": "如果他们需要的话，你认为他们愿意帮助解决另一个问题吗？",
+        "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "npc_has_var": "sofia_refugee_convinced",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_John_CF_REP_MISSION_4",
+    "dynamic_line": "我想问也无妨。当然，外面的情况也不好。人们时不时会来看看，那些可以自由自在的流浪汉。",
+    "responses": [
+      {
+        "text": "你觉得你可以帮助引导游客去那里吗？",
+        "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4_OFFER"
+      },
+      {
+        "text": "我看看能不能问问别人。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_John_CF_REP_MISSION_4_OFFER",
+    "dynamic_line": "我可以帮你。是什么样的？如果我不知道他们要去哪里，就不能叫他们去追踪。",
+    "responses": [
+      {
+        "text": "当地一群捕猎怪物的人在路边的教区教堂外活动，他们已经开始加固并在附近建造更多的建筑。",
+        "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4_DEAL"
+      },
+      {
+        "text": "再想一想，我也许能想出别的办法。",
+        "topic": "TALK_REFUGEE_John_1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_John_CF_REP_MISSION_4_DEAL",
+    "dynamic_line": "听起来像是一个正在发展的新兴城市，帕德纳。我去看看我能把什么流言蜚语传下去。小心点，听到了吗？",
+    "responses": [
+      {
+        "text": "你也是。我应该去前哨看看，早些时候和其他人谈过。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_wasteland_scavengers_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_2",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "你也是。我现在就继续做。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_2",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_1",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
+        "switch": true,
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "你也是。我会再问问周围的人，再找几个人帮忙。",
+        "effect": [
+          {
+            "u_add_var": "sofia_ally_seeking_1",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "switch": true,
+        "default": true,
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

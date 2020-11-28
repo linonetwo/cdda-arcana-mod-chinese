@@ -1,0 +1,811 @@
+[
+  {
+    "id": "thunder_sigil",
+    "type": "GUN",
+    "category": "weapons",
+    "name": {
+      "str": "判断的象征",
+      "str_pl": "判断的象征"
+    },
+    "description": "饰有三叉戟图案并镶有银的金色带子。小到可以抓住手心的带子，手指间的尖刺。拿着它给你一种模糊的感觉，这是一个神圣的象征，奉献给一些不属于这个世界的东西。发射它会发出闪电。",
+    "weight": "3000 g",
+    "volume": "1250 ml",
+    "longest_side": "25 cm",
+    "price": 150000,
+    "price_postapoc": 10000,
+    "to_hit": -2,
+    "bashing": 12,
+    "cutting": 1,
+    "material": [
+      "gold",
+      "silver"
+    ],
+    "symbol": ",",
+    "looks_like": "gold_bracelet",
+    "color": "yellow",
+    "ammo": "essence_type",
+    "skill": "magic",
+    "range": 50,
+    "ranged_damage": {
+      "damage_type": "electric",
+      "amount": 60,
+      "armor_penetration": 15
+    },
+    "dispersion": 200,
+    "durability": 10,
+    "loudness": 150,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_type": 5
+        }
+      }
+    ],
+    "clip_size": 5,
+    "reload": 400,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_symbol_judgment_zap",
+              "once_in": 5,
+              "message": "火花从你的武器上跳了出来。",
+              "npc_message": "火花从%1$s的武器上跳了出来。"
+            }
+          ]
+        }
+      ]
+    },
+    "ammo_effects": [
+      "LIGHTNING",
+      "LIGHTNING_JUDGMENT"
+    ],
+    "flags": [
+      "STAB",
+      "BELT_CLIP",
+      "NEVER_JAMS",
+      "PRIMITIVE_RANGED_WEAPON",
+      "MAGIC_FOCUS",
+      "TRADER_KEEP_EQUIPPED"
+    ],
+    "use_action": "MEDITATE"
+  },
+  {
+    "id": "bloodscourge",
+    "type": "GUN",
+    "category": "weapons",
+    "name": {
+      "str": "地狱火杖",
+      "str_pl": "地狱火杖"
+    },
+    "description": "一种用银和骷髅图案装饰的杖，上面有一颗奇怪的红色宝石。金属部件摸起来很暖和，不舒服。把它烧起来会产生一股邪恶的火焰。它也可以用来点燃魔法火焰，但这会消耗疲劳。",
+    "weight": "2800 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "price": 60000,
+    "price_postapoc": 7500,
+    "to_hit": 3,
+    "bashing": 21,
+    "material": [
+      "wood",
+      "silver",
+      "bone"
+    ],
+    "symbol": "/",
+    "looks_like": "q_staff",
+    "color": "red",
+    "ammo": "essence_blood_type",
+    "skill": "magic",
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 20,
+      "armor_penetration": 3
+    },
+    "dispersion": 250,
+    "durability": 10,
+    "loudness": 100,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 15
+        }
+      }
+    ],
+    "clip_size": 15,
+    "reload": 300,
+    "modes": [
+      [
+        "DEFAULT",
+        "single",
+        1
+      ],
+      [
+        "BURST",
+        "triple",
+        3
+      ]
+    ],
+    "ammo_effects": [
+      "FLAME",
+      "STREAM",
+      "INCENDIARY",
+      "FLARE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID"
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_sparks",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_bloodscourge_fire",
+              "once_in": 3,
+              "message": "在你的攻击之后，%2$s周围的空气中充满了神秘的热量！",
+              "npc_message": "%2$s突然起火，%1$s向他们挥舞！"
+            }
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "NEVER_JAMS",
+      "DURABLE_MELEE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "NONCONDUCTIVE",
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "USE_PLAYER_ENERGY",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "ethereal_crossbow",
+    "type": "GUN",
+    "category": "weapons",
+    "name": {
+      "str": "亡灵十字弓"
+    },
+    "//": "Piercing does not display when using explicit damage blocks, but armor_multiplier will affect it.",
+    "description": "一种饰有金色符号的弩，似乎没有弓弦。相反，它以高装甲穿透力推动明亮的绿色能量螺栓。",
+    "weight": "2928 g",
+    "volume": "1500 ml",
+    "longest_side": "65 cm",
+    "price": 45000,
+    "price_postapoc": 8000,
+    "to_hit": 1,
+    "bashing": 11,
+    "material": [
+      "steel",
+      "wood",
+      "gold"
+    ],
+    "symbol": "(",
+    "looks_like": "crossbow",
+    "color": "green",
+    "ammo": "essence_dull_type",
+    "skill": "magic",
+    "range": 15,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 40,
+      "armor_penetration": 50
+    },
+    "dispersion": 150,
+    "durability": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_dull_type": 20
+        }
+      }
+    ],
+    "clip_size": 20,
+    "reload": 75,
+    "ammo_effects": [
+      "WIDE",
+      "LASER",
+      "BEANBAG",
+      "BLINDS_EYES"
+    ],
+    "flags": [
+      "FIRE_20",
+      "NEVER_JAMS",
+      "PRIMITIVE_RANGED_WEAPON",
+      "NO_SALVAGE",
+      "BELTED",
+      "TRADER_KEEP_EQUIPPED"
+    ],
+    "armor_data": {
+      "covers": [
+        "torso"
+      ],
+      "coverage": 5,
+      "material_thickness": 1,
+      "encumbrance": 15
+    }
+  },
+  {
+    "id": "hand_of_armok",
+    "type": "GUN",
+    "category": "weapons",
+    "name": {
+      "str": "魔爪"
+    },
+    "description": "一种华丽的武器，类似于有爪的护手，刀锋永远炽热。尽管如此，这把武器在被抓住的时候不会烫伤你的手。烧了它，必击打你的仇敌，用恶毒的火将地洗刷，使血之神饱足。",
+    "weight": "360 g",
+    "volume": "750 ml",
+    "longest_side": "30 cm",
+    "price_postapoc": 12000,
+    "to_hit": 3,
+    "bashing": 8,
+    "cutting": 16,
+    "material": [
+      "steel",
+      "essencemat"
+    ],
+    "symbol": "/",
+    "looks_like": "bagh_nakha",
+    "repairs_like": "bloodscourge",
+    "color": "yellow",
+    "ammo": "essence_pure_type",
+    "skill": "magic",
+    "range": 40,
+    "//": "High as that amount is, remember this is the equivalent to 10 essence a shot, and is half as efficient compared to the other items.",
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 300,
+      "armor_penetration": 25
+    },
+    "dispersion": 200,
+    "durability": 10,
+    "loudness": 500,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_pure_type": 1
+        }
+      }
+    ],
+    "clip_size": 1,
+    "reload": 200,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_sparks",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    },
+    "ammo_effects": [
+      "NAPALM",
+      "FIRE_CORRUPTION"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_drain_life",
+              "once_in": 3
+            }
+          ],
+          "//intermittent_activation": {
+            "effects": [
+              {
+                "frequency": "25 minutes",
+                "spell_effects": [
+                  {
+                    "id": "arcana_react_evil_mimic"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "qualities": [
+      [
+        "BUTCHER",
+        12
+      ]
+    ],
+    "flags": [
+      "LIGHT_45",
+      "UNARMED_WEAPON",
+      "NEVER_JAMS",
+      "UNBREAKABLE_MELEE",
+      "FIRE",
+      "FLAMING",
+      "PRIMITIVE_RANGED_WEAPON",
+      "USE_PLAYER_ENERGY",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "scourge_staff",
+    "type": "GUN",
+    "category": "weapons",
+    "name": {
+      "str": "毒杖",
+      "str_pl": "贝恩杖"
+    },
+    "description": "一种用金装饰的木制杖，上面有深蓝色的宝石。木头发出一种微弱的刺鼻气味。燃烧它会产生大量的酸性和有毒气体。",
+    "weight": "2800 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "//": "An out-of-context artifact, if it ever existed as a relic the Silver Enclave left behind it's become effectively unrecognizable, but more likely it was stuck in the creature that brought it here.",
+    "price_postapoc": 10000,
+    "to_hit": 3,
+    "bashing": 22,
+    "material": [
+      "wood",
+      "gold",
+      "essencemat"
+    ],
+    "symbol": "/",
+    "looks_like": "q_staff",
+    "repairs_like": "staff_druidic",
+    "color": "yellow",
+    "ammo": "essence_blood_type",
+    "skill": "magic",
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "acid",
+      "amount": 30,
+      "armor_penetration": 10
+    },
+    "dispersion": 250,
+    "durability": 10,
+    "loudness": 75,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "essence_blood_type": 4
+        }
+      }
+    ],
+    "clip_size": 4,
+    "reload": 200,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_bane_staff_venom",
+              "message": "当你攻击的时候，令人恶心的毒液从你的手杖里流出来。",
+              "npc_message": "当%1$s的员工罢工时，令人恶心的毒液流出来。"
+            }
+          ]
+        }
+      ]
+    },
+    "ammo_effects": [
+      "ACIDBOMB",
+      "TOXICGAS"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID"
+    ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NEVER_JAMS",
+      "PRIMITIVE_RANGED_WEAPON",
+      "NONCONDUCTIVE",
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "TRADER_KEEP_EQUIPPED"
+    ]
+  },
+  {
+    "id": "electrothermal_arc_cannon",
+    "looks_like": "plasma_rifle",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "电热电弧炮"
+    },
+    "description": "一种先进的，虽然有点笨重的能源武器，利用外来现象。发射一个反常的能量，可以从一个目标跳到另一个目标，产生电热效应，使燃烧的等离子体在其不稳定的尾迹中。效率低下且不加区分，但如果在目标丰富的环境中使用，则具有极大的破坏性。",
+    "weight": "5 kg",
+    "volume": "3500 ml",
+    "longest_side": "100 cm",
+    "price": 1600000,
+    "price_postapoc": 7500,
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "skill": "rifle",
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 45
+    },
+    "dispersion": 60,
+    "durability": 7,
+    "loudness": 35,
+    "ups_charges": 120,
+    "reload": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "PLASMA",
+      "AMMO_ELECTROTHERMAL_LIGHTNING",
+      "AMMO_ELECTROTHERMAL_FIRE",
+      "BOUNCE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ]
+  },
+  {
+    "id": "rift_focus_cannon",
+    "looks_like": "laser_rifle",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "light_blue",
+    "name": {
+      "str": "裂缝聚焦炮"
+    },
+    "description": "一种笨重的实验用步枪，枪身长有奇特的金色镶嵌物。利用超自然的能量撕开现实中的裂痕，将其聚焦成一道极具破坏性的光束。虽然它的撞击产生了电磁脉冲效应，但是这种光束对机器人目标是完全无用的，一些反常的怪物也可能对它免疫。消耗UPS能量和结晶精华到火中，每次射击都会在面纱上留下挥之不去的伤口。",
+    "price": 180000,
+    "price_postapoc": 8000,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ups_charges": 50,
+    "ammo_effects": [
+      "LASER",
+      "PLASMA_BUBBLE",
+      "BLINDS_EYES",
+      "LARGE_BEANBAG",
+      "EMP",
+      "AMMO_RIFT_FOCUS_SHADOWS",
+      "AMMO_RIFT_FOCUS_FATIGUE"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "essence_pure_type"
+    ],
+    "weight": "6 kg",
+    "volume": "4 L",
+    "longest_side": "120 cm",
+    "bashing": 14,
+    "to_hit": -1,
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "cold",
+      "amount": 600
+    },
+    "loudness": 18,
+    "dispersion": 20,
+    "durability": 7,
+    "clip_size": 1,
+    "reload": 250,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "essence_pure_type": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "monster_fire_fake",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "怪物火力武器"
+    },
+    "description": "在阿卡纳，用来给喷火的老板一个特定程度的不准确。如果你在野外遇到这样的虫子，那就是虫子。",
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "STREAM",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "pistol",
+    "durability": 10,
+    "range": 5,
+    "dispersion": 7500,
+    "sight_dispersion": 1000,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 10,
+      "armor_penetration": 5
+    }
+  },
+  {
+    "id": "monster_lightning_fake",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "怪物闪电武器"
+    },
+    "description": "用来给执政官的主人一个特定程度的不准确。如果你在野外遇到这样的虫子，那就是虫子。",
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "LIGHTNING",
+      "LIGHTNING_JUDGMENT"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "pistol",
+    "durability": 10,
+    "range": 12,
+    "dispersion": 5000,
+    "sight_dispersion": 1000,
+    "loudness": 50,
+    "ranged_damage": {
+      "damage_type": "electric",
+      "amount": 10,
+      "armor_penetration": 10
+    }
+  },
+  {
+    "id": "monster_laser_fake",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "怪物激光武器"
+    },
+    "description": "用以给出特定的色差。如果你在野外遇到这样的虫子，那就是虫子。",
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "LASER",
+      "BLINDS_EYES"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "pistol",
+    "durability": 10,
+    "range": 15,
+    "dispersion": 5000,
+    "sight_dispersion": 1000,
+    "ranged_damage": {
+      "damage_type": "cold",
+      "amount": 12
+    }
+  },
+  {
+    "id": "mut_dragonfire",
+    "type": "GUN",
+    "name": {
+      "str": "火龙",
+      "str_pl": "火龙"
+    },
+    "description": "引自龙火变异，这是一个伪项。",
+    "material": [
+      "essencemat"
+    ],
+    "symbol": "(",
+    "color": "red",
+    "skill": "launcher",
+    "range": 10,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 10,
+      "armor_penetration": 5
+    },
+    "dispersion": 300,
+    "durability": 10,
+    "loudness": 5,
+    "reload": 500,
+    "ammo_effects": [
+      "WIDE",
+      "STREAM",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "TRADER_AVOID",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "bio_electrothermal_arc_projector_gun",
+    "type": "GUN",
+    "name": {
+      "str": "电热电弧投影仪"
+    },
+    "description": "这是假的",
+    "volume": "3 L",
+    "weight": "3 kg",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "looks_like": "v29",
+    "color": "magenta",
+    "skill": "pistol",
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 20
+    },
+    "dispersion": 90,
+    "durability": 10,
+    "loudness": 9,
+    "ammo_effects": [
+      "AMMO_ELECTROTHERMAL_LIGHTNING",
+      "AMMO_ELECTROTHERMAL_FIRE_SMALL",
+      "BOUNCE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "TRADER_AVOID",
+      "USES_BIONIC_POWER"
+    ]
+  },
+  {
+    "id": "bio_rift_focus_projector_gun",
+    "type": "GUN",
+    "name": {
+      "str": "裂缝聚焦投影仪"
+    },
+    "description": "这是假的",
+    "volume": "3 L",
+    "weight": "3 kg",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "looks_like": "v29",
+    "color": "magenta",
+    "skill": "pistol",
+    "range": 25,
+    "ranged_damage": {
+      "damage_type": "cold",
+      "amount": 30
+    },
+    "dispersion": 30,
+    "durability": 10,
+    "loudness": 9,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        3
+      ]
+    ],
+    "ammo_effects": [
+      "LASER",
+      "BLINDS_EYES",
+      "BEANBAG",
+      "AMMO_RIFT_FOCUS_SHADOWS"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "TRADER_AVOID",
+      "USES_BIONIC_POWER"
+    ]
+  }
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "type": "scenario",
+    "name": "奥术探索者",
+    "description": "你被吸引到这个地方是为了寻找答案，寻求权力。不管是谁，不管是谁，曾经住在这里的人，都和城里的人一样遭受着同样的命运。但他们的一些神秘作品可能会留下来。",
+    "id": "arcane_seeker",
+    "points": 0,
+    "start_name": "隐秘飞地",
+    "allowed_locs": [
+      "curious_structure",
+      "impact_site",
+      "island_temple",
+      "strange_grove"
+    ],
+    "professions": [
+      "arcanist_apprentice",
+      "arcanist_alchemist",
+      "arcanist_scribe",
+      "arcanist_bloodmage",
+      "arcanist_magehunter",
+      "arcanist_oathkeeper",
+      "arcanist_summoner"
+    ],
+    "traits": [
+      "ARCANA_SCALYPATCHES",
+      "ARCANA_INNERHEAT",
+      "ARCANA_DRAGONCLAWS",
+      "ARCANA_DRAGONTEETH",
+      "ARCANA_DRAGONHORNS",
+      "SPELL_DAMPENING",
+      "SPELL_FIRE",
+      "SPELL_LIGHT",
+      "SPELL_SUMMONDOG",
+      "MARTIAL_ARTS_CF"
+    ]
+  },
+  {
+    "type": "scenario",
+    "name": "城市觉醒",
+    "description": "有些人在文明的阴影下练习神秘术。要么是为了逃避遥远的神秘命令的争吵，要么是为了推进他们的目标。迟早，你将不得不面对在上面肆虐的世界末日。。。",
+    "id": "arcane_urban",
+    "points": 1,
+    "start_name": "隐藏在明处",
+    "allowed_locs": [
+      "arcanist_basement",
+      "cathedral_basement"
+    ],
+    "professions": [
+      "unemployed",
+      "priest",
+      "shinto_priest",
+      "imam",
+      "rabbi",
+      "guru",
+      "preacher",
+      "scoundrel",
+      "detective",
+      "archaeologist",
+      "arcanist_apprentice",
+      "arcanist_scholar",
+      "arcanist_alchemist",
+      "arcanist_scribe",
+      "arcanist_shrike",
+      "arcanist_purifier"
+    ],
+    "traits": [
+      "SPELL_DAMPENING",
+      "SPELL_DAYLIGHT",
+      "SPELL_LIGHT",
+      "SPELL_LOCKPICK",
+      "SPELL_POISONARMOR",
+      "MARTIAL_ARTS_CF"
+    ],
+    "flags": [
+      "CITY_START",
+      "LONE_START"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "surrounded",
+    "copy-from": "surrounded",
+    "add_professions": true,
+    "extend": {
+      "professions": [
+        "arcanist_alchemist",
+        "arcanist_scribe",
+        "arcanist_shrike",
+        "arcanist_purifier"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "isolationist",
+    "copy-from": "isolationist",
+    "add_professions": true,
+    "extend": {
+      "professions": [
+        "arcanist_alchemist",
+        "arcanist_scribe",
+        "arcanist_bloodmage",
+        "arcanist_magehunter",
+        "arcanist_oathkeeper",
+        "arcanist_summoner"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "lab_chal",
+    "copy-from": "lab_chal",
+    "extend": {
+      "traits": [
+        "ARCANA_SCALYPATCHES",
+        "ARCANA_INNERHEAT"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "mutant",
+    "copy-from": "mutant",
+    "extend": {
+      "traits": [
+        "ARCANA_SCALYPATCHES",
+        "ARCANA_INNERHEAT"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "ambushed",
+    "copy-from": "ambushed",
+    "extend": {
+      "professions": [
+        "arcanist_bloodmage",
+        "arcanist_magehunter",
+        "arcanist_oathkeeper",
+        "arcanist_shrike",
+        "arcanist_purifier"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "summer_advanced_start",
+    "copy-from": "summer_advanced_start",
+    "extend": {
+      "professions": [
+        "arcanist_bloodmage",
+        "arcanist_magehunter",
+        "arcanist_oathkeeper",
+        "arcanist_shrike",
+        "arcanist_purifier"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "wilderness",
+    "copy-from": "wilderness",
+    "add_professions": true,
+    "extend": {
+      "professions": [
+        "arcanist_alchemist",
+        "arcanist_scribe",
+        "arcanist_bloodmage",
+        "arcanist_magehunter",
+        "arcanist_oathkeeper",
+        "arcanist_summoner"
+      ]
+    }
+  },
+  {
+    "type": "scenario",
+    "id": "cyberpunk",
+    "copy-from": "cyberpunk",
+    "extend": {
+      "professions": [
+        "arcanist_purifier"
+      ]
+    }
+  }
+]

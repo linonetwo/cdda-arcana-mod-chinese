@@ -1,0 +1,15 @@
+[
+  {
+    "type": "MOD_INFO",
+    "ident": "Arcana",
+    "name": "奥秘和魔法物品",
+    "authors": [
+      "Chaosvolt"
+    ],
+    "description": "增加一个新的技能来创造和使用魔法物品，并改变许多异常怪物。",
+    "category": "content",
+    "dependencies": [
+      "dda"
+    ]
+  }
+]

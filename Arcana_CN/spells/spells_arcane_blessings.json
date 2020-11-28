@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "arcana_blessing_agility",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：敏捷"
+    },
+    "description": "奥术祝福\n使用此咒语将获得暂时的速度和敏捷增强效果。它可以用在你自己或盟友身上。",
+    "message": "时间似乎有点慢了，因为你在引导一股能量。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_agility",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "min_duration": 24000,
+    "max_duration": 168000,
+    "duration_increment": 7200
+  },
+  {
+    "id": "arcana_blessing_clairvoyance",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：透视"
+    },
+    "description": "奥术祝福\n使用此咒语将用象牙光环涂抹你，让你看不见。",
+    "message": "一种闪闪发光的光环弥漫在你身上，让你的眼睛看到隐藏的真相。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_clairvoyance",
+    "energy_source": "MANA",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 36000,
+    "max_duration": 252000,
+    "duration_increment": 10800
+  },
+  {
+    "id": "arcana_blessing_confuse_monster",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：迷惑怪物"
+    },
+    "description": "奥术祝福\n使用此咒语将眩晕你周围区域的所有敌人。",
+    "message": "一种微弱的扭曲在空气中荡漾开来，你感觉到一种超自然的力量在发挥它的意志。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "stunned",
+    "min_aoe": 4,
+    "max_aoe": 30,
+    "aoe_increment": 1.3,
+    "max_level": 20,
+    "difficulty": 30,
+    "skill": "magic",
+    "energy_source": "MANA",
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "base_energy_cost": 240,
+    "final_energy_cost": 120,
+    "energy_increment": -6,
+    "min_duration": 300,
+    "max_duration": 3000,
+    "duration_increment": 135
+  },
+  {
+    "id": "arcana_blessing_conjure_miasma",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤乌烟瘴气"
+    },
+    "description": "奥术祝福\n使用此咒语会将目标区域吞没在由各种有毒气体组成的漩涡中，造成多种伤害。",
+    "message": "一股不自然的风在你的命令下旋转，带来无数毒风。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_miasma_tear",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_conjure_miasma_nuke",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_conjure_miasma_fungicide",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_conjure_miasma_noise",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "difficulty": 30,
+    "skill": "magic",
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "energy_source": "MANA",
+    "base_energy_cost": 240,
+    "final_energy_cost": 120,
+    "energy_increment": -6,
+    "damage_type": "biological",
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "field_id": "fd_toxic_gas",
+    "field_chance": 4,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_blessing_conjure_lightburst",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤光爆"
+    },
+    "description": "奥术祝福\n使用此咒语将在目标区域召唤出大量的魔法光照。",
+    "message": "在你的指引下，闪烁的烛光在你的指引下散落在地面上，直到一道挥之不去的光芒渗透到那片区域。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "difficulty": 20,
+    "skill": "magic",
+    "energy_source": "MANA",
+    "base_casting_time": 150,
+    "final_casting_time": 75,
+    "casting_time_increment": -3.75,
+    "base_energy_cost": 180,
+    "final_energy_cost": 90,
+    "energy_increment": -4.5,
+    "min_duration": 240000,
+    "max_duration": 2640000,
+    "duration_increment": 120000,
+    "field_id": "fd_veil_light",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "arcana_blessing_conjure_shadow_field",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤阴影"
+    },
+    "description": "奥术祝福\n使用此咒语除了对初始效果中的敌人造成失明外，还将在持续的黑暗中包围目标区域。",
+    "message": "一小撮墨色的活生生的影子从地上冒出来，吞没了这片区域。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_shadow_field_blindness",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 0.9,
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.3,
+    "max_level": 20,
+    "difficulty": 30,
+    "skill": "magic",
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "energy_source": "MANA",
+    "base_energy_cost": 240,
+    "final_energy_cost": 120,
+    "energy_increment": -6,
+    "min_duration": 360000,
+    "max_duration": 3960000,
+    "duration_increment": 180000,
+    "field_id": "fd_veil_darkness",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.1,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_blessing_consecrate",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：神圣化"
+    },
+    "description": "奥术祝福\n使用此咒语将改变地形，赶走困扰大地的各种超自然的腐败迹象，同时驱散敌对召唤，并使来自远方的大多数入侵者感到恶心。",
+    "message": "你引导他从面纱之外的意志，为这不自然的入侵带来秩序。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_consecrate",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_consecrate_dispel_summons",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_consecrate_daze_intruders",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "energy_source": "MANA",
+    "difficulty": 80,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 4,
+    "max_damage": 1,
+    "damage_increment": -0.15,
+    "min_aoe": 6,
+    "max_aoe": 18,
+    "aoe_increment": 0.6,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 0.7,
+    "base_casting_time": 450,
+    "final_casting_time": 225,
+    "casting_time_increment": -11.25,
+    "base_energy_cost": 540,
+    "final_energy_cost": 270,
+    "energy_increment": -13.5
+  },
+  {
+    "id": "arcana_blessing_divine_storm",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：神圣风暴"
+    },
+    "description": "神迹奥术祝福\n将在你周围召唤出一股神秘的闪电风暴，将敌人击瞎。你周围的随机区域会受到额外伤害。",
+    "message": "一圈奇怪的蓝光环绕着你，苍白的闪电从四面八方涌出。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_divine_storm_blast",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_divine_storm_blast",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_divine_storm_blast",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_divine_storm_noise",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "effect_str": "blind",
+    "min_damage": 10,
+    "max_damage": 80,
+    "damage_increment": 3.5,
+    "min_aoe": 3,
+    "max_aoe": 15,
+    "aoe_increment": 0.6,
+    "max_level": 20,
+    "difficulty": 40,
+    "skill": "magic",
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "min_duration": 800,
+    "max_duration": 8000,
+    "duration_increment": 360,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 10,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_blessing_drain_life",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：吸取生命"
+    },
+    "description": "奥术祝福\n使用此咒语将用角光环涂抹你，给予你生命消耗效果。",
+    "message": "闪耀的光环弥漫在你身上，激起你对战斗和敌人死亡的渴望。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "halo_drainlife",
+    "energy_source": "MANA",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 36000,
+    "max_duration": 252000,
+    "duration_increment": 10800
+  },
+  {
+    "id": "arcana_blessing_holy_flare",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：圣火"
+    },
+    "description": "奥术祝福\n使用此咒语将在目标位置召唤出超自然的火焰喷发，这将使地形毫发无损。中心的任何东西都会受到双倍的伤害并被击倒。",
+    "message": "你的命令，从稀薄的空气中迸发出金光闪闪的火焰。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_holy_flare_spike",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_holy_flare_noise",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "dazed",
+    "sound_description": "the roar of flames",
+    "min_damage": 10,
+    "max_damage": 80,
+    "damage_increment": 3.5,
+    "min_range": 8,
+    "max_range": 30,
+    "range_increment": 1.1,
+    "min_aoe": 1,
+    "max_aoe": 5,
+    "aoe_increment": 0.2,
+    "max_level": 20,
+    "difficulty": 40,
+    "skill": "magic",
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "damage_type": "heat",
+    "field_id": "fd_plasma",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5,
+    "min_duration": 800,
+    "max_duration": 8000,
+    "duration_increment": 360
+  },
+  {
+    "id": "arcana_blessing_holy_ward",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：神圣的病房"
+    },
+    "description": "奥术祝福\n使用此咒语将创造一个光环保护刀锋，并防范各种异常危险。它可以用在你自己或盟友身上。",
+    "message": "当一个强大的保护咒语通过你时，你感觉到现实的线被拉紧了。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "cleric_warding_true",
+    "energy_source": "MANA",
+    "difficulty": 100,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 550,
+    "final_casting_time": 275,
+    "casting_time_increment": -13.75,
+    "base_energy_cost": 660,
+    "final_energy_cost": 330,
+    "energy_increment": -16.5,
+    "min_duration": 30000,
+    "max_duration": 210000,
+    "duration_increment": 9000
+  },
+  {
+    "id": "arcana_blessing_illusion_cloak",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：幻觉斗篷"
+    },
+    "description": "奥术祝福\n使用此咒语将使一个人在幻觉中隐形，隐藏他们不被看见，并保护他们免受某些光学效果的影响。",
+    "message": "你引导了一个闪光的光环，它会消失在旋转的幻影中。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "arcana_invis",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 70,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 400,
+    "final_casting_time": 200,
+    "casting_time_increment": -10,
+    "base_energy_cost": 480,
+    "final_energy_cost": 240,
+    "energy_increment": -12,
+    "min_duration": 21000,
+    "max_duration": 147000,
+    "duration_increment": 6300
+  },
+  {
+    "id": "arcana_blessing_might",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：权力"
+    },
+    "description": "奥术祝福\n使用此咒语将暂时增强力量。它可以用在你自己或盟友身上。",
+    "message": "你感觉到原始的力量通过你，在你的命令下汹涌而出。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_might",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 300,
+    "final_casting_time": 150,
+    "casting_time_increment": -7.5,
+    "base_energy_cost": 360,
+    "final_energy_cost": 180,
+    "energy_increment": -9,
+    "min_duration": 42000,
+    "max_duration": 210000,
+    "duration_increment": 8400
+  },
+  {
+    "id": "arcana_blessing_open_lock",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：开场"
+    },
+    "description": "奥术祝福\n使用此咒语将解开锁，打开路障，或者打开目标区域的前进道路。",
+    "message": "你的意志对土地产生了奇怪的影响。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_open_lock",
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 3,
+    "max_range": 12,
+    "range_increment": 0.45,
+    "min_aoe": 0,
+    "max_aoe": 6,
+    "aoe_increment": 0.25,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5
+  },
+  {
+    "id": "arcana_blessing_pacify_monsters",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：安抚怪物"
+    },
+    "description": "奥术祝福\n使用此咒语会瞬间将怪物移到你身边。它只适用于被削弱的怪物，但是效果会随着法术等级的增加而增加。",
+    "message": "你集中注意力，通过你的手传递一个舒缓的光环。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "effect": "charm_monster",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 50,
+    "max_damage": 300,
+    "damage_increment": 12.5,
+    "min_range": 12,
+    "max_range": 24,
+    "range_increment": 0.6,
+    "min_aoe": 0,
+    "max_aoe": 4,
+    "aoe_increment": 0.2,
+    "min_duration": 12000,
+    "max_duration": 84000,
+    "duration_increment": 3600,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5
+  },
+  {
+    "id": "arcana_blessing_radiant_burst",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：光芒四射"
+    },
+    "description": "奥术祝福\n使用此咒语将以爆裂的能量爆炸一个锥形区域，用神圣的闪电将敌人击昏。任何在中心线的东西都会受到双倍的伤害。",
+    "message": "奥术祝福\n神秘的闪电弧线向外延伸，在你前方沐浴着一道诡异的光芒。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_radiant_burst_line",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_radiant_burst_noise",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "blind",
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "min_range": 6,
+    "max_range": 20,
+    "range_increment": 0.7,
+    "min_aoe": 10,
+    "max_aoe": 40,
+    "aoe_increment": 1.5,
+    "max_level": 20,
+    "difficulty": 60,
+    "skill": "magic",
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "energy_source": "MANA",
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -19.5,
+    "min_duration": 1200,
+    "max_duration": 12000,
+    "duration_increment": 540,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 10,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.1,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_blessing_summon_giant_centipedes",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤蜈蚣"
+    },
+    "description": "奥术祝福\n使用此咒语将召唤变异的害虫，当此咒语完全熟练时，它将永久存在。",
+    "message": "你集中注意力，虚假的预兆被避免的画面在你的脑海中挥之不去，就像不自然的害虫滑向存在。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_centipede_giant_summoned",
+    "energy_source": "MANA",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 4,
+    "damage_increment": 0.15,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 720000,
+    "max_duration": 7920000,
+    "duration_increment": 360000
+  },
+  {
+    "id": "arcana_blessing_summon_homunculus",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤霍蒙库勒斯"
+    },
+    "description": "奥术祝福\n使用此咒语将召唤一个模仿人类形体的人，当这个咒语完全熟练时，它将永久存在。",
+    "message": "当你集中注意力时，虚假预兆的意象在你的脑海中挥之不去，就像一个活生生的建筑一样被召唤来为你服务。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_homunculus_summoned",
+    "energy_source": "MANA",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "base_casting_time": 300,
+    "final_casting_time": 150,
+    "casting_time_increment": -7.5,
+    "base_energy_cost": 360,
+    "final_energy_cost": 180,
+    "energy_increment": -9,
+    "min_duration": 600000,
+    "max_duration": 6600000,
+    "duration_increment": 300000
+  },
+  {
+    "id": "arcana_blessing_summon_skeletal_dog",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤骷髅狗"
+    },
+    "description": "奥术祝福\n使用此咒语将召唤许多动物性亡灵，当该咒语完全熟练时，这些亡灵将永久存在。",
+    "message": "当你集中注意力，一个死亡的世界的图像在你的脑海中挥之不去，一个不死的狩猎群汹涌而来。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_dog_skeleton_summoned",
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 4,
+    "damage_increment": 0.15,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "min_duration": 480000,
+    "max_duration": 5280000,
+    "duration_increment": 240000
+  },
+  {
+    "id": "arcana_blessing_summon_skeleton",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤骷髅"
+    },
+    "description": "奥术祝福\n使用此咒语将召唤一个人形亡灵，当该咒语完全熟练时，它将永久存在。",
+    "message": "你集中注意力，人类灭绝的景象在你脑海中挥之不去，一个不死的仆人出现在你面前。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_skeleton_summoned",
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "min_duration": 480000,
+    "max_duration": 5280000,
+    "duration_increment": 240000
+  },
+  {
+    "id": "arcana_blessing_summon_thing",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤物"
+    },
+    "description": "奥术祝福\n使用此咒语将召唤一个触手可憎的怪物，当这个咒语完全熟练时，它将永久存在。",
+    "message": "当你集中注意力时，你的敌人所体现的恐怖形象在你的脑海中挥之不去，如同一团卷须在你的脑海中摇曳。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_thing_summoned",
+    "energy_source": "MANA",
+    "difficulty": 50,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "base_casting_time": 300,
+    "final_casting_time": 150,
+    "casting_time_increment": -7.5,
+    "base_energy_cost": 360,
+    "final_energy_cost": 180,
+    "energy_increment": -9,
+    "min_duration": 600000,
+    "max_duration": 6600000,
+    "duration_increment": 300000
+  },
+  {
+    "id": "arcana_blessing_summon_vortices",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：召唤漩涡"
+    },
+    "description": "奥术祝福\n使用此咒语将从远处召唤漩涡生物，当此咒语完全熟练时，它将永久存在。",
+    "message": "你专注，不确定的，遥远的未来的图像萦绕在你的脑海里，活生生的风在倾听你的呼唤。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "PERMANENT",
+      "NO_FAIL"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_vortex_summoned",
+    "energy_source": "MANA",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 4,
+    "damage_increment": 0.15,
+    "min_range": 2,
+    "max_range": 10,
+    "range_increment": 0.4,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 720000,
+    "max_duration": 7920000,
+    "duration_increment": 360000
+  },
+  {
+    "id": "arcana_blessing_surge_adrenaline",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：澎湃的力量"
+    },
+    "description": "奥术祝福\n使用此咒语会激起肾上腺素的激增，并在紧急情况下缩短时间，尽管之后也有同样的缺点。它可以用在你自己或盟友身上。",
+    "message": "你引导了一股令人振奋的能量，时间似乎在瞬间变慢。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect_str": "adrenaline",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_surge_adrenaline_timewarp",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "max_level": 20,
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "difficulty": 40,
+    "skill": "magic",
+    "min_duration": 24000,
+    "max_duration": 168000,
+    "duration_increment": 7200,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "arcana_blessing_wall_force",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：力量之墙"
+    },
+    "description": "奥术祝福\n使用此咒语将在你瞄准它的地方召唤一道魔法屏障，如果放置小心，可以用来诱捕敌人。",
+    "message": "在一道难以逾越的障碍物包围之前，一道闪烁的火焰在地面上留下了片刻的痕迹。检查它以消除障碍。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_barrier",
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 0,
+    "max_aoe": 3,
+    "aoe_increment": 0.15,
+    "min_range": 6,
+    "max_range": 12,
+    "range_increment": 0.3,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5
+  },
+  {
+    "id": "arcana_blessing_ward_acid",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：病房（酸）"
+    },
+    "description": "奥术祝福\n使用此咒语将给予一个祝福，完全防止酸，甚至直接接触。它可以用在你自己或盟友身上。",
+    "message": "你引导了一个闪闪发光的光环，通过的空气带着一种微弱的苦味。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "acid_ward_true",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "base_energy_cost": 240,
+    "final_energy_cost": 120,
+    "energy_increment": -6,
+    "min_duration": 9000,
+    "max_duration": 63000,
+    "duration_increment": 2700
+  },
+  {
+    "id": "arcana_blessing_ward_cold",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：病房（冷）"
+    },
+    "description": "奥术祝福\n使用此咒语可以抵御寒冷和某些形式的超自然伤害。它可以用在你自己或盟友身上。",
+    "message": "你引导了一种保护性的光环，空气获得了一种舒适的温暖。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "cold_ward_true",
+    "energy_source": "MANA",
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 18000,
+    "max_duration": 126000,
+    "duration_increment": 5400
+  },
+  {
+    "id": "arcana_blessing_ward_flame",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：沃德（火焰）"
+    },
+    "description": "奥术祝福\n使用此咒语将完全防御火，以及由热和烟引起的副作用。它可以用在你自己或盟友身上。",
+    "message": "你传递了一种保护的光环，空气似乎被你的行为冷却了。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "heat_ward_true",
+    "energy_source": "MANA",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "difficulty": 60,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 350,
+    "final_casting_time": 175,
+    "casting_time_increment": -8.75,
+    "base_energy_cost": 420,
+    "final_energy_cost": 210,
+    "energy_increment": -10.5,
+    "min_duration": 18000,
+    "max_duration": 126000,
+    "duration_increment": 5400
+  },
+  {
+    "id": "arcana_blessing_ward_lightning",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：沃德（闪电）"
+    },
+    "description": "奥术祝福\n使用此咒语将给予一个完全防御闪电的祝福。它可以用在你自己身上，也可以用在盟友身上。",
+    "message": "你引导了一个舒缓的，绝缘的光环。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "lightning_ward_true",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 40,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 250,
+    "final_casting_time": 125,
+    "casting_time_increment": -6.25,
+    "base_energy_cost": 300,
+    "final_energy_cost": 150,
+    "energy_increment": -7.5,
+    "min_duration": 12000,
+    "max_duration": 84000,
+    "duration_increment": 3600
+  },
+  {
+    "id": "arcana_blessing_ward_poison",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：沃德（毒）"
+    },
+    "description": "奥术祝福\n使用此咒语将给予一个保护免受有毒气体和其他形式毒气的祝福。它可以用在你自己或盟友身上。",
+    "message": "你引导能量，通过你的意志传播一种充满活力的光芒。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_FAIL"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "poison_ward",
+    "min_range": 0,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "energy_source": "MANA",
+    "difficulty": 30,
+    "skill": "magic",
+    "max_level": 20,
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "base_energy_cost": 240,
+    "final_energy_cost": 120,
+    "energy_increment": -6,
+    "min_duration": 9000,
+    "max_duration": 63000,
+    "duration_increment": 2700
+  },
+  {
+    "id": "arcana_blessing_wave_destruction",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福：毁灭的浪潮"
+    },
+    "description": "奥术祝福\n使用这个咒语将释放一个毁灭性的，毁灭性的力量爆炸，冲刷大地本身。任何接近的东西都会受到双倍的伤害。过度使用会使使用者身心疲劳。",
+    "message": "当一种超凡脱俗的咆哮声回响时，空气在摇曳，以一种非自然的风暴的闪电轰击你周围的一切。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_wave_destruction_spike",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_wave_destruction_pulse",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "arcana_aftermath_wave_destruction_side_effects",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_aftermath_wave_destruction_noise",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_FAIL"
+    ],
+    "effect_str": "stunned",
+    "min_damage": 25,
+    "max_damage": 200,
+    "damage_increment": 8.75,
+    "damage_type": "pure",
+    "min_aoe": 8,
+    "max_aoe": 24,
+    "aoe_increment": 1.4,
+    "max_level": 20,
+    "difficulty": 100,
+    "skill": "magic",
+    "base_casting_time": 550,
+    "final_casting_time": 275,
+    "casting_time_increment": -13.75,
+    "energy_source": "MANA",
+    "base_energy_cost": 660,
+    "final_energy_cost": 330,
+    "energy_increment": -16.5,
+    "min_duration": 2000,
+    "max_duration": 20000,
+    "duration_increment": 900,
+    "field_id": "fd_electricity",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "field_intensity_increment": 0.2,
+    "field_intensity_variance": 0.5
+  }
+]

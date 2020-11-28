@@ -1,0 +1,354 @@
+[
+  {
+    "id": "TALK_OLD_GUARD_REP",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_trait": "PROF_FED"
+            }
+          ]
+        },
+        "topic": "TALK_OLD_GUARD_REP_GM_PRELUDE_SPECIAL"
+      },
+      {
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "PROF_FED"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_OLD_GUARD_REP_GM_PRELUDE"
+      },
+      {
+        "text": "[任务]老警卫会愿意在另一个社区建立一个存在吗？",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
+        },
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_GM_PRELUDE",
+    "type": "talk_topic",
+    "dynamic_line": "我收到了很多关于袭击的报告，我想你是在替别人追踪原因吧？我很想帮忙，但我们现在的处境很艰难。我只有足够的人力来跟进最近一次对我们巡逻队的袭击，这当然符合你所说的“反常”的说法。我会把报告摘要寄出去的，但我怀疑这是否足够有用。最近有很多事情发生，继续四处打听，也许你能用这些情报做点什么。"
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_GM_PRELUDE_SPECIAL",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_var": "old_guard_presence",
+      "type": "knowledge",
+      "context": "rural_church",
+      "value": "yes",
+      "yes": "我们确实收到了很多议论，元帅。我知道有一系列土匪袭击的地方性很强，而且有证据表明你代表你之前担保过的组织，带头袭击了他们的藏身处。而现在这个，分散在更广阔的区域，与任何人类或不死的攻击者不一致。我会把我们收集到的所有信息转达给你们的盟友，相信你们会处理好的。快点，元帅。",
+      "no": "我们收到了很多关于最近袭击的传言，警长。我知道有一系列土匪袭击的地方性很强，而且有证据表明你代表另一批幸存者带头袭击了他们的藏身处。而现在这个，分散在更广阔的区域，与任何人类或不死的攻击者不一致。我会把我们收集到的所有信息转达给你的同事，相信你会处理好的。快点，元帅。"
+    },
+    "responses": [
+      {
+        "text": "可以。我想我会向他们汇报的。",
+        "effect": [
+          {
+            "u_add_var": "johnathan_prelude_data_5",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
+        ],
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "PROF_FED",
+      "yes": "我很抱歉地说，我们现在很瘦。你为我们做了很多很好的工作，也许我可以试着说服上级做些什么。不过，老实说，要说服他们并不容易，我担心如果他们找到他们需要的东西，这样的安排可能会变味。我需要更多地了解你请求帮助的社区。",
+      "no": "我希望我们能在那里的每一个定居点都不伤害人民，但我们现在已经很危险了。更不用说，那是由上级决定的。如果这个地区的情况不那么紧张，我也许可以说服他们投入更多的人员，但我不确定这有多容易。"
+    },
+    "responses": [
+      {
+        "text": "这是一个将一个乡村教堂改造成一个小前哨的组织，一直在和自由商人进行交易。",
+        "condition": {
+          "u_has_trait": "PROF_FED"
+        },
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_CHURCH"
+      },
+      {
+        "text": "我会考虑其他的选择，以防万一。不过还是谢谢你。",
+        "switch": true,
+        "condition": {
+          "u_has_trait": "PROF_FED"
+        },
+        "topic": "TALK_OLD_GUARD_REP"
+      },
+      {
+        "text": "哦，好吧。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_CHURCH",
+    "type": "talk_topic",
+    "dynamic_line": "我听过一些谣言，从那些带来外部世界新闻的人那里。不过，有很多信息混杂和误传。我觉得不管他们在干什么，至少在指挥系统的上层有几个人会有兴趣关注他们，但我不确定结果会有多好。关于他们你能告诉我些什么？",
+    "responses": [
+      {
+        "text": "在事情还没结束之前，我就已经是他们小组的一员了。我们专注于寻找和处理一些异常现象，这些异常现象在这之前的几个月里开始显现出来。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_CF1"
+      },
+      {
+        "text": "实际上，我也是其中之一。我们有共同的利益，尽我们最大的努力确保人类的生存。我们有自己的方式，虽然它们是根植于超自然的。",
+        "condition": {
+          "u_has_trait": "PROF_CLEANSINGFLAME2"
+        },
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_CF2"
+      },
+      {
+        "text": "他们是猎人。现在的怪物猎人们，在过去他们与当地的神秘组织和其他小规模的威胁战斗，然后一切都结束了。",
+        "switch": true,
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_ARCANIST",
+            "PROF_ARCANIST2",
+            "PROF_SANGUINE",
+            "PROF_CHALICE"
+          ]
+        },
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_ARCANIST"
+      },
+      {
+        "text": "主要是怪物猎人。如果有点古怪的话，他们的装备也很得体。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_HUNTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_CF1",
+    "type": "talk_topic",
+    "dynamic_line": "所以你可以为他们担保，元帅。很好。我希望你知道风险。如果与他们会面的生还者传闻的一半都是真的，那么他们参与了一些奇怪的事情，这可能会引起高层的错误关注。如果你确定的话，我会尽我所能与我的上级沟通，与他们取得联系并建立联系。",
+    "responses": [
+      {
+        "text": "我认为任何一方都不能为了生存而不合作。前进。",
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_DEAL"
+      },
+      {
+        "text": "也许你是对的。为了以防万一，我也会研究其他的选择。不过，谢谢你。",
+        "topic": "TALK_OLD_GUARD_REP"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_DEAL",
+    "type": "talk_topic",
+    "dynamic_line": "就这样吧，元帅。我也会和当地的商人联系，因为我知道他们事先有安排。如果一切顺利的话，你回来的时候就应该准备好了。希望一切顺利…",
+    "responses": [
+      {
+        "text": "非常感谢。在我离开之前，我还想谈谈别的事。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "u_add_var": "old_guard_presence",
+            "type": "knowledge",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "old_guard_presence",
+            "type": "knowledge",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_old_guard_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_old_guard_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "topic": "TALK_OLD_GUARD_REP"
+      },
+      {
+        "text": "非常感谢。我应该去看看，再见。",
+        "effect": [
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "u_add_var": "old_guard_presence",
+            "type": "knowledge",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "old_guard_presence",
+            "type": "knowledge",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_old_guard_1",
+            "om_terrain": "cf_church_1",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_old_guard_2",
+            "om_terrain": "cf_church_3",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_1",
+            "om_terrain": "cf_church_1_roof",
+            "om_special": "cf_rural_church"
+          },
+          {
+            "mapgen_update": "arcana_cf_4_roof_2",
+            "om_terrain": "cf_church_3_roof",
+            "om_special": "cf_rural_church"
+          }
+        ],
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_CF2",
+    "type": "talk_topic",
+    "dynamic_line": "超凡脱俗的东西，哈。我看到和听到了很多奇怪的事情，但这不是我想介入的事情。如果这是真的，那也许你有道理。不过，小心卷入此事。如果你确定这是最好的办法，我会提出我的建议，元帅。",
+    "responses": [
+      {
+        "text": "我们必须与外来者结盟才能生存，我们的经验将对他们有利。去争取吧。",
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_DEAL"
+      },
+      {
+        "text": "那么我会研究其他的选择。不过还是谢谢你。",
+        "topic": "TALK_OLD_GUARD_REP"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_ARCANIST",
+    "type": "talk_topic",
+    "dynamic_line": "伟大的。神秘的东西和警戒。如果你对他们了解那么多，而且仍然认为他们会和老警卫相处得很好，那么我相信你的判断。只要说一句话，我会尽我所能把事情平息。",
+    "responses": [
+      {
+        "text": "那就去吧。",
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_DEAL"
+      },
+      {
+        "text": "再想一想，我会另谋出路。",
+        "topic": "TALK_OLD_GUARD_REP"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_REP_CF_MISSION_4_HUNTER",
+    "type": "talk_topic",
+    "dynamic_line": "我听到过比这更奇怪的谣言，所以我想如果这就是他们的心里话，那么我们最好一起合作。我对此仍有保留意见，但如果你确定的话，我可以和我的上级取得联系，争取他们的支持。",
+    "responses": [
+      {
+        "text": "那就去吧。",
+        "topic": "TALK_OLD_GUARD_REP_CF_MISSION_4_DEAL"
+      },
+      {
+        "text": "再想一想，我会另谋出路。",
+        "topic": "TALK_OLD_GUARD_REP"
+      }
+    ]
+  }
+]

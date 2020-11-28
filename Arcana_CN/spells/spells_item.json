@@ -1,0 +1,2725 @@
+[
+  {
+    "id": "arcana_item_athame_sanguine_art",
+    "type": "SPELL",
+    "//": "Todo: add a difficulty of 1 and remove no-failure from the item's action, if it turns out that skill reasonably reduces an unleveled spell's failure rate to be feasible, when spell skill is no longer hardcoded.",
+    "name": {
+      "str": "血色艺术"
+    },
+    "description": "准备一个仪式，将你生命的一部分转化为一种有用的精华形式。这样做将需要5分钟，造成失血和损伤的最后，以及潜在的后果，如果过度使用。。。",
+    "message": "你按照惯例从自己的血液中汲取力量，当你用钝刃在皮肤上描绘图案时，本能会引导你的手。当你使用最后一个符文，唯一一个真正打破皮肤，伤口在你身体的其他地方打开！",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_athame_sanguine_art_corruption",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_generate_blood_essence",
+        "hit_self": true
+      }
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "effect_str": "bleed",
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 60000,
+    "final_casting_time": 60000,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 20,
+    "final_energy_cost": 20,
+    "min_damage": 1,
+    "max_damage": 3,
+    "damage_type": "pure",
+    "min_duration": 30000,
+    "max_duration": 30000
+  },
+  {
+    "id": "arcana_item_athame_sanguine_art_corruption",
+    "type": "SPELL",
+    "name": {
+      "str": "血腥的艺术腐败"
+    },
+    "description": "这会造成更阴险的效果。顺便说一下，每次使用都会有2天的副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "blood_athame_side_effects",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 17280000,
+    "max_duration": 17280000
+  },
+  {
+    "id": "arcana_item_chalice_offering",
+    "type": "SPELL",
+    "//": "Todo: add a difficulty of 3 and remove no-failure from the item's action, if it turns out that skill reasonably reduces an unleveled spell's failure rate to be feasible, when spell skill is no longer hardcoded.",
+    "name": {
+      "str": "提供"
+    },
+    "description": "准备一个仪式，将你生命的一部分转化为一种有用的精华形式。这样做将需要15分钟，在最后对你的身体造成伤害，以及严重后果，如果过度使用。。。",
+    "message": "你习惯于从自己的呼吸中汲取力量，本能地用一种陌生的语言低语。经文完毕，你举起圣杯，好像要从中喝水，只是为了让你的呼吸从你的肺中抽出来！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_chalice_offering_winding",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_chalice_offering_corruption",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_generate_blood_essence",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_generate_blood_essence",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_generate_blood_essence",
+        "hit_self": true
+      }
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 8,
+    "max_damage": 10,
+    "damage_type": "pure",
+    "base_casting_time": 90000,
+    "final_casting_time": 90000,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 60,
+    "final_energy_cost": 60
+  },
+  {
+    "id": "arcana_item_chalice_offering_winding",
+    "type": "SPELL",
+    "name": {
+      "str": "提供风"
+    },
+    "description": "这是为了让圣杯仪式实际上把你击倒。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -10000,
+    "max_damage": -10000,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "STAMINA"
+  },
+  {
+    "id": "arcana_item_chalice_offering_corruption",
+    "type": "SPELL",
+    "name": {
+      "str": "提供腐败"
+    },
+    "description": "这造成圣杯更阴险的影响。顺便说一下，每次使用都会有2天的副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "chalice_offering_side_effects",
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 17280000,
+    "max_duration": 17280000
+  },
+  {
+    "id": "arcana_item_coalescent_conversion",
+    "type": "SPELL",
+    "name": {
+      "str": "聚结转化"
+    },
+    "description": "这是为了使魔法卷轴在用完时留下一个空白卷轴，从而放弃了以前的将项目转换为利用revert_的技巧。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "当火花从装置中跃出时，空气在颤动，当能量从现实的织物中被拉出来，凝固成水晶般的银时，空气中回荡着。\n在它存在的第一刹那间发出白热的光芒，稀薄的浓缩精华碎片迅速冷却成可以安全处理的东西。",
+    "flags": [
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_coalescent_conversion_sound",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_coalescent_conversion_side_effects",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_coalescent_conversion_wonder",
+        "hit_self": false
+      }
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "essence_pure",
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_coalescent_conversion_sound",
+    "name": {
+      "str": "凝聚转换噪声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a thundering boom!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "min_damage": 80,
+    "max_damage": 80,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_coalescent_conversion_sound",
+    "name": {
+      "str": "凝聚转换噪声"
+    },
+    "description": "除了对NPC做他妈的一切，这已经足够正常了。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self"
+    ],
+    "effect": "flashbang",
+    "shape": "blast",
+    "message": "",
+    "min_range": 40,
+    "max_range": 40
+  },
+  {
+    "id": "arcana_item_coalescent_conversion_side_effects",
+    "type": "SPELL",
+    "name": {
+      "str": "聚结转化副作用"
+    },
+    "description": "短暂地攻击用户，制造热空气。",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "zapped",
+    "field_id": "fd_hot_air2",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "field_intensity_variance": 0.5,
+    "min_duration": 500,
+    "max_duration": 1000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_coalescent_conversion_wonder",
+    "name": {
+      "str": "聚结转化奇迹"
+    },
+    "description": "可能会有一些有趣的后果。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_item_coalescent_conversion_wonder_archon"
+      },
+      {
+        "id": "arcana_item_coalescent_conversion_wonder_tindalos"
+      }
+    ]
+  },
+  {
+    "id": "arcana_item_coalescent_conversion_wonder_archon",
+    "type": "SPELL",
+    "name": {
+      "str": "聚结转换拱门裂谷"
+    },
+    "description": "在附近制造一个执政官裂缝。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "尽管新创造的水晶散发出热量，你还是感觉到一丝寒意…",
+    "flags": [
+      "RANDOM_TARGET",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 10,
+    "max_range": 10,
+    "field_id": "fd_archon_rift",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "min_duration": 45000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_coalescent_conversion_wonder_tindalos",
+    "type": "SPELL",
+    "name": {
+      "str": "廷达洛斯裂谷聚结转化"
+    },
+    "description": "在附近造成廷达罗斯裂谷。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "你觉得好像有什么东西在跟踪你，一些看不见的观察者在释放一种超凡脱俗的杀戮意图。",
+    "flags": [
+      "RANDOM_TARGET",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 10,
+    "max_range": 10,
+    "field_id": "fd_tindalos_rift",
+    "field_chance": 1,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3,
+    "min_duration": 200,
+    "max_duration": 400
+  },
+  {
+    "id": "arcana_item_generate_blood_essence",
+    "type": "SPELL",
+    "name": {
+      "str": "生成血之精华"
+    },
+    "description": "血魔法物品用来产生血之精华。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "essence_blood",
+    "effect": "spawn_item",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_item_gilded_aegis_healing",
+    "type": "SPELL",
+    "name": {
+      "str": "护盾修补"
+    },
+    "description": "强迫身体自行愈合，但也会造成相当大的伤害。",
+    "message": "你的斗篷闪烁着奇怪的光芒，一股痛苦的治疗力量冲击着你！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_gilded_aegis_pain",
+        "hit_self": true
+      }
+    ],
+    "effect_str": "arcana_aegis_mending",
+    "min_damage": -8,
+    "max_damage": -8,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 100,
+    "max_duration": 100
+  },
+  {
+    "id": "arcana_item_gilded_aegis_pain",
+    "type": "SPELL",
+    "name": {
+      "str": "疼痛副作用"
+    },
+    "description": "吃药吧，亨特。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -12,
+    "max_damage": -12,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "PAIN"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_hammerzeit",
+    "name": {
+      "str": "雷鸣般的愤怒"
+    },
+    "description": "在用户身上闪爆，让附近的人都瞎了眼。",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground",
+      "self"
+    ],
+    "message": "“马尔泰洛大道！”锤子发出金色的光芒，发出耀眼的闪光和响亮的巨响！",
+    "extra_effects": [
+      {
+        "id": "arcana_item_hammerzeit_attack",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_hammerzeit_dazzle",
+        "hit_self": false
+      }
+    ],
+    "effect": "flashbang",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 40,
+    "max_damage": 40,
+    "min_aoe": 6,
+    "max_aoe": 6
+  },
+  {
+    "id": "arcana_item_hammerzeit_attack",
+    "type": "SPELL",
+    "name": {
+      "str": "锤击二次效应"
+    },
+    "description": "轻微伤害和眩晕的每一个香草怪物与日晷，每一个召唤怪物基于这样的生物。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_dark_wyrm",
+      "mon_albino_penguin",
+      "mon_blank",
+      "mon_darkman",
+      "mon_hunting_horror",
+      "mon_shadow",
+      "mon_shadow_snake",
+      "mon_dark_wyrm_summoned",
+      "mon_hunting_horror_summoned",
+      "mon_shadow_summoned",
+      "mon_shadow_summoned_fake",
+      "mon_shadow_snake_summoned"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "dazed",
+    "min_damage": 3,
+    "max_damage": 6,
+    "min_aoe": 6,
+    "max_aoe": 6,
+    "min_duration": 100,
+    "max_duration": 300,
+    "damage_type": "heat"
+  },
+  {
+    "id": "arcana_item_hammerzeit_dazzle",
+    "type": "SPELL",
+    "name": {
+      "str": "锤盲"
+    },
+    "description": "这是一个不影响npc的flashbang效应的破解。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "min_aoe": 6,
+    "max_aoe": 6,
+    "min_duration": 100,
+    "max_duration": 300,
+    "field_id": "fd_dazzling",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "arcana_item_jade_hauberk_healing",
+    "type": "SPELL",
+    "name": {
+      "str": "哈伯修补术"
+    },
+    "description": "比镀金宙斯盾更弱的治疗，但更少的痛苦。",
+    "message": "你的盔甲披风闪烁着奇怪的光芒，将治愈魔法的隐痛穿透你的身体。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_jade_hauberk_pain",
+        "hit_self": true
+      }
+    ],
+    "effect_str": "arcana_aegis_mending",
+    "min_damage": -4,
+    "max_damage": -4,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 100,
+    "max_duration": 100,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 8,
+    "final_energy_cost": 8
+  },
+  {
+    "id": "arcana_item_jade_hauberk_pain",
+    "type": "SPELL",
+    "name": {
+      "str": "Hauberk疼痛副作用"
+    },
+    "description": "还是有点刺痛。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -6,
+    "max_damage": -6,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "PAIN"
+  },
+  {
+    "id": "arcana_item_mantle_shadow",
+    "type": "SPELL",
+    "name": {
+      "str": "幻影裹尸布"
+    },
+    "description": "赋予使用者幻觉隐形效果。",
+    "message": "长袍的织物变暗为浓浓的黑色，将你周围的环境掩蔽在一种闪烁的幻觉中。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "arcana_invis_lesser",
+    "min_duration": 30000,
+    "max_duration": 30000
+  },
+  {
+    "id": "arcana_item_meteoric_verge_bolt",
+    "type": "SPELL",
+    "name": {
+      "str": "从远处射出"
+    },
+    "description": "用闪电AoE炸毁一切。",
+    "message": "当你升起边缘时，一股能量冲击地面，发出雷鸣般的爆炸声！",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_meteoric_verge_spike",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_meteoric_verge_pulse",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_meteoric_verge_noise",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_meteoric_verge_buff",
+        "hit_self": true
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "blind",
+    "min_damage": 44,
+    "max_damage": 76,
+    "min_aoe": 9,
+    "max_aoe": 9,
+    "min_range": 50,
+    "max_range": 50,
+    "min_duration": 6000,
+    "max_duration": 12000,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 3,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3
+  },
+  {
+    "id": "arcana_item_meteoric_verge_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "边缘穗"
+    },
+    "description": "震中双重伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
+    "min_damage": 44,
+    "max_damage": 76,
+    "damage_type": "electric",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 50,
+    "max_range": 50
+  },
+  {
+    "id": "arcana_item_meteoric_verge_pulse",
+    "type": "SPELL",
+    "name": {
+      "str": "边缘脉冲"
+    },
+    "description": "这会增加地形伤害。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "bash",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_meteoric_verge_pulse_extra",
+        "hit_self": false
+      }
+    ],
+    "min_damage": 40,
+    "max_damage": 50,
+    "min_aoe": 9,
+    "max_aoe": 9,
+    "min_range": 30,
+    "max_range": 30
+  },
+  {
+    "id": "arcana_item_meteoric_verge_pulse_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "额外边缘脉冲"
+    },
+    "description": "在魔法代码中解决错误的肮脏黑客。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect_str": "arcana_pulse",
+    "min_damage": 10,
+    "max_damage": 10,
+    "min_aoe": 9,
+    "max_aoe": 9,
+    "min_range": 30,
+    "max_range": 30
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_meteoric_verge_noise",
+    "name": {
+      "str": "边缘噪声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a thunderclap!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "min_damage": 88,
+    "max_damage": 88,
+    "min_range": 50,
+    "max_range": 50,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_item_meteoric_verge_buff",
+    "type": "SPELL",
+    "name": {
+      "str": "边缘抛光"
+    },
+    "description": "给予使用者和附近盟友短暂的闪电豁免。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "lightning_ward_true",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DURATION",
+      "SILENT"
+    ],
+    "min_duration": 500,
+    "max_duration": 1000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_orb_veil_mapping",
+    "name": {
+      "str": "凝视更广阔的视野"
+    },
+    "description": "知识就是力量，但权力是要付出代价的。。。",
+    "effect": "map",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_orb_veil_revelation",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_orb_veil_attention",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_artifice_pain",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder",
+        "hit_self": false
+      }
+    ],
+    "message": "你深入观察这个球体，看到一个隐藏在令人头痛的几何图形中的周围区域。",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "base_casting_time": 100
+  },
+  {
+    "id": "arcana_item_orb_veil_revelation",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：启示录"
+    },
+    "description": "给予启示法术效果的随机持续时间。",
+    "message": "一股奇怪的景象涌上你的脑海。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_revelation",
+    "min_duration": 30000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_orb_veil_attention",
+    "type": "SPELL",
+    "name": {
+      "str": "注意球"
+    },
+    "description": "应用虚无的注意力，较短的持续时间，因为球体有一系列随机的副作用。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "attention",
+    "min_duration": 90000,
+    "max_duration": 270000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_orb_veil_wonder",
+    "name": {
+      "str": "球体随机效应"
+    },
+    "description": "使用面纱球体的随机副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      {
+        "id": "arcana_item_orb_veil_wonder_archon"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_blind"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_citrine"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_hallu"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_insight"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_stunned"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_ward"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_2"
+      }
+    ]
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_archon",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：执政官效应"
+    },
+    "description": "应用了相当数量的执政官凝视效果。",
+    "message": "你看到有东西在回头看你，比其他东西更专注。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "archon_gaze_effect",
+    "min_duration": 90000,
+    "max_duration": 270000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_blind",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：失明"
+    },
+    "description": "在一段时间内使你失明。",
+    "message": "在一道白光中看见你。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "blind",
+    "min_duration": 100,
+    "max_duration": 3000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_citrine",
+    "type": "SPELL",
+    "name": {
+      "str": "圆球：香"
+    },
+    "description": "给予柠檬香效果的随机持续时间。",
+    "message": "一缕令人精疲力尽的精华伴随着幻觉，似乎比幻觉更真实。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "potion_incense",
+    "min_duration": 30000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_hallu",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：幻觉"
+    },
+    "description": "产生幻觉。",
+    "message": "即使你把视线从球体上移开，那些幻觉仍会在你的脑海中萦绕。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_orb_veil_wonder_hallu2"
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "visuals",
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_hallu2",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：幻觉2"
+    },
+    "description": "第二幻觉效应。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "hallu",
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_insight",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：洞察力"
+    },
+    "description": "给予洞察法术效果的随机持续时间。",
+    "message": "一瞥超凡脱俗的洞察力充斥你的脑海。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "spell_insight",
+    "min_duration": 30000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_stunned",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：眩晕"
+    },
+    "description": "短暂昏迷。",
+    "message": "球体内的幻觉让你有一段时间摇摇欲坠。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "stunned",
+    "min_duration": 100,
+    "max_duration": 3000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_ward",
+    "type": "SPELL",
+    "name": {
+      "str": "球体：沃德"
+    },
+    "description": "给予一个随机的抵御邪恶的持续时间。",
+    "message": "你看到一个幻象，在球体内的奇怪景象中，有什么东西在看着你。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "cleric_warding",
+    "min_duration": 30000,
+    "max_duration": 90000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_orb_veil_wonder_2",
+    "name": {
+      "str": "球体随机召唤"
+    },
+    "description": "奇怪的是，这召唤了一个随机的怪物。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "因为某些原因，球体中的幻象看起来比它们应该的真实得多。。。",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      {
+        "id": "arcana_item_orb_veil_wonder_2_krecks"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_2_fiend"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_2_shadows"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_2_angel"
+      },
+      {
+        "id": "arcana_item_orb_veil_wonder_2_vortices"
+      }
+    ]
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_2_krecks",
+    "type": "SPELL",
+    "name": {
+      "str": "球体召唤：克里克斯"
+    },
+    "description": "在外面的某个地方有一些不该是真的，但是它们。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "HOSTILE_50",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_kreck_summoned",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 120000,
+    "max_duration": 240000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_2_fiend",
+    "type": "SPELL",
+    "name": {
+      "str": "球体召唤：恶魔"
+    },
+    "description": "在某个地方有一个不应该是真的，但是。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "RANDOM_TARGET",
+      "HOSTILE_50",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_zombie_fiend_summoned",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 120000,
+    "max_duration": 240000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_2_shadows",
+    "type": "SPELL",
+    "name": {
+      "str": "球体召唤：阴影"
+    },
+    "description": "在外面的某个地方有一些不该是真的，但是它们。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "HOSTILE_50",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_shadow_summoned",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 120000,
+    "max_duration": 240000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_2_angel",
+    "type": "SPELL",
+    "name": {
+      "str": "球体召唤：天使"
+    },
+    "description": "在某个地方有一个不应该是真的，但是。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "RANDOM_TARGET",
+      "HOSTILE_50",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_flesh_angel_summoned",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 120000,
+    "max_duration": 240000
+  },
+  {
+    "id": "arcana_item_orb_veil_wonder_2_vortices",
+    "type": "SPELL",
+    "name": {
+      "str": "球体召唤：漩涡"
+    },
+    "description": "在外面的某个地方有一些不该是真的，但是它们。。。",
+    "valid_targets": [
+      "ground"
+    ],
+    "message": "",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "HOSTILE_50",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_vortex_summoned",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 60,
+    "max_range": 60,
+    "min_duration": 120000,
+    "max_duration": 240000
+  },
+  {
+    "id": "arcana_item_pestilence",
+    "type": "SPELL",
+    "name": {
+      "str": "瘟疫传唤"
+    },
+    "description": "变异的害虫来帮助你。",
+    "message": "害虫从你脚下的地上滑出，听从你的召唤。",
+    "extra_effects": [
+      {
+        "id": "arcana_item_pestilence_aftereffect",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_centipede_giant_summoned",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_duration": 900000,
+    "max_duration": 7200000
+  },
+  {
+    "id": "arcana_item_pestilence_aftereffect",
+    "type": "SPELL",
+    "name": {
+      "str": "瘟疫后遗症"
+    },
+    "description": "破坏你周围的地形。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "message": "",
+    "effect_str": "arcana_pestilence",
+    "min_damage": 4,
+    "max_damage": 4,
+    "min_aoe": 6,
+    "max_aoe": 6
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_artifice",
+    "name": {
+      "str": "点名"
+    },
+    "description": "尝试在一段中等时间内安抚怪物，麻痹用户并造成痛苦。",
+    "effect": "charm_monster",
+    "shape": "blast",
+    "message": "“按秩序，我们超越了动物的能力。”一股能量向外辐射，在这个过程中，超自然的观点碎片充斥着你的脑海！",
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_artifice_pain",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_scroll_artifice_paralyze",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "min_damage": 100,
+    "max_damage": 300,
+    "min_duration": 24000,
+    "max_duration": 72000,
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "valid_targets": [
+      "self",
+      "hostile"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_artifice_pain",
+    "name": {
+      "str": "神卷：神术之痛"
+    },
+    "description": "用伪影来缩小信息的范围而不是压制疼痛。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "PAIN",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -15,
+    "max_damage": -20
+  },
+  {
+    "id": "arcana_item_scroll_artifice_paralyze",
+    "type": "SPELL",
+    "name": {
+      "str": "神功卷轴：神功麻痹"
+    },
+    "description": "这使指令卷轴短暂的大脑震荡，比正常的人造物品瘫痪时间更长。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "min_damage": -200,
+    "max_damage": -300
+  },
+  {
+    "id": "arcana_item_scroll_destruction",
+    "type": "SPELL",
+    "name": {
+      "str": "痛哭流涕"
+    },
+    "description": "类似于毁灭波的效果，但有不同的副作用。",
+    "message": "“万物皆有尽头。”一种可怕的杂音回响，伴随着雷鸣般的轰鸣声，你周围的环境都被火焰炸飞了！",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_destruction_spike",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_scroll_destruction_noise",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_scroll_destruction_attention",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_scroll_destruction_cold",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_destruction_pulse",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "dazed",
+    "min_damage": 44,
+    "max_damage": 132,
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "min_duration": 1500,
+    "max_duration": 3000,
+    "damage_type": "bash",
+    "field_id": "fd_toxic_gas",
+    "field_chance": 10,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3
+  },
+  {
+    "id": "arcana_item_scroll_destruction_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：毁灭钉"
+    },
+    "description": "增加震中伤害。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 44,
+    "max_damage": 132,
+    "effect_str": "downed",
+    "min_duration": 3000,
+    "max_duration": 4000,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "damage_type": "bash"
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_destruction_noise",
+    "name": {
+      "str": "神卷：毁灭之声"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a huge explosion!",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "min_damage": 220,
+    "max_damage": 220,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_item_scroll_destruction_attention",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：毁灭注意"
+    },
+    "description": "这是用来代替人工注意来抑制消息和缩小持续时间范围。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "attention",
+    "flags": [
+      "RANDOM_DURATION",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_duration": 540000,
+    "max_duration": 900000
+  },
+  {
+    "id": "arcana_item_scroll_destruction_cold",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：毁灭之寒"
+    },
+    "description": "这增加了空气中的寒意，由卷轴的分裂造成的。",
+    "effect": "attack",
+    "shape": "blast",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "field_id": "fd_cold_air1",
+    "field_chance": 1,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3
+  },
+  {
+    "id": "arcana_item_scroll_destruction_pulse",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：毁灭脉冲"
+    },
+    "description": "这将为卷轴添加高度随机的脉冲效果。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_destruction_pulse_extra",
+        "hit_self": false
+      }
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "bash",
+    "shape": "blast",
+    "min_damage": 25,
+    "max_damage": 75,
+    "min_aoe": 24,
+    "max_aoe": 24
+  },
+  {
+    "id": "arcana_item_scroll_destruction_pulse_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：额外的毁灭脉冲"
+    },
+    "description": "在魔法代码中解决错误的肮脏黑客。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT"
+    ],
+    "message": "",
+    "effect_str": "arcana_pulse",
+    "max_level": 20,
+    "min_damage": 8,
+    "max_damage": 8,
+    "min_aoe": 24,
+    "max_aoe": 24
+  },
+  {
+    "id": "arcana_item_scroll_leftover",
+    "type": "SPELL",
+    "name": {
+      "str": "卷轴：剩菜"
+    },
+    "description": "这是为了使魔法卷轴在用完时留下一个空白卷轴，从而放弃了以前的将项目转换为利用revert_的技巧。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "scroll_blank",
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "arcana_item_scroll_moon",
+    "type": "SPELL",
+    "name": {
+      "str": "无眼庇护所"
+    },
+    "description": "压倒性的黑暗，无论是场上还是事件形态，都会使怪物失明。",
+    "message": "“不要害怕未知。”一团朦胧的薄雾向四面八方散开，一缕活生生的黑暗向上拖去，把身后的一切都遮住了！",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_moon_blind",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_moon_event",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "field_id": "fd_veil_darkness",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "min_duration": 450000,
+    "max_duration": 3600000
+  },
+  {
+    "id": "arcana_item_scroll_moon_blind",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：明月效果"
+    },
+    "description": "这将使该区域内的所有目标在一段随机的时间内处于失明状态。",
+    "effect": "attack",
+    "shape": "blast",
+    "message": "",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "blind",
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "min_duration": 900,
+    "max_duration": 2400
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_moon_event",
+    "name": {
+      "str": "神卷：月事"
+    },
+    "description": "这增加了30分钟的黑暗。",
+    "message": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "timed_event",
+    "shape": "blast",
+    "effect_str": "dim",
+    "min_duration": 180000,
+    "max_duration": 180000
+  },
+  {
+    "id": "arcana_item_scroll_nature",
+    "type": "SPELL",
+    "name": {
+      "str": "乱补"
+    },
+    "description": "大剂量的不可预知的愈合，广泛应用的过度生长，变异的风险。",
+    "message": "“不要否认你的本能。”生命流过你的身体，以一种混乱的能量放射出来！",
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_nature_plants",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_nature_wonder",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "arcana_scroll_nature_effect",
+    "min_damage": -1,
+    "max_damage": -100,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 100,
+    "max_duration": 100
+  },
+  {
+    "id": "arcana_item_scroll_nature_plants",
+    "type": "SPELL",
+    "name": {
+      "str": "神卷：自然植物效果"
+    },
+    "description": "基本上只是过度增长的一个更猛烈的版本。",
+    "message": "",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "arcana_plants",
+    "min_damage": 3,
+    "max_damage": 3,
+    "min_aoe": 12,
+    "max_aoe": 12
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_nature_wonder",
+    "name": {
+      "str": "神卷：自然奇观"
+    },
+    "description": "随机化卷轴的变异咒语。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_nature_mutate_dragonblood"
+      },
+      {
+        "id": "arcana_item_scroll_nature_mutate_plant"
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_nature_mutate_dragonblood",
+    "name": {
+      "str": "神卷：自然变异1"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "DRAGONBLOOD",
+    "description": "类似于人工制品的变异，除了模仿血像的效果。",
+    "message": "",
+    "min_damage": 3333,
+    "max_damage": 3333,
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_nature_mutate_plant",
+    "name": {
+      "str": "神曲：自然变异2"
+    },
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "PLANT",
+    "description": "类似于人工突变，除了集中在植物种类。",
+    "message": "",
+    "min_damage": 3333,
+    "max_damage": 3333,
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ]
+  },
+  {
+    "id": "arcana_item_scroll_subversion",
+    "type": "SPELL",
+    "name": {
+      "str": "难以捉摸的门户"
+    },
+    "description": "传送你离开，留下一堆肮脏的东西在你身后。使用了很多执政官特有的效果，但这主要是因为他们对这个咒语应该做的事情更有用，卷轴上的实体可能不是执政官。",
+    "message": "“抛开现实的面纱。”你觉得自己被拉向了一个不存在的方向！",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_subversion_shadows",
+        "hit_self": false
+      },
+      {
+        "id": "AEA_FATIGUE",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_subversion_teleport",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "archon_gaze_effect",
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "min_duration": 6000,
+    "max_duration": 30000,
+    "field_id": "fd_archon_rift",
+    "field_chance": 3,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_subversion_shadows",
+    "name": {
+      "str": "神卷：颠覆阴影"
+    },
+    "description": "尼赫丽特，奥特拉·阿特维斯……除了，不是真的。",
+    "message": "",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_shadow_summoned",
+    "min_damage": 4,
+    "max_damage": 8,
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "min_duration": 8640000,
+    "max_duration": 8640000,
+    "flags": [
+      "RANDOM_DAMAGE",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_subversion_teleport",
+    "name": {
+      "str": "神卷：颠覆传送"
+    },
+    "description": "是的，你离得很远。一个好处是它是一个安全的传送。效果是最后一个，希望你能留下其他副作用。",
+    "message": "",
+    "effect": "teleport_random",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_range": 20,
+    "max_range": 40
+  },
+  {
+    "id": "arcana_item_scroll_sun",
+    "type": "SPELL",
+    "name": {
+      "str": "太阳祝福"
+    },
+    "description": "巨大的光波，阳光，肾上腺素和士气。",
+    "message": "“让纯洁指引你的手和你的心。”一道灿烂的光芒笼罩着你的周围，当一股力量流过你的身体时，穿透天空！",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_scroll_sun_event",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_sun_adrenaline",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_sun_timewarp",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_scroll_leftover",
+        "hit_self": false
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 24,
+    "max_aoe": 24,
+    "min_duration": 300000,
+    "max_duration": 2400000,
+    "field_id": "fd_veil_light",
+    "field_chance": 1,
+    "min_field_intensity": 3,
+    "max_field_intensity": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_sun_adrenaline",
+    "name": {
+      "str": "神曲：太阳肾上腺素"
+    },
+    "description": "用这个代替人工肾上腺素主要是为了抑制信息，也改变了持续时间范围。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "adrenaline",
+    "min_duration": 24000,
+    "max_duration": 72000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_scroll_sun_event",
+    "name": {
+      "str": "神卷：太阳事件"
+    },
+    "description": "这样可以增加30分钟的日照时间。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "timed_event",
+    "shape": "blast",
+    "effect_str": "artifact_light",
+    "min_duration": 180000,
+    "max_duration": 180000
+  },
+  {
+    "id": "arcana_item_scroll_sun_timewarp",
+    "type": "SPELL",
+    "name": {
+      "str": "神圣卷轴：太阳时空穿梭"
+    },
+    "description": "哦，嘿，什么是神圣的魔法结合肾上腺素和时间表。。。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "min_damage": 400,
+    "max_damage": 1600
+  },
+  {
+    "id": "arcana_item_spatial_displacement",
+    "type": "SPELL",
+    "name": {
+      "str": "空间位移"
+    },
+    "description": "控制传送，有一些副作用的风险。",
+    "message": "你觉得自己被拉向了一个不存在的方向！",
+    "effect": "ter_transform",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_spatial_displacement_wonder",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_item_spatial_displacement_summon",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "arcana_pulse",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 50,
+    "max_range": 50
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_spatial_displacement_wonder",
+    "name": {
+      "str": "空间位移奇观"
+    },
+    "description": "随机的副作用平衡控制隐形传送。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_react_nothing"
+      },
+      {
+        "id": "arcana_item_spatial_displacement_wonder_taint"
+      },
+      {
+        "id": "arcana_item_spatial_displacement_wonder_archon"
+      },
+      {
+        "id": "arcana_item_spatial_displacement_wonder_blind"
+      },
+      {
+        "id": "arcana_item_spatial_displacement_wonder_paralyze"
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_spatial_displacement_wonder_taint",
+    "name": {
+      "str": "空间位移触动心灵"
+    },
+    "description": "超空间是个可怕的地方。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "在短暂的旅途中，你看到了一些东西，在你的脑海中挥之不去…",
+    "flags": [
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "taint",
+    "min_duration": 12000,
+    "max_duration": 24000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_spatial_displacement_wonder_archon",
+    "name": {
+      "str": "空间位移对超越的一瞥"
+    },
+    "description": "他们在监视你。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "你在中间看到了一些东西…它看到了你，让你失去了方向感和麻木！",
+    "flags": [
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "archon_gaze_effect",
+    "min_duration": 24000,
+    "max_duration": 48000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_spatial_displacement_wonder_blind",
+    "name": {
+      "str": "空间移位麻痹"
+    },
+    "description": "短暂的失明。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "当你从传送带出来时，你的视线变黑了，被中间的另一种语言的阴霾蒙蔽了双眼！",
+    "flags": [
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "blind",
+    "min_duration": 1000,
+    "max_duration": 2000
+  },
+  {
+    "id": "arcana_item_spatial_displacement_wonder_paralyze",
+    "type": "SPELL",
+    "name": {
+      "str": "空间移位麻痹"
+    },
+    "description": "脑子乱七八糟的。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "当你从传送带出来的时候，你被甩了一会儿！",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "min_damage": -250,
+    "max_damage": -500
+  },
+  {
+    "id": "arcana_item_spatial_displacement_summon",
+    "type": "SPELL",
+    "name": {
+      "str": "空间召唤"
+    },
+    "description": "这之后会召唤一个生物，使交换成为可能。",
+    "message": "",
+    "effect": "summon",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_spatial_displacement_swap",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "effect_str": "mon_shadow_summoned_fake",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 50,
+    "max_range": 50,
+    "min_duration": 500,
+    "max_duration": 1500
+  },
+  {
+    "id": "arcana_item_spatial_displacement_swap",
+    "type": "SPELL",
+    "name": {
+      "str": "空间交换"
+    },
+    "description": "这就是真正的转换。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SWAP_POS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "stunned",
+    "min_range": 50,
+    "max_range": 50,
+    "min_duration": 500,
+    "max_duration": 1000
+  },
+  {
+    "id": "arcana_item_sparks",
+    "type": "SPELL",
+    "name": {
+      "str": "火花火焰"
+    },
+    "description": "在附近生火。",
+    "message": "余烬从你的指尖飞出，当它们落在地上时会点燃神奇的火焰。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "min_range": 2,
+    "max_range": 2,
+    "base_casting_time": 80,
+    "final_casting_time": 80,
+    "energy_source": "FATIGUE",
+    "base_energy_cost": 18,
+    "final_energy_cost": 18,
+    "field_id": "fd_fire",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "arcana_item_pet",
+    "type": "SPELL",
+    "name": {
+      "str": "熟悉的契约"
+    },
+    "description": "将友军召唤的怪物绑定到你身上，如果它还没有完全被驯服，它可以作为宠物使用。",
+    "message": "微弱的雾气从护身符中飞出，通过与你自己心灵的联系带来启示，并保护他们免受危险。",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_item_pet_buff",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "ally"
+    ],
+    "targeted_monster_ids": [
+      "mon_dark_wyrm_summoned",
+      "mon_zombie_fiend_summoned",
+      "mon_jabberwock_summoned",
+      "mon_homunculus_summoned",
+      "mon_thing_summoned",
+      "mon_dog_skeleton_summoned",
+      "mon_skeleton_summoned",
+      "mon_vortex_summoned",
+      "mon_yugg_summoned",
+      "mon_kreck_summoned",
+      "mon_triffid_summoned",
+      "mon_flesh_angel_summoned",
+      "mon_hunting_horror_summoned",
+      "mon_mi_go_summoned",
+      "mon_flying_polyp_summoned",
+      "mon_shoggoth_summoned",
+      "mon_shadow_summoned",
+      "mon_shadow_snake_summoned",
+      "mon_centipede_giant_summoned"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "pet",
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "base_casting_time": 5,
+    "final_casting_time": 5,
+    "//": "200 days, since the permanent spell flag doesn't seem to actually work for this.",
+    "min_duration": 1728000000,
+    "max_duration": 1728000000
+  },
+  {
+    "id": "arcana_item_pet_buff",
+    "type": "SPELL",
+    "name": {
+      "str": "熟悉的契约增益效果"
+    },
+    "description": "将友军召唤的怪物绑定到你身上，如果它还没有完全被驯服，它可以作为宠物使用。",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ally"
+    ],
+    "targeted_monster_ids": [
+      "mon_dark_wyrm_summoned",
+      "mon_zombie_fiend_summoned",
+      "mon_jabberwock_summoned",
+      "mon_homunculus_summoned",
+      "mon_thing_summoned",
+      "mon_dog_skeleton_summoned",
+      "mon_skeleton_summoned",
+      "mon_vortex_summoned",
+      "mon_yugg_summoned",
+      "mon_kreck_summoned",
+      "mon_triffid_summoned",
+      "mon_flesh_angel_summoned",
+      "mon_hunting_horror_summoned",
+      "mon_mi_go_summoned",
+      "mon_flying_polyp_summoned",
+      "mon_shoggoth_summoned",
+      "mon_shadow_summoned",
+      "mon_shadow_snake_summoned",
+      "mon_centipede_giant_summoned"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "effect_str": "talisman_pet_buff",
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "base_casting_time": 5,
+    "final_casting_time": 5,
+    "min_duration": 8640000,
+    "max_duration": 8640000
+  },
+  {
+    "id": "arcana_item_thunder_gauntlets_taze",
+    "type": "SPELL",
+    "name": {
+      "str": "雷霆之手"
+    },
+    "description": "一种短距离的震动，造成轻微伤害并使目标眩晕。",
+    "message": "一道血红色的闪电从你的指尖划出弧线，当它穿过你的受害者时，它会褪色成自然的颜色！",
+    "valid_targets": [
+      "hostile"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_item_thunder_gauntlets_lifedrain",
+        "hit_self": true
+      }
+    ],
+    "effect_str": "stunned",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "sound_description": "an electric buzzing",
+    "min_range": 2,
+    "max_range": 2,
+    "effect": "attack",
+    "shape": "blast",
+    "min_duration": 800,
+    "max_duration": 1600,
+    "min_damage": 25,
+    "max_damage": 75,
+    "damage_type": "electric",
+    "field_id": "fd_electricity",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "id": "arcana_item_thunder_gauntlets_lifedrain",
+    "type": "SPELL",
+    "name": {
+      "str": "长柄救生圈"
+    },
+    "description": "哦，现在物品标识中的引用是有意义的！",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -6,
+    "max_damage": -10,
+    "effect": "attack",
+    "shape": "blast"
+  },
+  {
+    "id": "arcana_item_wyrmskin_acid",
+    "type": "SPELL",
+    "name": {
+      "str": "Wyrm毒液"
+    },
+    "description": "一种低水平的酸咒，更注重地面效果。",
+    "message": "流淌的毒液在你的盔甲表面滑过，直到一股刺鼻的水花喷出来浸透地面！",
+    "effect": "attack",
+    "shape": "cone",
+    "extra_effects": [
+      {
+        "id": "arcana_item_wyrmskin_acid_noise",
+        "hit_self": false
+      }
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "sound_description": "splash",
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 31,
+    "max_damage": 57,
+    "min_range": 5,
+    "max_range": 5,
+    "min_aoe": 45,
+    "max_aoe": 45,
+    "min_duration": 18000,
+    "max_duration": 54000,
+    "damage_type": "acid",
+    "field_id": "fd_acid",
+    "field_chance": 1,
+    "min_field_intensity": 3,
+    "max_field_intensity": 3,
+    "field_intensity_variance": 0.5
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_wyrmskin_acid_noise",
+    "name": {
+      "str": "Wyrm毒液噪音"
+    },
+    "description": "更少的垃圾声音",
+    "message": "",
+    "sound_description": "a soft hiss.",
+    "sound_type": "combat",
+    "sound_ambient": true,
+    "sound_id": "misc",
+    "sound_variant": "shockwave",
+    "min_damage": 33,
+    "max_damage": 33,
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "noise",
+    "shape": "blast"
+  }
+]

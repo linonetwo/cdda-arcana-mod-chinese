@@ -1,0 +1,746 @@
+[
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_AGILE",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_CLAIRVOYANCE",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_CLARITY",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_CONFUSE",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_ACID",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_CONSECRATELESSER",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_ECLIPSE",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_ELEMENTALBURST",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_FLAMEARMOR",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_FREEACTION",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_FROSTARMORLESSER",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_HEAL",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_INSIGHT",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_ELECRESIST",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_STRENGTH",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_PLANTS",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_SHADOWSNAKES",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_LIGHTNING",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_BUGSLESSER",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_SUNDERINGQUAKE",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_ARCANA_CLERIC",
+    "name": {
+      "str": "虚拟阈值"
+    },
+    "description": "这是为了让图案卷轴再次工作。事物变化越多，它们就越保持不变。。。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_SERAPHIC_SIDE_EFFECTS",
+    "name": {
+      "str": "假突变阈值"
+    },
+    "description": "这只存在于确保天使之影的精神疤痕能力表现正常。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "MARTIAL_ARTS_CF",
+    "name": {
+      "str": "剑与锤之路"
+    },
+    "points": 3,
+    "description": "你已经在Via Gladium et Malleo接受过训练，这是一种武器艺术，专注于保持气势和对抗多个对手，根据你选择的武器，以不同的方式使用你的愤怒。",
+    "initial_ma_styles": [
+      "style_cleansingflame"
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_CLEANSINGFLAME",
+    "name": {
+      "str": "净化烈焰"
+    },
+    "points": 0,
+    "description": "你宣誓加入了一个被称为净化之火的秩序。无论是一个尽职的猎人还是一个叛徒，无论你现在的忠诚在哪里，你的过去在未来可能仍然有用。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "//": "This prevents mage hunters from picking forbidden summoning spells, along with blood magic.",
+    "cancels": [
+      "ILLITERATE",
+      "PACIFIST",
+      "SPELL_SHADOWSNAKES",
+      "SPELL_SUMMONDOG",
+      "SPELL_BUGSLESSER",
+      "SPELL_CLARITY",
+      "SPELL_ECLIPSE",
+      "ARCANA_SCALYPATCHES",
+      "ARCANA_INNERHEAT",
+      "ARCANA_DRAGONCLAWS",
+      "ARCANA_DRAGONTEETH",
+      "ARCANA_DRAGONHORNS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_CLEANSINGFLAME2",
+    "name": {
+      "str": "净化烈焰"
+    },
+    "points": 0,
+    "description": "你宣誓加入了一个被称为净化之火的秩序。无论是一个尽职的猎人还是一个叛徒，无论你现在的忠诚在哪里，你的过去在未来可能仍然有用。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "//": "This prevents mage hunters from picking forbidden summoning spells, along with blood magic.",
+    "cancels": [
+      "ILLITERATE",
+      "PACIFIST",
+      "SPELL_SHADOWSNAKES",
+      "SPELL_SUMMONDOG",
+      "SPELL_BUGSLESSER",
+      "SPELL_CLARITY",
+      "SPELL_ECLIPSE",
+      "ARCANA_SCALYPATCHES",
+      "ARCANA_INNERHEAT",
+      "ARCANA_DRAGONCLAWS",
+      "ARCANA_DRAGONTEETH",
+      "ARCANA_DRAGONHORNS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_SANGUINE",
+    "name": {
+      "str": "乐观主义者"
+    },
+    "points": 0,
+    "description": "你宣誓加入了一个被称为“乐观秩序”的组织。尽管你是那些秘密学习的人中的一员，但你的过去在未来可能仍然有用。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "//": "This prevents blood mages from picking a spell considered potentially too altruistic in nature, or from choosing a faction-specific martial art.  Non-faction arcanists are still allowed to pick it.",
+    "cancels": [
+      "ILLITERATE",
+      "SPIRITUAL",
+      "PACIFIST",
+      "SPELL_HEAL",
+      "MARTIAL_ARTS_CF"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_CHALICE",
+    "name": {
+      "str": "宣誓人"
+    },
+    "points": 0,
+    "description": "你们被立为守誓者。无论他是否从面纱之外引导你，你所发的誓言是永恒的，你的过去在将来可能仍然有用。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "//": "This prevents dark priests from picking a faction-specific martial art, nor to taint their bodies with strange magic.  Non-faction arcanists are still allowed to pick it.",
+    "cancels": [
+      "ILLITERATE",
+      "PACIFIST",
+      "MARTIAL_ARTS_CF",
+      "ARCANA_SCALYPATCHES",
+      "ARCANA_INNERHEAT",
+      "ARCANA_DRAGONCLAWS",
+      "ARCANA_DRAGONTEETH",
+      "ARCANA_DRAGONHORNS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_ARCANIST",
+    "name": {
+      "str": "神秘主义者"
+    },
+    "points": 0,
+    "description": "虽然你研究的范围很广，但你并没有直接与主要群体联系在一起，从而在你的学者中获得名声。不过，你对奥术的熟悉也许会有一天被证明是有用的。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "cancels": [
+      "ILLITERATE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_ARCANIST2",
+    "name": {
+      "str": "神秘主义者"
+    },
+    "points": 0,
+    "description": "虽然你研究的范围很广，但你并没有直接与主要群体联系在一起，从而在你的学者中获得名声。不过，你对奥术的熟悉也许会有一天被证明是有用的。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "cancels": [
+      "ILLITERATE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_1",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_2",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_3",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_4",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_5",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_BLOOD_MAGE_1",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_BLOOD_MAGE_2",
+    "name": {
+      "str": "幸存者故事"
+    },
+    "points": 0,
+    "description": "这个NPC可以告诉你他们是如何在大灾难中幸存下来的",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false,
+    "types": [
+      "BACKGROUND_SURVIVAL_STORY"
+    ],
+    "flags": [
+      "BG_SURVIVAL_STORY"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CF_DEACON",
+    "name": {
+      "str": "执事标记"
+    },
+    "points": 0,
+    "description": "此特性标记Deacon，用于某些对话检查以保持工作正常。看到这可能是一个错误。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "BGSS_CF_FILTER",
+    "name": {
+      "str": "背景故事筛选器"
+    },
+    "points": 0,
+    "description": "这一点的存在使得法师猎人NPC在索菲亚的任务后产生，如果他们在未来被招募并产生某些背景故事，那么他们将指与约翰纳森而不是索菲亚联系。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "FIX_CF_GM",
+    "name": {
+      "str": "修理乔纳森"
+    },
+    "points": 0,
+    "description": "这个特性保证了这个NPC的旧版本，在能够访问任务链时，只有引用正确的初始任务的版本才能提供任务。旧版本引用了错误的初始任务，将本应是一个聪明的兼容性特性变成了一个可怕的错误。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "SHRIKE_MISSION_MARKER",
+    "name": {
+      "str": "伯劳任务标记"
+    },
+    "points": 0,
+    "description": "这一特点使得一个特定的血质伯劳鸟NPC作为任务的焦点，改变了他们的对话。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_1",
+    "name": {
+      "str": "辅助标志1"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_2",
+    "name": {
+      "str": "辅助标记2"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_3",
+    "name": {
+      "str": "辅助标记3"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_4",
+    "name": {
+      "str": "辅助标记4"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_5",
+    "name": {
+      "str": "辅助标记5"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_6",
+    "name": {
+      "str": "辅助标记6"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_7",
+    "name": {
+      "str": "辅助标志7"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CF_AUX_MARKER_8",
+    "name": {
+      "str": "8号辅助标志"
+    },
+    "points": 0,
+    "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
+    "player_display": false,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "ARCANA_MASK_INSIGHT_EFFECT",
+    "name": {
+      "str": "真视力猎人"
+    },
+    "points": 99,
+    "valid": false,
+    "description": "你的眼睛暂时被打开，在一个适度的范围内给予透视，直到引起它的魔法消失。",
+    "player_display": false,
+    "flags": [
+      "CLAIRVOYANCE_PLUS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARCANA_CLAIRVOYANCE_LESSER",
+    "name": {
+      "str": "透视"
+    },
+    "points": 99,
+    "valid": false,
+    "description": "你暂时被赋予了看不见的天赋，被赋予了有限的透视能力，直到导致它的魔法消失。",
+    "player_display": false,
+    "flags": [
+      "CLAIRVOYANCE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARCANA_BERSERK_EFFECT",
+    "name": {
+      "str": "嗜血狂潮"
+    },
+    "points": 99,
+    "valid": false,
+    "description": "一种对战斗的渴望暂时萦绕在你的脑海里，这使得狩猎变得更加容易，直到源头消失。",
+    "player_display": false,
+    "flags": [
+      "PRED4"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARCANA_LIFE_SIGN_SUPPRESSION",
+    "name": {
+      "str": "生命体征抑制"
+    },
+    "points": 99,
+    "valid": false,
+    "player_display": false,
+    "description": "不死生物目前无法侦测到你，来自自然野生动物的攻击性增加。",
+    "ignored_by": [
+      "ZOMBIE"
+    ],
+    "anger_relations": [
+      [
+        "ZOMBIE",
+        -95
+      ],
+      [
+        "MAMMAL",
+        25
+      ],
+      [
+        "BIRD",
+        25
+      ]
+    ]
+  }
+]
