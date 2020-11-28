@@ -28,6 +28,10 @@ function replace1111toN(text: string) {
     .replace('6666', '<npcname>');
 }
 
+/**
+ * 使用百度翻译，带重试
+ * @param {string} value 要翻译的字符串，可以为空，为空就返回空
+ */
 function tryTranslation(value) {
   if (typeof value !== 'string') return Promise.resolve(value);
   if (!value) return Promise.resolve('');
@@ -54,6 +58,37 @@ function tryTranslation(value) {
   ).catch((error) => {
     return `Translation Error: ${error} result: ${lastResult}, From: ${value}, Count: ${retryCount}\nRetry Again\n--\n\n `;
   });
+}
+
+/**
+ * 保存之前翻译和润色过的内容的翻译缓存
+ */
+const translationCache = {};
+const translationCacheFilePath = '翻译缓存.json';
+function initializeTranslationCache() {
+  try {
+    fs.read(translationCacheFilePath);
+  } catch (error) {
+    console.error(error);
+    fs.write(translationCacheFilePath);
+  }
+}
+function writeTranslationCache() {
+  fs.write(translationCacheFilePath, JSON.stringify(translationCache, undefined, '  '));
+}
+
+/**
+ * 尝试使用缓存的内容，没有就实际翻译
+ * @param {string} value 待翻译的字符串
+ */
+async function translateWithCache(value) {
+  if (translationCache[value]) {
+    return translationCache[value];
+  }
+  // 没有缓存，就更新缓存
+  const translatedValue = await tryTranslation(value);
+  translationCache[value] = translatedValue;
+  return translatedValue;
 }
 
 /**
@@ -259,6 +294,7 @@ const talkTopic = async (item) => {
   }
 };
 
+// 注册各种类型数据的翻译器
 translators.profession = nameDesc;
 translators.scenario = async (item) => {
   item.name = await translateFunction(item.name);
@@ -431,7 +467,9 @@ translators.vehicle_part = namePlDesc;
  * 开始翻译
  */
 async function main() {
+  initializeTranslationCache();
   const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
   writeToCNMod(contents);
+  writeTranslationCache();
 }
 main();
