@@ -165,7 +165,7 @@ async function translateStringsInContent(fileItem) {
   }
 }
 
-const translateFunction = (i) => 'aaa';
+const translateFunction = tryTranslation;
 const noop = () => {};
 
 // 常用的翻译器
