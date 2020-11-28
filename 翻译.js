@@ -74,7 +74,7 @@ function initializeTranslationCache() {
   }
 }
 function writeTranslationCache() {
-  fs.write(translationCacheFilePath, JSON.stringify(translationCache, undefined, '  '));
+  return fs.writeAsync(translationCacheFilePath, JSON.stringify(translationCache, undefined, '  '));
 }
 
 /**
@@ -91,7 +91,7 @@ async function translateWithCache(value) {
   const translatedValue = await tryTranslation(value);
   console.log(`New Translation ${translatedValue}\n`);
   translationCache[value] = translatedValue;
-  writeTranslationCache();
+  await writeTranslationCache();
   return translatedValue;
 }
 
@@ -169,7 +169,7 @@ async function translateStringsInContent(fileItem) {
   }
 }
 
-const translateFunction = tryTranslation;
+const translateFunction = translateWithCache;
 const noop = () => {};
 
 // 常用的翻译器
