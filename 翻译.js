@@ -89,7 +89,7 @@ async function translateWithCache(value) {
   }
   // 没有缓存，就更新缓存
   const translatedValue = await tryTranslation(value);
-  console.log(`New Translation ${translatedValue}\n`);
+  console.log(`New Translation ${value}\n -> ${translatedValue}\n`);
   translationCache[value] = translatedValue;
   await writeTranslationCache();
   return translatedValue;
