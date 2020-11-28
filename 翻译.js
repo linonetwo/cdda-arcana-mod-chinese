@@ -5,6 +5,7 @@ const fs = require('fs-jetpack');
 const path = require('path');
 const _ = require('lodash');
 
+dotenv.config();
 const translate = new BaiduTranslate(process.env.TRANSLATION_APP_ID, process.env.TRANSLATION_SECRET, 'zh', 'en');
 
 function replaceNto1111(text) {
@@ -495,9 +496,11 @@ translators.event_transformation = noop;
  * 开始翻译
  */
 async function main() {
-  initializeTranslationCache();
-  const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
-  writeToCNMod(contents);
-  writeTranslationCache();
+  // initializeTranslationCache();
+  // const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
+  // writeToCNMod(contents);
+  // writeTranslationCache();
+  // DEBUG: console
+  console.log(`tryTranslation('apple')`, await tryTranslation('apple'));
 }
 main();
