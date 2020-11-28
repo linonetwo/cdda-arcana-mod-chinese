@@ -1,175 +1,146 @@
-# Arcana and Magic Items mod for Cataclysm: Dark Days Ahead and Cataclysm: Bright Nights
-Arcana and Magic Items mod, formerly an in-repo mod during 0.C Experimental, and now maintained as a third-party repository by its author. Continually updating and expanding on its mechanics, expect regular updates.
+# 大灾变的奥术和魔法物品模组：DDA 和 BN 版
 
-Note that the key for spellcasting is not bound by default in CDDA nor in CBN, and must be set by the user. I would personally suggest `]` as a good unused key, owing to its position near the bionics and mutation keys. Launcher users are advised to update this mod via deleting and re-installing in the launcher's mods section after updating their game, as the `update game` function does not touch third-party mods.
+Arcana 和 Magic Items mod，以前是 0.C 实验期间的内置 MOD，现在由作者作为第三方存储库进行维护。不断更新和扩展其机制，期待定期更新。
 
-Focused principally on magical items as the name implies (the mod predating the current spell mechanics), with proper spells being a valuable, powerful tool that demands hunting monsters and learning of the Beyond moreso than simple scavenging. Magic is a primal, recently-developed resource tied to otherworldly monsters and unearthly phenomena, with those who came before leaving an impression on the region that can be uncovered through exploration, or via pursuing missions and interactions involving the handful of survivors still around by the time of the Cataclysm.
+## 翻译
 
-If you are using Dark Days Ahead, place the included Arcana folder in your data/mods folder. If you are using the Bright Nights fork, use the Arcana_BN folder instead. In either case it is recommended that, if updating the mod, to delete the older version of the folder rather than just dumping the new one onto the old one.
+本翻译项目将持续跟踪最新更新，使用自制翻译脚本 `./翻译.js` 来进行百度机翻，并优先采用润色过的内容 `翻译缓存.json` 。
 
-Stuff the BN version has that the DDA version lacks:
-* Due to retaining artifact effects, evil artifacts work even though `intermittent_activation` is busted.
-* The restored ritual blade actually works with portals due to retaining `ARTC_PORTAL`.
-* Cleric ring has real psy resistance due to retaining `AEP_PSYSHIELD`.
+如果你对翻译结果不满意，可以直接打开 `翻译缓存.json` 修改对应内容，并提交 PR （在 Github 上点击保存应该会自动为你创建 PR 提交贡献给这个代码仓库），我会重新运行翻译脚本生成润色好的最新内容。
 
-Stuff the DDA version has that the BN version lacks:
-* Itemdrop overrides and/or recipe interaction with anomalous monsters and items that're in DDA but not BN.
-* The "how it happened" dialogue stuff for recruitable NPCs.
-* A few minor achievements.
+以下是机翻的介绍，我并不想润色，因为我不想被剧透…欢迎贡献！
 
-## Arcana
-* A new skill, which I'm surprised I got working. It's used as the primary crafting skill for magical items. Thanks to a PR by BevapDin, magic weapons can now use this skill.
+## 介绍
 
-## Essence
-*  Regular *essence* drops from slaying several different sorts of anomalous creatures, the more otherworldly the better. Main use is for creating most enchanted items. Certain magical items are also fueled by this.
-* *Blood essence* is drained from non-anomalous beings, using anomalous means. Some magical ranged weapons and items are fueled by this, and it can be used as a less powerful alternative to essence. Certain monsters, generally undead that are earthly but anomalous, also drop this instead of normal essence.
-* *Dull essence* is obtained by dismantling magic items and essence using the correct tools. Used to craft and fuel certain items, generally specific to the *Cleansing Flame*.
-* *Crystallized essence* is something you'll have to craft yourself, used for a handful of specialized, high-yield purposes...
+注意，默认情况下，在 CDDA 和 CBN 中，拼写转换的键不绑定，必须由用户设置。我个人建议`]`作为一个好的未使用的按键，因为它的位置靠近仿生学和变异键。由于“更新游戏”功能不涉及第三方 mod，因此建议用户在更新游戏后，通过删除和重新安装启动器的 mods 部分来更新此 mod。
 
-## Scenarios and Professions
+主要集中在魔法物品上，顾名思义（mod 早于当前的法术机制），正确的咒语是一个有价值的，强大的工具，它需要猎杀怪物和学习超越简单的清理。魔法是一种原始的、最近开发的资源，与超自然的怪物和不存在的现象联系在一起，那些在给这个地区留下印象之前就来到这里的人可以通过探索，或者通过执行任务和在大灾难发生时仍在附近的少数幸存者进行互动而被发现。
 
-##### Seeker of The Arcane
-A scenario added to allow players a good way to dive right into Arcana. In it you are a visitor to one of the forgotten locations where practitioners of the arcane once lived. Each has an assortment of items, monsters, a powerful enemy at the end, and a unique item to be retrieved.
+如果您正在使用前面的黑暗日子，请将包含的 Arcana 文件夹放在 data/mods 文件夹中。如果您使用的是光明夜叉，请改用 Arcana_BN 文件夹。在这两种情况下，如果更新 mod，建议删除旧版本的文件夹，而不是仅仅将新版本转储到旧版本上。
 
-* The *Apprentice* is a mere baseline class used as something with no special talents or point costs, but still starts with a bare minimum to get into the first level of arcana.
+BN 版本的 DDA 版本缺少的东西：
 
-* The *Alchemist*, *Scribe*, and *Summoner* are mainly utility professions, designed to easily get into the basics of their chosen craft. None of them are especially combat-ready, though the summoner stands a reasonable chance with its initial stock of minions.
+- 由于保留了神器效果，即使“断续激活”被破坏，邪恶的神器也能工作。
+- 由于保留了“艺术之门”，修复后的礼刀实际上可以与门户配合使用。
+- 牧师戒指由于保留了“AEP_PSYSHIELD”而具有真正的 psy 阻力。
 
-* The *Blood Mage*, *Mage Hunter*, and *Dark Priest* each are a remnant of a given group, and each has come relatively prepared for battle. One of the __Sanguine Order__, one of the __Cleansing Flame__, and one of the __Keepers of The Oath__.
+DDA 版本所具备的 BN 版本所缺少的东西：
 
-##### Urban Awakening
-The second scenario added, allowing players another method of getting into the arcane, in more urban scenario. It allows an assortment of professions in the game already, Apprentice, and a few professions.
+- Itemdrop 覆盖和/或配方与 DDA 中的异常怪物和物品（而不是 BN）进行交互。
+- 为新招募的 NPC 提供“如何发生”的对话。
+- 一些小成就。
 
-* The *Arcane Researcher* stole away with a small collection of arcane books, with nothing else but the clothes on their back.
+## 奥术
 
-* The *Sanguine Shrike* is a leftover member of the __Sanguine Order__, serving a different role compared to the *Blood Mage* from Seeker of The Arcane.
+- 一种新的技能，我很惊讶我能用上它。作为魔法物品的主要工艺技能。多亏了 BevapDin 的公关，魔法武器现在可以使用这个技能了。
 
-* The *Arcane Purifier* represents a splinter faction among the __Cleansing Flame__, combining technology and a few basic arcane tools of the trade.
+## 精华
 
+- 通过杀死几种不同种类的异常生物而获得的普通精华，越是超凡脱俗越好。主要用途是创造大多数附魔物品。某些魔法物品也由此而生。
+- *血之精华*是用反常的方法从非反常的人身上抽出来的。一些魔法远程武器和物品是由这一点，它可以作为一个不那么强大的替代精华。某些怪物，通常是不死的，在地球上但不正常，也会放弃这个而不是正常的本质。
+- *暗之精华*是通过使用正确的工具拆卸魔法物品和精华获得的。用于制造和燃烧某些物品，通常是清洁火焰专用的。
+- *结晶精华*是一种你必须自己制作的东西，用于一些特殊的，高产量的目的。。。
 
-## Item Dismantling
+## 场景和职业
 
-* The *Hammer of the Hunter* is needed to dismantle most arcane items. Some unique items are even more complex and difficult to get rid of, while a few are simpler to dispose of.
+##### 奥术探索者
 
-* *Cleansing Flame* items can be taken apart for *blood essence* using the tools of the __Sanguine Order__.
+增加了一个场景，让玩家可以很好地直接潜入奥术。在这里，你是一个游客，来到了一个被遗忘的地方，那里曾经是奥术的实践者。每一个都有各种各样的物品，怪物，一个强大的敌人在最后，和一个独特的项目要取回。
 
-## Stories Lost in Darkness: NPCs and Missions
+- 学徒只是一个基本的职业，没有特殊的天赋和点数成本，但是仍然从最低限度开始进入阿卡纳的第一级。
 
-In addition to discovering items and other hints as to what happened in the margins of society, in the days prior to and just after the Cataclysm, the player can uncover remnants of these near-extinct factions here and there. Some may be willing to work together with you, while others may be only one more threat to deal with.
+*炼金术士、*抄写员*和*召唤师- 主要是实用性职业，旨在轻松掌握所选工艺的基础知识。他们中没有一个是特别战斗准备，尽管召唤者站在一个合理的机会与最初的库存奴才。
 
-In contact with the *Refugee Center*, a small holdout of the *Cleansing Flame* has established shelter in what was once a rural church. By seeking out the right people you can be led into contact with them, enabling missions to assist in their survival. And, perhaps, seeking out other allies along with getting a better understanding of what went on between these warring factions, along with a chance to finish unfinished business.
+*血法师，*法师猎人*和黑暗牧师*都是一个特定群体的残余，并且每个人都已经为战斗做好了准备。其中一个是  乐观教团 ，一个  净化圣火  之一，一个  誓言的守护者。
 
-In addition, though the *Keepers of The Oath* had been driven nearly to extinction, at least one final member of their faith remains. Having since given up hope, it may be possible to encourage them to guide you along a path that may help humanity's chances of surviving. At least, that's what their order believes. Whether there's any truth to it is something no survivor of the cataclysm itself will be around to see, given the long-term machinations of those __Beyond__...
+##### 城市觉醒
 
-## Monster Tweaks
-* A wide range of monsters have been edited to allow obtaining essence or blood essence. A few can also drop magic items.
-* In addition, certain monsters will drop various small odds and ends usable in crafting magic items. These are relatively non-magic leftovers with a touch of the otherworldly to them, and hold the path to obtaining skill in the arcane without access to the work of those who came before.
+第二个场景增加了，允许玩家进入奥术的另一种方法，在更多的城市场景中。它允许各种职业已经在游戏中，学徒，和一些职业。
 
-## Books
-##### Apprentice's Notes
-* Entry-level 0-to-1 skillbook. Implied to discuss magical concepts using religious metaphors. Can additionally be used to get an earlier grasp on the few recipes that are autolearned.
+- 神秘研究者偷了一小部分秘籍，除了身上的衣服，什么都没有。
+- 血伯劳是血骑士团的剩余成员，与奥术探索者的血法师不同。
+- 奥术净化器代表了净化火焰中的一个小派别，结合了技术和一些基本的奥术工具。
 
-##### History of Alchemy
-* For crafting potions, and for getting from levels 0 to 3. A madman's interpretation of old alchemical texts, with results that would be profoundly useless without magical essence. You get a cookie if you notice the references to historical alchemical concepts, hidden underneath the stranger things the recipes involve.
+##项目拆卸
 
-##### The Six Pillars 
-* Levels 2-5, requires a decent intellect to understand. Used to craft disposable magic scrolls. Conceals magic lessons behind myths concerning a pantheon of otherworldly gods.
+-猎人的锤子需要用来拆除大部分的神秘物品。有些独特的物品更加复杂，很难处理，而有些物品则更容易处理。
 
-##### Sanguine Codex
-* Blood magic, for levels 3-6. Allows crafting the silver athame, and producing blood essence. Second option is for extracting blood essence from a used chalice.
+-清洗火焰物品可以用**血缘令**的工具拆下，用于提取血精。
 
-##### The Cleansing Flame 
-* Levels 4-7. Religious book, written by an order of witch-hunters, it allows crafting a select number of sanctioned items fueled by dull essence.
+## 黑暗中迷失的故事：npc 与任务
 
-##### Oaths to the Chalice 
-* Also a religious book, skill levels 5-8. Allows crafting the offering chalice, recipes for sacrificing items to obtain essence, and magic items related to __The Keepers of The Oath__. Also needed to extract blood essence from a used chalice.
+除了发现物品和其他线索，关于社会边缘发生了什么，在大灾难之前和之后的日子里，玩家可以发现这些几乎灭绝的派系的残余。有些人可能愿意和你一起工作，而另一些人可能只是又一个需要对付的威胁。
 
-##### To Master the Unknown 
-* Levels 6-10. A book for summoning your very own pet monstrosities.
+在与难民中心的接触中，一个小小的“净化圣火”组织在一个曾经是乡村教堂的地方建立了庇护所。通过寻找合适的人，你可以接触到他们，使任务能够帮助他们生存。或许，在寻找其他盟友的同时，更好地了解这些交战派系之间的关系，并有机会完成未完成的任务。
 
-##### A Story in Shadow 
-* Levels 4-9. Relatively rare book that combines some of the concepts from the three major factions. Translation: a few magic items with an assortment of useful effects.
+此外，虽然誓约的守护神们几乎被赶尽杀绝，但他们的信仰中至少还有一个成员。既然放弃了希望，也许可以鼓励他们引导你走上一条有助于人类生存的道路。至少，这是他们的命令所相信的。这其中是否有任何真相，这是一个大灾难的幸存者自己都不会看到的东西，考虑到那些**超越**的长期阴谋。。。
 
-##### Strange Map 
-* Technically not a book but instead a mapping item, revealing most anomalous locations.
+## 怪物调整
 
-##### The Path of Sword And Hammer
-* A rare book, rather than teaching magic it instead teaches a martial art, combining understanding of the arcane with cold steel.
+-一系列的怪物都经过了编辑，可以获得精华或精血。少数人还可以扔掉魔法物品。
 
-## Tools of The Trade
+-此外，某些怪物会掉落各种小的零碎物品来制造魔法物品。在没有接触到其他人的魔法之前，他们获得了一个相对不存在的魔法之路。
 
-##### Offering Chalice
-* Used for a few recipes from *Oaths to the Chalice*, as you could surely guess. Trying to take a swig from it is a bad idea, but needed to fulfill one path to crafting blood essence.
+## 书籍
 
-##### Silver Athame
-* Used for a few recipes in *Sanguine Codex*. Only a mere 3 butchering quality. Still sharp enough, so don't play around with it. Or do play with it, that's exactly what the authors of the Codex want you to do.
+##### 学徒笔记
 
-##### Hammer of the Hunter
-* Weapon of choice for magiphobes the world over. Required for uncrafting most magical items. Also can be used to blind enemies, and yourself if you aren't careful.
+-入门级 0-1 技能手册。暗示用宗教隐喻来讨论魔法概念。另外，还可以用来提前掌握一些自动学习的食谱。
 
-##### Blank scrolls
-* Used to craft magic scrolls, obviously. With other books, certain other things can be crafted with them.
+##### 炼金术史
 
-##### Silver Glyph
-* On its own it's merely a shiny piece of silver. But with the right magic, quite a few monsters will be yours to command.
+-制造药剂，从 0 级到 3 级。一个疯子对古老的炼金术文献的解释，如果没有魔法的本质，结果将是完全无用的。如果你注意到历史上的炼金术概念，隐藏在食谱所涉及的奇怪事物下面，你就会得到一块饼干。
 
-## Major Items
+##### 六大支柱
 
-##### Sanguine Codex
-* Can teach the reader to create items linked to the __Sanguine Order__. Aside from the athame itself this can include a *Hellfire Stave* that shoots fire, the *Veinreaver* as an explosive weapon, the *Revenant Crown* that protects against poisons and other effects, or *Wyrmskin Armor* capable of conjuring sprays of acid.
+-2-5 级，需要足够的智力才能理解。用来制作一次性魔法卷轴。隐藏了神秘的教训背后的神话关于一个万神殿的另一个世界的神。
 
-##### The Cleansing Flame
-* This book focuses on the items used by the mage-hunting order of the same name. While the hammer itself is both a weapon and tool, there's also the *Incorruptible Sword* that can bring fire to enemies in close combat, the *Wraithslayer Crossbow* with potent bolts of piercing light, the *Gilded Aegis* for healing, or the *Mask of Insight* to gain clairvoyance and protection from the hammer's blinding flare.
+##### 血法典
 
-##### Oaths to The Chalice 
-* Focuses on the items associated with The __Keepers of The Oath__, in addition to its uses for the chalice itself. Items include the lightning-shooting *Symbol of Judgement*, invisibility-granting *Mantle of Shadows*, the *Spear of Pestilence* which can conjure a host of mutated vermin, and *Thunder Gauntlets* that let you conjure lightning.
+-血魔法，3-6 级。可以制作银甲，并生产精血。从圣杯中提取精华是一种选择。
 
-## Magical Items
-* Certain monsters drop specific items, as mentioned above. Initially the only use for them is to carve and craft these things into decorate items. While not very useful in and of themselves, working with trophies taken from the __Beyond__ can enlighten those with no formal arcane skill.
-* With the base items themselves and a little arcana skill, magic seals can be crafted. These entail a little essence and some extra effort put in preparing the item, turning it into essentially a single-use spell. For all the items usable, each has a specific effect thematically linked to it.
-* At higher levels, and with the right books, magic seals can be woven into an effect bound to a scroll, allowing the user a shot at learning the corresponding ability permanently. Doing so doesn't always succeed.
-* Fire. Water. Earth, and Air. While study of the __Beyond__ unlocks abilities of often inhuman nature, a desperate novice arcanist can use their newfound experience for more earthy, primitive purposes. Using these essences, or the closest available effigy in times of desperation, one can work the most basic of miracles.
+##### 净化之火
 
-## Artifacts
-* Certain locations offer unique items that are otherwise uncraftable. Most notably are those hidden away in the forgotten halls of arcanist groups, how have since succumbed to the cataclysm and its horrors. Two of them tie into the background of what led to their downfall, while two are tied to the monsters that infest the place.
-* In addition, hidden away one can find a few other lesser artifacts, each having their own potential uses.
-* Two notable unique artifacts can be crafted, leading towards what's effectively endgame content, unlocking ways to become something more than human. By obtaining an item hidden away in a temple over the sky, one can restore its true nature and gain its power. The second meanwhile entails a shrine surrounded by water, and finishing what the *Sanguine Order* started.
+-4-7 级。一本由巫师批准的、由巫师手工制作的大量物品。
 
-## Other Magic Items
-* Using *History of Alchemy* an assortment of potions can be made, a mimicry of the Opus Magnum. Each step has its own use however, from numbing pain to enhancing strength. Later on, combinations of previous potions can be used to make items with more specific effects.
-* Scrolls with an array of magical effects can be made using *The Six Pillars*. Each has a specific effect, though many are a double-edged sword in some way.
-* *To Master The Unknown* allows binding summoning magic into silver glyphs, to summon an assortment of monsters of various strengths. Beware the consequences of the summoning attempt failing, though.
-* With *A Story in Shadow* a few extra items are available. The *Druidic Stave* can be used to mend a selection of materials, including some that are otherwise not repairable. The *Orb of the Veil* is a tool that can enhance the mind and scry the surrounding terrain, while the *Satchel of Eternity* harnesses the power of the __Beyond__ for more mundane utility.
+##### 圣杯宣誓
 
-## Furniture
-* An upright sword, currently serves as an easily-removed barrier and a Dwarf Fortress reference.
-* The *Candle of Warding*, also serves as a barrier from the unholy when activated, which can be crafted.
+-也是一本宗教书籍，技能等级 5-8。允许制作献祭圣杯，祭品获得精华的配方，以及与**誓约守护者**相关的魔法物品。也需要从用过的圣杯中提取精血。
 
-## Misc
-* Added some overrides to make new monsters mutually friendly to both factions of monster that spawn in its area.
+##### 去掌握未知
 
+-6-10 级。一本召唤你自己宠物怪物的书。
 
+##### 阴影中的故事
 
-# **Here there be spoilers.**
+-4-9 级。比较罕见的书，结合了三大派系的一些概念。翻译：一些具有各种有用效果的魔法物品。
 
+##### 奇怪的地图
 
+-从技术上讲，这不是一本书，而是一个地图项目，揭示了最不寻常的位置。
 
-## The Structures and their artifacts:
+##### 剑与锤之路
 
-##### Strange Grove
-*Before the major factions of arcanists had gained the power they held as the Cataclysm loomed closer, there were the patient scholars of the Beyond. They used little more than glimpses through the cracks of the Veil, and slowly advanced their studies. Then one day, they were scattered to the four winds. The decaying, overgrown structure has left little evidence of what caused their downfall, and the monsters that infest it may well be the work of the instability the Cataclysm itself has caused. But the knowledge they brought with them allowed the other orders to flourish, and began the conflicts that would rage in the shadow of the imminent apocalypse.*
+-这是一本罕见的书，它不是教魔法而是教武术，把对奥术的理解与冰冷的钢铁结合起来。
 
-##### Peculiar Shrine
-*This was the sanctum of the Sanguine Order, where their most morbid rituals were practiced. There they sought the blood of humans, monsters, anything they could exploit to gain greater power and mastery over the arcane. Sometime before the cataclysm, they prepared their greatest ritual yet. They hunted for copies of a Summoner's Tome, comparing differences and gleaning info. They also stole away a sacred ring from some forgotten craftsman, forced to use it even though they shun service to any God or Demon. With it, they called upon a creature of great power from beyond the realms, to best it and use its power for their own. When it came through the portal, it was twisted and warped. An undead mockery of what they sought, it broke the back of the Sanguine Order by fire and claw.*
+##贸易工具
 
-##### Impact Site
-*A place sacred to The Keepers of The Oath. Over the crater of a meteor strike from long before the Cataclysm, they built a temple that floated, unbound by the rules of reality or earthy architecture. A few months before the Cataclysm, a ritual was prepared. What they needed was a blade sacred to their Order, the only surviving examples lost to various misfortunes. A few cultists of the Sanguine Order brought them the only ritual blade known to still be intact. But it was an act of sabotage, a concealed curse meant to destroy the Keepers so that the dwindling blood mages could claim a new home. It worked too well, as the monster called forth instead of their master proved too powerful, and its evil too disruptive to cleanse.*
+##### 献祭圣杯
 
-##### Curious Structure
-*This was once a sanctum of The Cleansing Flame, outwardly designed to resemble a church hidden away, far from civilization. On the very day of the Cataclysm, the lowermost level was engulfed in the fires of Hell. There came a living demon and a host of monsters from beyond, and those who survived the initial chaos were driven back and picked off. In its wake it lingered, drawing more abominations with it, and left an unearthly weapon there as a symbol of its conquest. Only the actions of the last few survivors allowed them to seal off the entrance to the lowermost levels.*
+-你一定能猜到的，用过从宣誓到圣杯的一些食谱。想喝一大口是个坏主意，但需要实现一条途径来制造精血。
 
-##### Basements
-*Not all of the arcanists lurked in the shadows far from civilization. They still needed some means to ensure that their actions could be carried out unhindered, and that required people much closer to mundane life.*
+##### 银器
 
-##### Shrines
-*Elsewhere, beyond the reach of civilization, a few places of otherworldly construction have been dragged into this world in the wake of the Cataclysm. Some retain evidence of human contact and exploitation, but most are wild and infested by otherworldly monsters.*
+-用在《血法典》里的一些食谱里。只有 3 个屠宰品质。还是够锋利的，所以不要玩弄它。或者玩它，这正是法典的作者想要你做的。
+
+##### 猎人之锤
+
+-魔术师的武器选择。大多数魔法物品都需要。也可以用来蒙蔽敌人，如果你不小心自己。
+
+# **这里有剧透**
+
+## 结构及其制品：
+
+##### 奇怪的树林
+
+在大灾变迫近之际，主要的神秘主义派系还没有获得他们所掌握的力量，就有了超越者的耐心学者。他们只不过是透过面纱的缝隙瞥见一眼，慢慢地推进了他们的研究。后来有一天，他们被四级风吹散了。腐朽、杂草丛生的建筑几乎没有留下任何证据证明
