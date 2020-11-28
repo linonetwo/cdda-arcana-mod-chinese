@@ -156,8 +156,12 @@ async function translateStringsInContent(fileItem) {
       }
     }
     return fileItem;
+  } else if (fileItem.rawContent) {
+    return fileItem;
   } else {
-    console.warn(`File content is not an array! ${fileItem.filePath}`);
+    console.warn(
+      `File content is not an array! ${fileItem.filePath} ,\n this will resulted in "Cannot read property 'filePath' of undefined"`
+    );
   }
 }
 
