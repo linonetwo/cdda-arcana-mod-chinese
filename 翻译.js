@@ -82,12 +82,16 @@ function writeTranslationCache() {
  * @param {string} value 待翻译的字符串
  */
 async function translateWithCache(value) {
+  console.log(`\nTranslating ${value}`);
   if (translationCache[value]) {
+    console.log(`Use Cached version ${translationCache[value]}`);
     return translationCache[value];
   }
   // 没有缓存，就更新缓存
   const translatedValue = await tryTranslation(value);
+  console.log(`New Translation ${translatedValue}\n`);
   translationCache[value] = translatedValue;
+  writeTranslationCache();
   return translatedValue;
 }
 
