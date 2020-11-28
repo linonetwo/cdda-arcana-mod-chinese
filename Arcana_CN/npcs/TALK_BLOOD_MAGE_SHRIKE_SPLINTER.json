@@ -54,6 +54,41 @@
     },
     "responses": [
       {
+        "text": "【任务】你有关于被诅咒的仪式刀的信息吗？",
+        "condition": {
+          "and": [
+            {
+              "or": [
+                {
+                  "u_has_mission": "MISSION_HERMIT_RESTORE_SWORD"
+                },
+                {
+                  "u_has_effect": "hermit_quest_backdoor"
+                }
+              ]
+            },
+            {
+              "npc_has_trait": "SHRIKE_MISSION_MARKER"
+            },
+            {
+              "npc_has_var": "elena_convinced",
+              "type": "flag",
+              "context": "shrike",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "elena_blade_help",
+                "type": "flag",
+                "context": "shrike",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE"
+      },
+      {
         "text": "……拉尼乌斯。我来这里是为了了解情况。",
         "condition": {
           "and": [
@@ -205,6 +240,256 @@
     ]
   },
   {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "你听说过守誓者，是吗？奴隶们从远方来到他们的新神那里。撇开我们的分歧不谈，我们的命令这样欺骗他们是不对的。我不知道你听过多少故事，亨特，所以请你走开。",
+      "no": {
+        "u_has_trait": "PROF_CHALICE",
+        "yes": "你一定知道，不是吗？巫师，腐败仪式，把我们两个教团的最后一口气都淹没在血腥和疯狂之中的东西。我希望策划这个阴谋的法师和祭司们一起死在那里，他的灵魂被他们最后召唤的可憎之物吞噬。告诉我，守护者。你在寻找什么答案？",
+        "no": {
+          "u_has_trait": "PROF_SANGUINE",
+          "yes": "我不知道你知道多少。我们的秩序因短视而自我毁灭的故事让人记忆犹新。我可以回答你的问题。",
+          "no": "这让我想起了一个有趣的故事，从过去的日子。三博士篡改另一个骑士团的圣物。如果我记得的话，他们几乎被炸飞了。一个鼓励我们打破乐观秩序的事件。关于那个古老的故事你想知道什么？"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "他们对剑做了什么？",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_WHAT1"
+      },
+      {
+        "text": "那时候发生了什么？",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_WHAT2"
+      },
+      {
+        "text": "我需要帮助解除诅咒。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_HELP"
+      },
+      {
+        "text": "也许下次吧。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_WHAT1",
+    "type": "talk_topic",
+    "dynamic_line": "他们暗地里诅咒它。我不知道它是如何运作的，但它是为了破坏守护者的圣餐仪式。致命的反冲，召唤一些在他们控制下的小地狱生物，谁知道呢？我们的命令已经走到了尽头，一些该死的傻瓜马格斯有一个计划，他们认为会把我们从悬崖边拖回来，代价是守门员。显然没用。",
+    "responses": [
+      {
+        "text": "我懂了。就像你说的？",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE"
+      },
+      {
+        "text": "我们谈谈别的事吧。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_WHAT2",
+    "type": "talk_topic",
+    "dynamic_line": "据我所知，他们引起了其他人的注意。我不知道他们在想什么，也不知道他们有什么计划会从中受益。只是负责那个计划的法师得到了他们应得的。我几乎希望我能在那里看到它，尽管没人能在那里存活很长时间…",
+    "responses": [
+      {
+        "text": "正确的。我们在哪里？",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE"
+      },
+      {
+        "text": "我们换个话题吧。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_HELP",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "你也和他们一起工作？也许我们大家终究还是有希望的。我已经习惯于看到你们这些法师猎人试图用他们的小锤子砸碎任何他们无法利用的遗迹。我不熟悉诅咒的功能，但它的基本原理可以在乐观的法典中找到。如果你能接触到守护者自己的献祭仪式，你可以用它做些什么。",
+      "no": {
+        "u_has_trait": "PROF_CHALICE",
+        "yes": "我知道你的圣书中包括了可以用来做这件事的祭祀仪式。你可能需要关于诅咒如何运作的信息来正确地修复它，其中一些可能会从一本乐观的法典中被弄明白。",
+        "no": {
+          "u_has_trait": "PROF_SANGUINE",
+          "yes": "你需要守护者魔法来修复守护者的遗物，这是肯定的。很少有法师能处理诅咒绑定，所以你可能也需要一份手边的法典。否则你更有可能把诅咒烧掉，变成一块无用的金属。",
+          "no": "我不知道我能不能直接帮你。你首先需要的是诅咒本身的信息，从一份乐观的法典。那你就知道这把剑的老主人用来供奉文物的仪式。这可能在他们的书里，对圣杯的誓言。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "我们不只是用锤子砸东西，信不信由你。让它既安全又实用是一个更好的结果。",
+        "condition": {
+          "u_has_trait": "PROF_CLEANSINGFLAME2"
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_1"
+      },
+      {
+        "text": "我们有更多的方法不仅仅是破坏，而且每种方法都有原因。因此，不想销毁这件物品。",
+        "condition": {
+          "u_has_trait": "PROF_CLEANSINGFLAME"
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_1"
+      },
+      {
+        "text": "所以我需要一份乐观的法典，太好了。",
+        "switch": true,
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_2"
+      },
+      {
+        "text": "你有我可以用的血法典吗？",
+        "switch": true,
+        "condition": {
+          "not": {
+            "u_has_item": "book_bloodmagic"
+          }
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CODEX"
+      },
+      {
+        "text": "我还有其他问题。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE"
+      },
+      {
+        "text": "我会设法弄清楚的。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_1",
+    "type": "talk_topic",
+    "dynamic_line": "我知道。抛开过去的习惯，有一个好的机会朝着这个目标努力。我猜你需要一份抄本？如果仪式需要的话，我会相信你的。",
+    "responses": [
+      {
+        "text": "我已经有一个了。不过，谢谢你。",
+        "switch": true,
+        "condition": {
+          "u_has_item": "book_bloodmagic"
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_3"
+      },
+      {
+        "text": "谢谢，是的。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CODEX"
+      },
+      {
+        "text": "我自己会想办法的。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_3",
+    "type": "talk_topic",
+    "dynamic_line": "你似乎充满了惊喜。我不考虑你从哪儿弄来的问题。千万不要把它烧了，希望那把旧剑会有用。",
+    "speaker_effect": {
+      "effect": {
+        "npc_add_var": "elena_blade_help",
+        "type": "flag",
+        "context": "shrike",
+        "value": "yes"
+      }
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_2",
+    "type": "talk_topic",
+    "dynamic_line": "是的，你会的。我想我可以借给你一个。我相信你会好好照顾的，明白吗？",
+    "responses": [
+      {
+        "text": "没有必要。我已经有一个了。",
+        "switch": true,
+        "condition": {
+          "u_has_item": "book_bloodmagic"
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CF_3"
+      },
+      {
+        "text": "理解。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CODEX"
+      },
+      {
+        "text": "我下次再考虑。",
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_BLADE_CODEX",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "就这样吧。我会给你一份复印件，但可以考虑借阅。这意味着，首先，要好好照顾它。总有一天，当人类可以期待片刻的和平和在废墟上重建的希望时，我希望你们能活到最后。然后我们再考虑归还那本书。",
+      "no": "那好吧。干得好。好好照顾它，并小心地应用你将在里面发现的教训。正如我们当年所说，通往权力的道路并不容易走。"
+    },
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_add_var": "elena_blade_help",
+          "type": "flag",
+          "context": "shrike",
+          "value": "yes"
+        },
+        {
+          "u_buy_item": "book_bloodmagic"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "到时候我们再看看情况如何。",
+        "switch": true,
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      },
+      {
+        "text": "非常感谢。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER"
+      },
+      {
+        "text": "非常感谢。再见了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
     "id": "TALK_BLOOD_MAGE_SHRIKE_SPLINTER_CLEANSINGFLAME",
     "type": "talk_topic",
     "dynamic_line": {
@@ -213,7 +498,7 @@
       "no": {
         "u_has_trait": "THRESH_VEIL",
         "yes": "你有些事，亨特。不正常的事。你不是来这里代表净化圣火的吧？你在找什么？",
-        "no": "你凭什么认为我会相信你的意图？你这样的人破坏了太多的知识，这些知识本可以用来适应和生存在这个艰难的时期。"
+        "no": "你凭什么认为我会相信你的意图？你们这帮人毁了这么多本可以用来适应和生存的知识。"
       }
     },
     "responses": [
