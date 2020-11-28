@@ -496,11 +496,9 @@ translators.event_transformation = noop;
  * 开始翻译
  */
 async function main() {
-  // initializeTranslationCache();
-  // const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
-  // writeToCNMod(contents);
-  // writeTranslationCache();
-  // DEBUG: console
-  console.log(`tryTranslation('apple')`, await tryTranslation('apple'));
+  initializeTranslationCache();
+  const contents = await Promise.all(readSourceFiles().map(translateStringsInContent));
+  writeToCNMod(contents);
+  writeTranslationCache();
 }
 main();
