@@ -16,7 +16,10 @@ function replaceNto1111(text) {
     .replace('%3$s', ' 3333 ')
     .replace('%s', ' 4444 ')
     .replace('<good>', ' 5555 ')
-    .replace('<npcname>', ' 6666 ');
+    .replace('<npcname>', ' 6666 ')
+    .replace('\n\n', ' 7777 ')
+    .replace('\n', ' 8888 ')
+    .replace('<color_cyan>(Arcana)</color>', ' 9999 ')
 }
 function replace1111toN(text) {
   // 防止 %2$s 影响了翻译
@@ -26,7 +29,10 @@ function replace1111toN(text) {
     .replace('3333', '%3$s')
     .replace('4444', '%s')
     .replace('5555', '<good>')
-    .replace('6666', '<npcname>');
+    .replace('6666', '<npcname>')
+    .replace('7777', '\n\n')
+    .replace('8888', '\n')
+    .replace('9999', '<color_cyan>(Arcana)</color>')
 }
 
 /**
@@ -83,7 +89,7 @@ function writeTranslationCache() {
  * @param {string} value 待翻译的字符串
  */
 async function translateWithCache(value) {
-  console.log(`\nTranslating ${value}`);
+  console.log(`\nTranslating ${value}\n`);
   if (translationCache[value]) {
     console.log(`Use Cached version ${translationCache[value]}`);
     return translationCache[value];
