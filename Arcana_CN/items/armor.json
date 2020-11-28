@@ -45,7 +45,7 @@
             {
               "id": "arcana_react_shadowy_shield",
               "message": "在 %2$s 有一缕阴影突然出现",
-              "npc_message": "一缕影子从%1$s跳到%2$s。"
+              "npc_message": "一缕影子从 %1$s 跳到 %2$s。"
             }
           ]
         }

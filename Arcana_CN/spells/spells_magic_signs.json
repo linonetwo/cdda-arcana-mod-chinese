@@ -6,7 +6,7 @@
       "str": "标志：敏捷"
     },
     "description": "神迹\n魔法符号将获得暂时的速度和敏捷增强效果。它可以用在你自己或盟友身上。",
-    "message": "“飘渺的风，指引我的航程……”你投了%s！",
+    "message": "“飘渺的风，指引我的航程……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -44,7 +44,7 @@
       "str": "标志：电容"
     },
     "description": "神迹\n魔法符号将引导你的能量进入身体内部的技巧，以疲劳为代价恢复仿生能量。然而，这样做会让你自己感到震惊。",
-    "message": "“诺比斯维图斯……”你投了%s！",
+    "message": "“Dōnēs nobis virtus……”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -90,7 +90,7 @@
       "str": "标志：透视"
     },
     "description": "神迹\n魔法符号会用象牙色的光环涂抹你，让你看不见东西。",
-    "message": "“让我看看什么是眼睛永远看不到的…”你投了%s！",
+    "message": "“让我看看什么是眼睛永远看不到的…”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -124,7 +124,7 @@
       "str": "体征：血液清澈"
     },
     "description": "神迹\n魔法符号可以保护你免受寄生虫和瞳孔的伤害。它可以用在你自己或盟友身上。",
-    "message": "“你们很多，但我比你们所有人都多……”你投了%s！",
+    "message": "“你们很多，但我比你们所有人都多……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -159,10 +159,10 @@
     "id": "arcana_magic_cold_ward",
     "type": "SPELL",
     "name": {
-      "str": "标牌：冷库"
+      "str": "标志：冷库"
     },
     "description": "神迹\n魔法符号可以抵御寒冷及其所有副作用。它可以用在你自己或盟友身上。",
-    "message": "“我是保护的，在困难时期给予怜悯……”你投了%s！",
+    "message": "“我是保护的，在困难时期给予怜悯……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -197,10 +197,10 @@
     "id": "arcana_magic_confuse_monster",
     "type": "SPELL",
     "name": {
-      "str": "招牌：迷惑怪物"
+      "str": "魔符：迷惑怪物"
     },
     "description": "神迹\n魔法符号将使你周围的所有敌人眩晕。",
-    "message": "“没有刀锋可以标记我，如果手不能击中真实…”你投%s！",
+    "message": "“没有刀锋可以印记我，如果手不能击中真实…”你投%s！",
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [
@@ -237,10 +237,10 @@
     "id": "arcana_magic_conjure_acid",
     "type": "SPELL",
     "name": {
-      "str": "征兆：变酸"
+      "str": "征兆：召唤酸"
     },
     "description": "神迹\n魔法符将在目标点召唤出一股酸雨，并击中目标中心造成双倍伤害。对你自己和盟友也很危险。",
-    "message": "“让它像时间一样，在它的道路上侵蚀一切……”你投了%s！",
+    "message": "“让它像时间一样，在它的道路上侵蚀一切……”你施放了 %s！",
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
@@ -303,10 +303,10 @@
     "id": "arcana_magic_conjure_flame",
     "type": "SPELL",
     "name": {
-      "str": "招牌：召唤火焰"
+      "str": "魔符：召唤火焰"
     },
     "description": "神迹\n魔法符号将在目标位置召唤出一场烈火爆炸，引发火灾并破坏地形。任何被夹在中间的东西都会受到双倍的伤害。如果使用不当会伤害施法者。",
-    "message": "“让这成为你的火葬…”你投了%s！",
+    "message": "“让这成为你的火葬…”你施放了 %s！",
     "extra_effects": [
       {
         "id": "arcana_aftermath_conjure_flame_spike",
@@ -374,7 +374,7 @@
       "str": "标志：圣化"
     },
     "description": "神迹\n魔法符号将改变你周围的地形，驱走困扰这片土地的各种超自然的腐败迹象。它也会在一定程度上削弱一些超自然的怪物。",
-    "message": "“我是揭露恶人，用火焰鞭打他们的人……”你投了%s！",
+    "message": "“我是揭露恶人，用火焰鞭打他们的人……”你施放了 %s！",
     "valid_targets": [
       "ground"
     ],
@@ -474,7 +474,7 @@
       "str": "标志：日蚀"
     },
     "description": "神迹\n魔法符号将在面纱上造成一个浅层伤害，带出怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。",
-    "message": "“我是那个反抗的人，有限使无限……”你投了%s！",
+    "message": "“我是那个反抗的人，有限使无限……”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -523,7 +523,7 @@
       "str": "标志：元素爆发"
     },
     "description": "神迹\n魔法符号将以元素力爆炸一个锥形区域，在其尾迹中留下随机的副作用。处于中心线的生物将受到双倍的伤害。小心友军开火的危险！",
-    "message": "“我是居住在所有生物中的，隐藏在混乱中的秩序……”你投了%s！",
+    "message": "“我是居住在所有生物中的，隐藏在混乱中的秩序……”你施放了 %s！",
     "effect": "attack",
     "shape": "cone",
     "extra_effects": [
@@ -578,7 +578,7 @@
       "str": "标志：自由行动"
     },
     "description": "神迹\n魔法符号将对麻痹效果和其他障碍提供保护。它可以用在你自己或盟友身上。",
-    "message": "“让没有束缚我的镣铐……”你投了%s！",
+    "message": "“让没有束缚我的镣铐……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -616,7 +616,7 @@
       "str": "标志：愈合"
     },
     "description": "魔法符号\n使用此咒语可以止血和愈合伤口，但长期使用可能有害。它可以用在你自己或盟友身上。",
-    "message": "“我们还不至于灭亡……”你投了%s！",
+    "message": "“我们还不至于灭亡……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -659,7 +659,7 @@
     "id": "arcana_magic_heat_ward",
     "type": "SPELL",
     "name": {
-      "str": "标牌：暖气病房"
+      "str": "标志：暖气病房"
     },
     "description": "神迹\n魔法符号将给予对热量和烟雾的暂时抵抗力。然而，直接接触火焰仍会造成伤害。它可以用在你自己或盟友身上。",
     "message": "“钢铁不怕回火的火焰……”你铸造了%s！",
@@ -697,10 +697,10 @@
     "id": "arcana_magic_insight",
     "type": "SPELL",
     "name": {
-      "str": "标牌：Insight"
+      "str": "标志：Insight"
     },
     "description": "神迹\n魔法符号将暂时提升感知力。它可以用在你自己或盟友身上。",
-    "message": "“耐心地观察和倾听的人都知道……”你投了%s！",
+    "message": "“耐心地观察和倾听的人都知道……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -738,7 +738,7 @@
       "str": "标志：灯光"
     },
     "description": "神迹\n魔法符号将召唤出一片魔法光场，在你周围徘徊。",
-    "message": "“最小的烛光带来希望直到黎明……”你投了%s！",
+    "message": "“最小的烛光带来希望直到黎明……”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -779,7 +779,7 @@
       "str": "标志：闪电病房"
     },
     "description": "神迹\n魔法符号将给予一个完全保护你免受闪电伤害的祝福，但代价是你的速度会减慢一点。它可以施加在你自己或盟友身上。",
-    "message": "“一只脚接一只脚，总是接地……”你投了%s！",
+    "message": "“一只脚接一只脚，总是接地……”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -813,10 +813,10 @@
     "id": "arcana_magic_might",
     "type": "SPELL",
     "name": {
-      "str": "标志：权力"
+      "str": "标志：权能"
     },
     "description": "神迹\n魔法符号将暂时增强力量。它可以用在你自己或盟友身上。",
-    "message": "“让这是一场光荣的战斗……”你投了%s！",
+    "message": "“让这是一场光荣的战斗……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -851,10 +851,10 @@
     "id": "arcana_magic_open_lock",
     "type": "SPELL",
     "name": {
-      "str": "标牌：开业"
+      "str": "标志：开业"
     },
     "description": "神迹\n有机会解开锁，打开路障，或者在目标区域打开前进的道路。",
-    "message": "“人类制造的东西总是可以用人类的双手来解开……”你投了%s！",
+    "message": "“人类制造的东西总是可以用人类的双手来解开……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally",
@@ -896,7 +896,7 @@
       "str": "征兆：过度生长"
     },
     "description": "神迹\n魔法符号将在你的目标位置召唤活森林的喷发。",
-    "message": "“我们将繁荣昌盛，无论土地多么贫瘠……”你投了%s！",
+    "message": "“我们将繁荣昌盛，无论土地多么贫瘠……”你施放了 %s！",
     "valid_targets": [
       "ground"
     ],
@@ -933,10 +933,10 @@
     "id": "arcana_magic_poison_armor",
     "type": "SPELL",
     "name": {
-      "str": "标牌：毒甲"
+      "str": "标志：毒甲"
     },
     "description": "神迹\n魔法符号将给予一个祝福，保护你免受有毒气体和其他形式的毒气的伤害。它可以用在你自己或盟友身上。",
-    "message": "“我不怕毒液，不管是用言语还是刀剑……”你投了%s！",
+    "message": "“我不怕毒液，不管是用言语还是刀剑……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -973,10 +973,10 @@
     "//": "ID retained to avoid breaking saves.",
     "type": "SPELL",
     "name": {
-      "str": "标牌：暗盾"
+      "str": "标志：暗盾"
     },
     "description": "神迹\n魔法符号会用黑曜石光环涂抹你，给予你暂时的防御效果，用超自然的黑暗将攻击者击昏。",
-    "message": "“不要害怕黑暗，要害怕那些引诱你进入黑暗的人……”你投了%s！",
+    "message": "“不要害怕黑暗，要害怕那些引诱你进入黑暗的人……”你施放了 %s！",
     "valid_targets": [
       "self"
     ],
@@ -1010,7 +1010,7 @@
       "str": "标志：冲击风暴"
     },
     "description": "神迹\n魔法符号会在你周围发出闪电，伤害任何靠近你的人。小心在盟友周围使用它。",
-    "message": "“雷声劈天地……”你投了%s！",
+    "message": "“雷声劈天地……”你施放了 %s！",
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
@@ -1087,7 +1087,7 @@
       "str": "征兆：大地震"
     },
     "description": "神迹\n魔法符号将摧毁建筑并将其掩埋在瓦砾中，但生物将安然无恙。",
-    "message": "“我是那躺在下面的人，用一个词就可以分裂大陆……”你投了%s！",
+    "message": "“我是那躺在下面的人，用一个词就可以分裂大陆……”你施放了 %s！",
     "effect": "bash",
     "shape": "blast",
     "extra_effects": [
@@ -1135,10 +1135,10 @@
     "id": "arcana_magic_summon_giant_centipedes",
     "type": "SPELL",
     "name": {
-      "str": "招牌：召唤蜈蚣"
+      "str": "魔符：召唤蜈蚣"
     },
     "description": "神迹\n魔法符号将召唤变异的害虫，这将是忠诚的但不是永久的。",
-    "message": "“我是那个冷酷而又必要的人，因为没有没有死亡就没有生命……”你投了%s！",
+    "message": "“我是那个冷酷而又必要的人，因为没有没有死亡就没有生命……”你施放了 %s！",
     "valid_targets": [
       "ground"
     ],
@@ -1177,7 +1177,7 @@
     "id": "arcana_magic_summon_skeletal_dog",
     "type": "SPELL",
     "name": {
-      "str": "招牌：召唤骷髅狗"
+      "str": "魔符：召唤骷髅狗"
     },
     "description": "神迹\n魔法符号将召唤一个动物复仇者，它将忠诚但不是永久的。",
     "message": "即使是对死亡的忠诚！",
@@ -1217,10 +1217,10 @@
     "id": "arcana_magic_summon_shadow",
     "type": "SPELL",
     "name": {
-      "str": "招牌：召唤暗影"
+      "str": "魔符：召唤暗影"
     },
     "description": "神迹\n会召唤一个活的影子，它是忠诚的，但不是永久的。",
-    "message": "“尼赫丽特，奥特拉·阿特维斯……”你投了%s！",
+    "message": "“尼赫丽特，奥特拉·阿特维斯……”你施放了 %s！",
     "valid_targets": [
       "ground"
     ],
@@ -1256,10 +1256,10 @@
     "id": "arcana_magic_summon_shadow_snake",
     "type": "SPELL",
     "name": {
-      "str": "招牌：召唤暗影蛇"
+      "str": "魔符：召唤暗影蛇"
     },
     "description": "神迹\n会召唤出一个蛇形的活影，它是忠诚的但不是永久的。",
-    "message": "“尼赫丽特，伊沃娜·卡洛……”你投了%s！",
+    "message": "“尼赫丽特，伊沃娜·卡洛……”你施放了 %s！",
     "valid_targets": [
       "ground"
     ],
@@ -1298,7 +1298,7 @@
       "str": "体征：肾上腺素激增"
     },
     "description": "魔法符号\n使用这个咒语会在紧急情况下引起肾上腺素的激增，尽管之后也有同样的缺点。它可以用在你自己或盟友身上。",
-    "message": "“战斗还没结束…”你投了%s！",
+    "message": "“战斗还没结束…”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"
@@ -1334,10 +1334,10 @@
     "id": "arcana_magic_ward_against_evil",
     "type": "SPELL",
     "name": {
-      "str": "标牌：驱邪"
+      "str": "标志：驱邪"
     },
     "description": "神迹\n魔法符号将给予一个祝福，以防止某些异常的威胁。它可以用在你自己或盟友身上。",
-    "message": "“恶人在警戒者面前畏缩……”你投了%s！",
+    "message": "“恶人在警戒者面前畏缩……”你施放了 %s！",
     "valid_targets": [
       "self",
       "ally"

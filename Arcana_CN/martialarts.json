@@ -255,7 +255,7 @@
       {
         "id": "buff_cleansingflame_onhit1",
         "name": "谨慎（锤子）",
-        "description": "以谨慎的凶猛，没有刀锋可以标记你。\n+1护甲。",
+        "description": "以谨慎的凶猛，没有刀锋可以印记你。\n+1护甲。",
         "melee_allowed": true,
         "skill_requirements": [
           {

@@ -42,7 +42,7 @@
     "id": "t_rock_archon_barricade",
     "looks_like": "t_rock_wall",
     "name": "雕刻墙",
-    "description": "一种由看起来像玄武岩的东西做成的砖墙，上面刻有奇怪的标记，发出一种奇特的光芒。",
+    "description": "一种由看起来像玄武岩的东西做成的砖墙，上面刻有奇怪的印记，发出一种奇特的光芒。",
     "symbol": "LINE_OXOX",
     "color": "light_gray",
     "move_cost": 0,

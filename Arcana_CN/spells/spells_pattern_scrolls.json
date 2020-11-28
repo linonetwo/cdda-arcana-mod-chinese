@@ -107,7 +107,7 @@
     "type": "SPELL",
     "id": "arcana_pattern_conjure_acid",
     "name": {
-      "str": "图样：变酸"
+      "str": "图样：召唤酸"
     },
     "effect": "mutate",
     "shape": "blast",
@@ -367,7 +367,7 @@
     "type": "SPELL",
     "id": "arcana_pattern_might",
     "name": {
-      "str": "模式：权力"
+      "str": "模式：权能"
     },
     "effect": "mutate",
     "shape": "blast",

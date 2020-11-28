@@ -62,7 +62,7 @@
     "id": "SPELL_SMOKE",
     "//": "IDs for Arcane Blessings are reused to reduce the amount of obsolete JSON.",
     "name": {
-      "str": "变更标志一"
+      "str": "变更标志 I"
     },
     "points": 1,
     "description": "“你必须学会塑造你的环境来达到你的目的。总有一天，你也会找到你的目标。”\n不可知的力量给了你一个礼物，它可以召唤一层黑暗的裹尸布来隐藏你。（（记住绑定“施法”键！）",
@@ -113,7 +113,7 @@
     "type": "mutation",
     "id": "SPELL_LIGHT2",
     "name": {
-      "str": "变更标志二"
+      "str": "变更标志 II"
     },
     "points": 2,
     "description": "“你将举起我的火炬，发挥我的影响力，为我们共同的目标服务。”\n不可知的力量给了你一份礼物，它可以召唤出光明的光环。（（记住绑定“施法”键！）",
@@ -171,7 +171,7 @@
     "type": "mutation",
     "id": "SPELL_LOCKPICK2",
     "name": {
-      "str": "变更标志三"
+      "str": "变更标志 III"
     },
     "points": 3,
     "description": "“你将不请自来，任何诡计都不会妨碍听从我命令的人。”\n不可知的部队给了你第三个礼物，可以打开锁和路障。（（记住绑定“施法”键！）",
@@ -213,7 +213,7 @@
     "//": "ID retained, effect changed as teleport is of more limited use.",
     "id": "SPELL_TELEPORT",
     "name": {
-      "str": "变更标志四"
+      "str": "变更标志 IV"
     },
     "points": 4,
     "description": "“如果你的敌人寻求逃跑或避难，你将学会阻止他们。”\n不可知力量给了你第四个礼物，它可以让你召唤光障。（（记住绑定“施法”键！）",
@@ -258,7 +258,7 @@
     "type": "mutation",
     "id": "SPELL_PACIFY",
     "name": {
-      "str": "变更标志五"
+      "str": "变更标志 V"
     },
     "points": 5,
     "description": "“如果敌人挡住了你的路，我的信息可以安抚那些无法摧毁的东西。”\n不可知力量给了你第五个礼物，可以让你安抚怪物。（（记住绑定“施法”键！）",
@@ -307,7 +307,7 @@
     "type": "mutation",
     "id": "SPELL_CONSECRATE",
     "name": {
-      "str": "变更标志六"
+      "str": "变更标志 VI"
     },
     "points": 6,
     "description": "“随着时间的推移，你在保护这个世界上只会扮演一个角色，那就是赶走这些入侵。这是我的意愿。”\n不可知的力量给了你第六个礼物，它可以让你颠覆影响环境的超自然的改变。（（记住绑定“施法”键！）",
@@ -601,7 +601,7 @@
     "type": "mutation",
     "id": "SPELL_INVIS",
     "name": {
-      "str": "增强之符"
+      "str": "增强之符 VI"
     },
     "points": 6,
     "description": "“总有一天，你的精神会强大起来，而不必逃避凡人所惧怕的。这是我的意愿。”\n不可知力量给了你第六个礼物，可以让你暂时隐身。（（记住绑定“施法”键！）",
@@ -702,7 +702,7 @@
     "type": "mutation",
     "id": "SPELL_CLOUD",
     "name": {
-      "str": "毁灭迹象2"
+      "str": "毁灭迹象 II"
     },
     "points": 2,
     "description": "“你的敌人将遭受他们在这个领域所经历过的同样的邪恶。”\n不可知力量给了你第二个礼物，可以在你想要的地点召唤有毒气体。（（记住绑定“施法”键！）",
@@ -801,7 +801,7 @@
     "type": "mutation",
     "id": "SPELL_FIRE2",
     "name": {
-      "str": "破坏迹象四"
+      "str": "破坏迹象 IV"
     },
     "points": 4,
     "description": "“审判我们的敌人，因为他们只会带来痛苦。”\n不可知的力量给了你第四个礼物，可以用神圣的火焰来炸开一个区域。（（记住绑定“施法”键！）",
@@ -895,7 +895,7 @@
     "type": "mutation",
     "id": "SPELL_PULSE",
     "name": {
-      "str": "破坏迹象六"
+      "str": "破坏迹象 VI"
     },
     "points": 6,
     "description": "“总有一天，你会为这些罪恶复仇的。这是我的意志。”\n不可知的力量给了你第六个礼物，可以释放出一股毁灭性的能量。（（记住绑定“施法”键！）",
@@ -996,7 +996,7 @@
     "type": "mutation",
     "id": "SPELL_POISONARMOR2",
     "name": {
-      "str": "防护标志二"
+      "str": "防护标志 II"
     },
     "points": 2,
     "description": "“你将承受我的保护标志，因为你的身体是脆弱而短暂的。”\n不可知力量给了你第二份礼物，可以暂时保护你免受有毒气体和其他毒物的伤害。（（记住绑定“施法”键！）",
@@ -1095,7 +1095,7 @@
     "type": "mutation",
     "id": "SPELL_FLAMEARMOR2",
     "name": {
-      "str": "防护标志四"
+      "str": "防护标志 IV"
     },
     "points": 4,
     "description": "“但是你的灵魂将面对这些考验，就像石头面对火焰，不屈于地狱。”\n不可知的力量给了你第四个礼物，可以抵抗火和烟。（（记住绑定“施法”键！）",
@@ -1189,7 +1189,7 @@
     "type": "mutation",
     "id": "SPELL_PSYSHIELD",
     "name": {
-      "str": "保护标志六"
+      "str": "保护标志 VI"
     },
     "points": 6,
     "description": "“总有一天，你对我的服务会让你安然度过死亡。“这是我的意愿。”\n不可知力量给了你第六个礼物，它可以投射出强大的保护力量。（（记住绑定“施法”键！）",
@@ -1239,7 +1239,7 @@
     "type": "mutation",
     "id": "SPELL_SUMMONDOG2",
     "name": {
-      "str": "召唤我的标志"
+      "str": "召唤标志 I"
     },
     "points": 1,
     "description": "“这是等待你们世界的命运的征兆。“\n不可知的力量给了你一个礼物，可以召唤骷髅狗。（（记住绑定“施法”键！）",
@@ -1389,7 +1389,7 @@
     "type": "mutation",
     "id": "SPELL_SUMMONTHING",
     "name": {
-      "str": "召唤四号"
+      "str": "召唤之标志 IV"
     },
     "points": 4,
     "description": "“小心地研究，你将学会阅读这些迹象，并召唤众生去回应他们的虚假承诺。”\n不可知力量给了你第四个礼物，它可以召唤出一个可怕的东西。（（记住绑定“施法”键！）",

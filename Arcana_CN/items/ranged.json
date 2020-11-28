@@ -185,7 +185,7 @@
       "str": "亡灵十字弓"
     },
     "//": "Piercing does not display when using explicit damage blocks, but armor_multiplier will affect it.",
-    "description": "一种饰有金色符号的弩，似乎没有弓弦。相反，它以高装甲穿透力推动明亮的绿色能量螺栓。",
+    "description": "一种饰有金色符号的弩，似乎没有弓弦。相反，它以高装甲穿透力推动明亮的绿色能量箭。",
     "weight": "2928 g",
     "volume": "1500 ml",
     "longest_side": "65 cm",
@@ -405,7 +405,7 @@
             {
               "id": "arcana_react_bane_staff_venom",
               "message": "当你攻击的时候，令人恶心的毒液从你的手杖里流出来。",
-              "npc_message": "当%1$s的员工罢工时，令人恶心的毒液流出来。"
+              "npc_message": "当%1$s的法杖挥舞时，令人恶心的毒液流动出来。"
             }
           ]
         }

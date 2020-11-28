@@ -138,7 +138,7 @@
   {
     "id": "TALK_BLOOD_MAGE_SHRIKE_ROGUE_LANIUS",
     "type": "talk_topic",
-    "dynamic_line": "亨特，去死吧。",
+    "dynamic_line": "亨特，奋战并荣耀战死吧！",
     "responses": [
       {
         "text": "…",

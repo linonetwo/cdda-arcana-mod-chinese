@@ -584,7 +584,7 @@
     "id": "arcana_blessing_might",
     "type": "SPELL",
     "name": {
-      "str": "祝福：权力"
+      "str": "祝福：权能"
     },
     "description": "奥术祝福\n使用此咒语将暂时增强力量。它可以用在你自己或盟友身上。",
     "message": "你感觉到原始的力量通过你，在你的命令下汹涌而出。",

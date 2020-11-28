@@ -77,7 +77,7 @@
     "id": "MISSION_FIND_HERMIT_3",
     "type": "mission_definition",
     "name": {
-      "str": "到达奇数之家"
+      "str": "到达奇异之家"
     },
     "description": "带你的同伴去一个怀疑有人居住的乡村房子。这些奇怪的梦终究还是有些东西。。。",
     "goal": "MGOAL_GO_TO_TYPE",

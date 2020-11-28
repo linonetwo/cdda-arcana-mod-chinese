@@ -177,7 +177,7 @@
     "id": "arcana_trap_archon_hallu2",
     "type": "SPELL",
     "name": {
-      "str": "陷阱：哈鲁2号"
+      "str": "陷阱：哈鲁 2"
     },
     "description": "更多的脑痛。",
     "valid_targets": [

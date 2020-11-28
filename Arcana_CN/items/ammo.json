@@ -146,7 +146,7 @@
     "type": "AMMO",
     "id": "bolt_arcana_unpowered",
     "name": {
-      "str": "奇异的螺栓"
+      "str": "奇异的箭"
     },
     "symbol": "=",
     "color": "green",
@@ -222,7 +222,7 @@
     "symbol": "=",
     "color": "green",
     "looks_like": "bolt_arcana_unpowered",
-    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时击毙目标。一旦发射，很有可能完好无损。",
+    "description": "一个简单的有羽毛的木制十字弓箭，顶端有一条超凡脱俗的材料。能够在撞击时击毙目标。一旦发射，很有可能完好无损。",
     "material": [
       "wood",
       "essencemat"
@@ -292,12 +292,12 @@
     "type": "AMMO",
     "id": "bolt_arcana_water",
     "name": {
-      "str": "冬日异域风情"
+      "str": "冬日异域箭"
     },
     "symbol": "=",
     "color": "green",
     "looks_like": "bolt_arcana_unpowered",
-    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时击昏目标。一旦发射，很有可能完好无损。",
+    "description": "一个简单的有羽毛的木制十字弓箭，顶端有一条超凡脱俗的材料。能够在撞击时击昏目标。一旦发射，很有可能完好无损。",
     "material": [
       "wood",
       "essencemat"
@@ -367,12 +367,12 @@
     "type": "AMMO",
     "id": "bolt_arcana_earth",
     "name": {
-      "str": "土制异形螺栓"
+      "str": "土制异形箭"
     },
     "symbol": "=",
     "color": "green",
     "looks_like": "bolt_arcana_unpowered",
-    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时减缓和腐蚀目标，留下酸性物质。一旦发射，保持原样的几率很低。",
+    "description": "一个简单的有羽毛的木制十字弓箭，顶端有一条超凡脱俗的材料。能够在撞击时减缓和腐蚀目标，留下酸性物质。一旦发射，保持原样的几率很低。",
     "material": [
       "wood",
       "essencemat"
@@ -448,7 +448,7 @@
     "symbol": "=",
     "color": "green",
     "looks_like": "bolt_arcana_unpowered",
-    "description": "一个简单的有羽毛的木制十字弓螺栓，顶端有一条超凡脱俗的材料。能够在撞击时使目标失明，留下闪电。一旦发射，保持完整的可能性很低。",
+    "description": "一个简单的有羽毛的木制十字弓箭，顶端有一条超凡脱俗的材料。能够在撞击时使目标失明，留下闪电。一旦发射，保持完整的可能性很低。",
     "material": [
       "wood",
       "essencemat"

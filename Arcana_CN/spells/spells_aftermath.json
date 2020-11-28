@@ -77,7 +77,7 @@
     "type": "SPELL",
     "id": "arcana_aftermath_conjure_acid_noise",
     "name": {
-      "str": "变酸噪音"
+      "str": "召唤酸噪音"
     },
     "description": "更少的垃圾声音",
     "message": "",
@@ -1443,7 +1443,7 @@
     "id": "arcana_aftermath_elemental_coldness",
     "type": "SPELL",
     "name": {
-      "str": "元素标记寒冷"
+      "str": "元素印记寒冷"
     },
     "description": "它的存在是为了使这个区域的树液温度成为元素。",
     "effect": "attack",

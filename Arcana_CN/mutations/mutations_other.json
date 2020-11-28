@@ -533,10 +533,10 @@
     "type": "mutation",
     "id": "CF_DEACON",
     "name": {
-      "str": "执事标记"
+      "str": "执事印记"
     },
     "points": 0,
-    "description": "此特性标记Deacon，用于某些对话检查以保持工作正常。看到这可能是一个错误。",
+    "description": "此特性印记Deacon，用于某些对话检查以保持工作正常。看到这可能是一个错误。",
     "player_display": false,
     "valid": false,
     "purifiable": false
@@ -569,7 +569,7 @@
     "type": "mutation",
     "id": "SHRIKE_MISSION_MARKER",
     "name": {
-      "str": "伯劳任务标记"
+      "str": "伯劳任务印记"
     },
     "points": 0,
     "description": "这一特点使得一个特定的血质伯劳鸟NPC作为任务的焦点，改变了他们的对话。",
@@ -593,7 +593,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_2",
     "name": {
-      "str": "辅助标记2"
+      "str": "辅助印记2"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
@@ -605,7 +605,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_3",
     "name": {
-      "str": "辅助标记3"
+      "str": "辅助印记3"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
@@ -617,7 +617,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_4",
     "name": {
-      "str": "辅助标记4"
+      "str": "辅助印记 4"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
@@ -629,7 +629,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_5",
     "name": {
-      "str": "辅助标记5"
+      "str": "辅助印记 5"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
@@ -641,7 +641,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_6",
     "name": {
-      "str": "辅助标记6"
+      "str": "辅助印记6"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
@@ -665,7 +665,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_8",
     "name": {
-      "str": "8号辅助标志"
+      "str": "辅助标志 8"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",

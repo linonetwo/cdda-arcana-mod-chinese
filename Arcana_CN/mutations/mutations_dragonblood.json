@@ -196,7 +196,7 @@
     "//": "ID retained to reduce redundancy and avoid load errors.",
     "id": "SPELL_SUMMONWYRM",
     "name": {
-      "str": "可憎的标记"
+      "str": "可憎的印记"
     },
     "points": 5,
     "description": "非人的力量赋予了你非自然的能力，允许你召唤来自远方的奇异生物。（（记住绑定“施法”键！）",
@@ -1039,7 +1039,7 @@
     "allow_soft_gear": true,
     "attacks": {
       "attack_text_u": "你用尾巴抽打%s",
-      "attack_text_npc": "%1$s用尾巴鞭打%2$s",
+      "attack_text_npc": "%1$s 用尾巴鞭打 %2$s",
       "chance": 20,
       "strength_damage": {
         "damage_type": "bash",
@@ -1076,7 +1076,7 @@
     "allow_soft_gear": true,
     "attacks": {
       "attack_text_u": "你用你的尾巴鞭打%s",
-      "attack_text_npc": "%1$s用尾巴鞭打%2$s根",
+      "attack_text_npc": "%1$s 用尾巴鞭打 %2$s",
       "chance": 15,
       "strength_damage": [
         {
@@ -1126,7 +1126,7 @@
     ],
     "attacks": {
       "attack_text_u": "你这个混蛋%s",
-      "attack_text_npc": "%1$s头撞%2$s",
+      "attack_text_npc": "%1$s 头撞 %2$s",
       "chance": 35,
       "strength_damage": {
         "damage_type": "bash",

@@ -168,10 +168,10 @@
     "type": "TOOL_ARMOR",
     "copy-from": "armor_blarmor",
     "name": {
-      "str": "蛇皮甲",
-      "str_pl": "wyrmskin盔甲套装"
+      "str": "龙皮甲",
+      "str_pl": "龙皮甲套装"
     },
-    "description": "一套装饰精美的皮革盔甲，上面缝有蛇形图案，并增加了各种可调节的肩带。使用它会产生持久的酸雾。",
+    "description": "一套装饰精美的皮革盔甲，上面缝有双翼龙形图案，并增加了各种可调节的肩带。使用它会产生持久的酸雾。",
     "material": [
       "wyrmskin",
       "leather"

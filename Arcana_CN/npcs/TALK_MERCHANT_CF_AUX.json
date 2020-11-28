@@ -604,7 +604,7 @@
         "topic": "TALK_MERCHANT_CF_AUX_BOUNTY_TURNIN"
       },
       {
-        "text": "变成了一个wyrmskin碎片。",
+        "text": "归还龙皮碎片。",
         "condition": {
           "u_has_item": "wyrmskin_piece"
         },

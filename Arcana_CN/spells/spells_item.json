@@ -272,7 +272,7 @@
     "name": {
       "str": "聚结转化奇迹"
     },
-    "description": "可能会有一些有趣的后果。",
+    "description": "权能会有一些有趣的后果。",
     "valid_targets": [
       "self"
     ],
@@ -2662,7 +2662,7 @@
     "id": "arcana_item_wyrmskin_acid",
     "type": "SPELL",
     "name": {
-      "str": "Wyrm毒液"
+      "str": "龙之毒液"
     },
     "description": "一种低水平的酸咒，更注重地面效果。",
     "message": "流淌的毒液在你的盔甲表面滑过，直到一股刺鼻的水花喷出来浸透地面！",
@@ -2705,7 +2705,7 @@
     "type": "SPELL",
     "id": "arcana_item_wyrmskin_acid_noise",
     "name": {
-      "str": "Wyrm毒液噪音"
+      "str": "龙之毒液噪音"
     },
     "description": "更少的垃圾声音",
     "message": "",
