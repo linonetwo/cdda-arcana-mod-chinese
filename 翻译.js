@@ -7,7 +7,7 @@ const _ = require('lodash');
 
 const translate = new BaiduTranslate(process.env.TRANSLATION_APP_ID, process.env.TRANSLATION_SECRET, 'zh', 'en');
 
-function replaceNto1111(text: string) {
+function replaceNto1111(text) {
   // 防止 %2$s 影响了翻译
   return text
     .replace('%1$s', ' 1111 ')
@@ -17,7 +17,7 @@ function replaceNto1111(text: string) {
     .replace('<good>', ' 5555 ')
     .replace('<npcname>', ' 6666 ');
 }
-function replace1111toN(text: string) {
+function replace1111toN(text) {
   // 防止 %2$s 影响了翻译
   return text
     .replace('1111', '%1$s')
@@ -221,6 +221,9 @@ const namePlDesc = async (item) => {
       await useActionMsg(item.use_action.activation_message);
     }
   }
+  if (item.use_action?.message) {
+    item.use_action.message = await translateFunction(item.use_action.message);
+  }
 
   if (item.special_attacks) {
     for (const specialAttacks of item.special_attacks) {
@@ -270,12 +273,12 @@ const relic = async (item) => {
 const dynamicLine = async (line) => {
   if (typeof line.yes === 'string') {
     line.yes = await translateFunction(line.yes);
-  } else {
+  } else if (typeof line.yes === 'object') {
     await dynamicLine(line.yes);
   }
   if (typeof line.no === 'string') {
     line.no = await translateFunction(line.no);
-  } else {
+  } else if (typeof line.no === 'object') {
     await dynamicLine(line.no);
   }
 };
@@ -317,6 +320,7 @@ translators.ammunition_type = noop;
 translators.AMMO = namePlDesc;
 translators.ARMOR = namePlDesc;
 translators.BIONIC_ITEM = namePlDesc;
+translators.BOOK = namePlDesc;
 translators.GENERIC = namePlDesc;
 translators.TOOL = namePlDesc;
 translators.COMESTIBLE = namePlDesc;
@@ -391,7 +395,14 @@ translators.recipe_category = noop;
 translators.uncraft = noop;
 translators.enchantment = noop;
 translators.SPELL = namePlDesc;
-translators.achievement = namePlDesc;
+translators.achievement = async (item) => {
+  await namePlDesc(item);
+  if (Array.isArray(item.requirements)) {
+    for (const requirement of item.requirements) {
+      requirement.description = await translateFunction(requirement.description);
+    }
+  }
+};
 translators.ammo_effect = noop;
 translators.bionic = namePlDesc;
 translators.clothing_mod = noop;
@@ -462,6 +473,15 @@ translators.technique = async (item) => {
   }
 };
 translators.vehicle_part = namePlDesc;
+translators.overlay_order = noop;
+translators.mod_tileset = noop;
+translators.palette = noop;
+translators.event_statistic = async (item) => {
+  if (item.description?.str_sp) {
+    item.description.str_sp = await translateFunction(item.description.str_sp);
+  }
+};
+translators.event_transformation = noop;
 
 /**
  * 开始翻译
