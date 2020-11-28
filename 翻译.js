@@ -19,7 +19,7 @@ function replaceNto1111(text) {
     .replace('<npcname>', ' 6666 ')
     .replace('\n\n', ' 7777 ')
     .replace('\n', ' 8888 ')
-    .replace('<color_cyan>(Arcana)</color>', ' 9999 ')
+    .replace('<color_cyan>(Arcana)</color>', ' 9999 ');
 }
 function replace1111toN(text) {
   // 防止 %2$s 影响了翻译
@@ -32,7 +32,7 @@ function replace1111toN(text) {
     .replace('6666', '<npcname>')
     .replace('7777', '\n\n')
     .replace('8888', '\n')
-    .replace('9999', '<color_cyan>(Arcana)</color>')
+    .replace('9999', '<color_cyan>(Arcana)</color>');
 }
 
 /**
@@ -70,11 +70,11 @@ function tryTranslation(value) {
 /**
  * 保存之前翻译和润色过的内容的翻译缓存
  */
-const translationCache = {};
+let translationCache = {};
 const translationCacheFilePath = '翻译缓存.json';
 function initializeTranslationCache() {
   try {
-    fs.read(translationCacheFilePath);
+    translationCache = JSON.parse(fs.read(translationCacheFilePath));
   } catch (error) {
     console.error(error);
     fs.write(translationCacheFilePath);
