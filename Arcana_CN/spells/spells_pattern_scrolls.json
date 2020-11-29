@@ -7,13 +7,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_AGILE",
+    "effect_str": "SPELL_AGILE",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，无尽的螺旋交织在一起。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -33,13 +34,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_CLAIRVOYANCE",
+    "effect_str": "SPELL_CLAIRVOYANCE",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，一张充满异国情调的眼睛图案的重叠网。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -59,13 +61,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_CLARITY",
+    "effect_str": "SPELL_CLARITY",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，一个看似不可能的几何图形的炼金术圆圈。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -85,13 +88,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_CONFUSE",
+    "effect_str": "SPELL_CONFUSE",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，一圈神秘的书法让位于不人道的意象。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -111,13 +115,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_ACID",
+    "effect_str": "SPELL_ACID",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，令人目眩的轨道图，几乎像是某种复杂化合物的模型。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -137,13 +142,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_CONSECRATELESSER",
+    "effect_str": "SPELL_CONSECRATELESSER",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，就像翅膀上笼罩着的光线。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -163,13 +169,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_ECLIPSE",
+    "effect_str": "SPELL_ECLIPSE",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，符号渐渐消失在难以理解的主题中。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -189,13 +196,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_ELEMENTALBURST",
+    "effect_str": "SPELL_ELEMENTALBURST",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的模式，在你的脑海里激起奇怪的本能反应。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -215,13 +223,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_FLAMEARMOR",
+    "effect_str": "SPELL_FLAMEARMOR",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，奇怪的图案，像舞动的火焰一样摇曳。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -241,13 +250,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_FREEACTION",
+    "effect_str": "SPELL_FREEACTION",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，复杂的线条给人一种立体的印象。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -267,13 +277,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_FROSTARMORLESSER",
+    "effect_str": "SPELL_FROSTARMORLESSER",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇异的图案，外星人天空的星座。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -293,13 +304,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_HEAL",
+    "effect_str": "SPELL_HEAL",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，复杂的解剖图像和神秘的图表。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -319,13 +331,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_INSIGHT",
+    "effect_str": "SPELL_INSIGHT",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，奇特的符号与超现实主义的风景融合在一起。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -345,13 +358,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_ELECRESIST",
+    "effect_str": "SPELL_ELECRESIST",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，无尽的线路交叉和弯曲，以违反几何定律的方式。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -371,13 +385,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_STRENGTH",
+    "effect_str": "SPELL_STRENGTH",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着那些奇怪的图案，一个迷宫般的图案，流淌着对超自然动物的模糊印象。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -397,13 +412,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_PLANTS",
+    "effect_str": "SPELL_PLANTS",
     "description": "这将授予一个特定的法术变异。",
     "message": "你深深地凝视着那些奇怪的图案，像不断变换的常春藤一样编织着。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -423,13 +439,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_SHADOWSNAKES",
+    "effect_str": "SPELL_SHADOWSNAKES",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，盘绕的蛇形线条蜿蜒成无尽的大毒蛇图案。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -449,13 +466,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_LIGHTNING",
+    "effect_str": "SPELL_LIGHTNING",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，不规则的锯齿状的艺术品折叠在自己身上。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -475,13 +493,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_BUGSLESSER",
+    "effect_str": "SPELL_BUGSLESSER",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，奇怪的线性图案让位于更有机的图案。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -501,13 +520,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_SUNDERINGQUAKE",
+    "effect_str": "SPELL_SUNDERINGQUAKE",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，外星人的符号和艺术品扭曲成更有序的形式。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
@@ -527,13 +547,14 @@
     },
     "effect": "mutate",
     "shape": "blast",
-    "effect_str": "ARCANA_CLERIC",
+    "effect_str": "SPELL_CLERIC",
     "description": "这将授予一个特定的法术变异。",
     "message": "你凝视着奇怪的图案，无尽的符号和图表与超凡脱俗的图像融合在一起。。。",
     "min_damage": 10000,
     "max_damage": 10000,
     "flags": [
-      "SILENT"
+      "SILENT",
+      "MUTATE_TRAIT"
     ],
     "valid_targets": [
       "self"
