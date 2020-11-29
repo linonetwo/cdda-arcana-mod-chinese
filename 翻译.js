@@ -125,7 +125,7 @@ function getFileJSON(inspectData, parentPath = '') {
       return { ...inspectData, content: JSON.parse(fs.read(filePath)), filePath };
     } else {
       // png 贴图等
-      return { ...inspectData, rawContent: fs.read(filePath), filePath };
+      return { ...inspectData, rawContent: fs.read(filePath, 'buffer'), filePath };
     }
   }
   if (inspectData.type === 'dir') {
