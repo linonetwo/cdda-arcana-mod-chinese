@@ -101,7 +101,7 @@
     "color": "red",
     "ammo": "essence_blood_type",
     "skill": "magic",
-    "range": 20,
+    "range": 15,
     "ranged_damage": {
       "damage_type": "heat",
       "amount": 20,
@@ -203,7 +203,7 @@
     "color": "green",
     "ammo": "essence_dull_type",
     "skill": "magic",
-    "range": 15,
+    "range": 20,
     "ranged_damage": {
       "damage_type": "stab",
       "amount": 40,

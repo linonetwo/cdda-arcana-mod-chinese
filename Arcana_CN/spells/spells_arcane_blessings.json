@@ -71,14 +71,15 @@
   },
   {
     "id": "arcana_blessing_confuse_monster",
+    "//": "ID retained for save compatibility reasons.",
     "type": "SPELL",
     "name": {
-      "str": "祝福：迷惑怪物"
+      "str": "祝福：迷茫波"
     },
-    "description": "奥术祝福\n使用此咒语将眩晕你周围区域的所有敌人。",
-    "message": "一种微弱的扭曲在空气中荡漾开来，你感觉到一种超自然的力量在发挥它的意志。",
+    "description": "奥术祝福\n使用此咒语将爆炸一个锥形的区域和精神力量，伤害和震惊被困其中的敌人。",
+    "message": "一股微弱的扭曲在你面前荡漾而出，你感觉到一股无形的力量在发挥它的意志。",
     "effect": "attack",
-    "shape": "blast",
+    "shape": "cone",
     "valid_targets": [
       "hostile",
       "ground"
@@ -92,9 +93,16 @@
       "NO_FAIL"
     ],
     "effect_str": "stunned",
-    "min_aoe": 4,
-    "max_aoe": 30,
-    "aoe_increment": 1.3,
+    "min_damage": 15,
+    "max_damage": 120,
+    "damage_increment": 5.25,
+    "damage_type": "cold",
+    "min_range": 3,
+    "max_range": 12,
+    "range_increment": 0.45,
+    "min_aoe": 25,
+    "max_aoe": 75,
+    "aoe_increment": 2.5,
     "max_level": 20,
     "difficulty": 30,
     "skill": "magic",
@@ -105,9 +113,9 @@
     "base_energy_cost": 240,
     "final_energy_cost": 120,
     "energy_increment": -6,
-    "min_duration": 300,
-    "max_duration": 3000,
-    "duration_increment": 135
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 270
   },
   {
     "id": "arcana_blessing_conjure_miasma",
@@ -189,10 +197,17 @@
     "name": {
       "str": "祝福：召唤光爆"
     },
-    "description": "奥术祝福\n使用此咒语将在目标区域召唤出大量的魔法光照。",
+    "description": "奥术祝福\n使用此咒语将在目标区域召唤出大量的魔法照明，并烧焦那些避光的。",
     "message": "在你的指引下，闪烁的烛光在你的指引下散落在地面上，直到一道挥之不去的光芒渗透到那片区域。",
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_conjure_lightburst_searing",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
     "valid_targets": [
       "ground"
     ],
@@ -289,7 +304,7 @@
     "name": {
       "str": "祝福：神圣化"
     },
-    "description": "奥术祝福\n使用此咒语将改变地形，赶走困扰大地的各种超自然的腐败迹象，同时驱散敌对召唤，并使来自远方的大多数入侵者感到恶心。",
+    "description": "奥术祝福\n使用此咒语将改变地形，赶走困扰大地的各种异界腐化迹象，同时从远处干扰大多数入侵者，敌对召唤生物受到双重伤害。",
     "message": "你引导他从面纱之外的意志，为这不自然的入侵带来秩序。",
     "valid_targets": [
       "ground"
@@ -676,27 +691,27 @@
     "effect": "charm_monster",
     "shape": "blast",
     "energy_source": "MANA",
-    "difficulty": 40,
+    "difficulty": 70,
     "skill": "magic",
     "max_level": 20,
-    "min_damage": 50,
-    "max_damage": 300,
-    "damage_increment": 12.5,
+    "min_damage": 35,
+    "max_damage": 280,
+    "damage_increment": 12.25,
     "min_range": 12,
     "max_range": 24,
     "range_increment": 0.6,
     "min_aoe": 0,
     "max_aoe": 4,
     "aoe_increment": 0.2,
-    "min_duration": 12000,
-    "max_duration": 84000,
-    "duration_increment": 3600,
-    "base_casting_time": 250,
-    "final_casting_time": 125,
-    "casting_time_increment": -6.25,
-    "base_energy_cost": 300,
-    "final_energy_cost": 150,
-    "energy_increment": -7.5
+    "min_duration": 21000,
+    "max_duration": 147000,
+    "duration_increment": 6300,
+    "base_casting_time": 400,
+    "final_casting_time": 200,
+    "casting_time_increment": -10,
+    "base_energy_cost": 480,
+    "final_energy_cost": 240,
+    "energy_increment": -12
   },
   {
     "id": "arcana_blessing_radiant_burst",

@@ -67,7 +67,8 @@
     "price_postapoc": 4000,
     "material": [
       "iron",
-      "copper"
+      "copper",
+      "leather"
     ],
     "symbol": "[",
     "looks_like": "mask_bal",
@@ -490,7 +491,8 @@
     "relative": {
       "weight": 3020,
       "price": 55000,
-      "material_thickness": 1
+      "material_thickness": 1,
+      "encumbrance": 5
     },
     "extend": {
       "flags": [

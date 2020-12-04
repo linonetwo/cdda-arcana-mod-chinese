@@ -106,7 +106,7 @@
     ]
   },
   {
-    "id": "only",
+    "id": "TALK_CF_PURIFIER_REMAIN",
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "FIX_CF_GM",

@@ -358,7 +358,9 @@
         "cabin_strange",
         "standing_stones",
         "temple_stairs",
-        "shrine_anomaly"
+        "shrine_anomaly",
+        "shrine_anomaly_2",
+        "shrine_anomaly_3"
       ],
       "message": "你会在地图上添加奇怪的庙宇，毁坏的神殿，奇怪的建筑，撞击地点，奇特的神龛和奇怪的小树林。"
     }
