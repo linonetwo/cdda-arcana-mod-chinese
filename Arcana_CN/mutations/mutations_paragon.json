@@ -19,10 +19,13 @@
       ]
     ],
     "ignored_by": [
-      "ARCANA_SUMMONED",
       "UNKNOWN"
     ],
     "anger_relations": [
+      [
+        "ARCANA_SUMMONED",
+        -95
+      ],
       [
         "NETHER",
         20

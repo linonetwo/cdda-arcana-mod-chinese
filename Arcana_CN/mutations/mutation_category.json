@@ -22,8 +22,8 @@
     "iv_pain": 0,
     "iv_thirst": 0,
     "mutagen_message": "如果你能读到这篇文章，这可能是一个bug。",
-    "iv_additional_mutations": 2,
-    "iv_additional_mutations_chance": 5,
+    "iv_additional_mutations": 1,
+    "iv_additional_mutations_chance": 10,
     "iv_min_mutations": 1,
     "memorial_message": "刺穿了世界之间的面纱。"
   },
@@ -43,8 +43,8 @@
     "iv_thirst": 0,
     "mutagen_message": "你感到超自然的生命流过你的身体。",
     "iv_message": "你会感觉到一股强大的共鸣贯穿全身，这是通往权力之路的又一个不可逆转的步骤。",
-    "iv_additional_mutations": 2,
-    "iv_additional_mutations_chance": 10,
+    "iv_additional_mutations": 1,
+    "iv_additional_mutations_chance": 15,
     "iv_min_mutations": 1,
     "memorial_message": "从龙血圣礼获得力量。"
   }
