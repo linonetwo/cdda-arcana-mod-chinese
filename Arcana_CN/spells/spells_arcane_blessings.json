@@ -641,7 +641,10 @@
     "description": "奥术祝福\n使用此咒语将解开锁，打开路障，或者打开目标区域的前进道路。",
     "message": "你的意志对土地产生了奇怪的影响。",
     "valid_targets": [
-      "self"
+      "self",
+      "ally",
+      "hostile",
+      "ground"
     ],
     "flags": [
       "CONCENTRATE",

@@ -4,8 +4,8 @@
     "copy-from": "tindalos_whistle",
     "type": "TOOL",
     "name": {
-      "str": "廷达洛斯哨声",
-      "str_pl": "丁达洛的哨声"
+      "str": "廷达罗斯口哨",
+      "str_pl": "廷达罗斯口哨"
     },
     "description": "这是一个小哨子，如果不是因为不寻常的印记和异国情调的材料，它像狗的哨子。它发出的奇怪的声音显然不是为了叫唤犬科动物，或任何与此维度相关的东西。",
     "initial_charges": 1,

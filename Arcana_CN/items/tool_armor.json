@@ -5,10 +5,10 @@
     "copy-from": "cloak_leather",
     "category": "armor",
     "name": {
-      "str": "镀金盾牌",
+      "str": "金色斗篷",
       "str_pl": "镀金宙斯盾"
     },
-    "description": "一种简单的皮革斗篷，用镀金的铁鳞和几根羽毛装饰。它像金龙或毒蛇的皮。使用它可以治愈轻微的伤害，以换取痛苦。",
+    "description": "一种简单的皮革斗篷，用镀金的铁鳞和几根羽毛装饰，像金龙或毒蛇的皮。使用它，感受痛苦，以治愈轻微的损伤。",
     "material": [
       "leather",
       "iron",

@@ -4,9 +4,9 @@
     "copy-from": "spell_base",
     "type": "ARMOR",
     "name": {
-      "str": "象牙光环"
+      "str": "乳白光晕"
     },
-    "description": "一种奇异的光芒渗透你的身体，赋予你看不见的东西。",
+    "description": "奇异的光辉弥漫在你的身边，你的目光得以穿透障壁。",
     "color": "magenta",
     "relic_data": {
       "passive_effects": [

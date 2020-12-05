@@ -2,7 +2,7 @@
   {
     "type": "SPECIES",
     "id": "ARCANA_SUMMONED",
-    "description": "召唤的怪物",
+    "description": "召唤兽",
     "footsteps": "微弱的耳语。",
     "anger_triggers": [
       "HURT"

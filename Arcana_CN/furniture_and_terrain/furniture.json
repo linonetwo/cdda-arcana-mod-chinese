@@ -2,7 +2,7 @@
   {
     "id": "f_blade_upright",
     "type": "furniture",
-    "name": "直立武器",
+    "name": "直立的宝剑",
     "description": "一把奇怪的剑在地上盘旋。下面的楼梯被一道坚固的光障挡住了，但是通过检查，这把剑应该很容易被移除。",
     "symbol": "|",
     "looks_like": "sun_sword_on",

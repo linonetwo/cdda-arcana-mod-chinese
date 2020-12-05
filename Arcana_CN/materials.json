@@ -42,7 +42,7 @@
     "type": "material",
     "id": "arcana_fuel_essence_dull",
     "copy-from": "essencemat",
-    "name": "沉闷精华",
+    "name": "黑暗精华",
     "fuel_data": {
       "energy": 4
     }

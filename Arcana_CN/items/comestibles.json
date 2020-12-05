@@ -5,8 +5,8 @@
     "comestible_type": "DRINK",
     "category": "drugs",
     "name": {
-      "str": "黑药",
-      "str_pl": "黑药"
+      "str": "黑色药水",
+      "str_pl": "黑色药水"
     },
     "description": "一种奇怪的黑色液体，闻起来像死亡。据称，这是创造长生不老药的第一步。喝这个会使身体麻木，但会让你有点迟钝。",
     "weight": "300 g",
