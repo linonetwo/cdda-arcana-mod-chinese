@@ -5,7 +5,11 @@
     "description": "召唤兽",
     "footsteps": "微弱的耳语。",
     "anger_triggers": [
-      "HURT"
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
     ]
   },
   {

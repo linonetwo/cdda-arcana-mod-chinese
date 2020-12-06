@@ -137,6 +137,90 @@
     "use_action": "MEDITATE"
   },
   {
+    "id": "charm_bone_empowered",
+    "copy-from": "charm_bone",
+    "type": "TOOL",
+    "name": {
+      "str": "圣骨咒"
+    },
+    "description": "一种由某种超自然的骨头或象牙制成的小护身符，上面刻有同样超凡脱俗的肖像。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将严重伤害和瘫痪8瓦内的任何生物，包括盟友，如果你不小心。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 2000,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_charm_bone_empowered",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "stinger_flute_empowered",
+    "copy-from": "stinger_flute",
+    "type": "TOOL",
+    "name": {
+      "str": "快刺长笛"
+    },
+    "description": "一种有五个指孔的抛光长笛，由某种异国怪物的毒刺雕刻而成。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将大大降低移动成本并提高规避能力。耐力和攻击速度不受影响。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 2500,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_stinger_flute_empowered",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
     "id": "offering_chalice",
     "type": "TOOL",
     "name": {

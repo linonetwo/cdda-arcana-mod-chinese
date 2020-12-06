@@ -67,6 +67,56 @@
     "max_duration": 17280000
   },
   {
+    "type": "SPELL",
+    "id": "arcana_item_brooch_iridescent_empowered",
+    "name": {
+      "str": "防护与导向"
+    },
+    "description": "向使用者授予恢复效果。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "胸针散发出一股保护魔法！",
+    "effect": "spawn_item",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "halo_brooch_effect",
+    "extra_effects": [
+      {
+        "id": "arcana_item_brooch_iridescent_empowered_fatigue",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 108000,
+    "max_duration": 108000
+  },
+  {
+    "id": "arcana_item_brooch_iridescent_empowered_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "防护与导向疲劳"
+    },
+    "description": "这使得它花费的疲劳和它在 SL 5 的魔符上花费的一样多。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -88,
+    "max_damage": -88,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "FATIGUE"
+  },
+  {
     "id": "arcana_item_chalice_offering",
     "type": "SPELL",
     "//": "Todo: add a difficulty of 3 and remove no-failure from the item's action, if it turns out that skill reasonably reduces an unleveled spell's failure rate to be feasible, when spell skill is no longer hardcoded.",
@@ -163,6 +213,116 @@
     "shape": "blast",
     "min_duration": 17280000,
     "max_duration": 17280000
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_charm_bone_empowered",
+    "name": {
+      "str": "惊人的爆炸"
+    },
+    "description": "对附近目标造成严重伤害。",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "message": "魅力散发出强大的能量！",
+    "extra_effects": [
+      {
+        "id": "arcana_item_charm_bone_empowered_spike",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_charm_bone_empowered_paralyze",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_item_charm_bone_empowered_fatigue",
+        "hit_self": true
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "min_damage": 48,
+    "max_damage": 48,
+    "damage_type": "heat",
+    "min_aoe": 8,
+    "max_aoe": 8
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_charm_bone_empowered_spike",
+    "name": {
+      "str": "惊人的冲击波"
+    },
+    "description": "对距离足够近的敌人造成双倍伤害。",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "min_damage": 48,
+    "max_damage": 48,
+    "damage_type": "heat",
+    "min_aoe": 2,
+    "max_aoe": 2
+  },
+  {
+    "id": "arcana_item_charm_bone_empowered_paralyze",
+    "type": "SPELL",
+    "name": {
+      "str": "震颤麻痹"
+    },
+    "description": "这让敌人的大脑一次被摧毁！",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "message": "",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect": "mod_moves",
+    "shape": "blast",
+    "min_damage": -2200,
+    "max_damage": -2200,
+    "min_aoe": 8,
+    "max_aoe": 8
+  },
+  {
+    "id": "arcana_item_charm_bone_empowered_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "惊人的爆炸疲劳"
+    },
+    "description": "这使得它花费的疲劳和它在 SL 5 的魔符上花费的一样多。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -48,
+    "max_damage": -48,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "FATIGUE"
   },
   {
     "id": "arcana_item_coalescent_conversion",
@@ -400,6 +560,56 @@
     "max_field_intensity": 3,
     "min_duration": 200,
     "max_duration": 400
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_amulet_exotic_empowered",
+    "name": {
+      "str": "隐藏的光环"
+    },
+    "description": "生成使效果生效所需的项。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "一个奇怪的脉冲从护身符穿过你的身体！",
+    "effect": "spawn_item",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "halo_amulet_effect",
+    "extra_effects": [
+      {
+        "id": "arcana_item_amulet_exotic_empowered_fatigue",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "arcana_item_amulet_exotic_empowered_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "隐性光环疲劳"
+    },
+    "description": "这使得它花费的疲劳和它在 SL 5 的魔符上花费的一样多。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -72,
+    "max_damage": -72,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "FATIGUE"
   },
   {
     "id": "arcana_item_generate_blood_essence",
@@ -1414,6 +1624,56 @@
     "max_damage": 4,
     "min_aoe": 6,
     "max_aoe": 6
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_triffid_garland_empowered",
+    "name": {
+      "str": "青翠促生"
+    },
+    "description": "向使用者授予恢复效果。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "一股能量从花环中流过你！",
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "triffid_garland_buff",
+    "extra_effects": [
+      {
+        "id": "arcana_item_triffid_garland_empowered_fatigue",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 84000,
+    "max_duration": 84000
+  },
+  {
+    "id": "arcana_item_triffid_garland_empowered_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "青翠促生"
+    },
+    "description": "这使得它花费的疲劳和它在 SL 5 的魔符上花费的一样多。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -56,
+    "max_damage": -56,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "FATIGUE"
   },
   {
     "type": "SPELL",
@@ -2494,6 +2754,56 @@
     "field_chance": 1,
     "min_field_intensity": 1,
     "max_field_intensity": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "arcana_item_stinger_flute_empowered",
+    "name": {
+      "str": "难以捉摸的增强"
+    },
+    "description": "生成使效果生效所需的项。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "一股能量从长笛中划过你的身体！",
+    "effect": "spawn_item",
+    "shape": "blast",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "effect_str": "halo_flute_effect",
+    "extra_effects": [
+      {
+        "id": "arcana_item_amulet_exotic_empowered_fatigue",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 96000,
+    "max_duration": 96000
+  },
+  {
+    "id": "arcana_item_stinger_flute_empowered_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "难以捉摸的增强疲劳"
+    },
+    "description": "这使得它花费的疲劳和它在 SL 5 的魔符上花费的一样多。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": -80,
+    "max_damage": -80,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "FATIGUE"
   },
   {
     "id": "arcana_item_pet",
