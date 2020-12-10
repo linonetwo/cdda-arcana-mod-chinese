@@ -938,7 +938,7 @@
     "name": {
       "str": "日蚀黑暗"
     },
-    "description": "长达3小时的黑暗。",
+    "description": "长达7个半小时的黑暗。",
     "valid_targets": [
       "self"
     ],
@@ -948,8 +948,8 @@
     "effect_str": "dim",
     "max_level": 10,
     "min_duration": 540000,
-    "max_duration": 1080000,
-    "duration_increment": 54000
+    "max_duration": 2700000,
+    "duration_increment": 216000
   },
   {
     "type": "SPELL",
@@ -993,9 +993,9 @@
     "shape": "blast",
     "effect_str": "halo_drainlife",
     "max_level": 10,
-    "min_duration": 180000,
-    "max_duration": 360000,
-    "duration_increment": 18000
+    "min_duration": 108000,
+    "max_duration": 324000,
+    "duration_increment": 21600
   },
   {
     "type": "SPELL",
@@ -2104,11 +2104,10 @@
       "RANDOM_DURATION"
     ],
     "effect_str": "arcane_pulse_side_effects",
-    "max_level": 10,
     "effect": "attack",
     "shape": "blast",
-    "min_duration": 2880000,
-    "max_duration": 3600000
+    "min_duration": 1080000,
+    "max_duration": 1440000
   },
   {
     "id": "arcana_aftermath_wave_destruction_spike",

@@ -426,15 +426,7 @@
         {
           "om_terrain": "cf_church_3",
           "om_special": "cf_rural_church",
-          "place_nested": [
-            {
-              "chunks": [
-                "cf_church_upgrade_1_c"
-              ],
-              "x": 21,
-              "y": 9
-            }
-          ]
+          "mapgen_update_id": "cf_church_upgrade_1_c"
         },
         {
           "om_terrain": "cf_church_4",
@@ -531,6 +523,11 @@
               "y": 3
             }
           ]
+        },
+        {
+          "om_terrain": "cf_church_3",
+          "om_special": "cf_rural_church",
+          "mapgen_update_id": "cf_church_upgrade_2_c"
         }
       ]
     }
@@ -683,11 +680,6 @@
               "y": 0
             }
           ]
-        },
-        {
-          "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
-          "mapgen_update_id": "cf_church_upgrade_4_c"
         }
       ]
     },
@@ -883,7 +875,7 @@
               "chunks": [
                 "cf_church_upgrade_7_a"
               ],
-              "x": 3,
+              "x": 2,
               "y": 4
             }
           ]
@@ -1585,7 +1577,7 @@
       "ORIGIN_SECONDARY"
     ],
     "dialogue": {
-      "describe": "看到这可能是一个错误，因为这个任务实际上是通过dialouge中的add_任务开始的。",
+      "describe": "看到这可能是个错误，因为这个任务实际上是通过对话中的add_mission启动的。",
       "offer": "看到这可能是一个错误。",
       "accepted": "看到这可能是一个错误。",
       "rejected": "看到这可能是一个错误。",

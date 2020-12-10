@@ -429,7 +429,7 @@
   {
     "id": "TALK_EVAC_MERCHANT_CF_MISSION_NODEAL",
     "type": "talk_topic",
-    "dynamic_line": "对不起，20个金鳞片已经够低了。世界末日，黄金不再那么方便了。我已经接受了他们的报价。",
+    "dynamic_line": "对不起，20个金鳞片已经够低了。世界末日，黄金不再那么方便了。我已经根据表面价值接受了他们的报价。",
     "responses": [
       {
         "text": "好吧，给你。",

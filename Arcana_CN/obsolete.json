@@ -1779,5 +1779,26 @@
       "TOOL_ARMOR"
     ],
     "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>，同时减少了它的<good>累赘度</good>。"
+  },
+  {
+    "id": "candle_warding_special",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "闪烁的蜡烛"
+    },
+    "description": "一支简单的蜡烛，燃烧着不灭的火焰。它给人一种淡淡的抚慰感，却没有温暖，在整个房间投下灿烂的光芒。它似乎被某种未知的力量牢牢地固定住了。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "material": [
+      "essencemat"
+    ],
+    "symbol": ",",
+    "looks_like": "candle_warding_active",
+    "color": "white",
+    "flags": [
+      "NO_SALVAGE",
+      "LIGHT_120"
+    ]
   }
 ]
