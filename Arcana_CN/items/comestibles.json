@@ -5,8 +5,8 @@
     "comestible_type": "DRINK",
     "category": "drugs",
     "name": {
-      "str": "黑药",
-      "str_pl": "黑药"
+      "str": "黑色药水",
+      "str_pl": "黑色药水"
     },
     "description": "一种奇怪的黑色液体，闻起来像死亡。据称，这是创造长生不老药的第一步。喝这个会使身体麻木，但会让你有点迟钝。",
     "weight": "300 g",
@@ -186,7 +186,7 @@
     "type": "COMESTIBLE",
     "comestible_type": "MED",
     "category": "drugs",
-    "//": "Technically carmine with purpleish-red, not black and red.  Lower base healing than water talisman, but better results with first aid skill.",
+    "//": "Technically carmine is purpleish-red, not black and red.  Lower base healing than water talisman, but better results with first aid skill.",
     "name": {
       "str": "胭脂红",
       "str_pl": "胭脂红"
@@ -235,7 +235,7 @@
       "str": "柠檬香",
       "str_pl": "柠檬香"
     },
-    "//": "Citrine isn't quite white-yellow either, but jasmine incense would imply the flower rather than the color.  Last piece of advice in the description, while common sense, is only really a concern with sleep deprivation enabled.",
+    "//": "Citrine isn't quite white-yellow either, but jasmine incense would imply the flower rather than the color.",
     "description": "一种渗入可燃木炭或树脂基的炼金术混合物，产生一种特殊的香。点燃它会迅速烧掉这种奇怪的混合物，用一种类似于最初用来制造它的药剂的集中效果来激励它的使用者。它用它对强度和速度的影响来换取通过不寻常的方法直接缓解疲劳，尽管不建议长期使用而不休息。",
     "weight": "550 g",
     "volume": "250 ml",

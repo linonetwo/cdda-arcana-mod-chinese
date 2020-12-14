@@ -1,24 +1,6 @@
 [
   {
-    "id": "arcana_acidchitin_weave",
-    "type": "json_flag",
-    "context": [
-      "ARMOR",
-      "TOOL_ARMOR"
-    ],
-    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>以及<good>耐酸性</good>。"
-  },
-  {
-    "id": "arcana_bone_weave",
-    "type": "json_flag",
-    "context": [
-      "ARMOR",
-      "TOOL_ARMOR"
-    ],
-    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>，同时减少了它的<good>累赘度</good>。"
-  },
-  {
-    "id": "arcana_chitin_weave",
+    "id": "arcana_birchbark_weave",
     "type": "json_flag",
     "context": [
       "ARMOR",
@@ -27,30 +9,21 @@
     "info": "这个装备已经被德鲁伊魔法改变了，增加了<good>防护能力</good>。"
   },
   {
-    "id": "arcana_clay_weave",
+    "id": "arcana_tanbark_weave",
     "type": "json_flag",
     "context": [
       "ARMOR",
       "TOOL_ARMOR"
     ],
-    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>，以及它的<good>防火能力</good>。"
+    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>耐酸性和耐火性。"
   },
   {
-    "id": "arcana_stone_weave",
+    "id": "arcana_willowbark_weave",
     "type": "json_flag",
     "context": [
       "ARMOR",
       "TOOL_ARMOR"
     ],
-    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>，以及它的<good>防火能力</good>。"
-  },
-  {
-    "id": "arcana_wood_weave",
-    "type": "json_flag",
-    "context": [
-      "ARMOR",
-      "TOOL_ARMOR"
-    ],
-    "info": "这个装备已经被德鲁伊魔法改变了，增加了它的<good>防护能力</good>，同时减少了它的<good>累赘度</good>。"
+    "info": "这个装备已经被德鲁伊魔法改变了，减少了<good>的负担。"
   }
 ]

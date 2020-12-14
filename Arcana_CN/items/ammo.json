@@ -476,5 +476,19 @@
       "AMMO_ARCANA_AIR_EFFECT",
       "NO_EMBED"
     ]
+  },
+  {
+    "type": "AMMO",
+    "id": "primitive_magic_item_ammo",
+    "name": {
+      "str_sp": "recharge"
+    },
+    "symbol": "=",
+    "color": "white",
+    "description": "残余的能量流过一个初级的魔法物品。",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "ammo_type": "primitive_magic_item_ammo_type"
   }
 ]

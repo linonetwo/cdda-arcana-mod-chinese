@@ -194,8 +194,7 @@
     "energy_increment": -1.2,
     "min_duration": 30000,
     "max_duration": 90000,
-    "duration_increment": 6000,
-    "spell_class": "SPELL_CONFUSE"
+    "duration_increment": 6000
   },
   {
     "id": "arcana_magic_confuse_monster",
@@ -204,7 +203,7 @@
       "str": "魔符：迷惑怪物"
     },
     "description": "神迹\n魔法符号将使你周围的所有敌人眩晕。",
-    "message": "“没有刀锋可以印记我，如果手不能击中真实…”你投%s！",
+    "message": "“没有刀锋可以印记我，如果手不能击中真实…”你施放出了%s！",
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [
@@ -233,9 +232,10 @@
     "base_energy_cost": 40,
     "final_energy_cost": 32,
     "energy_increment": -0.8,
-    "min_duration": 600,
-    "max_duration": 2400,
-    "duration_increment": 180
+    "min_duration": 900,
+    "max_duration": 5400,
+    "duration_increment": 450,
+    "spell_class": "SPELL_CONFUSE"
   },
   {
     "id": "arcana_magic_conjure_acid",
@@ -377,7 +377,7 @@
     "name": {
       "str": "标志：圣化"
     },
-    "description": "神迹\n魔法符号将改变你周围的地形，驱走困扰这片土地的各种超自然的腐败迹象。它也会在一定程度上削弱一些超自然的怪物。",
+    "description": "使用此咒语的\n魔法符号将改变你周围的地形，驱走困扰这片土地的各种超自然的腐败迹象。它也会伤害到有限的选择超自然的怪物。",
     "message": "“我是揭露恶人，用火焰鞭打他们的人……”你施放了 %s！",
     "valid_targets": [
       "ground"
@@ -400,7 +400,7 @@
     ],
     "energy_source": "FATIGUE",
     "max_level": 10,
-    "difficulty": 80,
+    "difficulty": 60,
     "skill": "magic",
     "min_damage": 4,
     "max_damage": 2,
@@ -408,15 +408,15 @@
     "min_aoe": 8,
     "max_aoe": 12,
     "aoe_increment": 0.4,
-    "min_range": 12,
-    "max_range": 20,
+    "min_range": 8,
+    "max_range": 16,
     "range_increment": 0.8,
-    "base_casting_time": 360,
-    "final_casting_time": 270,
-    "casting_time_increment": -9,
-    "base_energy_cost": 90,
-    "final_energy_cost": 72,
-    "energy_increment": -1.8
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4
   },
   {
     "id": "arcana_magic_dampening",
@@ -426,7 +426,7 @@
       "str": "标志：位移"
     },
     "description": "神迹\n魔法符号会将你的位置与你选择的敌对目标交换，让你的受害者头晕目眩，并在你走出的区域前方制造一股雾。",
-    "message": "“如果它是已知的，它可以达到…”你投%s！",
+    "message": "“如果它是已知的，它可以达到…”你施放了%s！",
     "valid_targets": [
       "hostile"
     ],
@@ -516,9 +516,9 @@
     "base_energy_cost": 100,
     "final_energy_cost": 80,
     "energy_increment": -2,
-    "min_duration": 120000,
-    "max_duration": 360000,
-    "duration_increment": 24000
+    "min_duration": 108000,
+    "max_duration": 324000,
+    "duration_increment": 21600
   },
   {
     "id": "arcana_magic_elemental_burst",
@@ -667,7 +667,7 @@
       "str": "标志：暖气病房"
     },
     "description": "神迹\n魔法符号将给予对热量和烟雾的暂时抵抗力。然而，直接接触火焰仍会造成伤害。它可以用在你自己或盟友身上。",
-    "message": "“钢铁不怕回火的火焰……”你铸造了%s！",
+    "message": "“钢铁不怕回火的火焰……”你施放了%s！",
     "valid_targets": [
       "self",
       "ally"
@@ -743,19 +743,27 @@
     "name": {
       "str": "标志：灯光"
     },
-    "description": "神迹\n魔法符号将召唤出一片魔法光场，在你周围徘徊。",
+    "description": "使用此咒语的\n魔法符号将召唤出一片魔法光场，在你周围徘徊。它也会对避光的生物造成轻微伤害。",
     "message": "“最小的烛光带来希望直到黎明……”你施放了 %s！",
     "valid_targets": [
-      "self"
+      "ground"
     ],
     "flags": [
       "NO_HANDS",
       "NO_LEGS",
       "VERBAL",
-      "NO_FAIL"
+      "NO_FAIL",
+      "SILENT"
     ],
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_light_searing",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
     "energy_source": "FATIGUE",
     "min_aoe": 4,
     "max_aoe": 8,
@@ -769,9 +777,9 @@
     "base_energy_cost": 30,
     "final_energy_cost": 24,
     "energy_increment": -0.6,
-    "min_duration": 300000,
-    "max_duration": 2400000,
-    "duration_increment": 210000,
+    "min_duration": 120000,
+    "max_duration": 600000,
+    "duration_increment": 48000,
     "field_id": "fd_veil_light",
     "field_chance": 2,
     "min_field_intensity": 1,
@@ -1178,9 +1186,9 @@
     "base_energy_cost": 70,
     "final_energy_cost": 56,
     "energy_increment": -1.4,
-    "min_duration": 900000,
-    "max_duration": 7200000,
-    "duration_increment": 630000
+    "min_duration": 360000,
+    "max_duration": 1800000,
+    "duration_increment": 144000
   },
   {
     "id": "arcana_magic_summon_skeletal_dog",
@@ -1217,9 +1225,9 @@
     "base_energy_cost": 40,
     "final_energy_cost": 32,
     "energy_increment": -0.8,
-    "min_duration": 450000,
-    "max_duration": 3600000,
-    "duration_increment": 315000,
+    "min_duration": 180000,
+    "max_duration": 900000,
+    "duration_increment": 72000,
     "spell_class": "SPELL_SUMMONDOG"
   },
   {
@@ -1257,9 +1265,9 @@
     "base_energy_cost": 60,
     "final_energy_cost": 48,
     "energy_increment": -1.2,
-    "min_duration": 750000,
-    "max_duration": 6000000,
-    "duration_increment": 525000
+    "min_duration": 300000,
+    "max_duration": 1500000,
+    "duration_increment": 120000
   },
   {
     "id": "arcana_magic_summon_shadow_snake",
@@ -1296,9 +1304,9 @@
     "base_energy_cost": 50,
     "final_energy_cost": 40,
     "energy_increment": -1,
-    "min_duration": 480000,
-    "max_duration": 4800000,
-    "duration_increment": 432000
+    "min_duration": 240000,
+    "max_duration": 1200000,
+    "duration_increment": 96000
   },
   {
     "id": "arcana_magic_surge_adrenaline",

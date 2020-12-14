@@ -1080,20 +1080,24 @@
   {
     "type": "mapgen",
     "method": "json",
-    "nested_mapgen_id": "cf_church_upgrade_1_c",
-    "weight": 100,
+    "update_mapgen_id": "cf_church_upgrade_1_b",
     "object": {
-      "mapgensize": [
-        2,
-        2
-      ],
-      "rows": [
-        " +",
-        " +"
-      ],
-      "terrain": {
-        "+": "t_rdoor_c"
-      }
+      "set": [
+        {
+          "line": "terrain",
+          "id": "t_rdoor_c",
+          "x": 22,
+          "x2": 22,
+          "y": 9,
+          "y2": 10
+        },
+        {
+          "point": "terrain",
+          "id": "t_pit",
+          "x": 20,
+          "y": 3
+        }
+      ]
     }
   },
   {
@@ -1112,12 +1116,12 @@
         "                   #",
         "                   #",
         "                    ",
-        "                   #",
+        "              i    #",
         "                   #",
         "                    ",
         "                    ",
         "                   #",
-        "                   #",
+        "              i    #",
         "                    ",
         "                   #",
         "                   #",
@@ -1131,22 +1135,9 @@
         "+": "t_rdoor_c"
       },
       "furniture": {
-        "#": "f_sandbag_half"
-      },
-      "place_loot": [
-        {
-          "item": "candle_warding_special",
-          "x": 14,
-          "y": 6,
-          "chance": 100
-        },
-        {
-          "item": "candle_warding_special",
-          "x": 14,
-          "y": 11,
-          "chance": 100
-        }
-      ]
+        "#": "f_sandbag_half",
+        "i": "f_arcane_candlestick_lit"
+      }
     }
   },
   {
@@ -1222,6 +1213,21 @@
         "|": "t_wall_log_half",
         "_": "t_thatch_roof"
       }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "update_mapgen_id": "cf_church_upgrade_2_c",
+    "object": {
+      "set": [
+        {
+          "point": "terrain",
+          "id": "t_covered_well",
+          "x": 20,
+          "y": 3
+        }
+      ]
     }
   },
   {
@@ -1447,6 +1453,12 @@
           "x2": 21,
           "y": 22,
           "y2": 22
+        },
+        {
+          "point": "terrain",
+          "id": "t_water_pump",
+          "x": 20,
+          "y": 3
         }
       ],
       "place_loot": [
@@ -1578,21 +1590,6 @@
         "|": "t_wall_log",
         "_": "t_door_frame"
       }
-    }
-  },
-  {
-    "type": "mapgen",
-    "method": "json",
-    "update_mapgen_id": "cf_church_upgrade_4_c",
-    "object": {
-      "set": [
-        {
-          "point": "terrain",
-          "id": "t_covered_well",
-          "x": 20,
-          "y": 3
-        }
-      ]
     }
   },
   {
@@ -3216,7 +3213,7 @@
       "rows": [
         "|||||||||||||||||||",
         "|    |        |   |",
-        "|    |            |",
+        "     |            |",
         "|             |||||",
         "|    |            |",
         "|    |        |   |",
@@ -3251,7 +3248,7 @@
       "rows": [
         "|||||||||||||||||||",
         "|    |        |   |",
-        "|    |        _   |",
+        "_    |        _   |",
         "|    _        |||||",
         "|    |        _   |",
         "|    |        |   |",
@@ -3282,27 +3279,28 @@
     "nested_mapgen_id": "cf_church_upgrade_7_a",
     "object": {
       "mapgensize": [
-        17,
-        17
+        18,
+        18
       ],
       "rows": [
-        ".... ........ ...",
-        ".... ........+...",
-        "....+........    ",
-        ".... ........+...",
-        ".... ........ ...",
-        "        ++       ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 ",
-        "                 "
+        " .... ........ ...",
+        "+.... ........+...",
+        " ....+........    ",
+        " .... ........+...",
+        " .... ........ ...",
+        "         ++       ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  ",
+        "                  "
       ],
       "terrain": {
         "+": "t_door_c",

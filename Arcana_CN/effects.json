@@ -1,6 +1,55 @@
 [
   {
     "type": "effect_type",
+    "id": "triffid_garland_buff",
+    "name": [
+      "青翠促生"
+    ],
+    "desc": [
+      "你身体的自然耐力和疼痛恢复得到增强。"
+    ],
+    "remove_message": "花环的恢复效果减弱。",
+    "decay_messages": [
+      [
+        "青翠三尖树花环的效果开始消退。",
+        "坏的"
+      ]
+    ],
+    "rating": "good",
+    "max_intensity": 15,
+    "int_dur_factor": "1 m",
+    "base_mods": {
+      "pain_min": [
+        -1
+      ],
+      "stamina_min": [
+        20
+      ],
+      "health_min": [
+        1
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "rad_min": [
+        -1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "halo_flute_effect",
+    "//": "Effectively combines some of the perks of Free Action and yellow potion.",
+    "removes_effects": [
+      "downed",
+      "bouldering",
+      "grabbed",
+      "lack_sleep",
+      "sleep_deprived"
+    ]
+  },
+  {
+    "type": "effect_type",
     "id": "potion_numbness",
     "name": [
       "极度麻木"
@@ -220,6 +269,12 @@
       "health_chance": [
         5
       ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        5
+      ],
       "pain_tick": [
         25
       ],
@@ -260,6 +315,12 @@
         1
       ],
       "health_chance": [
+        15
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
         15
       ],
       "pain_tick": [
@@ -596,6 +657,14 @@
         -10
       ],
       "health_tick": [
+        0,
+        30
+      ],
+      "h_mod_min": [
+        0,
+        -10
+      ],
+      "h_mod_tick": [
         0,
         30
       ],
@@ -1107,6 +1176,12 @@
       ],
       "health_chance": [
         12
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        12
       ]
     }
   },
@@ -1175,6 +1250,15 @@
       ],
       "health_chance_bot": [
         100
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        30
+      ],
+      "h_mod_chance_bot": [
+        100
       ]
     }
   },
@@ -1218,6 +1302,13 @@
         1800,
         2000
       ],
+      "h_mod_min": [
+        -1
+      ],
+      "h_mod_tick": [
+        1800,
+        2000
+      ],
       "stamina_min": [
         -5
       ],
@@ -1228,6 +1319,10 @@
     },
     "scaling_mods": {
       "health_min": [
+        -1,
+        -0.8
+      ],
+      "h_mod_min": [
         -1,
         -0.8
       ],
@@ -1248,7 +1343,7 @@
       "PROF_CHALICE"
     ],
     "name": [
-      "毁灭性倦怠"
+      "奥术倦怠"
     ],
     "desc": [
       "人类的思想和身体并不是用来输送这种破坏性能量的管道。过度使用不会杀死你，但会让你更难集中精力施法。"
@@ -1259,17 +1354,20 @@
       "int_mod": [
         -1
       ],
-      "vomit_chance": [
-        2000,
-        2400
-      ],
-      "pain_min": [
-        5,
-        3
+      "stamina_min": [
+        -5
       ],
       "pain_chance": [
-        1000,
-        1200
+        1500,
+        2000
+      ],
+      "vomit_chance": [
+        2000,
+        2500
+      ],
+      "vomit_tick": [
+        60,
+        120
       ]
     },
     "scaling_mods": {
@@ -1277,16 +1375,21 @@
         -1.25,
         -1
       ],
-      "vomit_chance": [
-        -200,
-        -240
-      ],
       "stamina_min": [
-        -5
+        -2,
+        -1
+      ],
+      "pain_min": [
+        1,
+        0.5
       ],
       "pain_chance": [
-        100,
-        120
+        -200,
+        100
+      ],
+      "vomit_chance": [
+        -200,
+        -100
       ]
     }
   },
@@ -1339,6 +1442,12 @@
         -1
       ],
       "health_tick": [
+        600
+      ],
+      "h_mod_min": [
+        -1
+      ],
+      "h_mod_tick": [
         600
       ],
       "stamina_min": [
@@ -1555,6 +1664,13 @@
       "health_chance": [
         400
       ],
+      "h_mod_min": [
+        -6,
+        -5
+      ],
+      "h_mod_chance": [
+        400
+      ],
       "rad_min": [
         5,
         4
@@ -1581,6 +1697,10 @@
         -115
       ],
       "health_chance": [
+        -40,
+        -35
+      ],
+      "h_mod_chance": [
         -40,
         -35
       ],
@@ -1734,6 +1854,12 @@
       "health_tick": [
         3600
       ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_tick": [
+        3600
+      ],
       "hunger_min": [
         1
       ],
@@ -1764,6 +1890,10 @@
     },
     "scaling_mods": {
       "health_tick": [
+        -360,
+        -300
+      ],
+      "h_mod_tick": [
         -360,
         -300
       ],
@@ -1817,6 +1947,10 @@
         50
       ],
       "health_min": [
+        0,
+        -10
+      ],
+      "h_mod_min": [
         0,
         -10
       ],
@@ -1885,6 +2019,9 @@
     "max_duration": "4 s",
     "base_mods": {
       "health_min": [
+        1
+      ],
+      "h_mod_min": [
         1
       ]
     }

@@ -426,15 +426,7 @@
         {
           "om_terrain": "cf_church_3",
           "om_special": "cf_rural_church",
-          "place_nested": [
-            {
-              "chunks": [
-                "cf_church_upgrade_1_c"
-              ],
-              "x": 21,
-              "y": 9
-            }
-          ]
+          "mapgen_update_id": "cf_church_upgrade_1_c"
         },
         {
           "om_terrain": "cf_church_4",
@@ -531,6 +523,11 @@
               "y": 3
             }
           ]
+        },
+        {
+          "om_terrain": "cf_church_3",
+          "om_special": "cf_rural_church",
+          "mapgen_update_id": "cf_church_upgrade_2_c"
         }
       ]
     }
@@ -683,11 +680,6 @@
               "y": 0
             }
           ]
-        },
-        {
-          "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
-          "mapgen_update_id": "cf_church_upgrade_4_c"
         }
       ]
     },
@@ -883,7 +875,7 @@
               "chunks": [
                 "cf_church_upgrade_7_a"
               ],
-              "x": 3,
+              "x": 2,
               "y": 4
             }
           ]
@@ -1248,8 +1240,8 @@
     "followup": "MISSION_CF_GM_4",
     "dialogue": {
       "describe": "赐予我们力量。。。",
-      "offer": "我们不仅有证据表明一群仍在实践的乐观主义者，而且还证实了他们最有可能的藏身之处。你知道该怎么做。他们的教派很可能集中在一个当地的法师周围，优先考虑他们将减少威胁，即使他们的部下逃脱法律制裁。当你准备好完成任务时，把他们找出来。",
-      "accepted": "上帝和众神愿意，愿你平安归来。这将是一项危险的任务，虽然我们可能捉襟见肘，但我允许你酌情请求援助。我们可以再找一个猎人来完成这项任务。",
+      "offer": "我们不仅有证据表明一群仍在实践的乐观主义者，而且证实了他们最可能的藏身之处。你知道该怎么做。他们的教派将集中在一个当地的法师周围，优先考虑他们将减少威胁，即使他们的部下逃脱法律制裁。当你准备好完成任务时，把他们找出来。",
+      "accepted": "上帝和众神愿意，愿你平安归来。这将是一项危险的任务，虽然我们可能捉襟见肘，但我允许你酌情请求援助。我们可以让另一个猎人来完成这么危险的任务。",
       "rejected": "我理解。准备好了再回来。",
       "advice": "他们会追求任何他们能得到的好处。任何武器，任何邪恶的魔法，任何身体和灵魂的堕落。尽可能多的为你的事业召集盟友，任何适合你的武器。",
       "inquire": "他们被处理了吗？",
@@ -1585,7 +1577,7 @@
       "ORIGIN_SECONDARY"
     ],
     "dialogue": {
-      "describe": "看到这可能是一个错误，因为这个任务实际上是通过dialouge中的add_任务开始的。",
+      "describe": "看到这可能是个错误，因为这个任务实际上是通过对话中的add_mission启动的。",
       "offer": "看到这可能是一个错误。",
       "accepted": "看到这可能是一个错误。",
       "rejected": "看到这可能是一个错误。",

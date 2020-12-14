@@ -1,14 +1,140 @@
 [
   {
+    "id": "triffid_garland_empowered",
+    "copy-from": "triffid_garland",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "青翠三尖树花环"
+    },
+    "description": "戴在脖子上的由另一个世界的鲜艳的花组成的花环。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将给予一个新的耐力爆发，恢复疼痛和加快身体的自然愈合。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 1200,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_triffid_garland_empowered",
+      "no_fail": true,
+      "need_worn": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "amulet_exotic_empowered",
+    "copy-from": "amulet_exotic",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "带着异国情调的护身符"
+    },
+    "description": "一条镶有一颗宝石的临时项链，一种由某种非自然材料制成的符咒。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它会遮蔽你的生命力，使你无法被亡灵发现，作为交换，让世俗的野生动物对你更有侵略性。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 1500,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_amulet_exotic_empowered",
+      "no_fail": true,
+      "need_worn": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "brooch_iridescent_empowered",
+    "copy-from": "brooch_iridescent",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "镶嵌彩虹色胸针"
+    },
+    "description": "一个手工制作的圆盘胸针由一种奇怪的，神秘的材料制成，类似于珍珠母元素魔法，被编织成一个原始的魔法物品。使用它会增强你的抵抗力。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 2000,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_brooch_iridescent_empowered",
+      "no_fail": true,
+      "need_worn": true,
+      "level": 0
+    }
+  },
+  {
     "id": "gilded_aegis",
     "type": "TOOL_ARMOR",
     "copy-from": "cloak_leather",
     "category": "armor",
     "name": {
-      "str": "镀金盾牌",
+      "str": "金色斗篷",
       "str_pl": "镀金宙斯盾"
     },
-    "description": "一种简单的皮革斗篷，用镀金的铁鳞和几根羽毛装饰。它像金龙或毒蛇的皮。使用它可以治愈轻微的伤害，以换取痛苦。",
+    "description": "一种简单的皮革斗篷，用镀金的铁鳞和几根羽毛装饰，像金龙或毒蛇的皮。使用它，感受痛苦，以治愈轻微的损伤。",
     "material": [
       "leather",
       "iron",
@@ -67,7 +193,8 @@
     "price_postapoc": 4000,
     "material": [
       "iron",
-      "copper"
+      "copper",
+      "leather"
     ],
     "symbol": "[",
     "looks_like": "mask_bal",
@@ -490,7 +617,8 @@
     "relative": {
       "weight": 3020,
       "price": 55000,
-      "material_thickness": 1
+      "material_thickness": 1,
+      "encumbrance": 5
     },
     "extend": {
       "flags": [

@@ -190,7 +190,7 @@
     "type": "vehicle_part",
     "location": "engine_block",
     "name": {
-      "str": "失真放大电机"
+      "str": "空间扭曲电动机"
     },
     "symbol": "*",
     "looks_like": "vgen2",
