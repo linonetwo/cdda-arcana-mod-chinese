@@ -309,7 +309,7 @@
     "name": {
       "str": "火焰护身符"
     },
-    "description": "一种粗糙的纸制护身符，上面有奇怪的图案，并涂有少量的祭品。如果你走投无路，它可以用来迅速点火。",
+    "description": "一种粗糙的纸制护身符，上面有奇怪的图案，并涂有少量的祭品。它可以用来近距离献祭敌人，或者在你绝望的情况下迅速点燃一个更可控的火力。",
     "//": "Talismans are natural magic, rare to non-existent pre-cataclysm as they develop from survivors studying otherworldly phenomena and connecting it to familiar concepts.",
     "price_postapoc": 300,
     "weight": "150 g",
@@ -320,12 +320,19 @@
     "looks_like": "birchbark",
     "symbol": ",",
     "color": "cyan",
-    "charges": 10,
-    "charges_per_use": 1,
-    "use_action": {
-      "type": "firestarter",
-      "moves": 5
-    },
+    "charges": 1,
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "arcana_item_immolate",
+        "no_fail": true,
+        "level": 0
+      },
+      {
+        "type": "firestarter",
+        "moves": 5
+      }
+    ],
     "flags": [
       "NO_SALVAGE",
       "NO_INGEST",

@@ -5435,7 +5435,7 @@
   {
     "type": "mapgen",
     "method": "json",
-    "update_mapgen_id": "cf_church_upgrade_4_prelude_c",
+    "update_mapgen_id": "cf_church_upgrade_GM_4_prelude_c",
     "object": {
       "set": [
         {
@@ -5508,7 +5508,7 @@
   {
     "type": "mapgen",
     "method": "json",
-    "update_mapgen_id": "cf_church_upgrade_4_prelude_d",
+    "update_mapgen_id": "cf_church_upgrade_GM_4_prelude_d",
     "object": {
       "set": [
         {
@@ -5548,7 +5548,7 @@
           "id": "t_palisade",
           "x": 22,
           "x2": 22,
-          "y": 3,
+          "y": 0,
           "y2": 22
         },
         {
@@ -5796,9 +5796,9 @@
       "set": [
         {
           "line": "terrain",
-          "id": "t_palisade_gate",
+          "id": "t_palisade_gate_o",
           "x": 9,
-          "x2": 4,
+          "x2": 14,
           "y": 22,
           "y2": 22
         },

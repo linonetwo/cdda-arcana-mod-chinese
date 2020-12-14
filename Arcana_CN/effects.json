@@ -989,11 +989,17 @@
       ]
     ],
     "rating": "good",
-    "max_intensity": 100,
+    "max_duration": "100 m",
+    "max_intensity": 15,
     "int_dur_factor": "1 m",
     "base_mods": {
       "int_mod": [
-        8
+        1
+      ]
+    },
+    "scaling_mods": {
+      "int_mod": [
+        0.5
       ]
     }
   },

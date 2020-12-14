@@ -93,7 +93,7 @@
     "type": "TOOL",
     "copy-from": "bone_flute",
     "name": {
-      "str": "毒刺长笛",
+      "str": "刺笛",
       "str_pl": "毒刺长笛"
     },
     "description": "一种有五个指孔的抛光长笛，由某种异国怪物的毒刺雕刻而成。把它放在嘴里应该是安全的。",
@@ -274,7 +274,7 @@
     "//": "By necessity can't yet define this to use copy-from, as qualities will break it.",
     "category": "weapons",
     "name": {
-      "str": "银器"
+      "str": "银质仪式刀"
     },
     "description": "一把华丽的银匕首，似乎是为了祭祀而制作的。它似乎比银更锋利。它可以用来进行一个仪式，将你的生命力转化为血之精华。这样做将需要5分钟，造成失血和损伤的最后，以及潜在的后果，如果过度使用。。。",
     "weight": "1302 g",
@@ -329,7 +329,7 @@
     "type": "TOOL",
     "category": "weapons",
     "name": {
-      "str": "清廉之剑"
+      "str": "不朽之剑"
     },
     "//": "Stats are a blend of the available swords you can use to make it, same deal as the mantle of shadows.",
     "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。当它被神圣的魔法精华所驱动时，它有能力穿透黑暗。",
@@ -397,8 +397,8 @@
     "repairs_like": "sun_sword",
     "category": "weapons",
     "name": {
-      "str": "清廉剑（开）",
-      "str_pl": "清廉剑（上）"
+      "str": "不朽之剑（开）",
+      "str_pl": "不朽之剑（开）"
     },
     "//": "Weapons normally come with the vorpal flag, not the technique.  But gaining the technique through normal means likely breaks with transforming weapons.",
     "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。刀片发出强烈的白光和灼热。",
@@ -444,8 +444,8 @@
     "category": "weapons",
     "copy-from": "warhammer",
     "name": {
-      "str": "猎人之锤",
-      "str_pl": "猎人之锤"
+      "str": "猎手战锤",
+      "str_pl": "猎手战锤"
     },
     "description": "一种镶有银的战锤，上面刻有古拉丁语的宗教祈祷词。很多魔法物品都可以用这个道具净化。使用它将引导神圣的精华进入一个惊人的闪光。虽然使用它是一把双刃剑，但它会对黑暗生物产生进一步的影响。",
     "price": 80000,
@@ -560,7 +560,7 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神光卷轴",
+      "str": "神圣的光明卷轴",
       "str_pl": "神圣的光明卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和太阳图案的插图，代表着一个超凡脱俗的太阳神。使用它会使肾上腺素激增，瞬间减慢时间，同时发出耀眼的光芒。",
@@ -569,7 +569,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开神圣的光卷轴…"
+      "message": "你展开神圣的光明卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -585,8 +585,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "黑暗神圣卷轴",
-      "str_pl": "黑暗的神圣卷轴"
+      "str": "神圣的黑暗卷轴",
+      "str_pl": "神圣的黑暗卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和对月亮周期的描绘，代表着一个超凡脱俗的月亮神。使用它将在黑暗中笼罩该区域，使敌人暂时失明。",
     "price": 12000,
@@ -594,7 +594,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开黑暗的神圣卷轴…"
+      "message": "你展开神圣的黑暗卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -610,8 +610,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神圣命令卷轴",
-      "str_pl": "神圣的命令卷轴"
+      "str": "神圣的指令卷轴",
+      "str_pl": "神圣的指令卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和士兵的形象，代表着一个超自然的秩序神。使用它会尝试将生物暂时束缚在你的意志上。然而，将你的思想向外投射的突如其来的冲击会让你痛苦地眩晕。",
     "price": 14000,
@@ -619,7 +619,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开神圣的命令卷轴…"
+      "message": "你展开神圣的指令卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -635,8 +635,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "再生神卷",
-      "str_pl": "重生的神圣卷轴"
+      "str": "神圣的再生神卷",
+      "str_pl": "神圣的再生卷轴"
     },
     "description": "这是一幅卷轴，上面写着奇怪的文字和奇异的自然风光，代表着一位超凡脱俗的混沌之神。使用它将召唤一个强大的治疗咒语，同时使该地区的生命变得狂野。然而，使用它有可能以不正常的方式变异。",
     "price": 14000,
@@ -644,7 +644,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开重生的神圣卷轴…"
+      "message": "你展开神圣的再生卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -660,8 +660,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神破卷轴",
-      "str_pl": "神破卷轴"
+      "str": "神圣的毁灭卷轴",
+      "str_pl": "神圣的毁灭卷轴"
     },
     "description": "这是一幅卷轴，上面写着奇怪的文字和无尽的战斗场面，代表着一个超凡脱俗的战神。使用它会引起雷鸣般的轰鸣，倒塌建筑物，伤害周围的生物，代价是吸引超自然的注意力。",
     "price": 16000,
@@ -669,7 +669,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开了神圣的分裂卷轴…"
+      "message": "你展开了神圣的毁灭卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -685,8 +685,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "不和谐神圣卷轴",
-      "str_pl": "神圣的不和卷轴"
+      "str": "神圣的诡术卷轴",
+      "str_pl": "神圣的诡术卷轴"
     },
     "description": "这是一幅卷轴，上面有奇怪的文字和奇特的旋转符号，代表着一个超凡脱俗的骗子神。使用它会传送你离开，留下你曾经存在过的危险。虽然你总能安全抵达目的地，但你可能会遭受其他后果。",
     "price": 16000,
@@ -694,7 +694,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开了不和谐的神圣卷轴…"
+      "message": "你展开了神圣的诡术卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -710,8 +710,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "诡计铭文",
-      "str_pl": "诡计铭文"
+      "str": "雕文：欺诈",
+      "str_pl": "雕文：欺诈"
     },
     "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。很容易控制。",
     "price": 150000,
@@ -732,8 +732,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "诡计雕文（激活）",
-      "str_pl": "诡计雕文（激活）"
+      "str": "雕文：欺诈（激活）",
+      "str_pl": "雕文：欺诈（激活）"
     },
     "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。",
     "price": 150000,
@@ -759,8 +759,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "根字形",
-      "str_pl": "根字形"
+      "str": "雕文：树根",
+      "str_pl": "雕文：树根"
     },
     "//": "ID retained to prevent tileset breakage, monster summoned was changed due to blank bodies being outright useless.",
     "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。很容易控制。",
@@ -782,8 +782,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "根字形（活动）",
-      "str_pl": "根字形（活动）"
+      "str": "雕文：树根（活动）",
+      "str_pl": "雕文：树根（活动）"
     },
     "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。",
     "price": 150000,
@@ -809,8 +809,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "火坑雕文",
-      "str_pl": "火坑雕文"
+      "str": "雕文：欣嫩谷",
+      "str_pl": "雕文：欣嫩谷"
     },
     "//": "ID retained to prevent tileset breakage, monster summoned was changed due to flaming eyes being useless if friendly.",
     "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。它有点容易控制。",
@@ -832,8 +832,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "火坑雕文（激活）",
-      "str_pl": "火坑雕文（激活）"
+      "str": "雕文：欣嫩谷（激活）",
+      "str_pl": "雕文：欣嫩谷（激活）"
     },
     "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。",
     "price": 150000,
