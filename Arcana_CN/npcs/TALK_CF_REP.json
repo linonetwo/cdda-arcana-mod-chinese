@@ -123,7 +123,7 @@
         }
       },
       {
-        "text": "约翰纳森派我去调查一个异常，我找到了这本日记。你能解释一下吗？",
+        "text": "[任务]约翰纳森派我去调查一个异常，我找到了这本日记。你能解释吗？",
         "topic": "TALK_CF_REP_PRELUDE_JOURNAL",
         "condition": {
           "and": [
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "text": "约翰纳森派我去调查一个异常情况，我在那里发现了一块奇怪的宝石。你怎么看的？",
+        "text": "[任务]约翰纳森派我去调查一个异常，我在那里发现了一块奇怪的宝石。你怎么看的？",
         "topic": "TALK_CF_REP_PRELUDE_GEM",
         "condition": {
           "and": [
@@ -167,7 +167,14 @@
         ]
       },
       {
-        "text": "Johnathan问我他正在调查的一个异常情况，并建议我向其他人询问信息。我该问谁？",
+        "text": "[任务]约翰纳森问我他正在调查的一个异常情况，告诉我一个幸存者营地可能有线索。有什么建议吗？",
+        "topic": "TALK_CF_REP_PRELUDE_CAMP",
+        "condition": {
+          "u_has_mission": "MISSION_CF_GM_4_PRELUDE"
+        }
+      },
+      {
+        "text": "[任务]约翰纳森问我他正在调查的一个异常情况，并建议我向其他人询问信息。我该问谁？",
         "topic": "TALK_CF_REP_JOHNATHAN_PRELUDE",
         "condition": {
           "and": [
@@ -244,6 +251,11 @@
           "and": [
             {
               "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
+            {
+              "not": {
                 "u_has_effect": "sofia_motive_explained"
               }
             },
@@ -258,6 +270,11 @@
         "text": "我不是来和你打架的。",
         "condition": {
           "and": [
+            {
+              "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
             {
               "not": {
                 "u_has_effect": "sofia_motive_explained"
@@ -276,6 +293,11 @@
           "and": [
             {
               "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
+            {
+              "not": {
                 "u_has_effect": "sofia_motive_explained"
               }
             },
@@ -290,6 +312,11 @@
         "text": "我是被他们选中的，虽然我不是看守人。",
         "condition": {
           "and": [
+            {
+              "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
             {
               "not": {
                 "u_has_effect": "sofia_motive_explained"
@@ -313,6 +340,11 @@
           "and": [
             {
               "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
+            {
+              "not": {
                 "u_has_effect": "sofia_motive_explained"
               }
             },
@@ -329,6 +361,11 @@
           "and": [
             {
               "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
+            {
+              "not": {
                 "u_has_effect": "sofia_motive_explained"
               }
             },
@@ -343,6 +380,11 @@
         "text": "难民中心的商人告诉我这个地方的情况，决定看看这里的情况是否好转。",
         "condition": {
           "and": [
+            {
+              "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
             {
               "not": {
                 "u_has_effect": "sofia_motive_explained"
@@ -366,6 +408,11 @@
         "text": "我是被难民中心的执事派来检查你的。",
         "condition": {
           "and": [
+            {
+              "not": {
+                "u_has_effect": "cf_mission_1"
+              }
+            },
             {
               "not": {
                 "u_has_effect": "sofia_motive_explained"
@@ -728,6 +775,32 @@
       {
         "text": "非常感谢。再见。",
         "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CF_REP_PRELUDE_CAMP",
+    "type": "talk_topic",
+    "dynamic_line": "我听说了那件事。上帝啊，如果我记得他们在那里失去了三个人。在有人袭击他们之前，他们已经埋葬了两个之前受伤的人。第三个留下来给其他人争取时间用生命逃走。",
+    "responses": [
+      {
+        "text": "我应该找什么？",
+        "topic": "TALK_CF_REP_PRELUDE_CAMP_2"
+      },
+      {
+        "text": "现在到此为止。",
+        "topic": "TALK_CF_REP"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CF_REP_PRELUDE_CAMP_2",
+    "type": "talk_topic",
+    "dynamic_line": "任何你能在他们留下的物品中发现的异常文物，任何书籍或其他书面情报也可能有用。如果你找到什么东西，先把它交给约翰纳森，如果需要，他会让你给我看。我祈祷你平安归来，战胜一切造成这一切的一切。",
+    "responses": [
+      {
+        "text": "好吧。非常感谢。",
+        "topic": "TALK_CF_REP"
       }
     ]
   },
@@ -1254,7 +1327,7 @@
   {
     "type": "talk_topic",
     "id": "TALK_CF_REP_TRADE",
-    "dynamic_line": "入口和厨房有一些你需要时可以使用的东西。除此之外，我们没有什么多余的，但我会尽我所能给你。我们已经习惯于用测量过的空白黄金代替货币，过去我们用它来修理我们的一些物品。其他的可以保证纯度和重量是标准化的。",
+    "dynamic_line": "入口和厨房有一些你需要时可以使用的东西。除此之外，我们没有什么多余的，但我会尽我所能给你。我们已经习惯于用称量好的一大筐子黄金来代替货币，过去我们用它来修理我们的一些物品。其他的可以保证纯度和重量是标准化的。",
     "responses": [
       {
         "text": "那我们交易吧。",

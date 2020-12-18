@@ -2,7 +2,7 @@
   {
     "id": "f_blade_upright",
     "type": "furniture",
-    "name": "直立武器",
+    "name": "直立的宝剑",
     "description": "一把奇怪的剑在地上盘旋。下面的楼梯被一道坚固的光障挡住了，但是通过检查，这把剑应该很容易被移除。",
     "symbol": "|",
     "looks_like": "sun_sword_on",
@@ -233,6 +233,40 @@
     }
   },
   {
+    "type": "furniture",
+    "id": "f_arcane_candlestick_lit",
+    "name": "烛台",
+    "description": "一个短的石头基座，上面牢固地安装着一个华丽的烛台。一种诡异的蓝色火焰萦绕在人们期待的地方，一支蜡烛将点燃，散发出一种舒缓的光芒。",
+    "looks_like": "t_pedestal_wyrm",
+    "symbol": "&",
+    "color": "dark_gray",
+    "light_emitted": 120,
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "required_str": -1,
+    "flags": [
+      "TRANSPARENT",
+      "SEALED",
+      "PLACE_ITEM",
+      "USABLE_FIRE"
+    ],
+    "bash": {
+      "str_min": 100,
+      "str_max": 400,
+      "sound": "crash!",
+      "sound_fail": "whump!",
+      "items": [
+        {
+          "item": "rock",
+          "count": [
+            2,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "f_force_barrier",
     "type": "furniture",
     "name": "闪光屏障",
@@ -262,7 +296,7 @@
     "type": "furniture",
     "id": "f_alien_zapper_altered",
     "looks_like": "f_alien_zapper",
-    "name": "叶抽搐",
+    "name": "抽搐的脑叶",
     "description": "像蛾子的触角一样的脊柱从地上伸出，在空中轻轻地摇摆。每隔一段时间，一连串的能量沿着它形成弧线并排放到天花板上。",
     "symbol": "F",
     "color": "light_blue",

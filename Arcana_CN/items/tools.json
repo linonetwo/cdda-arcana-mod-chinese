@@ -4,8 +4,8 @@
     "copy-from": "tindalos_whistle",
     "type": "TOOL",
     "name": {
-      "str": "廷达洛斯哨声",
-      "str_pl": "丁达洛的哨声"
+      "str": "廷达罗斯口哨",
+      "str_pl": "廷达罗斯口哨"
     },
     "description": "这是一个小哨子，如果不是因为不寻常的印记和异国情调的材料，它像狗的哨子。它发出的奇怪的声音显然不是为了叫唤犬科动物，或任何与此维度相关的东西。",
     "initial_charges": 1,
@@ -93,7 +93,7 @@
     "type": "TOOL",
     "copy-from": "bone_flute",
     "name": {
-      "str": "毒刺长笛",
+      "str": "刺笛",
       "str_pl": "毒刺长笛"
     },
     "description": "一种有五个指孔的抛光长笛，由某种异国怪物的毒刺雕刻而成。把它放在嘴里应该是安全的。",
@@ -135,6 +135,90 @@
     "looks_like": "small_relic",
     "color": "white",
     "use_action": "MEDITATE"
+  },
+  {
+    "id": "charm_bone_empowered",
+    "copy-from": "charm_bone",
+    "type": "TOOL",
+    "name": {
+      "str": "圣骨咒"
+    },
+    "description": "一种由某种超自然的骨头或象牙制成的小护身符，上面刻有同样超凡脱俗的肖像。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将严重伤害和瘫痪8瓦内的任何生物，包括盟友，如果你不小心。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 2000,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_charm_bone_empowered",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "stinger_flute_empowered",
+    "copy-from": "stinger_flute",
+    "type": "TOOL",
+    "name": {
+      "str": "快刺长笛"
+    },
+    "description": "一种有五个指孔的抛光长笛，由某种异国怪物的毒刺雕刻而成。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将大大降低移动成本并提高规避能力。耐力和攻击速度不受影响。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
+    "price_postapoc": 2500,
+    "max_charges": 600,
+    "charges_per_use": 100,
+    "ammo": "primitive_magic_item_ammo_type",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "primitive_magic_item_ammo_type": 600
+        }
+      }
+    ],
+    "flags": [
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TARDIS"
+    ],
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "arcana_item_stinger_flute_empowered",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
   },
   {
     "id": "offering_chalice",
@@ -190,7 +274,7 @@
     "//": "By necessity can't yet define this to use copy-from, as qualities will break it.",
     "category": "weapons",
     "name": {
-      "str": "银器"
+      "str": "银质仪式刀"
     },
     "description": "一把华丽的银匕首，似乎是为了祭祀而制作的。它似乎比银更锋利。它可以用来进行一个仪式，将你的生命力转化为血之精华。这样做将需要5分钟，造成失血和损伤的最后，以及潜在的后果，如果过度使用。。。",
     "weight": "1302 g",
@@ -245,7 +329,7 @@
     "type": "TOOL",
     "category": "weapons",
     "name": {
-      "str": "清廉之剑"
+      "str": "不朽之剑"
     },
     "//": "Stats are a blend of the available swords you can use to make it, same deal as the mantle of shadows.",
     "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。当它被神圣的魔法精华所驱动时，它有能力穿透黑暗。",
@@ -313,8 +397,8 @@
     "repairs_like": "sun_sword",
     "category": "weapons",
     "name": {
-      "str": "清廉剑（开）",
-      "str_pl": "清廉剑（上）"
+      "str": "不朽之剑（开）",
+      "str_pl": "不朽之剑（开）"
     },
     "//": "Weapons normally come with the vorpal flag, not the technique.  But gaining the technique through normal means likely breaks with transforming weapons.",
     "description": "这是某种形式的剑，装饰有一个金色的十字架图案的刀片。刀片发出强烈的白光和灼热。",
@@ -360,8 +444,8 @@
     "category": "weapons",
     "copy-from": "warhammer",
     "name": {
-      "str": "猎人之锤",
-      "str_pl": "猎人之锤"
+      "str": "猎手战锤",
+      "str_pl": "猎手战锤"
     },
     "description": "一种镶有银的战锤，上面刻有古拉丁语的宗教祈祷词。很多魔法物品都可以用这个道具净化。使用它将引导神圣的精华进入一个惊人的闪光。虽然使用它是一把双刃剑，但它会对黑暗生物产生进一步的影响。",
     "price": 80000,
@@ -476,7 +560,7 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神光卷轴",
+      "str": "神圣的光明卷轴",
       "str_pl": "神圣的光明卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和太阳图案的插图，代表着一个超凡脱俗的太阳神。使用它会使肾上腺素激增，瞬间减慢时间，同时发出耀眼的光芒。",
@@ -485,7 +569,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开神圣的光卷轴…"
+      "message": "你展开神圣的光明卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -501,8 +585,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "黑暗神圣卷轴",
-      "str_pl": "黑暗的神圣卷轴"
+      "str": "神圣的黑暗卷轴",
+      "str_pl": "神圣的黑暗卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和对月亮周期的描绘，代表着一个超凡脱俗的月亮神。使用它将在黑暗中笼罩该区域，使敌人暂时失明。",
     "price": 12000,
@@ -510,7 +594,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开黑暗的神圣卷轴…"
+      "message": "你展开神圣的黑暗卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -526,8 +610,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神圣命令卷轴",
-      "str_pl": "神圣的命令卷轴"
+      "str": "神圣的指令卷轴",
+      "str_pl": "神圣的指令卷轴"
     },
     "description": "这是一个卷轴，上面有奇怪的文字和士兵的形象，代表着一个超自然的秩序神。使用它会尝试将生物暂时束缚在你的意志上。然而，将你的思想向外投射的突如其来的冲击会让你痛苦地眩晕。",
     "price": 14000,
@@ -535,7 +619,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开神圣的命令卷轴…"
+      "message": "你展开神圣的指令卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -551,8 +635,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "再生神卷",
-      "str_pl": "重生的神圣卷轴"
+      "str": "神圣的再生神卷",
+      "str_pl": "神圣的再生卷轴"
     },
     "description": "这是一幅卷轴，上面写着奇怪的文字和奇异的自然风光，代表着一位超凡脱俗的混沌之神。使用它将召唤一个强大的治疗咒语，同时使该地区的生命变得狂野。然而，使用它有可能以不正常的方式变异。",
     "price": 14000,
@@ -560,7 +644,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开重生的神圣卷轴…"
+      "message": "你展开神圣的再生卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -576,8 +660,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "神破卷轴",
-      "str_pl": "神破卷轴"
+      "str": "神圣的毁灭卷轴",
+      "str_pl": "神圣的毁灭卷轴"
     },
     "description": "这是一幅卷轴，上面写着奇怪的文字和无尽的战斗场面，代表着一个超凡脱俗的战神。使用它会引起雷鸣般的轰鸣，倒塌建筑物，伤害周围的生物，代价是吸引超自然的注意力。",
     "price": 16000,
@@ -585,7 +669,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开了神圣的分裂卷轴…"
+      "message": "你展开了神圣的毁灭卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -601,8 +685,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "不和谐神圣卷轴",
-      "str_pl": "神圣的不和卷轴"
+      "str": "神圣的诡术卷轴",
+      "str_pl": "神圣的诡术卷轴"
     },
     "description": "这是一幅卷轴，上面有奇怪的文字和奇特的旋转符号，代表着一个超凡脱俗的骗子神。使用它会传送你离开，留下你曾经存在过的危险。虽然你总能安全抵达目的地，但你可能会遭受其他后果。",
     "price": 16000,
@@ -610,7 +694,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开了不和谐的神圣卷轴…"
+      "message": "你展开了神圣的诡术卷轴…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -626,8 +710,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "诡计铭文",
-      "str_pl": "诡计铭文"
+      "str": "雕文：欺诈",
+      "str_pl": "雕文：欺诈"
     },
     "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。很容易控制。",
     "price": 150000,
@@ -648,8 +732,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "诡计雕文（激活）",
-      "str_pl": "诡计雕文（激活）"
+      "str": "雕文：欺诈（激活）",
+      "str_pl": "雕文：欺诈（激活）"
     },
     "description": "一种奇怪的银徽章，上面刻有怪诞生物的描述。使用它会召唤出一个克雷克，并把它与你的意志捆绑在一起。有希望地。",
     "price": 150000,
@@ -675,8 +759,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "根字形",
-      "str_pl": "根字形"
+      "str": "雕文：树根",
+      "str_pl": "雕文：树根"
     },
     "//": "ID retained to prevent tileset breakage, monster summoned was changed due to blank bodies being outright useless.",
     "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。很容易控制。",
@@ -698,8 +782,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "根字形（活动）",
-      "str_pl": "根字形（活动）"
+      "str": "雕文：树根（活动）",
+      "str_pl": "雕文：树根（活动）"
     },
     "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。",
     "price": 150000,
@@ -725,8 +809,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "火坑雕文",
-      "str_pl": "火坑雕文"
+      "str": "雕文：欣嫩谷",
+      "str_pl": "雕文：欣嫩谷"
     },
     "//": "ID retained to prevent tileset breakage, monster summoned was changed due to flaming eyes being useless if friendly.",
     "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。它有点容易控制。",
@@ -748,8 +832,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "火坑雕文（激活）",
-      "str_pl": "火坑雕文（激活）"
+      "str": "雕文：欣嫩谷（激活）",
+      "str_pl": "雕文：欣嫩谷（激活）"
     },
     "description": "一个奇怪的银徽章，上面刻着对天使形象的嘲弄。使用它会召唤出一个肉体天使，并把它束缚在你的意志上。有希望地。",
     "price": 150000,
@@ -1127,7 +1211,7 @@
       "str": "图案卷轴（连续）",
       "str_pl": "图案卷轴（连续）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将驱除困扰大地的各种超自然的腐败迹象，并使一些来自远方的生物眩晕。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将驱除困扰大地的各种超自然的腐败迹象，并使一些来自远方的生物眩晕。”",
     "//": "Pattern scrolls were extremely rare pre-cataclysm as spell development was in its infancy, but now they're all quite useful in various ways.  Divine pattern scrolls especially were almost non-existent.",
     "price_postapoc": 12000,
     "use_action": {
@@ -1152,7 +1236,7 @@
       "str": "花样卷轴（御寒）",
       "str_pl": "图案卷轴（御寒）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语可以抵御寒冷及其所有副作用。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语可以抵御寒冷及其所有副作用。”",
     "price_postapoc": 9000,
     "use_action": {
       "type": "countdown",
@@ -1176,7 +1260,7 @@
       "str": "图案卷轴（碎震）",
       "str_pl": "图案卷轴（碎震）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将摧毁建筑并将其埋在瓦砾中，但生物不会受到伤害。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将摧毁建筑并将其埋在瓦砾中，但生物不会受到伤害。”",
     "price_postapoc": 10000,
     "use_action": {
       "type": "countdown",
@@ -1200,7 +1284,7 @@
       "str": "图案卷轴（元素爆发）",
       "str_pl": "图案卷轴（元素爆发）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将以随机元素效果爆炸一个锥形区域，对中心的敌人造成双倍伤害",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将以随机元素效果爆炸一个锥形区域，对中心的敌人造成双倍伤害",
     "price_postapoc": 10000,
     "use_action": {
       "type": "countdown",
@@ -1224,7 +1308,7 @@
       "str": "图案卷轴（召唤蜈蚣）",
       "str_pl": "图案卷轴（召唤蜈蚣）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将召唤变异的害虫，这将是忠诚的但不是永久的",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将召唤变异的害虫，这将是忠诚的但不是永久的",
     "price_postapoc": 8000,
     "use_action": {
       "type": "countdown",
@@ -1248,7 +1332,7 @@
       "str": "图案卷轴（月蚀）",
       "str_pl": "图案滚动（月蚀）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语将带来怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将带来怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。”",
     "price_postapoc": 12000,
     "use_action": {
       "type": "countdown",
@@ -1765,7 +1849,7 @@
       "str": "图案卷轴（敏捷）",
       "str_pl": "图案卷轴（敏捷）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将获得暂时的速度和敏捷增强效果。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将获得暂时的速度和敏捷增强效果。”",
     "//": "Unlike divine pattern scrolls, basic pattern scrolls were rare but at least existed pre-cataclysm.",
     "price": 300000,
     "price_postapoc": 11000,
@@ -1791,7 +1875,7 @@
       "str": "图案卷轴（透视）",
       "str_pl": "图案卷轴（透视）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语会用象牙色的光环涂抹你，让你看不见东西。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语会用象牙色的光环涂抹你，让你看不见东西。”",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -1816,7 +1900,7 @@
       "str": "图案卷轴（血之澄明）",
       "str_pl": "图案卷轴（血之澄明）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语可以保护你不受寄生虫和瞳孔的伤害。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语可以保护你不受寄生虫和瞳孔的伤害。”",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -1841,7 +1925,7 @@
       "str": "图案卷轴（迷惑怪物）",
       "str_pl": "图案卷轴（迷惑怪物）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将击昏你周围区域的所有敌人。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将击昏你周围区域的所有敌人。”",
     "price": 300000,
     "price_postapoc": 7000,
     "use_action": {
@@ -1866,7 +1950,7 @@
       "str": "图案卷轴（召唤酸）",
       "str_pl": "图案卷轴（召唤酸）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将在目标点召唤出一股酸液喷溅，对中心的敌人造成双倍伤害。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将在目标点召唤出一股酸液喷溅，对中心的敌人造成双倍伤害。”",
     "price": 300000,
     "price_postapoc": 10000,
     "use_action": {
@@ -1891,7 +1975,7 @@
       "str": "图案卷轴（防暑）",
       "str_pl": "图案卷轴（防热）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将对热量和烟雾产生暂时的抵抗力，但不能直接接触火",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将对热量和烟雾产生暂时的抵抗力，但不能直接接触火",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -1916,7 +2000,7 @@
       "str": "图案卷轴（自由动作）",
       "str_pl": "图案滚动（自由操作）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将对麻痹效果和其他障碍提供保护。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将对麻痹效果和其他障碍提供保护。”",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -1941,7 +2025,7 @@
       "str": "图案卷轴（治疗）",
       "str_pl": "图案卷轴（治疗）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语可以止血和愈合伤口，尽管长期使用可能是有害的。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语可以止血和愈合伤口，尽管长期使用可能是有害的。”",
     "price": 300000,
     "price_postapoc": 12000,
     "use_action": {
@@ -1966,7 +2050,7 @@
       "str": "图案卷轴（细节）",
       "str_pl": "图案卷轴（细节）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将暂时提升感知力。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将暂时提升感知力。”",
     "price": 300000,
     "price_postapoc": 11000,
     "use_action": {
@@ -1991,7 +2075,7 @@
       "str": "图案卷轴（闪电守卫）",
       "str_pl": "图案卷轴（闪电守卫）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个法术将给予你闪电免疫，代价是减慢你的速度。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个法术将给予你闪电免疫，代价是减慢你的速度。”",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -2013,10 +2097,10 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（可能）",
-      "str_pl": "图案滚动（可能）"
+      "str": "图案卷轴（权能）",
+      "str_pl": "图案滚动（权能）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将暂时增强力量。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将暂时增强力量。”",
     "price": 300000,
     "price_postapoc": 11000,
     "use_action": {
@@ -2041,7 +2125,7 @@
       "str": "图案卷轴（过度生长）",
       "str_pl": "图案卷轴（过度生长）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）在88森林喷发的地方，你将召唤出一个“88森林喷发”的咒语",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将召唤活森林在你目标位置喷发。”",
     "price": 300000,
     "price_postapoc": 8000,
     "use_action": {
@@ -2067,7 +2151,7 @@
       "str": "图案卷轴（暗盾）",
       "str_pl": "图案卷轴（暗影盾牌）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将用黑曜石光环涂抹你，给予你的攻击者一个暂时的防御效果，使你的攻击者失明。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将用黑曜石光环涂抹你，给予你的攻击者一个暂时的防御效果，使你的攻击者失明。”",
     "price": 300000,
     "price_postapoc": 8000,
     "use_action": {
@@ -2092,7 +2176,7 @@
       "str": "图案卷轴（冲击波）",
       "str_pl": "图案卷轴（冲击波）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“这个咒语会在你周围召唤闪电，伤害任何靠近你的敌人。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语会在你周围召唤闪电，伤害任何靠近你的敌人。”",
     "price": 300000,
     "price_postapoc": 10000,
     "use_action": {
@@ -2117,7 +2201,7 @@
       "str": "图案卷轴（辟邪）",
       "str_pl": "图案卷轴（辟邪）"
     },
-    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。这有一个失败的机会，但重复使用将稳步提高相关的魔术符号，并使铸造他们减少负担。（（记住绑定“施法”键！）\n“此咒语将给予一个祝福，保护你免受某些异常的威胁。”",
+    "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将给予一个祝福，保护你免受某些异常的威胁。”",
     "price": 300000,
     "price_postapoc": 9000,
     "use_action": {
@@ -2377,14 +2461,11 @@
           "wood",
           "wool"
         ],
-        "skill": "tailor",
+        "skill": "magic",
         "clothing_mods": [
-          "arcana_acidchitin_weave",
-          "arcana_bone_weave",
-          "arcana_chitin_weave",
-          "arcana_clay_weave",
-          "arcana_stone_weave",
-          "arcana_wood_weave"
+          "arcana_birchbark_weave",
+          "arcana_tanbark_weave",
+          "arcana_willowbark_weave"
         ]
       }
     ],
@@ -2792,7 +2873,7 @@
     "name": {
       "str": "修复后的礼刀"
     },
-    "description": "一把双手剑，上面刻有丰富的异国神符，全是用不是这个世界的文字写成的。一旦被破坏，现在又恢复，它只能服务于它最初目的的一部分。用水晶精华为它加油，会给你带来很好的礼物，但会让你走上一条无法回头的路。",
+    "description": "一把双手剑，上面刻有丰富的异国神符，全是用不是这个世界的文字写成的。一旦被破坏，现在又恢复，它只能服务于它最初目的的一部分。用结晶的精华为它加油，会给你带来很好的礼物，但却会让你走上一条无法回头的路。",
     "weight": "2267 g",
     "volume": "3 L",
     "longest_side": "140 cm",

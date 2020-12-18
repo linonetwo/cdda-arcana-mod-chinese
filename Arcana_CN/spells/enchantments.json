@@ -29,10 +29,6 @@
       {
         "value": "REGEN_HP",
         "multiply": -1
-      },
-      {
-        "value": "SOCIAL_PERSUADE",
-        "multiply": -0.5
       }
     ]
   },

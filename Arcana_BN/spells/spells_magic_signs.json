@@ -59,7 +59,7 @@
     "id": "arcana_magic_clairvoyance",
     "type": "SPELL",
     "name": { "str": "Sign: Clairvoyance" },
-    "description": "Magic Sign\nUsing this spell will anoint you with an ivory halo, granting you sight beyond sight.",
+    "description": "Magic Sign\nUsing this spell will gift you with clairvoyance, granting sight beyond sight.",
     "message": "\"Show me what eyes could never glimpse...\"  You cast %s!",
     "valid_targets": [ "self" ],
     "flags": [ "NO_HANDS", "NO_LEGS", "VERBAL", "NO_FAIL" ],
@@ -159,9 +159,9 @@
     "base_energy_cost": 40,
     "final_energy_cost": 32,
     "energy_increment": -0.8,
-    "min_duration": 600,
-    "max_duration": 2400,
-    "duration_increment": 180,
+    "min_duration": 900,
+    "max_duration": 5400,
+    "duration_increment": 450,
     "spell_class": "SPELL_CONFUSE"
   },
   {
@@ -254,7 +254,7 @@
     "id": "arcana_magic_consecrate",
     "type": "SPELL",
     "name": { "str": "Sign: Consecrate" },
-    "description": "Magic Sign\nUsing this spell will alter the terrain around you, driving off various signs of otherworldly corruption afflicting the land.  It will also weaken some otherworldly monsters, to a limited extent.",
+    "description": "Magic Sign\nUsing this spell will alter the terrain around you, driving off various signs of otherworldly corruption afflicting the land.  It will also harm a limited selection of otherworldly monsters.",
     "message": "\"I am that which reveals the wicked, and scourges them with flame...\"  You cast %s!",
     "valid_targets": [ "ground" ],
     "flags": [ "NO_HANDS", "NO_LEGS", "VERBAL", "NO_FAIL" ],
@@ -263,7 +263,7 @@
     "extra_effects": [ { "id": "arcana_aftermath_consecrate_lesser", "hit_self": false, "max_level": 10 } ],
     "energy_source": "FATIGUE",
     "max_level": 10,
-    "difficulty": 80,
+    "difficulty": 60,
     "skill": "magic",
     "min_damage": 4,
     "max_damage": 2,
@@ -271,15 +271,15 @@
     "min_aoe": 8,
     "max_aoe": 12,
     "aoe_increment": 0.4,
-    "min_range": 12,
-    "max_range": 20,
+    "min_range": 8,
+    "max_range": 16,
     "range_increment": 0.8,
-    "base_casting_time": 360,
-    "final_casting_time": 270,
-    "casting_time_increment": -9,
-    "base_energy_cost": 90,
-    "final_energy_cost": 72,
-    "energy_increment": -1.8
+    "base_casting_time": 280,
+    "final_casting_time": 210,
+    "casting_time_increment": -7,
+    "base_energy_cost": 70,
+    "final_energy_cost": 56,
+    "energy_increment": -1.4
   },
   {
     "id": "arcana_magic_dampening",
@@ -342,9 +342,9 @@
     "base_energy_cost": 100,
     "final_energy_cost": 80,
     "energy_increment": -2,
-    "min_duration": 120000,
-    "max_duration": 360000,
-    "duration_increment": 24000
+    "min_duration": 108000,
+    "max_duration": 324000,
+    "duration_increment": 21600
   },
   {
     "id": "arcana_magic_elemental_burst",
@@ -496,11 +496,12 @@
     "id": "arcana_magic_light",
     "type": "SPELL",
     "name": { "str": "Sign: Light" },
-    "description": "Magic Sign\nUsing this spell will conjure a field of magical light, lingering in the area around you.",
+    "description": "Magic Sign\nUsing this spell will conjure a field of magical light, lingering in the area around you.  It will also deal minor damage to creatures that shun the light.",
     "message": "\"The smallest candle flame brings hope until the dawn...\"  You cast %s!",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_HANDS", "NO_LEGS", "VERBAL", "NO_FAIL" ],
+    "valid_targets": [ "ground" ],
+    "flags": [ "NO_HANDS", "NO_LEGS", "VERBAL", "NO_FAIL", "SILENT" ],
     "effect": "target_attack",
+    "extra_effects": [ { "id": "arcana_aftermath_light_searing", "hit_self": false, "max_level": 10 } ],
     "energy_source": "FATIGUE",
     "min_aoe": 4,
     "max_aoe": 8,
@@ -514,9 +515,9 @@
     "base_energy_cost": 30,
     "final_energy_cost": 24,
     "energy_increment": -0.6,
-    "min_duration": 300000,
-    "max_duration": 2400000,
-    "duration_increment": 210000,
+    "min_duration": 120000,
+    "max_duration": 600000,
+    "duration_increment": 48000,
     "field_id": "fd_veil_light",
     "field_chance": 2,
     "min_field_intensity": 1,
@@ -797,9 +798,9 @@
     "base_energy_cost": 70,
     "final_energy_cost": 56,
     "energy_increment": -1.4,
-    "min_duration": 900000,
-    "max_duration": 7200000,
-    "duration_increment": 630000
+    "min_duration": 360000,
+    "max_duration": 1800000,
+    "duration_increment": 144000
   },
   {
     "id": "arcana_magic_summon_skeletal_dog",
@@ -826,9 +827,9 @@
     "base_energy_cost": 40,
     "final_energy_cost": 32,
     "energy_increment": -0.8,
-    "min_duration": 450000,
-    "max_duration": 3600000,
-    "duration_increment": 315000,
+    "min_duration": 180000,
+    "max_duration": 900000,
+    "duration_increment": 72000,
     "spell_class": "SPELL_SUMMONDOG"
   },
   {
@@ -856,9 +857,9 @@
     "base_energy_cost": 60,
     "final_energy_cost": 48,
     "energy_increment": -1.2,
-    "min_duration": 750000,
-    "max_duration": 6000000,
-    "duration_increment": 525000
+    "min_duration": 300000,
+    "max_duration": 1500000,
+    "duration_increment": 120000
   },
   {
     "id": "arcana_magic_summon_shadow_snake",
@@ -885,9 +886,9 @@
     "base_energy_cost": 50,
     "final_energy_cost": 40,
     "energy_increment": -1,
-    "min_duration": 480000,
-    "max_duration": 4800000,
-    "duration_increment": 432000
+    "min_duration": 240000,
+    "max_duration": 1200000,
+    "duration_increment": 96000
   },
   {
     "id": "arcana_magic_surge_adrenaline",

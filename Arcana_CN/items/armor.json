@@ -4,9 +4,9 @@
     "copy-from": "spell_base",
     "type": "ARMOR",
     "name": {
-      "str": "象牙光环"
+      "str": "乳白光晕"
     },
-    "description": "一种奇异的光芒渗透你的身体，赋予你看不见的东西。",
+    "description": "奇异的光辉弥漫在你的身边，你的目光得以穿透障壁。",
     "color": "magenta",
     "relic_data": {
       "passive_effects": [
@@ -88,6 +88,141 @@
     }
   },
   {
+    "id": "halo_amulet_effect",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "笼罩的光环"
+    },
+    "description": "一种奇怪的光芒渗透你的身体，使你的生命力从不死生物身上消失。",
+    "color": "white",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "mutations": [
+            "ARCANA_LIFE_SIGN_SUPPRESSION"
+          ],
+          "values": [
+            {
+              "value": "REGEN_HP",
+              "multiply": -1
+            }
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
+    "id": "halo_flute_effect",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "难以捉摸的光环"
+    },
+    "description": "一种奇异的光芒渗透你的身体，增强你的运动和反应能力。",
+    "color": "white",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "MOVE_COST",
+              "multiply": -0.9
+            },
+            {
+              "value": "BONUS_DODGE",
+              "add": 10
+            }
+          ],
+          "ench_effects": [
+            {
+              "effect": "halo_flute_effect",
+              "intensity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
+    "id": "halo_brooch_effect",
+    "copy-from": "spell_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "守护者光环"
+    },
+    "description": "一种奇怪的光芒渗透你的身体，增加你的防御能力。",
+    "color": "white",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ARMOR_ACID",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_BASH",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_BIO",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_COLD",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_CUT",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_ELEC",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_HEAT",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_STAB",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_BULLET",
+              "multiply": -0.5
+            }
+          ]
+        }
+      ]
+    },
+    "extend": {
+      "flags": [
+        "ONLY_ONE",
+        "NO_TAKEOFF"
+      ]
+    }
+  },
+  {
     "id": "triffid_garland",
     "type": "ARMOR",
     "name": {
@@ -104,24 +239,6 @@
     "symbol": "[",
     "looks_like": "holy_symbol_wood",
     "color": "light_red",
-    "relic_data": {
-      "passive_effects": [
-        {
-          "has": "WORN",
-          "condition": "ALWAYS",
-          "values": [
-            {
-              "value": "REGEN_MANA",
-              "multiply": 0.025
-            },
-            {
-              "value": "MAX_MANA",
-              "multiply": 0.025
-            }
-          ]
-        }
-      ]
-    },
     "flags": [
       "FANCY"
     ]
@@ -145,24 +262,6 @@
     "flags": [
       "FANCY"
     ],
-    "relic_data": {
-      "passive_effects": [
-        {
-          "has": "WORN",
-          "condition": "ALWAYS",
-          "values": [
-            {
-              "value": "REGEN_MANA",
-              "multiply": 0.025
-            },
-            {
-              "value": "MAX_MANA",
-              "multiply": 0.025
-            }
-          ]
-        }
-      ]
-    },
     "use_action": "MEDITATE"
   },
   {
@@ -182,24 +281,6 @@
     "symbol": "[",
     "looks_like": "jade_brooch",
     "color": "dark_gray",
-    "relic_data": {
-      "passive_effects": [
-        {
-          "has": "WORN",
-          "condition": "ALWAYS",
-          "values": [
-            {
-              "value": "REGEN_MANA",
-              "multiply": 0.025
-            },
-            {
-              "value": "MAX_MANA",
-              "multiply": 0.025
-            }
-          ]
-        }
-      ]
-    },
     "flags": [
       "FANCY"
     ]
@@ -234,7 +315,7 @@
             },
             {
               "value": "MAX_MANA",
-              "multiply": 0.01
+              "multiply": 0.1
             }
           ]
         }

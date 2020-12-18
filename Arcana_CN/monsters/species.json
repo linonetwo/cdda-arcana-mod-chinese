@@ -2,8 +2,15 @@
   {
     "type": "SPECIES",
     "id": "ARCANA_SUMMONED",
-    "description": "召唤的怪物",
-    "footsteps": "微弱的耳语。"
+    "description": "召唤兽",
+    "footsteps": "微弱的耳语。",
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ]
   },
   {
     "type": "SPECIES",
