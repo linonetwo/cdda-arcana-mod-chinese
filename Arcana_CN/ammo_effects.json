@@ -207,7 +207,8 @@
       "field_type": "fd_fire",
       "intensity_min": 2,
       "intensity_max": 3,
-      "radius": 0
+      "radius": 0,
+      "chance": 100
     }
   },
   {
@@ -219,6 +220,17 @@
       "intensity_max": 2,
       "radius": 0,
       "chance": 75
+    }
+  },
+  {
+    "id": "ARCANA_DAZZLE_SHOT",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_dazzling",
+      "intensity_min": 3,
+      "intensity_max": 3,
+      "radius": 0,
+      "chance": 100
     }
   }
 ]

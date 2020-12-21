@@ -490,5 +490,69 @@
       "ZERO_WEIGHT"
     ],
     "ammo_type": "primitive_magic_item_ammo_type"
+  },
+  {
+    "id": "reloaded_shot_00_arcana",
+    "copy-from": "reloaded_shot_00",
+    "type": "AMMO",
+    "name": {
+      "str": "净化00霰弹"
+    },
+    "description": "一个装有手枪的弹壳，里面装满了银弹丸和盐。圣化精华的加入增强了它的冲击力，并使每个弹丸在发射时变成一团白热的光点。在撞击中牺牲目标并绕过普通的盔甲，同时留下耀眼的光芒。",
+    "price": 0,
+    "price_postapoc": 900,
+    "damage": {
+      "damage_type": "heat",
+      "amount": 45
+    },
+    "extend": {
+      "effects": [
+        "INCENDIARY",
+        "ARCANA_DAZZLE_SHOT"
+      ]
+    }
+  },
+  {
+    "id": "flintlock_shot_arcana",
+    "copy-from": "flintlock_shot",
+    "type": "AMMO",
+    "name": {
+      "str": "净化纸卷霰弹弹药筒"
+    },
+    "description": "一种黑色的粉状纸筒，里面装着银色的小球，上面撒着盐。圣化精华的加入增强了它的冲击力，并使每个弹丸在发射时变成一团白热的光点。在撞击中牺牲目标并绕过普通的盔甲，同时留下耀眼的光芒。",
+    "//": "Likely rare to non-existent before the cataclysm.",
+    "price": 0,
+    "price_postapoc": 1500,
+    "damage": {
+      "damage_type": "heat",
+      "amount": 45
+    },
+    "extend": {
+      "effects": [
+        "INCENDIARY",
+        "ARCANA_DAZZLE_SHOT"
+      ]
+    }
+  },
+  {
+    "id": "blun_shot_arcana",
+    "copy-from": "blun_shot",
+    "type": "AMMO",
+    "name": {
+      "str": "净化炮弹"
+    },
+    "description": "一种事先准备好的大炮，装满了银色的弹丸并撒上了盐。圣化精华的加入增强了它的冲击力，并使每个弹丸在发射时变成一团白热的光点。在撞击中牺牲目标并绕过普通的盔甲，同时留下耀眼的光芒。",
+    "price": 0,
+    "price_postapoc": 100,
+    "damage": {
+      "damage_type": "heat",
+      "amount": 60
+    },
+    "extend": {
+      "effects": [
+        "INCENDIARY",
+        "ARCANA_DAZZLE_SHOT"
+      ]
+    }
   }
 ]

@@ -569,7 +569,7 @@
     "id": "achievement_arcana_mutation_paragon",
     "type": "achievement",
     "name": {
-      "str": "<color_cyan>（Arcana）</color>涂过"
+      "str": "<color_cyan>（Arcana）</color>涂油礼"
     },
     "description": "从面纱之外给他力量，并得到回报。",
     "hidden_by": [

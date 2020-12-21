@@ -3790,7 +3790,7 @@
       },
       {
         "group": "sanguine_cult_spells",
-        "chance": 75
+        "prob": 75
       }
     ]
   },

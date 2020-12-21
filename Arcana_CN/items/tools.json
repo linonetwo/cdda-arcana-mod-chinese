@@ -122,7 +122,7 @@
     "id": "charm_bone",
     "type": "GENERIC",
     "name": {
-      "str": "骨符"
+      "str": "骸骨护符"
     },
     "description": "一种由某种超自然的骨头或象牙制成的小护身符，上面刻有同样超凡脱俗的肖像。",
     "weight": "38 g",
@@ -141,7 +141,7 @@
     "copy-from": "charm_bone",
     "type": "TOOL",
     "name": {
-      "str": "圣骨咒"
+      "str": "神圣骸骨护符"
     },
     "description": "一种由某种超自然的骨头或象牙制成的小护身符，上面刻有同样超凡脱俗的肖像。元素魔法被编织到它的结构中，把它变成一个原始的魔法物品。使用它将严重伤害和瘫痪8瓦内的任何生物，包括盟友，如果你不小心。每次激活后，用户都需要很长时间来充电。它最多可以使用6次。",
     "price_postapoc": 2000,
@@ -476,8 +476,7 @@
     },
     "relative": {
       "weight": "360 g",
-      "bashing": 2,
-      "price": 12000
+      "bashing": 2
     },
     "extend": {
       "flags": [
@@ -751,7 +750,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -782,8 +783,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "雕文：树根（活动）",
-      "str_pl": "雕文：树根（活动）"
+      "str": "雕文：树根（激活）",
+      "str_pl": "雕文：树根（激活）"
     },
     "description": "一种奇怪的银色徽章，上面刻着外星人的植物。使用它会召唤出一个三脚戟，并将其绑定到你的意志上。有希望地。",
     "price": 150000,
@@ -801,7 +802,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -851,7 +854,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -883,7 +888,7 @@
     "copy-from": "silver_glyph",
     "name": {
       "str": "爬行混沌雕文（激活）",
-      "str_pl": "爬行混沌雕文（活动）"
+      "str_pl": "爬行混沌雕文（激活）"
     },
     "description": "奇怪的银徽章，不规则地刻着难以辨认的符文。使用它会引起一种狩猎恐惧，并将其与你的意志捆绑在一起。有希望地。",
     "price": 150000,
@@ -901,7 +906,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -909,8 +916,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "眼影",
-      "str_pl": "眼影"
+      "str": "眼雕文",
+      "str_pl": "眼雕文"
     },
     "//": "Explanation: Petrified eyes are associated with dark wyrms due to the mine finale that features one.",
     "description": "一种奇怪的银色徽章，上面刻着双翼龙形图案。使用它会召唤出一个黑暗之龙，并把它束缚在你的意志上。这有点难以控制。",
@@ -932,8 +939,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "眼影（活动）",
-      "str_pl": "眼影（活动）"
+      "str": "眼雕文（激活）",
+      "str_pl": "眼雕文（激活）"
     },
     "description": "一种奇怪的银色徽章，上面刻着双翼龙形图案。使用它会召唤出一个黑暗的蛆，并把它束缚在你的意志上。有希望地。",
     "price": 150000,
@@ -951,7 +958,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -959,8 +968,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "尤戈斯雕文",
-      "str_pl": "尤戈斯雕文"
+      "str": "犹格斯雕文",
+      "str_pl": "犹格斯雕文"
     },
     "//": "Explanation: Yuggoth is a fictional planet from Lovecraft's work, stated to have been colonized by the mi-go.",
     "description": "一种奇怪的银徽章，上面刻有奇怪的几丁质实体。使用它会引起一个迷走，并约束它与你的意志。有希望地。这有点难以控制。",
@@ -982,8 +991,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "尤戈斯雕文（活跃）",
-      "str_pl": "尤戈斯雕文（活跃）"
+      "str": "犹格斯雕文（激活）",
+      "str_pl": "犹格斯雕文（激活）"
     },
     "description": "一种奇怪的银徽章，上面刻有奇怪的几丁质实体。使用它会引起一个迷走，并约束它与你的意志。有希望地。",
     "price": 150000,
@@ -1001,7 +1010,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -1031,8 +1042,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "傀儡雕文（活动）",
-      "str_pl": "傀儡雕文（活动）"
+      "str": "傀儡雕文（激活）",
+      "str_pl": "傀儡雕文（激活）"
     },
     "description": "一种奇怪的银徽章，上面用一种未知的语言刻着反写。使用它会引起一种刺耳的叫声，并将其与你的意志捆绑在一起。有希望地。",
     "price": 150000,
@@ -1050,7 +1061,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -1058,8 +1071,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "普纳科图铭文",
-      "str_pl": "普纳科图象形文字"
+      "str": "奈克特雕文",
+      "str_pl": "奈克特雕文"
     },
     "//": "Explanation: In Lovecraft's works, the Pnakotic Manuscripts were associated with the city of this name, which was overrun by flying polyps in their conflict with the species that built the city.",
     "description": "一种奇怪的银徽章，上面刻着一种类似珊瑚的奇怪图案。使用它会召唤出一个会飞的息肉，并将它绑定到你的意志上。有希望地。这很难控制。",
@@ -1081,8 +1094,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "普纳科特斯雕文（活动）",
-      "str_pl": "普纳科图象形文字（活动）"
+      "str": "奈克特雕文（激活）",
+      "str_pl": "奈克特雕文（激活）"
     },
     "description": "一种奇怪的银徽章，上面刻着一种类似珊瑚的奇怪图案。使用它会召唤出一个会飞的息肉，并将它绑定到你的意志上。有希望地。",
     "price": 150000,
@@ -1100,7 +1113,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -1108,8 +1123,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "钚铭文",
-      "str_pl": "普劳顿铭文"
+      "str": "哈迪斯雕文",
+      "str_pl": "哈迪斯雕文"
     },
     "//": "Plouton, Latinized as Pluto, is another name for Hades, and reflects the association with wealth the god had by the time the name was in common use.",
     "description": "一个奇怪的银质徽章，上面刻有古代克托尼亚人的财富。使用它会召唤出一个尤格，并把它束缚在你的意志上。有希望地。这很难控制。",
@@ -1131,8 +1146,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "普劳顿雕文（活动）",
-      "str_pl": "普劳顿雕文（活动）"
+      "str": "哈迪斯雕文（激活）",
+      "str_pl": "哈迪斯雕文（激活）"
     },
     "description": "一个奇怪的银质徽章，上面刻有古代克托尼亚人的财富。使用它会召唤出一个尤格，并把它束缚在你的意志上。有希望地。",
     "price": 150000,
@@ -1150,7 +1165,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -1158,8 +1175,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "古老事物铭文",
-      "str_pl": "古老事物的铭文"
+      "str": "古老者雕文",
+      "str_pl": "古老者雕文"
     },
     "//": "Explanation: The Elder Things in Lovecraft's work were the creators of shoggoths.",
     "description": "一个奇怪的银徽章，上面刻着许多奇怪的眼睛符号。使用它会发出一声嘘声，并把它束缚在你的意志上。有希望地。这很难控制。",
@@ -1181,8 +1198,8 @@
     "type": "TOOL",
     "copy-from": "silver_glyph",
     "name": {
-      "str": "长者之物雕文（活跃）",
-      "str_pl": "长者之物雕文（活跃）"
+      "str": "古老者雕文（激活）",
+      "str_pl": "古老者雕文（激活）"
     },
     "description": "一个奇怪的银徽章，上面刻着许多奇怪的眼睛符号。使用它会发出一声嘘声，并把它束缚在你的意志上。有希望地。这很难控制。",
     "price": 150000,
@@ -1200,7 +1217,9 @@
       "moves": 60,
       "place_randomly": true,
       "is_pet": true,
-      "skill1": "magic"
+      "skills": [
+        "magic"
+      ]
     }
   },
   {
@@ -1208,8 +1227,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（连续）",
-      "str_pl": "图案卷轴（连续）"
+      "str": "彩纹绘卷（祝福）",
+      "str_pl": "彩纹绘卷（祝福）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将驱除困扰大地的各种超自然的腐败迹象，并使一些来自远方的生物眩晕。”",
     "//": "Pattern scrolls were extremely rare pre-cataclysm as spell development was in its infancy, but now they're all quite useful in various ways.  Divine pattern scrolls especially were almost non-existent.",
@@ -1217,7 +1236,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1233,15 +1252,15 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "花样卷轴（御寒）",
-      "str_pl": "图案卷轴（御寒）"
+      "str": "彩纹绘卷（御寒）",
+      "str_pl": "彩纹绘卷（御寒）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语可以抵御寒冷及其所有副作用。”",
     "price_postapoc": 9000,
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1257,15 +1276,15 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（碎震）",
-      "str_pl": "图案卷轴（碎震）"
+      "str": "彩纹绘卷（地震）",
+      "str_pl": "彩纹绘卷（地震）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将摧毁建筑并将其埋在瓦砾中，但生物不会受到伤害。”",
     "price_postapoc": 10000,
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1281,15 +1300,15 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（元素爆发）",
-      "str_pl": "图案卷轴（元素爆发）"
+      "str": "彩纹绘卷（元素爆发）",
+      "str_pl": "彩纹绘卷（元素爆发）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将以随机元素效果爆炸一个锥形区域，对中心的敌人造成双倍伤害",
     "price_postapoc": 10000,
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1305,15 +1324,15 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（召唤蜈蚣）",
-      "str_pl": "图案卷轴（召唤蜈蚣）"
+      "str": "彩纹绘卷（召唤蜈蚣）",
+      "str_pl": "彩纹绘卷（召唤蜈蚣）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将召唤变异的害虫，这将是忠诚的但不是永久的",
     "price_postapoc": 8000,
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1329,15 +1348,15 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（月蚀）",
-      "str_pl": "图案滚动（月蚀）"
+      "str": "彩纹绘卷（月蚀）",
+      "str_pl": "彩纹绘卷（月蚀）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语将带来怪物和黑暗，以换取一个暂时的原始力量的提升来追踪夜晚。”",
     "price_postapoc": 12000,
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1354,7 +1373,7 @@
     "type": "TOOL",
     "category": "weapons",
     "name": {
-      "str": "维恩雷弗"
+      "str": "黑血掠夺者"
     },
     "description": "斧头斧头的斧头稍微亮了一点，染上了干血的暗淡颜色。使用它会将血之精华导入一个危险的爆炸，爆炸半径相当大。它会给你很少的时间来逃避，明智地利用它。",
     "price": 40000,
@@ -1376,8 +1395,7 @@
     "volume": "750 ml",
     "longest_side": "45 cm",
     "relative": {
-      "bashing": -2,
-      "weight": "-200 g"
+      "bashing": -2
     },
     "use_action": [
       {
@@ -1404,7 +1422,7 @@
     "type": "TOOL",
     "category": "weapons",
     "name": {
-      "str": "发光细脉"
+      "str": "鲜血掠夺者"
     },
     "description": "一把改良的斧头，斧头发出邪恶的红光。扔掉它可能是个聪明的主意，因为你几乎没有时间逃避它的冲击。",
     "weight": "707 g",
@@ -1445,8 +1463,8 @@
       "type": "explosion",
       "fields_type": "fd_blood",
       "fields_radius": 3,
-      "fields_min_density": 3,
-      "fields_max_density": 3,
+      "fields_min_intensity": 3,
+      "fields_max_intensity": 3,
       "sound_volume": 1,
       "sound_msg": "Drip.",
       "no_deactivate_msg": "You can't dispel the effect.  Might want to try throwing it instead.",
@@ -1469,8 +1487,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "琥珀色海豹：闪电守卫",
-      "str_pl": "琥珀海豹：闪电守卫"
+      "str": "琥珀图章：抗电",
+      "str_pl": "琥珀图章：抗电"
     },
     "description": "一小块雕刻得超凡脱俗的琥珀。激活它来集中你的注意力，创造一个神奇的标志，保护你免受雷击。这将完全消耗该项目。",
     "//": "Magic seals are all explicitly a post-cataclysm development, as this path towards development of natural magic did not exist without more monsters to study.",
@@ -1495,8 +1513,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "天使印章：抵御邪恶",
-      "str_pl": "天使封印：抵御邪恶"
+      "str": "天使图章：辟邪",
+      "str_pl": "天使图章：辟邪"
     },
     "description": "一种有翅膀的小雕像，由一种奇怪的彩虹石雕刻而成。激活它来集中你的注意力，创造一个魔法符号，保护你免受各种不正常的影响。这将完全消耗该项目。",
     "price_postapoc": 4500,
@@ -1520,8 +1538,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "骨印：敏捷",
-      "str_pl": "骨海豹：敏捷"
+      "str": "骸骨图章：敏捷",
+      "str_pl": "骸骨图章：敏捷"
     },
     "description": "用超自然的骨头刻出来的一小套骰子。激活它来集中你的注意力，创造一个神奇的符号，给予一个暂时的敏捷效果。这将完全消耗该项目。",
     "price_postapoc": 5500,
@@ -1545,8 +1563,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "甲壳质怪物：迷惑海豹",
-      "str_pl": "甲壳海豹：迷惑怪物"
+      "str": "甲壳图章：迷惑怪物",
+      "str_pl": "甲壳图章：迷惑怪物"
     },
     "description": "从邪恶的毒刺上刻出来的小令牌。激活它来集中你的注意力，创造一个魔法符号，让你周围的怪物感到困惑。这将完全消耗该项目。",
     "price_postapoc": 3500,
@@ -1570,8 +1588,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "匕首印：权能",
-      "str_pl": "匕首海豹：权能"
+      "str": "匕首图章：力量",
+      "str_pl": "匕首图章：力量"
     },
     "description": "用奇怪的象牙雕刻的微型匕首。激活它来集中你的注意力，创造一个神奇的符号，给予力量一个暂时的提升。这将完全消耗该项目。",
     "price_postapoc": 5500,
@@ -1595,8 +1613,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "永恒印记：千里眼",
-      "str_pl": "永恒海豹：透视"
+      "str": "永恒图章：透视",
+      "str_pl": "永恒图章：透视"
     },
     "description": "一种黑色闪闪发光的象牙的小圆形物。激活你的心灵，创造一个暂时的专注力。这将完全消耗该项目。",
     "price_postapoc": 4500,
@@ -1620,8 +1638,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "靛蓝印章：自由行动",
-      "str_pl": "靛蓝海豹：自由行动"
+      "str": "靛蓝图章：挣脱束缚",
+      "str_pl": "靛蓝图章：挣脱束缚"
     },
     "description": "鲜艳的紫色花瓣的小装饰品。激活它来集中你的注意力，创造一个神奇的标志，保护你免受麻痹和其他障碍的影响。这将完全消耗该项目。",
     "price_postapoc": 4500,
@@ -1646,8 +1664,8 @@
     "//": "ID retained to avoid breaking stuff.",
     "type": "TOOL",
     "name": {
-      "str": "黑曜印章：暗影之盾",
-      "str_pl": "黑曜石海豹：暗影之盾"
+      "str": "黑曜石图章：暗影盾",
+      "str_pl": "黑曜石图章：暗影盾"
     },
     "description": "一块不自然的黑色石头，形状古怪。激活它来集中你的注意力，创造一个魔法符号，给予一个临时的防御效果，用活生生的影子攻击攻击者。这将完全消耗该项目。",
     "price_postapoc": 4000,
@@ -1671,8 +1689,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "红海豹",
-      "str_pl": "猩红海豹：过度生长"
+      "str": "猩红图章：过度生长",
+      "str_pl": "猩红图章：过度生长"
     },
     "description": "一种由花瓣编织而成的小装饰品，一种超凡脱俗的鲜红色调。激活它，集中你的思想，创造一个神奇的标志，并带来森林。这将完全消耗该项目。",
     "price_postapoc": 4000,
@@ -1696,8 +1714,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "星石海豹：抵御高温",
-      "str_pl": "星际海豹：抵御高温"
+      "str": "星石图章：避热",
+      "str_pl": "星石图章：避热"
     },
     "description": "一种由看起来像流星一样的材料雕刻而成的闪闪发光的圆盘。激活它来集中你的注意力，创造一个神奇的符号，获得对热量和烟雾的暂时抵抗力。直接接触火焰仍然会伤害你。这将完全消耗该项目。",
     "price_postapoc": 4500,
@@ -1721,8 +1739,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "撕开封印：洞察",
-      "str_pl": "撕裂封印：洞察力"
+      "str": "泪滴图章：洞悉",
+      "str_pl": "泪滴图章：洞悉"
     },
     "description": "从一个神秘的蓝色球体雕刻而成的奇特的折射宝石。激活它来集中你的注意力，创造一个神奇的符号，暂时提升你的感知力。这将完全消耗该项目。",
     "price_postapoc": 5500,
@@ -1746,8 +1764,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "刺印：血之澄明",
-      "str_pl": "刺海豹：血之澄明"
+      "str": "荆棘图章：净化血液",
+      "str_pl": "荆棘图章：净化血液"
     },
     "description": "从一个巨大的刺上刻出来的锋利的针。激活它来集中你的注意力，创造一个神奇的标志，保护你免受寄生虫和瞳孔的侵害。这将完全消耗该项目。",
     "price_postapoc": 4500,
@@ -1771,8 +1789,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "雷霆封印：冲击风暴",
-      "str_pl": "雷霆海豹突击队"
+      "str": "雷霆图章：冲击波",
+      "str_pl": "雷霆图章：冲击波"
     },
     "description": "一小块奇怪的水晶，摇曳着，仿佛远方的风暴在里面肆虐。激活它来集中你的注意力，创造一个魔法符号，在你周围召唤闪电。这将完全消耗该项目。",
     "price_postapoc": 5000,
@@ -1796,8 +1814,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "编织海豹：治疗",
-      "str_pl": "编织海豹：治疗"
+      "str": "编织图章：治愈",
+      "str_pl": "编织图章：治愈"
     },
     "description": "一个缠结在一起的流动的，模制的骨头。激活它来集中你的思想，创造一个神奇的迹象，并轻微地治愈身体。这将完全消耗该项目。",
     "price_postapoc": 6000,
@@ -1821,8 +1839,8 @@
     "copy-from": "totem_base",
     "type": "TOOL",
     "name": {
-      "str": "龙之封印：喷酸",
-      "str_pl": "龙之封印：酸雾"
+      "str": "巨龙图章：酸雾",
+      "str_pl": "巨龙图章：酸雾"
     },
     "description": "一块刻有刺鼻气味、超凡脱俗肉体的鳞片。激活它来集中你的注意力，创造一个神奇的符号，召唤出一股酸雾。这将完全消耗该项目。",
     "price_postapoc": 5000,
@@ -1846,8 +1864,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（敏捷）",
-      "str_pl": "图案卷轴（敏捷）"
+      "str": "彩纹绘卷（敏捷）",
+      "str_pl": "彩纹绘卷（敏捷）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将获得暂时的速度和敏捷增强效果。”",
     "//": "Unlike divine pattern scrolls, basic pattern scrolls were rare but at least existed pre-cataclysm.",
@@ -1856,7 +1874,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1872,8 +1890,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（透视）",
-      "str_pl": "图案卷轴（透视）"
+      "str": "彩纹绘卷（透视）",
+      "str_pl": "彩纹绘卷（透视）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语会用象牙色的光环涂抹你，让你看不见东西。”",
     "price": 300000,
@@ -1881,7 +1899,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1897,8 +1915,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（血之澄明）",
-      "str_pl": "图案卷轴（血之澄明）"
+      "str": "彩纹绘卷（净化血液）",
+      "str_pl": "彩纹绘卷（净化血液）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语可以保护你不受寄生虫和瞳孔的伤害。”",
     "price": 300000,
@@ -1906,7 +1924,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1922,8 +1940,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（迷惑怪物）",
-      "str_pl": "图案卷轴（迷惑怪物）"
+      "str": "彩纹绘卷（迷惑怪物）",
+      "str_pl": "彩纹绘卷（迷惑怪物）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将击昏你周围区域的所有敌人。”",
     "price": 300000,
@@ -1931,7 +1949,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1947,8 +1965,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（召唤酸）",
-      "str_pl": "图案卷轴（召唤酸）"
+      "str": "彩纹绘卷（召唤酸）",
+      "str_pl": "彩纹绘卷（召唤酸）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将在目标点召唤出一股酸液喷溅，对中心的敌人造成双倍伤害。”",
     "price": 300000,
@@ -1956,7 +1974,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1972,8 +1990,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（防暑）",
-      "str_pl": "图案卷轴（防热）"
+      "str": "彩纹绘卷（避热）",
+      "str_pl": "彩纹绘卷（避热）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将对热量和烟雾产生暂时的抵抗力，但不能直接接触火",
     "price": 300000,
@@ -1981,7 +1999,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -1997,8 +2015,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（自由动作）",
-      "str_pl": "图案滚动（自由操作）"
+      "str": "彩纹绘卷（挣脱束缚）",
+      "str_pl": "彩纹绘卷（挣脱束缚）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将对麻痹效果和其他障碍提供保护。”",
     "price": 300000,
@@ -2006,7 +2024,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2022,8 +2040,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（治疗）",
-      "str_pl": "图案卷轴（治疗）"
+      "str": "彩纹绘卷（治愈）",
+      "str_pl": "彩纹绘卷（治愈）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语可以止血和愈合伤口，尽管长期使用可能是有害的。”",
     "price": 300000,
@@ -2031,7 +2049,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2047,8 +2065,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（细节）",
-      "str_pl": "图案卷轴（细节）"
+      "str": "彩纹绘卷（洞悉）",
+      "str_pl": "彩纹绘卷（洞悉）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将暂时提升感知力。”",
     "price": 300000,
@@ -2056,7 +2074,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2072,8 +2090,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（闪电守卫）",
-      "str_pl": "图案卷轴（闪电守卫）"
+      "str": "彩纹绘卷（抗电）",
+      "str_pl": "彩纹绘卷（抗电）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个法术将给予你闪电免疫，代价是减慢你的速度。”",
     "price": 300000,
@@ -2081,7 +2099,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2097,8 +2115,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（权能）",
-      "str_pl": "图案滚动（权能）"
+      "str": "彩纹绘卷（力量）",
+      "str_pl": "彩纹绘卷（力量）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将暂时增强力量。”",
     "price": 300000,
@@ -2106,7 +2124,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2122,8 +2140,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（过度生长）",
-      "str_pl": "图案卷轴（过度生长）"
+      "str": "彩纹绘卷（过度生长）",
+      "str_pl": "彩纹绘卷（过度生长）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将召唤活森林在你目标位置喷发。”",
     "price": 300000,
@@ -2131,7 +2149,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2148,8 +2166,8 @@
     "//": "ID retained to avoid breaking stuff.",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（暗盾）",
-      "str_pl": "图案卷轴（暗影盾牌）"
+      "str": "彩纹绘卷（暗影盾）",
+      "str_pl": "彩纹绘卷（暗影盾）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将用黑曜石光环涂抹你，给予你的攻击者一个暂时的防御效果，使你的攻击者失明。”",
     "price": 300000,
@@ -2157,7 +2175,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2173,8 +2191,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（冲击波）",
-      "str_pl": "图案卷轴（冲击波）"
+      "str": "彩纹绘卷（冲击波）",
+      "str_pl": "彩纹绘卷（冲击波）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“这个咒语会在你周围召唤闪电，伤害任何靠近你的敌人。”",
     "price": 300000,
@@ -2182,7 +2200,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2198,8 +2216,8 @@
     "copy-from": "scroll_magic_base",
     "type": "TOOL",
     "name": {
-      "str": "图案卷轴（辟邪）",
-      "str_pl": "图案卷轴（辟邪）"
+      "str": "彩纹绘卷（辟邪）",
+      "str_pl": "彩纹绘卷（辟邪）"
     },
     "description": "这是一幅写在纸上的华丽图案的卷轴，用不自然的顺序描绘出奇怪的几何图案。激活它来探索它的秘密。（（记住绑定“施法”键！）\n“此咒语将给予一个祝福，保护你免受某些异常的威胁。”",
     "price": 300000,
@@ -2207,7 +2225,7 @@
     "use_action": {
       "type": "countdown",
       "name": "Unroll",
-      "message": "你展开图案卷轴…"
+      "message": "你展开彩纹绘卷…"
     },
     "countdown_interval": 1,
     "countdown_destroy": true,
@@ -2222,8 +2240,8 @@
     "id": "candle_warding",
     "type": "TOOL",
     "name": {
-      "str": "沃丁蜡烛",
-      "str_pl": "沃丁蜡烛"
+      "str": "守护蜡烛",
+      "str_pl": "守护蜡烛"
     },
     "description": "一种蜡半透明的蜡烛，不含任何杂质，带有舒缓的气氛。它可以用来放置魔法屏障，也可以用来投射微弱的光。这个项目造成的障碍不是不可摧毁的，但它是艰难的。",
     "weight": "100 g",
@@ -2256,8 +2274,8 @@
     "id": "candle_warding_active",
     "type": "TOOL",
     "name": {
-      "str": "沃丁之烛（开）",
-      "str_pl": "沃丁蜡烛（开）"
+      "str": "守护蜡烛（开）",
+      "str_pl": "守护蜡烛（开）"
     },
     "description": "一种蜡半透明的蜡烛，不含任何杂质，带有舒缓的气氛。它的灯芯被一种幽灵般的蓝色火焰点燃，发出的光没有热量。它也可以用来放置一个魔法屏障，一个既坚固又不坚不可摧的屏障。",
     "weight": "100 g",
@@ -2744,7 +2762,7 @@
     "id": "scourge_moonstone_on",
     "copy-from": "scourge_moonstone",
     "repairs_like": "scourge_moonstone",
-    "type": "GENERIC",
+    "type": "TOOL",
     "name": {
       "str": "月光石天灾（开启）",
       "str_pl": "月光石灾祸（开）"
@@ -2934,7 +2952,6 @@
       "NO_SALVAGE",
       "MAGIC_FOCUS",
       "NONCONDUCTIVE",
-      "NO_UNLOAD",
       "SHEATH_SWORD",
       "TRADER_KEEP_EQUIPPED"
     ]

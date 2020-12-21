@@ -165,7 +165,6 @@
     },
     "relative": {
       "weight": 3020,
-      "price": 7200,
       "material_thickness": 3,
       "encumbrance": 9
     },
@@ -341,8 +340,7 @@
     ],
     "relative": {
       "weight": "722 g",
-      "volume": "1500 ml",
-      "price": 80000
+      "volume": "1500 ml"
     },
     "extend": {
       "flags": [
@@ -482,7 +480,6 @@
     "relative": {
       "weight": 616,
       "volume": -1,
-      "price": 16000,
       "coverage": 5,
       "encumbrance": -5,
       "max_encumbrance": -5,
@@ -555,7 +552,6 @@
     },
     "relative": {
       "weight": 210,
-      "price": 6200,
       "material_thickness": 1
     },
     "extend": {

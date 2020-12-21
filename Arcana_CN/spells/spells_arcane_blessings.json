@@ -803,7 +803,7 @@
     "name": {
       "str": "祝福：召唤蜈蚣"
     },
-    "description": "奥术祝福\n使用此咒语将召唤变异的害虫，当此咒语完全熟练时，它将永久存在。",
+    "description": "奥术祝福\n使用此咒语将召唤变异的害虫，这将是忠诚的，但不是永久的。",
     "message": "你集中注意力，虚假的预兆被避免的画面在你的脑海中挥之不去，就像不自然的害虫滑向存在。",
     "valid_targets": [
       "ground"
@@ -812,7 +812,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",
@@ -846,7 +845,7 @@
     "name": {
       "str": "祝福：召唤霍蒙库勒斯"
     },
-    "description": "奥术祝福\n使用此咒语将召唤一个模仿人类形体的人，当这个咒语完全熟练时，它将永久存在。",
+    "description": "使用此咒语的奥术祝福\n将召唤出一个模仿人类形体的人，这将是忠诚的，但不是永久的。",
     "message": "当你集中注意力时，虚假预兆的意象在你的脑海中挥之不去，就像一个活生生的建筑一样被召唤来为你服务。",
     "valid_targets": [
       "ground"
@@ -855,7 +854,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",
@@ -886,7 +884,7 @@
     "name": {
       "str": "祝福：召唤骷髅狗"
     },
-    "description": "奥术祝福\n使用此咒语将召唤许多动物性亡灵，当该咒语完全熟练时，这些亡灵将永久存在。",
+    "description": "奥术祝福\n使用此咒语将召唤一些动物性的复仇者，他们将忠诚但不是永久性的。",
     "message": "当你集中注意力，一个死亡的世界的图像在你的脑海中挥之不去，一个不死的狩猎群汹涌而来。",
     "valid_targets": [
       "ground"
@@ -895,7 +893,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",
@@ -929,7 +926,7 @@
     "name": {
       "str": "祝福：召唤骷髅"
     },
-    "description": "奥术祝福\n使用此咒语将召唤一个人形亡灵，当该咒语完全熟练时，它将永久存在。",
+    "description": "奥术祝福\n使用此咒语将召唤一个人形亡灵，它是忠诚的但不是永久的。",
     "message": "你集中注意力，人类灭绝的景象在你脑海中挥之不去，一个不死的仆人出现在你面前。",
     "valid_targets": [
       "ground"
@@ -938,7 +935,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",
@@ -969,7 +965,7 @@
     "name": {
       "str": "祝福：召唤物"
     },
-    "description": "奥术祝福\n使用此咒语将召唤一个触手可憎的怪物，当这个咒语完全熟练时，它将永久存在。",
+    "description": "奥术祝福\n使用此咒语将召唤一个触角可憎的怪物，它将忠诚但不是永久的。",
     "message": "当你集中注意力时，你的敌人所体现的恐怖形象在你的脑海中挥之不去，如同一团卷须在你的脑海中摇曳。",
     "valid_targets": [
       "ground"
@@ -978,7 +974,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",
@@ -1009,7 +1004,7 @@
     "name": {
       "str": "祝福：召唤漩涡"
     },
-    "description": "奥术祝福\n使用此咒语将从远处召唤漩涡生物，当此咒语完全熟练时，它将永久存在。",
+    "description": "使用此咒语的奥术祝福\n将从远处召唤漩涡生物，它将是忠诚的，但不是永久的。",
     "message": "你专注，不确定的，遥远的未来的图像萦绕在你的脑海里，活生生的风在倾听你的呼唤。",
     "valid_targets": [
       "ground"
@@ -1018,7 +1013,6 @@
       "CONCENTRATE",
       "NO_HANDS",
       "NO_LEGS",
-      "PERMANENT",
       "NO_FAIL"
     ],
     "effect": "summon",

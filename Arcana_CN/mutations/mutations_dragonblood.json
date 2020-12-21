@@ -135,7 +135,7 @@
     "type": "mutation",
     "id": "SPELL_HUNT_DRAGONBLOOD",
     "name": {
-      "str": "狩猎的标志"
+      "str": "狩猎之印记"
     },
     "points": 10,
     "description": "非人道的力量赋予你进一步磨练你的杀伤力的能力，以消耗生命的魔法和随意激发肾上腺素的能力。（（记住绑定“施法”键！）",
@@ -175,7 +175,7 @@
     "//": "ID retained to reduce redundancy and avoid load errors.",
     "id": "SPELL_SUMMONWYRM",
     "name": {
-      "str": "可憎的印记"
+      "str": "憎恶之印记"
     },
     "points": 5,
     "description": "非人的力量赋予了你非自然的能力，允许你召唤来自远方的奇异生物。（（记住绑定“施法”键！）",
@@ -212,7 +212,7 @@
     "type": "mutation",
     "id": "SPELL_BEYOND_DRAGONBLOOD",
     "name": {
-      "str": "超越的印记"
+      "str": "超越之印记"
     },
     "points": 5,
     "description": "不人道的力量赋予了你超凡脱俗的能力，利用你与外界的联系给你的受害者带来可怕的痛苦。（（记住绑定“施法”键！）",

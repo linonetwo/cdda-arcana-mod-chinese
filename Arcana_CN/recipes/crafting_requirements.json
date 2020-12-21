@@ -181,48 +181,9 @@
     "components": [
       [
         [
-          "chem_ethanol",
-          1
-        ],
-        [
-          "denat_alcohol",
-          1
-        ],
-        [
-          "mixed_alcohol_strong",
-          2
-        ],
-        [
-          "vodka",
-          2
-        ],
-        [
-          "rum",
-          2
-        ],
-        [
-          "whiskey",
-          2
-        ],
-        [
-          "single_malt_whiskey",
-          2
-        ],
-        [
-          "tequila",
-          2
-        ],
-        [
-          "gin",
-          2
-        ],
-        [
-          "moonshine",
-          2
-        ],
-        [
-          "brandy",
-          2
+          "hard_liquor_toxic",
+          1,
+          "LIST"
         ]
       ]
     ]

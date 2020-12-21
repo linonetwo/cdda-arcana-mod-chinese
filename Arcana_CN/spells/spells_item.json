@@ -879,6 +879,28 @@
     "effect_str": "PAIN"
   },
   {
+    "id": "arcana_item_mana_potion",
+    "type": "SPELL",
+    "name": {
+      "str": "法力提升"
+    },
+    "description": "恢复120法力。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "你喝了药水，感到神奇的能量在你身上流动。",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "min_damage": 1200,
+    "max_damage": 1200,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "MANA"
+  },
+  {
     "id": "arcana_item_mantle_shadow",
     "type": "SPELL",
     "name": {

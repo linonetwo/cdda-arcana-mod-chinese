@@ -51,6 +51,20 @@
           "repeat": 2
         }
       ],
+      "place_loot": [
+        {
+          "item": "essence_pure",
+          "x": [
+            9,
+            13
+          ],
+          "y": [
+            9,
+            13
+          ],
+          "repeat": 2
+        }
+      ],
       "place_monsters": [
         {
           "monster": "GROUP_NETHER",
@@ -119,10 +133,21 @@
             9,
             13
           ],
-          "repeat": [
-            3,
-            5
-          ]
+          "repeat": 3
+        }
+      ],
+      "place_loot": [
+        {
+          "item": "essence_pure",
+          "x": [
+            9,
+            13
+          ],
+          "y": [
+            9,
+            13
+          ],
+          "repeat": 3
         }
       ],
       "place_monsters": [

@@ -2,73 +2,77 @@
   {
     "id": "homebooks",
     "type": "item_group",
-    "items": [
-      [
-        "book_magicfordummies",
-        1
-      ],
-      [
-        "book_potioncraft",
-        1
-      ],
-      [
-        "book_scrollcraft",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_magicfordummies",
+        "prob": 1
+      },
+      {
+        "item": "book_potioncraft",
+        "prob": 1
+      },
+      {
+        "item": "book_scrollcraft",
+        "prob": 1
+      }
     ]
   },
   {
     "id": "church",
     "type": "item_group",
-    "items": [
-      [
-        "book_hexenhammer",
-        1
-      ],
-      [
-        "book_scrollcraft",
-        1
-      ],
-      [
-        "manual_cleansingflame",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_hexenhammer",
+        "prob": 1
+      },
+      {
+        "item": "book_scrollcraft",
+        "prob": 1
+      },
+      {
+        "item": "manual_cleansingflame",
+        "prob": 1
+      }
     ]
   },
   {
     "id": "religious_books",
     "type": "item_group",
-    "items": [
-      [
-        "book_hexenhammer",
-        1
-      ],
-      [
-        "book_scrollcraft",
-        1
-      ],
-      [
-        "book_sacrifice",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_hexenhammer",
+        "prob": 1
+      },
+      {
+        "item": "book_scrollcraft",
+        "prob": 1
+      },
+      {
+        "item": "book_sacrifice",
+        "prob": 1
+      }
     ]
   },
   {
     "id": "mansion_books",
     "type": "item_group",
-    "items": [
-      [
-        "book_magicfordummies",
-        5
-      ],
-      [
-        "book_potioncraft",
-        3
-      ],
-      [
-        "book_scrollcraft",
-        2
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_magicfordummies",
+        "prob": 5
+      },
+      {
+        "item": "book_potioncraft",
+        "prob": 3
+      },
+      {
+        "item": "book_scrollcraft",
+        "prob": 2
+      }
     ]
   },
   {
@@ -85,29 +89,31 @@
   {
     "id": "exotic_books",
     "type": "item_group",
-    "items": [
-      [
-        "book_hexenhammer",
-        5
-      ],
-      [
-        "book_scrollcraft",
-        5
-      ],
-      [
-        "book_sacrifice",
-        2
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_hexenhammer",
+        "prob": 5
+      },
+      {
+        "item": "book_scrollcraft",
+        "prob": 5
+      },
+      {
+        "item": "book_sacrifice",
+        "prob": 2
+      }
     ]
   },
   {
     "id": "rare_martial_arts_books",
     "type": "item_group",
-    "items": [
-      [
-        "manual_cleansingflame",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "manual_cleansingflame",
+        "prob": 1
+      }
     ]
   },
   {
@@ -124,6 +130,7 @@
   {
     "id": "SUS_book_nonf_hard_spirit",
     "type": "item_group",
+    "subtype": "distribution",
     "entries": [
       {
         "item": "book_hexenhammer",
@@ -142,6 +149,7 @@
   {
     "id": "SUS_book_nonf_soft_occult",
     "type": "item_group",
+    "subtype": "distribution",
     "entries": [
       {
         "group": "magic_books",
@@ -153,7 +161,7 @@
     "id": "mansion_safe",
     "type": "item_group",
     "subtype": "collection",
-    "groups": [
+    "items": [
       {
         "group": "magic_consumables",
         "prob": 45
@@ -166,24 +174,25 @@
         "group": "magic_tools",
         "prob": 15
       },
-      {
-        "item": "arcanemap",
-        "prob": 25
-      }
+      [
+        "arcanemap",
+        20
+      ]
     ]
   },
   {
     "id": "cop_evidence",
     "type": "item_group",
-    "items": [
-      [
-        "offering_chalice",
-        1
-      ],
-      [
-        "blood_athame",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "offering_chalice",
+        "prob": 1
+      },
+      {
+        "item": "blood_athame",
+        "prob": 1
+      }
     ]
   },
   {
@@ -253,85 +262,87 @@
   {
     "id": "antique_rare",
     "type": "item_group",
-    "items": [
-      [
-        "mana_gem",
-        3
-      ],
-      [
-        "offering_chalice",
-        2
-      ],
-      [
-        "blood_athame",
-        2
-      ],
-      [
-        "revenant_crown",
-        1
-      ],
-      [
-        "gauntlets_necro",
-        1
-      ],
-      [
-        "thunder_sigil",
-        1
-      ],
-      [
-        "brooch_iridescent",
-        3
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "mana_gem",
+        "prob": 3
+      },
+      {
+        "item": "offering_chalice",
+        "prob": 2
+      },
+      {
+        "item": "blood_athame",
+        "prob": 2
+      },
+      {
+        "item": "revenant_crown",
+        "prob": 1
+      },
+      {
+        "item": "gauntlets_necro",
+        "prob": 1
+      },
+      {
+        "item": "thunder_sigil",
+        "prob": 1
+      },
+      {
+        "item": "brooch_iridescent",
+        "prob": 3
+      }
     ]
   },
   {
     "id": "art",
     "type": "item_group",
-    "items": [
-      [
-        "mana_gem",
-        2
-      ],
-      [
-        "offering_chalice",
-        3
-      ],
-      [
-        "revenant_crown",
-        3
-      ],
-      [
-        "gauntlets_necro",
-        1
-      ],
-      [
-        "thunder_sigil",
-        3
-      ],
-      [
-        "amulet_exotic",
-        2
-      ],
-      [
-        "brooch_iridescent",
-        2
-      ],
-      [
-        "totem_elecresist",
-        1
-      ],
-      [
-        "totem_clairvoyance",
-        1
-      ],
-      [
-        "totem_insight",
-        1
-      ],
-      [
-        "totem_lightning",
-        1
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "mana_gem",
+        "prob": 2
+      },
+      {
+        "item": "offering_chalice",
+        "prob": 3
+      },
+      {
+        "item": "revenant_crown",
+        "prob": 3
+      },
+      {
+        "item": "gauntlets_necro",
+        "prob": 1
+      },
+      {
+        "item": "thunder_sigil",
+        "prob": 3
+      },
+      {
+        "item": "amulet_exotic",
+        "prob": 2
+      },
+      {
+        "item": "brooch_iridescent",
+        "prob": 2
+      },
+      {
+        "item": "totem_elecresist",
+        "prob": 1
+      },
+      {
+        "item": "totem_clairvoyance",
+        "prob": 1
+      },
+      {
+        "item": "totem_insight",
+        "prob": 1
+      },
+      {
+        "item": "totem_lightning",
+        "prob": 1
+      }
     ]
   },
   {
@@ -409,29 +420,31 @@
   {
     "id": "my_precious",
     "type": "item_group",
-    "items": [
-      [
-        "book_hexenhammer",
-        10
-      ],
-      [
-        "book_sacrifice",
-        10
-      ],
-      [
-        "book_bloodmagic",
-        10
-      ]
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "book_hexenhammer",
+        "prob": 10
+      },
+      {
+        "item": "book_sacrifice",
+        "prob": 10
+      },
+      {
+        "item": "book_bloodmagic",
+        "prob": 10
+      }
     ]
   },
   {
     "id": "spider",
     "type": "item_group",
-    "items": [
-      [
-        "arcanemap",
-        5
-      ],
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "arcanemap",
+        "prob": 5
+      },
       {
         "group": "magic_tools",
         "prob": 1
@@ -499,7 +512,8 @@
   {
     "id": "rare",
     "type": "item_group",
-    "items": [
+    "subtype": "distribution",
+    "entries": [
       {
         "group": "magic_books",
         "prob": 5
@@ -516,14 +530,14 @@
         "group": "magic_items",
         "prob": 1
       },
-      [
-        "tindalos_whistle",
-        10
-      ],
-      [
-        "spatial_displacer",
-        5
-      ]
+      {
+        "item": "tindalos_whistle",
+        "prob": 10
+      },
+      {
+        "item": "spatial_displacer",
+        "prob": 5
+      }
     ]
   },
   {
@@ -541,7 +555,7 @@
     ]
   },
   {
-    "id": "museum_primative",
+    "id": "museum_primitive",
     "type": "item_group",
     "items": [
       [

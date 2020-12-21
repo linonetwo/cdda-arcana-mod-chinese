@@ -50,11 +50,48 @@
   },
   {
     "type": "effect_type",
+    "id": "life_sign_suppression_debuff",
+    "//": "This makes you health go down slowly while LSS is in use.",
+    "base_mods": {
+      "health_min": [
+        -1
+      ],
+      "health_tick": [
+        60
+      ],
+      "h_mod_min": [
+        -1
+      ],
+      "h_mod_tick": [
+        60
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "temporal_stimulation_effect",
+    "//": "This adds the stamina and fatigue effects to TS.",
+    "base_mods": {
+      "stamina_min": [
+        10
+      ],
+      "fatigue_min": [
+        1
+      ],
+      "fatigue_tick": [
+        300
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
     "id": "potion_numbness",
     "name": [
       "极度麻木"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "desc": [
       "你的身体感觉到难以置信的麻木和迟缓。"
     ],
@@ -96,7 +133,9 @@
     "name": [
       "加强"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "desc": [
       "你觉得自己很强大，好像你可以挑战世界。"
     ],
@@ -167,7 +206,9 @@
     "desc": [
       "你的心脏感觉心跳得很快，你甚至连休息都想不起来。"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "remove_message": "你的心跳减慢到正常速度。",
     "//": "Hinders relaxing, but paralysis and similar effects are too strong to prevent.",
     "removes_effects": [
@@ -238,7 +279,9 @@
     "name": [
       "万能药"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "desc": [
       "不是永生，但感觉还是不错的。"
     ],
@@ -293,7 +336,9 @@
     "name": [
       "脆弱的"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "desc": [
       "在你的伤口涂上药膏后，你会感觉到一种舒缓的感觉挥之不去。"
     ],
@@ -341,7 +386,9 @@
     "name": [
       "熏香"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "desc": [
       "你的大脑感到精力充沛，避免疲劳。"
     ],
@@ -387,7 +434,9 @@
     "desc": [
       "对食物中毒和寄生虫有免疫力，增加饥饿感。不会清除预先存在的状况。"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "remove_message": "你对腐烂食物的渴望消退了。",
     "blocks_effects": [
       "poison",
@@ -1127,7 +1176,9 @@
     "desc": [
       "对食物中毒、寄生虫和真菌的免疫力。增加饥饿感和口渴感，具有积极的新陈代谢作用。"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "remove_message": "你的血痕的保护作用会消退，在你的血管里留下短暂的瘙痒。",
     "removes_effects": [
       "nausea",
@@ -1281,7 +1332,9 @@
   {
     "type": "effect_type",
     "id": "arcane_healing_side_effects",
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "name": [
       "愈合疲劳",
       "治疗过度劳累",
@@ -1408,7 +1461,9 @@
     "desc": [
       "减少饥渴获得，阻碍耐力回复。"
     ],
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "remove_message": "当抑制效果消退时，你身体内的温暖就会爆发出来。",
     "blocks_effects": [
       "nausea",
@@ -1635,7 +1690,9 @@
     "type": "effect_type",
     "id": "archon_gaze_effect",
     "//": "Regular Ward Against Evil will only protect you a bit, you need Holy Ward to actually stop the effect.  This will be relevant once I add an encounter you can access after restoring the ritual blade.",
-    "resist_effect": "cleric_warding",
+    "resist_effects": [
+      "cleric_warding"
+    ],
     "name": [
       "对未来的一瞥"
     ],
@@ -1719,7 +1776,9 @@
   {
     "type": "effect_type",
     "id": "chalice_offering_side_effects",
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "resist_traits": [
       "PROF_CHALICE",
       "THRESH_VEIL"
@@ -1828,7 +1887,9 @@
   {
     "type": "effect_type",
     "id": "blood_athame_side_effects",
-    "resist_effect": "talisman_warding",
+    "resist_effects": [
+      "talisman_warding"
+    ],
     "resist_traits": [
       "PROF_SANGUINE",
       "THRESH_DRAGONBLOOD"
@@ -2105,7 +2166,7 @@
   {
     "type": "effect_type",
     "id": "hermit_stage_2",
-    "\\": "AI tag marking The Hermit's quest progression, changing dialogue.  Intended to be permanent.  Also given to players for achievement tracking purposes."
+    "//": "AI tag marking The Hermit's quest progression, changing dialogue.  Intended to be permanent.  Also given to players for achievement tracking purposes."
   },
   {
     "type": "effect_type",

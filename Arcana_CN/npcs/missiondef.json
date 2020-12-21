@@ -322,7 +322,6 @@
       ],
       "assign_mission_target": {
         "om_terrain": "cf_church_4",
-        "om_special": "cf_rural_church",
         "om_terrain_replace": "field",
         "reveal_radius": 3,
         "random": true,
@@ -362,7 +361,7 @@
     "id": "MISSION_CF_REP_1",
     "type": "mission_definition",
     "name": {
-      "str": "找到或制造骨头魅力"
+      "str": "找到或制造骸骨护符"
     },
     "description": "获得或制作一个骨符，一个临时的神圣符号，从某些超自然的怪物的身体部位雕刻而成，然后带到索非亚。",
     "goal": "MGOAL_FIND_ITEM",
@@ -399,7 +398,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -412,7 +410,6 @@
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -425,12 +422,10 @@
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_1_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -500,7 +495,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -513,7 +507,6 @@
         },
         {
           "om_terrain": "cf_church_1_roof",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -526,7 +519,6 @@
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_2_c"
         }
       ]
@@ -599,7 +591,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -612,17 +603,14 @@
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_3_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_3_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_3_d"
         }
       ]
@@ -657,7 +645,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -670,7 +657,6 @@
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -724,7 +710,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -737,7 +722,6 @@
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -750,7 +734,6 @@
         },
         {
           "om_terrain": "cf_church_3_roof",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_4_j"
         }
       ]
@@ -780,7 +763,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -824,7 +806,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -869,7 +850,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -882,7 +862,6 @@
         },
         {
           "om_terrain": "cf_church_2_roof",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -920,7 +899,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "place_nested": [
             {
               "chunks": [
@@ -933,7 +911,6 @@
         },
         {
           "om_terrain": "cf_church_2_roof",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_8_b"
         }
       ]
@@ -966,12 +943,10 @@
         },
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_9_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_9_b"
         }
       ]
@@ -1005,12 +980,10 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_10_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_10_b"
         }
       ]
@@ -1053,22 +1026,18 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_1_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_1_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_1_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_1_d"
         }
       ]
@@ -1122,22 +1091,18 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_2_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_2_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_2_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_2_d"
         }
       ]
@@ -1179,7 +1144,6 @@
       "update_mapgen": [
         {
           "om_terrain": "sanguine_holdout_b1",
-          "om_special": "sanguine_holdout",
           "place_npcs": [
             {
               "class": "sanguine_order_magus",
@@ -1214,22 +1178,18 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_3_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_3_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_3_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_3_d"
         }
       ]
@@ -1630,7 +1590,6 @@
       "update_mapgen": [
         {
           "om_terrain": "arcana_structure_anomalous_finale",
-          "om_special": "arcana_anomaly_resurgence",
           "place_monster": [
             {
               "monster": "mon_seraphic_shade",
@@ -1642,22 +1601,18 @@
         },
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_4_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_4_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_4_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_4_d"
         }
       ]
@@ -1693,22 +1648,18 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_5_a"
         },
         {
           "om_terrain": "cf_church_2",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_5_b"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_5_c"
         },
         {
           "om_terrain": "cf_church_4",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_GM_5_d"
         }
       ]
@@ -1740,7 +1691,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_a"
         }
       ]
@@ -1782,12 +1732,10 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_b_1"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_b_2"
         }
       ]
@@ -1831,7 +1779,6 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_c"
         }
       ]
@@ -1895,12 +1842,10 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_d_1"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_d_2"
         }
       ]
@@ -1927,10 +1872,8 @@
         "om_terrain_replace": "field",
         "random": true,
         "cant_see": true,
-        "range": [
-          20,
-          60
-        ]
+        "search_range": 60,
+        "min_distance": 10
       },
       "update_mapgen": [
         {
@@ -1967,12 +1910,10 @@
       "update_mapgen": [
         {
           "om_terrain": "cf_church_1",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_e_1"
         },
         {
           "om_terrain": "cf_church_3",
-          "om_special": "cf_rural_church",
           "mapgen_update_id": "cf_church_upgrade_aux_e_2"
         }
       ]

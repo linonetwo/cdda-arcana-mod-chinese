@@ -275,7 +275,7 @@
     "type": "mutation",
     "id": "CF_DEACON",
     "name": {
-      "str": "执事印记"
+      "str": "执事之印记"
     },
     "points": 0,
     "description": "此特性印记Deacon，用于某些对话检查以保持工作正常。看到这可能是一个错误。",
@@ -323,7 +323,7 @@
     "type": "mutation",
     "id": "CF_AUX_MARKER_1",
     "name": {
-      "str": "辅助标志1"
+      "str": "辅助之印记1"
     },
     "points": 0,
     "description": "这是用来区分不同的商人，在索非亚的第四个任务。",
