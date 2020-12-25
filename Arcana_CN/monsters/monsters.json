@@ -448,10 +448,12 @@
     "copy-from": "mon_vortex",
     "type": "MONSTER",
     "//": "FFS why are they harmless",
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
     "melee_damage": [
       {
         "damage_type": "cold",
-        "amount": 4,
+        "amount": 2,
         "armor_multiplier": 0.75
       }
     ],
@@ -1853,6 +1855,8 @@
     "death_drops": {},
     "speed": 90,
     "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
     "vision_day": 25,
     "vision_night": 2,
     "luminance": 60,
