@@ -641,7 +641,7 @@
     "name": {
       "str": "怪物闪电武器"
     },
-    "description": "用来给执政官的主人一个特定程度的不准确。如果你在野外遇到这样的虫子，那就是虫子。",
+    "description": "用来给执政官的躯壳一个特定程度的不准确。如果你在野外遇到这样的情况，那就是Bug。",
     "ammo_effects": [
       "NEVER_MISFIRES",
       "LIGHTNING",

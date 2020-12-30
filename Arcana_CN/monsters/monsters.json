@@ -1337,8 +1337,8 @@
     "id": "mon_archon",
     "type": "MONSTER",
     "name": {
-      "str": "执政官的主人",
-      "str_pl": "执政官的主人"
+      "str": "执政官的躯壳",
+      "str_pl": "执政官的躯壳"
     },
     "description": "一个高高的，穿着长袍的人扭曲成一个嘲弄人的形式，挥舞着一个奇怪的金色护身符。你觉得这是一个超凡脱俗的存在。",
     "default_faction": "archon",
@@ -1426,7 +1426,7 @@
           "id": "arcana_monster_archon_gaze"
         },
         "cooldown": 10,
-        "monster_message": "当它在%3$s时，你会短暂地感觉到它控制着主人的存在。"
+        "monster_message": "当它盯着%3$s时，你在一瞬间感觉到有异界的存在控制着这个躯壳。"
       }
     ],
     "//": "Here, have some chalice-specific loot",
