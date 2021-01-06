@@ -229,13 +229,13 @@
       "BLINDS_EYES"
     ],
     "flags": [
-      "FIRE_20",
       "NEVER_JAMS",
       "PRIMITIVE_RANGED_WEAPON",
       "NO_SALVAGE",
       "BELTED",
       "TRADER_KEEP_EQUIPPED"
     ],
+    "ammo_to_fire": 20,
     "armor_data": {
       "covers": [
         "torso"
