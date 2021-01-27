@@ -256,7 +256,7 @@
         "time": "60 m",
         "using": [
           [
-            "vehicle_bolt",
+            "vehicle_wrench_2",
             1
           ]
         ]
@@ -279,7 +279,7 @@
         "time": "30 m",
         "using": [
           [
-            "vehicle_bolt",
+            "vehicle_wrench_2",
             1
           ]
         ]
